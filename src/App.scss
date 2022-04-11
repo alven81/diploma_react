@@ -1,38 +1,68 @@
-.App {
-  text-align: center;
+.catalog_main {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    &-element {
+        width: 23%;
+        box-sizing: border-box;
+        margin: 10px;
+        &-image {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            img:first-child {
+                border: none;
+                width: 60px;
+                height: 60px;
+            }
+            img {
+                height: 328px;
+                width: 246px;
+                border: 1px solid #fc5185;
+            }
+        }
+        &-disc_bottom {
+            background-color: #fc5185;
+            color: #fff;
+        }
+        &-price {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+        &-title {
+            text-align: center;
+            padding: 0 20px;
+        }
+
+    }
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.hide {
+    display: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.discount_block {
+    text-align: center;
+    border: 1px solid #fc5185;
+    position: absolute;
+    color: #fc5185;
+    font-weight: 500;
+    right: 43px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.discount {
+    color: #fc5185;
+    font-weight: 500;
 }
 
-.App-link {
-  color: #61dafb;
+.overline {
+    text-decoration: line-through;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.new {
+    position: absolute;
+    left: 25px;
+    top: -15px;
 }

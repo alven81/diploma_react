@@ -1,9 +1,9 @@
-import { FC, useRef } from "react"
+import { FC } from "react"
+import { NavLink } from "react-router-dom"
 import InputSearch from "./InputSearch"
 import "./NavBar.scss"
 
 const NavBar: FC = () => {
-    //const InputSearch = useRef<HTMLInputElement>(null);
     return (
         <>
             <nav className="nav_main container">
@@ -28,25 +28,27 @@ const NavBar: FC = () => {
                         <img src="./assets/img/logo.png" alt="логотип Креатив"/>
                     </div>
                     <div>
-                        <InputSearch className="nav_middle-input"/><span className="nav_middle-loupe"/>
+                        <InputSearch className="nav_middle-input" placeholder="Поиск товара"/><span className="nav_middle-loupe"/>
                     </div>
                     <div className="nav_middle-cart">
                         <img src="./assets/img/cart_man.svg" alt="Регистрация" />
                         <img src="./assets/img/cart_heart.svg" alt="Избранное" />
+                        <span className="nav_middle-cart-span-heart">0</span>
                         <img src="./assets/img/cart.svg" alt="Корзина" />
+                        <span className="nav_middle-cart-span-cart">0</span>
                     </div>
                 </div>
                 <div className="nav_bottom">
                     <ul className="nav_bottom-list">
-                        <li>Каталог</li>
-                        <li>Рукоделие</li>
-                        <li>Рисование</li>
-                        <li>Моделирование</li>
-                        <li>Украшение</li>
-                        <li>Флогистика</li>
-                        <li>Мастерская</li>
-                        <li>Новинки</li>
-                        <li>Скидки</li>
+                        <li><NavLink to='catalog'>Каталог</NavLink></li>
+                        <li><NavLink to='craft'>Рукоделие</NavLink></li>
+                        <li><NavLink to='paint'>Рисование</NavLink></li>
+                        <li><NavLink to='model'>Моделирование</NavLink></li>
+                        <li><NavLink to='decor'>Украшение</NavLink></li>
+                        <li><NavLink to='flora'>Флористика</NavLink></li>
+                        <li><NavLink to='workshop'>Мастерская</NavLink></li>
+                        <li><NavLink to='new'>Новинки</NavLink></li>
+                        <li><NavLink to='discount'>Скидки</NavLink></li>
                     </ul>
                 </div>
             </nav>

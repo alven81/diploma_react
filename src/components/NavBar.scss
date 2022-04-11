@@ -28,13 +28,44 @@
         justify-content: space-between;
         margin-left: 50px;
         &-cart {
+            padding: 0;
+            width: 125px;
+            height: 35px;
             display: flex;
             align-items: center;
-            margin-right: 64px;
-            gap: 10px;
+            margin-right: 50px;
+            gap: 28px;
+            position: relative;
             img {
                 height: 24px;
                 width: 24px;
+            }
+            span {
+                color: #cdd7de;
+            }
+            &-span-heart {
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid #f2785c;
+                height: 24px;
+                width: 24px;
+                border-radius: 24px;
+                bottom: 18px;
+                left: 71px;
+            }
+            &-span-cart {
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid #f2785c;
+                height: 24px;
+                width: 24px;
+                border-radius: 24px;
+                bottom: 18px;
+                left: 121px;
             }
         }
     }
@@ -54,7 +85,14 @@
 
 .nav_middle {
     display: flex;
-    align-items: center;
+    align-items:flex-end;
+    min-height: 100px;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+    &-logo {
+        display: flex;
+        align-items: flex-end;
+    }
     &-input {
         border: 0;
         border-bottom: 1px solid rgba(240, 71, 132, 0.5);
@@ -63,14 +101,20 @@
         width: 344px;
         padding-left: 8px;
         padding-right: 45px;
+        font-size: 18px;
+        &::placeholder { 
+            color: #cdd7de; 
+        }
     }
     &-loupe {
         position: relative;
         &::after {
             position: absolute;
             content: url("./img/loupe.svg");
-            top: -23px;
+            top: -25px;
             right: 0;
         }
     }
 }
+
+//input[type="search"]::placeholder { color: #ffd595; }

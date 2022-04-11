@@ -1,13 +1,14 @@
 import { FC } from "react";
 
 interface InputSearchProps {
-    className: string
+    className: string,
+    placeholder: string
     
     // value: string,
     // name: string,
     //onChange: (e: string) => void
 }
-const InputSearch: FC<InputSearchProps> = ({ className }) => {
+const InputSearch: FC<InputSearchProps> = ({ className, placeholder }) => {
     
 // const handleInputChange = () => {
 //     console.log(e.target.value);
@@ -25,6 +26,7 @@ const InputSearch: FC<InputSearchProps> = ({ className }) => {
         <>
             <input
                 className={className} 
+                placeholder={placeholder}
                 // type='text'
                 // name={name}
                 // value={value}

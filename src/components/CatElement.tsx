@@ -1,0 +1,45 @@
+import { FC } from "react"
+import IElement from "../types/element"
+
+interface CatElementProps {
+    catalog: IElement
+} 
+
+const CatElement: FC<CatElementProps> = ({ catalog }) => {
+
+const discountPercent = Math.round((catalog.price - catalog.discount_price) / catalog.price*100)
+
+    return (
+            <div className="catalog_main-element">
+                <div className="catalog_main-element-image">
+                    <img className={catalog.new === true ? "new" : "hide"} src="./assets/img/new.svg" alt=""/>
+                    <img src={`http://localhost:3000${catalog.image}`} alt=""/>
+                    <div className={catalog.discount === true ? "discount_block" : "hide"}>
+                        <div className="catalog_main-element-disc_top">
+                            СКИДКА
+                        </div>
+                        <div className="catalog_main-element-disc_bottom">
+                            {discountPercent}%
+                        </div>
+                    </div>
+                </div>
+                <div className="catalog_main-element-price">
+                    <p className={catalog.discount === true ? "overline" : ""}>
+                        {`${catalog.price} руб.`}
+                    </p>
+                    <p className={catalog.discount === true ? "discount" : "hide"}>
+                        {`${catalog.discount_price} руб.`}
+                    </p>
+                </div>
+                <div className="catalog_main-element-title">
+                    <p>{catalog.title}</p>
+                </div>
+            </div>
+    )
+}
+export default CatElement                
+
+//<p>{catalog.id}</p>             
+//<p>{catalog.new}</p>
+                
+                
