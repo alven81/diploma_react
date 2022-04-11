@@ -1,0 +1,73 @@
+.footer_main {
+    border-top: 3px solid #F2785C;
+    display: flex;
+    &-contacts {
+        background-image: url("./img/f_flower.png");
+        background-repeat: no-repeat;
+        background-position: 0% 100%;
+        padding-left: 81px;
+        margin-top: 56px;
+        width: 250px;
+        color: #F2785C;
+        p {
+            width: 160px;
+            position: relative;
+        }
+        &-phone::before {
+            position: absolute;
+            content: url("./img/f_phone.svg");
+            top: 0;
+            left: -40px;
+        }
+        &-time::before {
+            position: absolute;
+            content: url("./img/f_clock.svg");
+            top: 0;
+            left: -40px;
+        }
+        &-mail::before {
+            position: absolute;
+            content: url("./img/f_mail.svg");
+            top: 0;
+            left: -40px;
+        }
+    }
+    &-block {
+        flex: 1;
+        &-top{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            background-color: #F2785C;
+            ul {
+                list-style: none;
+                color: #fff;
+                width: 15%;
+                li {
+                    margin: 20px 0;
+                    &:first-child {
+                        font-weight: 700;
+                        text-transform: uppercase;
+                    }
+                }
+                &:last-child {
+                    li:last-child{
+                        display: flex;
+                        gap: 30px;
+                    }
+                }
+            }
+        }
+        &-middle{
+            text-transform: uppercase;
+        }
+        &-bottom{
+            padding: 0 40px;
+            display: flex;
+            justify-content:space-between ;
+            background-color: #F2785C;
+            color: #fff;
+        }
+        
+    }
+}

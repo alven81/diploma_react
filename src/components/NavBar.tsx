@@ -1,10 +1,12 @@
+import { FC, useRef } from "react"
 import InputSearch from "./InputSearch"
 import "./NavBar.scss"
 
-const NavBar = () => {
+const NavBar: FC = () => {
+    //const InputSearch = useRef<HTMLInputElement>(null);
     return (
         <>
-            <nav className="nav_main">
+            <nav className="nav_main container">
                 <div className="nav_top">
                     <div>
                         <ul className="nav_top-list">
@@ -26,7 +28,7 @@ const NavBar = () => {
                         <img src="./assets/img/logo.png" alt="логотип Креатив"/>
                     </div>
                     <div>
-                        <InputSearch />
+                        <InputSearch className="nav_middle-input"/><span className="nav_middle-loupe"/>
                     </div>
                     <div className="nav_middle-cart">
                         <img src="./assets/img/cart_man.svg" alt="Регистрация" />

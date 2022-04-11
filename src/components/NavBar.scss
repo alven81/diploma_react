@@ -7,6 +7,7 @@
     }
     &_top {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         background-color: #F2785C;
         text-transform: uppercase;
@@ -43,10 +44,33 @@
 
         &-list {
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-around;
             list-style: none;
             text-transform: uppercase;
         }
+    }
+}
 
+.nav_middle {
+    display: flex;
+    align-items: center;
+    &-input {
+        border: 0;
+        border-bottom: 1px solid rgba(240, 71, 132, 0.5);
+        box-shadow: 0 6px 4px -4px rgba(0, 0, 0, 0.25);
+        outline:none;
+        width: 344px;
+        padding-left: 8px;
+        padding-right: 45px;
+    }
+    &-loupe {
+        position: relative;
+        &::after {
+            position: absolute;
+            content: url("./img/loupe.svg");
+            top: -23px;
+            right: 0;
+        }
     }
 }
