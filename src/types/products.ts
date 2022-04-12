@@ -1,6 +1,6 @@
 import IFeatures from "./features";
 export default interface IProducts {
-    id: number;
+    id: number,
     price: number,
     discount: boolean, 
     new: boolean,
@@ -12,6 +12,6 @@ export default interface IProducts {
     image: string,
     icons: [],
     consist: [],
-    review: []
+    review: [],
     raiting: []
 }

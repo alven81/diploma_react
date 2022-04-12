@@ -1,6 +1,6 @@
 export default interface IFeatures {
     weight: number,
-    creation: string,
+    creation: [],
     age: string,
     height_gross: number,
     deep: number,

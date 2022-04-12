@@ -1,3 +1,15 @@
+@import url(https://fonts.googleapis.com/css?family=Pattaya:regular);
+
+.home_main {
+    font-family: Pattaya, serif;
+    font-size: 36px;
+    color: #8C7158;
+    text-transform: uppercase;
+    &-top {
+        display: flex;
+    }
+}
+
 .catalog_main {
     padding: 10px;
     display: flex;

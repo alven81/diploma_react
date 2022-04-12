@@ -2,7 +2,7 @@
     border-top: 3px solid #F2785C;
     display: flex;
     &-contacts {
-        background-image: url("./img/f_flower.png");
+        background-image: url("../img/f_flower.png");
         background-repeat: no-repeat;
         background-position: 0% 100%;
         padding-left: 81px;
@@ -15,19 +15,19 @@
         }
         &-phone::before {
             position: absolute;
-            content: url("./img/f_phone.svg");
+            content: url("../img/f_phone.svg");
             top: 0;
             left: -40px;
         }
         &-time::before {
             position: absolute;
-            content: url("./img/f_clock.svg");
+            content: url("../img/f_clock.svg");
             top: 0;
             left: -40px;
         }
         &-mail::before {
             position: absolute;
-            content: url("./img/f_mail.svg");
+            content: url("../img/f_mail.svg");
             top: 0;
             left: -40px;
         }

@@ -10,7 +10,7 @@ const NavBar: FC = () => {
                 <div className="nav_top">
                     <div>
                         <ul className="nav_top-list">
-                            <li>Главная</li>
+                            <li><NavLink to="/">Главная</NavLink></li>
                             <li>О нас</li>
                             <li>Блог</li>
                             <li>Оплата и доставка</li>
