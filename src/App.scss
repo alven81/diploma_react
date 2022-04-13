@@ -1,12 +1,198 @@
 @import url(https://fonts.googleapis.com/css?family=Pattaya:regular);
 
+.home_container {
+    width: 1144px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
 .home_main {
     font-family: Pattaya, serif;
     font-size: 36px;
     color: #8C7158;
     text-transform: uppercase;
-    &-top {
+    background-color: rgba(242, 120, 92, 0.3);
+    &-theme {
         display: flex;
+        gap: 10px;
+        border-bottom: 20px solid rgba(242, 120, 92, 0.5);
+        padding: 50px;
+        background-color: #fff;
+        &-left {
+            width: 50%;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            max-height: 524px;
+            img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            &-first {
+                display: flex;
+                justify-content: center;
+                height: 150px;
+                background-image: url("./img/corner_border.png");
+                background-repeat: no-repeat;
+                background-position: 0 0;
+                span {
+                    margin-top: 16px;
+                    text-align: center;
+                    max-width: 432px;
+                }
+            }
+            &-second {
+                display: flex;
+                justify-content: center;
+                margin: 0;
+            }
+            &-third {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-image: url("./img/corner_border_b.png");
+                background-repeat: no-repeat;
+                background-position: 100% 0;
+                height: 155px;
+            }
+        }
+        &-right {
+            img{
+                padding: 0;
+                margin: 0;
+                max-height: 522px;
+                max-width: 766px;
+            }    
+        }
+        &-button {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 340px;
+            height: 70px;
+            background: #FFFFFF;
+            border: 3px solid #F2785C;
+            box-sizing: border-box;
+            box-shadow: 0px 4px 4px rgba(252, 81, 133, 0.25);
+            border-radius: 10px;
+            button {
+                border: none;
+                background: #FC5185;
+                box-shadow: 0px 4px 4px rgba(191, 48, 115, 0.4);
+                border-radius: 10px;
+                width: 320px;
+                height: 60px;
+                color: #fff;
+                font-size: 24px;
+                font-weight: 700;
+                letter-spacing: 0.2em;
+                text-transform: uppercase;
+                cursor: pointer;
+                transition: 0.2s;
+                &:active {
+                    background-color: #F2785C;
+                    transform: scale(0.95);
+                }
+            }
+        }
+    }
+    &-head {
+        
+        &-name {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            span {
+                height: 3px;
+                width: 195px;
+                background-color: #8C7158;
+            }
+            p {
+                max-width: 275px;
+                font-family: 'Pattaya';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 48px;
+                line-height: 67px;
+                text-align: center;
+                color: #8C7158;
+            }
+        }
+        &-links {
+            display: flex;
+            justify-content: space-around;
+            padding-bottom: 46px;
+            font-family: 'Pattaya';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 33px;
+            text-align: center;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            a {
+                color: #8C7158;
+                text-decoration: none;
+                }
+        }
+        &-buttons {
+            position: relative;
+            display: flex;
+            justify-content: space-around;
+            padding-top: 17px;
+            height: 350px;
+            background: rgba(242, 120, 92, 0.2);
+            box-shadow: 0px 4px 4px rgba(242, 120, 92, 0.25);
+            div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 278px;
+                width: 278px;
+                background-color: #FFFFFF;
+                box-shadow: 0px 4px 4px rgba(242, 120, 92, 0.25);
+                border-radius: 278px;
+                a {
+                    width: 130px;
+                    font-family: 'Roboto';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 14px;
+                    line-height: 20px;
+                    text-align: center;
+                    text-transform: uppercase;
+                    color: #FFFFFF;
+                    text-decoration: none;
+                }
+            }
+            &-idea {
+                background-image: url("./img/btn_idea.png");
+                background-repeat: no-repeat;
+                background-position: 55% 55%;
+            }
+            &-set {
+                background-image: url("./img/btn_set.png");
+                background-repeat: no-repeat;
+                background-position: 35% 35%;
+            }
+            &-quiz {
+                background-image: url("./img/btn_quiz.png");
+                background-repeat: no-repeat;
+                background-position: 50% 50%;
+            }
+            &-craft {
+                background-image: url("./img/btn_craft.png");
+                background-repeat: no-repeat;
+                background-position: 50% 50%;
+            }
+        }
+       
     }
 }
 
@@ -23,15 +209,18 @@
             display: flex;
             justify-content: center;
             position: relative;
+            > div {
+                border: 1px solid #fc5185;
+            }
             img:first-child {
                 border: none;
                 width: 60px;
                 height: 60px;
             }
-            img {
-                height: 328px;
-                width: 246px;
-                border: 1px solid #fc5185;
+            &-main {
+                box-sizing: border-box;
+                min-height: 328px;
+                min-width: 246px;
             }
         }
         &-disc_bottom {
@@ -77,4 +266,54 @@
     position: absolute;
     left: 25px;
     top: -15px;
+}
+
+
+.artefact {
+    &_1 {
+        border-radius: 19px;
+        position: absolute;
+        width: 19px;
+        height: 19px;
+        left: 34px;
+        top: 64px;
+        background: radial-gradient(50% 50% at 50% 50%, #FC5185 0%, rgba(252, 81, 133, 0.5) 100%);
+    }
+    &_2 {
+        border-radius: 19px;
+        position: absolute;
+        width: 19px;
+        height: 19px;
+        left: 533px;
+        top: 60px;
+        background: radial-gradient(50% 50% at 50% 50%, #D96907 0%, rgba(217, 105, 7, 0.5) 100%);
+        opacity: 0.9;
+    }
+    &_3 {
+        border-radius: 19px;
+        position: absolute;
+        width: 19px;
+        height: 19px;
+        left: 600px;
+        top: 268px;
+        background: radial-gradient(50% 50% at 50% 50%, #364F6B 0%, rgba(54, 79, 107, 0.5) 100%);
+    }
+    &_4 {
+        border-radius: 30px;
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        left: 818px;
+        top: 265px;
+        background: radial-gradient(50% 50% at 50% 50%, #364F6B 0%, rgba(54, 79, 107, 0.5) 100%);
+    }
+    &_5 {
+        border-radius: 30px;
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        right: 0px;
+        top: 64px;
+        background: radial-gradient(50% 50% at 50% 50%, #8C7158 0%, rgba(140, 113, 88, 0.5) 100%);
+    }
 }
