@@ -1,7 +1,6 @@
 import { FC } from "react"
 import { NavLink } from "react-router-dom"
 import InputSearch from "./InputSearch"
-import "./NavBar.scss"
 
 const NavBar: FC = () => {
     return (

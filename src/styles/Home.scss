@@ -1,5 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Pattaya:regular);
-
 .home_container {
     width: 1144px;
     margin: 0 auto;
@@ -36,7 +34,7 @@
                 display: flex;
                 justify-content: center;
                 height: 150px;
-                background-image: url("./img/corner_border.png");
+                background-image: url("../img/corner_border.png");
                 background-repeat: no-repeat;
                 background-position: 0 0;
                 span {
@@ -54,7 +52,7 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                background-image: url("./img/corner_border_b.png");
+                background-image: url("../img/corner_border_b.png");
                 background-repeat: no-repeat;
                 background-position: 100% 0;
                 height: 155px;
@@ -77,7 +75,7 @@
             width: 340px;
             height: 70px;
             background: #FFFFFF;
-            border: 3px solid #F2785C;
+            border: 3px solid $headerDarker;
             box-sizing: border-box;
             box-shadow: 0px 4px 4px rgba(252, 81, 133, 0.25);
             border-radius: 10px;
@@ -96,7 +94,7 @@
                 cursor: pointer;
                 transition: 0.2s;
                 &:active {
-                    background-color: #F2785C;
+                    background-color: $headerDarker;
                     transform: scale(0.95);
                 }
             }
@@ -155,7 +153,7 @@
                 align-items: center;
                 height: 278px;
                 width: 278px;
-                background-color: #FFFFFF;
+                background-color: $lightBackground;
                 box-shadow: 0px 4px 4px rgba(242, 120, 92, 0.25);
                 border-radius: 278px;
                 a {
@@ -167,27 +165,27 @@
                     line-height: 20px;
                     text-align: center;
                     text-transform: uppercase;
-                    color: #FFFFFF;
+                    color: $lightFont;
                     text-decoration: none;
                 }
             }
             &-idea {
-                background-image: url("./img/btn_idea.png");
+                background-image: url("../img/btn_idea.png");
                 background-repeat: no-repeat;
                 background-position: 55% 55%;
             }
             &-set {
-                background-image: url("./img/btn_set.png");
+                background-image: url("../img/btn_set.png");
                 background-repeat: no-repeat;
                 background-position: 35% 35%;
             }
             &-quiz {
-                background-image: url("./img/btn_quiz.png");
+                background-image: url("../img/btn_quiz.png");
                 background-repeat: no-repeat;
                 background-position: 50% 50%;
             }
             &-craft {
-                background-image: url("./img/btn_craft.png");
+                background-image: url("../img/btn_craft.png");
                 background-repeat: no-repeat;
                 background-position: 50% 50%;
             }
@@ -195,79 +193,6 @@
        
     }
 }
-
-.catalog_main {
-    padding: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    &-element {
-        width: 23%;
-        box-sizing: border-box;
-        margin: 10px;
-        &-image {
-            display: flex;
-            justify-content: center;
-            position: relative;
-            > div {
-                border: 1px solid #fc5185;
-            }
-            img:first-child {
-                border: none;
-                width: 60px;
-                height: 60px;
-            }
-            &-main {
-                box-sizing: border-box;
-                min-height: 328px;
-                min-width: 246px;
-            }
-        }
-        &-disc_bottom {
-            background-color: #fc5185;
-            color: #fff;
-        }
-        &-price {
-            display: flex;
-            justify-content: space-between;
-            padding: 0 20px;
-        }
-        &-title {
-            text-align: center;
-            padding: 0 20px;
-        }
-
-    }
-}
-
-.hide {
-    display: none;
-}
-
-.discount_block {
-    text-align: center;
-    border: 1px solid #fc5185;
-    position: absolute;
-    color: #fc5185;
-    font-weight: 500;
-    right: 43px;
-}
-
-.discount {
-    color: #fc5185;
-    font-weight: 500;
-}
-
-.overline {
-    text-decoration: line-through;
-}
-
-.new {
-    position: absolute;
-    left: 25px;
-    top: -15px;
-}
-
 
 .artefact {
     &_1 {

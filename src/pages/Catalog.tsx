@@ -1,24 +1,31 @@
 import axios from "axios"
-import { FC, useEffect, useState } from "react"
+import { FC, useEffect } from "react"
+import { useDispatch, useSelector, RootStateOrAny } from "react-redux"
 import CatElement from "../components/CatElement"
+import { addCatalogData } from "../store/actions/catalogAction"
 import IElement from "../types/element"
 
 const Catalog: FC = () => {
 
-    const [catalogData, setCatalogData] = useState<IElement[]>([])
+    //const [catalogData, setCatalogData] = useState<IElement[]>([])
+    const catalog = useSelector((state: RootStateOrAny) => state.catalogData.catalogList)
+    const dispatch = useDispatch()
 
     useEffect(() => {
         axios.get<IElement[]>('http://localhost:3004/products')
-        .then(res => setCatalogData(res.data))
-        //.then(res => console.log(res.data))
-    }, [])
+        .then(res => dispatch(addCatalogData(res.data)))
+
+    }, [dispatch])
 
     return (
             <div className="catalog_main container">
                 {
-                    catalogData.map(catalog => <CatElement key={catalog.id} catalog={catalog} />)
+                    catalog.map((catalog: IElement) =><CatElement key={catalog.id} catalog={catalog} />)
                 }
             </div>
     )
 }
 export default Catalog
+
+
+//<Link key={catalog.id} to={`product:${catalog.id}`}><img className="catalog_main-element-image-main" src={`http://localhost:3000${catalog.image}`} alt=""/>

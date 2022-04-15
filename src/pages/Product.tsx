@@ -1,14 +1,14 @@
-import { FC } from "react"
-import IElement from "../types/element"
+
 
 // interface ProductProps {
-//     catalog: IElement
+//     //catalog: IElement
+//     catalog: []
 // }
 
 const Product = () => {
     return (
         <>
-        Product page
+        Product page 
         </>
     )
 }

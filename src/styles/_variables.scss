@@ -1,0 +1,13 @@
+$containerBackground: #ffffff;
+$headerDarker: #f2785f;
+$lightFont: #ffffff;
+$lightBackground: #ffffff;
+//$headerLighter:
+
+@mixin fontPattaya ($weight, $fontSize, $lineHeight) {
+    font: $weight #{$fontSize}px/#{$lineHeight}px "Pattaya", serif;
+}
+
+@mixin fontRoboto ($weight, $fontSize, $lineHeight) {
+    font: $weight #{$fontSize}px/#{$lineHeight}px "Roboto", sans-serif;
+}

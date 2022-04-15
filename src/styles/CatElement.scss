@@ -1,0 +1,79 @@
+@import "./_variables.scss";
+
+.catalog_main {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    &-element {
+        width: 23%;
+        box-sizing: border-box;
+        margin: 10px;
+        &-image {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            > div {
+                border: 1px solid #fc5185;
+            }
+            img:first-child {
+                border: none;
+                width: 60px;
+                height: 60px;
+            }
+            &-main {
+                box-sizing: border-box;
+                min-height: 328px;
+                min-width: 246px;
+            }
+        }
+        &-disc_bottom {
+            background-color: #fc5185;
+            color: #fff;
+            @include fontRoboto(400, 14, 16);
+        }
+        &-price {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+            @include fontRoboto(700, 18, 21);
+
+        }
+        &-title {
+            text-align: center;
+            padding: 0 20px;
+            @include fontRoboto(400, 14, 16);
+        }
+
+    }
+}
+
+.hide {
+    display: none;
+}
+
+.discount_block {
+    text-align: center;
+    border: 1px solid #fc5185;
+    position: absolute;
+    width: 70px;
+    color: #fc5185;
+    @include fontRoboto(400, 14, 16);
+    right: 43px;
+    top: 0;
+}
+
+.discount {
+    color: #fc5185;
+    font-weight: 500;
+}
+
+.overline {
+    text-decoration: line-through;
+}
+
+.new {
+    position: absolute;
+    left: 25px;
+    top: -15px;
+}

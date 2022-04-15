@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom"
-import './App.scss';
+import './styles/App.scss';
 import Catalog from "./pages/Catalog";
 import Home from "./pages/Home";
 import Layout from "./pages/Layout";
@@ -14,7 +14,7 @@ function App() {
                 <Route path='/' element={<Layout />} >
                     <Route index element={<Home />} />
                     <Route path="catalog" element={<Catalog />} />
-                    <Route path="catalog/product:id" element={<Product />} />
+                    <Route path="/product:id" element={<Product />} />
                     <Route path="workshop" element={<Workshop />} />
                     <Route path="*" element={<PageNotFound />} />
                 </Route>

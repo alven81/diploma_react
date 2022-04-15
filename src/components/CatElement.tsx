@@ -1,6 +1,5 @@
 import { FC } from "react"
-import { Link, NavLink } from "react-router-dom"
-import Product from "../pages/Product"
+import { Link } from "react-router-dom"
 import IElement from "../types/element"
 
 interface CatElementProps {
@@ -11,27 +10,14 @@ const CatElement: FC<CatElementProps> = ({ catalog }) => {
 
 const discountPercent = Math.round((catalog.price - catalog.discount_price) / catalog.price*100)
 
-
-// return (
-//     <div className="user-page">
-//         <form
-//         onSubmit={handleFilter}>
-//             <input ref={input} name="value"/>
-//             <button>Filter</button>
-//         </form>
-//         {
-//             userList.map(user => <Link key={user.id} to={`/users/${user.id}`}><UserItem user={user} /></Link>)
-//         }
-//     </div>
-// )
-
-
     return (
             <div className="catalog_main-element">
                 <div className="catalog_main-element-image">
                     <img className={catalog.new === true ? "new" : "hide"} src="./assets/img/new.svg" alt=""/>
                     <div>
-                        <Link key={catalog.id} to={`product:${catalog.id}`}><img className="catalog_main-element-image-main" src={`http://localhost:3000${catalog.image}`} alt=""/></Link>
+                        <Link key={catalog.id} to={`/product:${catalog.id}`}>
+                            <img className="catalog_main-element-image-main" src={`http://localhost:3000${catalog.image}`} alt=""/>
+                        </Link>
                     </div>
                     <div className={catalog.discount === true ? "discount_block" : "hide"}>
                         <div className="catalog_main-element-disc_top">
@@ -57,8 +43,3 @@ const discountPercent = Math.round((catalog.price - catalog.discount_price) / ca
     )
 }
 export default CatElement                
-
-//<p>{catalog.id}</p>             
-//<p>{catalog.new}</p>
-                
-                
