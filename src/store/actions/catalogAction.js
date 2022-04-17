@@ -4,4 +4,5 @@ function addCatalogData(catalog) {
         payload: catalog
     }
 }
+
 export { addCatalogData }

@@ -1,5 +1,8 @@
 import IFeatures from "./features";
+import IReview from "./review";
+
 export default interface IProducts {
+    [x: string]: any;
     id: number,
     price: number,
     discount: boolean, 
@@ -12,6 +15,6 @@ export default interface IProducts {
     image: string,
     icons: [],
     consist: [],
-    review: [],
+    review: IReview,
     raiting: []
 }

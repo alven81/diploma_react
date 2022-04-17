@@ -7,7 +7,6 @@ import IElement from "../types/element"
 
 const Catalog: FC = () => {
 
-    //const [catalogData, setCatalogData] = useState<IElement[]>([])
     const catalog = useSelector((state: RootStateOrAny) => state.catalogData.catalogList)
     const dispatch = useDispatch()
 
@@ -26,6 +25,3 @@ const Catalog: FC = () => {
     )
 }
 export default Catalog
-
-
-//<Link key={catalog.id} to={`product:${catalog.id}`}><img className="catalog_main-element-image-main" src={`http://localhost:3000${catalog.image}`} alt=""/>

@@ -2,6 +2,9 @@ $containerBackground: #ffffff;
 $headerDarker: #f2785f;
 $lightFont: #ffffff;
 $lightBackground: #ffffff;
+$mainBlack: #000000;
+$mainPinc: #f04784;
+$produckBtnBorder: #fc5185;
 //$headerLighter:
 
 @mixin fontPattaya ($weight, $fontSize, $lineHeight) {
@@ -10,4 +13,8 @@ $lightBackground: #ffffff;
 
 @mixin fontRoboto ($weight, $fontSize, $lineHeight) {
     font: $weight #{$fontSize}px/#{$lineHeight}px "Roboto", sans-serif;
+}
+
+.hide {
+    display: none;
 }

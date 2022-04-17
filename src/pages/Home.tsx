@@ -1,3 +1,5 @@
+import { Button } from "@mui/material"
+
 const Home = () => {
     return (
         <div className="home_main container">
@@ -16,7 +18,7 @@ const Home = () => {
                             идей для творчества 
                         </span>
                         <span className="home_main-theme-button">
-                            <button>Вдохновись</button>
+                            <Button variant="contained">Вдохновись</Button>
                         </span>
                     </div>
                     <img src="./assets/img/oreol.png" alt="" />
