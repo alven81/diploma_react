@@ -2,13 +2,14 @@ import { Rating } from "@mui/material";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux"
+import { useParams } from "react-router";
+import { Features } from "../components/Features";
 import { ImageBox } from "../components/ImageBox";
 import { Review } from "../components/Review";
-//import IProducts from "../types/products";
 
 const Product = () => {
 
-    const itemIndex = useSelector ((state) => state.itemIndexData.indexList)
+    const itemIndex = useParams().id;
     const catalog = useSelector((state) => state.catalogData.catalogList)
     const catalogList = catalog[itemIndex - 1]
     const [raiting, setRaiting] = useState([]);
@@ -16,20 +17,24 @@ const Product = () => {
 
 
     useEffect(() => {
+        if (!catalogList) return;
+
         axios.get(`http://localhost:3004/products/${catalogList.id}`)
         .then(res => setRaiting(res.data.raiting))
-        }, [catalogList.id]
+        }, [catalogList]
     )
 
     useEffect(() => {
+
         setAverageRating((raiting.reduce((x, y) => x + y, 0))/raiting.length)
         }, [raiting]
     )
 
-//console.log(raiting, averageRating)
+console.log(raiting, averageRating)
 
     const handleRate = (e) => {
         if (e.target.value) {
+            //e.stopPropagation();
         setRaiting(raiting.push(Number(e.target.value)))
         console.log(raiting);
          axios.patch(`http://localhost:3004/products/${catalogList.id}`, {
@@ -41,6 +46,8 @@ const Product = () => {
           });
         }
     }
+
+    if (!catalogList) return null;
 
     return (
         <section className="product_main container">
@@ -101,15 +108,7 @@ const Product = () => {
                             <p>{catalogList.description}</p>             
                     </div>
                     <div className="product_main-item-about">
-                            <h3>Характеристики</h3> 
-                            <p>Вид товара с упаковкой (г)<span>{catalogList.features.weight}</span></p>
-                            <p>Вид творчества<span>{catalogList.features.creation}</span></p>
-                            <p>Возрастные ограничения<span>{catalogList.features.age}</span></p>
-                            <p>Высота упаковки<span>{catalogList.features.height_gross}</span></p>
-                            <p>Глубина упаковки<span>{catalogList.features.deep}</span></p>
-                            <p>Ширина упаковки<span>{catalogList.features.width}</span></p>
-                            <p>Высота изделия<span>{catalogList.features.height}</span></p>
-                            <p>Страна производства<span>{catalogList.features.origin}</span></p>
+                        <Features features={catalogList.features} />
                     </div>
                     <div className="product_main-item-consist">
                             <h3>Состав:</h3>
