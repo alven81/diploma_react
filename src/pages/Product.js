@@ -1,32 +1,46 @@
 import { Rating } from "@mui/material";
 import axios from "axios";
-import { useEffect, useState } from "react";
-import { useSelector } from "react-redux"
+import { useEffect, useState, FC } from "react";
+import { useDispatch, useSelector } from "react-redux"
+import { useNavigate, useParams } from "react-router-dom";
+import { Features } from "../components/Features";
 import { ImageBox } from "../components/ImageBox";
 import { Review } from "../components/Review";
+import { addCatalogData } from "../store/actions/catalogAction";
 //import IProducts from "../types/products";
 
 const Product = () => {
 
-    const itemIndex = useSelector ((state) => state.itemIndexData.indexList)
-    const catalog = useSelector((state) => state.catalogData.catalogList)
-    const catalogList = catalog[itemIndex - 1]
+    const { id } = useParams(); // hook
+    //const catalog = useSelector((state) => state.catalogData.catalogList)
+    //const dispatch = useDispatch()
+    const [catalogList, setcatalogList] = useState([]);
     const [raiting, setRaiting] = useState([]);
     const [averageRating, setAverageRating] = useState();
-
+  
+console.log(`http://localhost:3004/products/`);
 
     useEffect(() => {
-        axios.get(`http://localhost:3004/products/${catalogList.id}`)
+        axios.get(`http://localhost:3004/products/${id}`)
+        .then(res => setcatalogList(res.data))
+        }, []
+    )
+   //console.log("id: ", id, ",", "catalog: ", catalogList)
+    
+    //const catalogList = catalog[id-1]
+
+    useEffect(() => {
+        axios.get(`http://localhost:3004/products/${catalogList}.${id}`)
         .then(res => setRaiting(res.data.raiting))
-        }, [catalogList.id]
+        }, []
     )
 
-    useEffect(() => {
-        setAverageRating((raiting.reduce((x, y) => x + y, 0))/raiting.length)
-        }, [raiting]
-    )
+    // useEffect(() => {
+    //     setAverageRating((raiting.reduce((x, y) => x + y, 0))/raiting.length)
+    //     }, [raiting]
+    // )
 
-//console.log(raiting, averageRating)
+   console.log("id: ", id, ",", "catalog: ", catalogList, "raiting: ", raiting);
 
     const handleRate = (e) => {
         if (e.target.value) {
@@ -75,6 +89,7 @@ const Product = () => {
                         />
                     </div>
                         блок для написания ревью
+                        <button onClick="">Отправить</button>
                     </div>
                     <div className="product_main-item-review">
                         <Review reviews={catalogList.review} />
@@ -96,12 +111,14 @@ const Product = () => {
                         {/* <image />
                         <image /> */}
                     </div>
+                
                     <div className="product_main-item-description">       
                             <h3>Описание:</h3> 
                             <p>{catalogList.description}</p>             
                     </div>
                     <div className="product_main-item-about">
-                            <h3>Характеристики</h3> 
+                        <Features features={catalogList.features} />
+                            {/* <h3>Характеристики</h3> 
                             <p>Вид товара с упаковкой (г)<span>{catalogList.features.weight}</span></p>
                             <p>Вид творчества<span>{catalogList.features.creation}</span></p>
                             <p>Возрастные ограничения<span>{catalogList.features.age}</span></p>
@@ -109,7 +126,7 @@ const Product = () => {
                             <p>Глубина упаковки<span>{catalogList.features.deep}</span></p>
                             <p>Ширина упаковки<span>{catalogList.features.width}</span></p>
                             <p>Высота изделия<span>{catalogList.features.height}</span></p>
-                            <p>Страна производства<span>{catalogList.features.origin}</span></p>
+                            <p>Страна производства<span>{catalogList.features.origin}</span></p> */}
                     </div>
                     <div className="product_main-item-consist">
                             <h3>Состав:</h3>

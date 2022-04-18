@@ -7,14 +7,14 @@ import IElement from "../types/element"
 
 const Catalog: FC = () => {
 
-    const catalog = useSelector((state: RootStateOrAny) => state.catalogData.catalogList)
-    const dispatch = useDispatch()
+     const catalog = useSelector((state: RootStateOrAny) => state.catalogData.catalogList)
+     //const dispatch = useDispatch()
 
-    useEffect(() => {
-        axios.get<IElement[]>('http://localhost:3004/products')
-        .then(res => dispatch(addCatalogData(res.data)))
+    // useEffect(() => {
+    //     axios.get<IElement[]>('http://localhost:3004/products')
+    //     .then(res => dispatch(addCatalogData(res.data)))
 
-    }, [dispatch])
+    // }, [dispatch])
 
     return (
             <div className="catalog_main container">
