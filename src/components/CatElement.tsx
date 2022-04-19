@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 import { useDispatch } from "react-redux"
 import IElement from "../types/element"
 import { addItemIndex } from "../store/actions/indexAction"
+import Product from "../pages/Product"
 
 interface CatElementProps {
     catalog: IElement,
@@ -10,10 +11,8 @@ interface CatElementProps {
 
 const CatElement: FC<CatElementProps> = ({ catalog }) => {
 
-    const dispatch = useDispatch()
-
     const discountPercent = Math.round((catalog.price - catalog.discount_price) / catalog.price*100)
-
+    const dispatch = useDispatch();
     return (
             <div className="catalog_main-element">
                 <div className="catalog_main-element-image">
@@ -21,7 +20,8 @@ const CatElement: FC<CatElementProps> = ({ catalog }) => {
                     <div>
                         <Link key={catalog.id} to={`/product/${catalog.id}`}>
                             <img className="catalog_main-element-image-main" 
-                                onClick={() => dispatch(addItemIndex(catalog.id))} 
+                                onClick={() => {dispatch(addItemIndex(catalog.id));
+                                <Product />}}
                                 src={`http://localhost:3000${catalog.image}`} alt=""/>
                         </Link>
                     </div>

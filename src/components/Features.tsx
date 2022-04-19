@@ -10,28 +10,28 @@ const Features: FC<FeaturesProps> = ({features}) => {
         <>
             <h3>Характеристики</h3>
             <div>
-                <p>Вид товара с упаковкой (г)</p><span>{features.weight}</span>
+                <p>Вид товара с упаковкой (г)</p><em></em><span>{features.weight}</span>
             </div>
             <div>
-                <p>Вид творчества</p><span>{features.creation}</span>
+                <p>Вид творчества</p><em></em><span>{features.creation}</span>
             </div>
             <div>
-                <p>Возрастные ограничения</p><span>{features.age}</span>
+                <p>Возрастные ограничения</p><em></em><span>{features.age}</span>
             </div>
             <div>
-                <p>Высота упаковки</p><span>{features.height_gross}</span>
+                <p>Высота упаковки</p><em></em><span>{features.height_gross}</span>
             </div>
             <div>
-                <p>Глубина упаковки</p><span>{features.deep}</span>
+                <p>Глубина упаковки</p><em></em><span>{features.deep}</span>
             </div>
             <div>
-                <p>Ширина упаковки</p><span>{features.width}</span>
+                <p>Ширина упаковки</p><em></em><span>{features.width}</span>
             </div>
             <div>
-                <p>Высота изделия</p><span>{features.height}</span>
+                <p>Высота изделия</p><em></em><span>{features.height}</span>
             </div>
             <div>
-                <p>Страна производства</p><span>{features.origin}</span>
+                <p>Страна производства</p><em></em><span>{features.origin}</span>
             </div>
         </>
     )

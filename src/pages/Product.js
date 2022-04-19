@@ -1,150 +1,129 @@
 import { Rating } from "@mui/material";
 import axios from "axios";
-import { useEffect, useState, FC } from "react";
-import { useDispatch, useSelector } from "react-redux"
-import { useNavigate, useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useSelector } from "react-redux"
+import { useParams } from "react-router";
+import Comments from "../components/Comments";
 import { Features } from "../components/Features";
 import { ImageBox } from "../components/ImageBox";
 import { Review } from "../components/Review";
-import { addCatalogData } from "../store/actions/catalogAction";
-//import IProducts from "../types/products";
 
 const Product = () => {
 
-    const { id } = useParams(); // hook
-    //const catalog = useSelector((state) => state.catalogData.catalogList)
-    //const dispatch = useDispatch()
-    const [catalogList, setcatalogList] = useState([]);
+    const itemIndex = useParams().id;
+    const catalog = useSelector((state) => state.catalogData.catalogList)
+    const catalogList = catalog[itemIndex - 1]
     const [raiting, setRaiting] = useState([]);
     const [averageRating, setAverageRating] = useState();
   
 console.log(`http://localhost:3004/products/`);
 
-    useEffect(() => {
-        axios.get(`http://localhost:3004/products/${id}`)
-        .then(res => setcatalogList(res.data))
-        }, []
-    )
-   //console.log("id: ", id, ",", "catalog: ", catalogList)
-    
-    //const catalogList = catalog[id-1]
+ useEffect(() => {
+        if (!catalogList) return;
 
-    useEffect(() => {
-        axios.get(`http://localhost:3004/products/${catalogList}.${id}`)
+        axios.get(`http://localhost:3004/products/${catalogList.id}`)
         .then(res => setRaiting(res.data.raiting))
-        }, []
+        }, [catalogList]
     )
 
-    // useEffect(() => {
-    //     setAverageRating((raiting.reduce((x, y) => x + y, 0))/raiting.length)
-    //     }, [raiting]
-    // )
+    useEffect(() => {
+        if (!catalogList) return;
 
-   console.log("id: ", id, ",", "catalog: ", catalogList, "raiting: ", raiting);
+        axios.get(`http://localhost:3004/products/${catalogList.id}`)
+        .then(res => setRaiting(res.data.raiting))
+        }, [catalogList]
+    )
+
+    useEffect(() => {
+        setAverageRating((raiting.reduce((x, y) => x + y, 0))/raiting.length)
+        }, [raiting]
+    )
+
+const updateRaiting = () => {
+    setAverageRating((raiting.reduce((x, y) => x + y, 0))/raiting.length)
+}
+
+console.log(raiting, averageRating)
 
     const handleRate = (e) => {
         if (e.target.value) {
-        setRaiting(raiting.push(Number(e.target.value)))
-        console.log(raiting);
-         axios.patch(`http://localhost:3004/products/${catalogList.id}`, {
-             raiting: raiting
-         }).then(resp => {
-            console.log(resp.data);
-         }).catch(error => {
-            console.log(error);
-          });
+            
+            raiting.push(Number(e.target.value));
+
+            axios.patch(`http://localhost:3004/products/${catalogList.id}`, 
+            {raiting: raiting})
+            .then(updateRaiting(raiting))
+            .then(resp => {console.log(resp.data)})
+            .catch(error => {console.log(error)});
         }
     }
+
+    if (!catalogList) return null;
 
     return (
         <section className="product_main container">
             <div className="product_main-name">
                 <p>{catalogList.title}</p>
             </div>
+
+
             <div className="product_main-item">
+
+
                 <div className="product_main-item-pictures">
                     <ImageBox imageList={catalogList.icons} imageMain={catalogList.image} newProduct={catalogList.new} age={catalogList.features.age} />
                     <div className="product_main-item-raiting">
                         <div className="product_main-item-raiting-block">
-                            <Rating 
-                                name="half-rating" 
-                                defaultValue={0} 
-                                precision={0.5} 
-                                value={+averageRating}
-                                readOnly
-                            />
+                            <Rating name="half-rating" defaultValue={0} precision={0.5} value={Number(averageRating)} readOnly />
                             <p>Отзывы</p>
                         </div>
-                        <div className="product_main-item-raiting-btn">
+                        <div className="button_container">
                             <button>Написать отзыв</button>
                         </div>
                     </div>
                     <div className="">
-                    <div>
-                        <Rating 
-                            name="half-rating" 
-                            defaultValue={0} 
-                            precision={0.5} 
-                            onClick={(e) => (handleRate(e))}
-                        />
-                    </div>
-                        блок для написания ревью
-                        <button onClick="">Отправить</button>
+                        <Comments onClick={(e) => (handleRate(e))} className=""/>
                     </div>
                     <div className="product_main-item-review">
                         <Review reviews={catalogList.review} />
                     </div>
                 </div>
-                <div className="product_main-item-price">
-                    <p>
-                        Цена: {catalogList.price}
-                    </p>
-                    <p>
-                        "discount": {catalogList.discount}
-                        "discount_price": {catalogList.discount_price}
-                    </p>
-                    <p>
-                        Цвет: {catalogList.color}
-                    </p>
-                    <div>
-                        <button />
-                        {/* <image />
-                        <image /> */}
+
+
+                <div className="product_main-item-info">
+                    <div className="product_main-item-info-price">
+                        <p className={catalogList.discount === true ? "overline" : ""}>
+                            Цена: <span>{`${catalogList.price} руб.`}</span>
+                        </p>
+                        <p  className={catalogList.discount === true ? "discount" : "hide"}>
+                            Цена со скидкой: <span>{`${catalogList.discount_price} руб.`}</span>
+                        </p>
+                        <p>
+                            Цвет: <span>{catalogList.color}</span>
+                        </p>
+                        <div className="button_container button_cart">
+                            <button >
+                            Добавить в корзину
+                            </button>
+                        </div>
                     </div>
-                
+
                     <div className="product_main-item-description">       
-                            <h3>Описание:</h3> 
+                            <h3>Описание</h3> 
                             <p>{catalogList.description}</p>             
                     </div>
+
                     <div className="product_main-item-about">
                         <Features features={catalogList.features} />
-                            {/* <h3>Характеристики</h3> 
-                            <p>Вид товара с упаковкой (г)<span>{catalogList.features.weight}</span></p>
-                            <p>Вид творчества<span>{catalogList.features.creation}</span></p>
-                            <p>Возрастные ограничения<span>{catalogList.features.age}</span></p>
-                            <p>Высота упаковки<span>{catalogList.features.height_gross}</span></p>
-                            <p>Глубина упаковки<span>{catalogList.features.deep}</span></p>
-                            <p>Ширина упаковки<span>{catalogList.features.width}</span></p>
-                            <p>Высота изделия<span>{catalogList.features.height}</span></p>
-                            <p>Страна производства<span>{catalogList.features.origin}</span></p> */}
                     </div>
+
                     <div className="product_main-item-consist">
                             <h3>Состав:</h3>
                             <p>{catalogList.consist}</p>
                     </div>
+
                 </div>
             </div>
-            {/*"image": "/images/1_1.jpg",
-            "icons": [
-            ],
-            "consist": [
-            ],
-            "review": [],
-            "raiting": []
- */}
-
-
-
 </section>
     )
 }
