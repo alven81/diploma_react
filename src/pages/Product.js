@@ -26,18 +26,10 @@ console.log(`http://localhost:3004/products/`);
         }, [catalogList]
     )
 
-    useEffect(() => {
-        if (!catalogList) return;
-
-        axios.get(`http://localhost:3004/products/${catalogList.id}`)
-        .then(res => setRaiting(res.data.raiting))
-        }, [catalogList]
-    )
-
-    useEffect(() => {
-        setAverageRating((raiting.reduce((x, y) => x + y, 0))/raiting.length)
-        }, [raiting]
-    )
+useEffect(() => {
+    setAverageRating((raiting.reduce((x, y) => x + y, 0))/raiting.length)
+    }, [raiting]
+)
 
 const updateRaiting = () => {
     setAverageRating((raiting.reduce((x, y) => x + y, 0))/raiting.length)
@@ -58,73 +50,83 @@ console.log(raiting, averageRating)
         }
     }
 
-    if (!catalogList) return null;
+    //if (!catalogList) return null;
 
     return (
+
+
         <section className="product_main container">
+            
+            { catalogList &&
+            <>
             <div className="product_main-name">
-                <p>{catalogList.title}</p>
+                    <p>{catalogList.title}</p>
+                </div><div className="product_main-item">
+
+
+                        <div className="product_main-item-pictures">
+                            <ImageBox imageList={catalogList.icons} imageMain={catalogList.image} newProduct={catalogList.new} age={catalogList.features.age} />
+                            <div className="product_main-item-raiting">
+                                <div className="product_main-item-raiting-block">
+                                    <Rating name="half-rating" defaultValue={0} precision={0.5} value={Number(averageRating)} readOnly />
+                                    <p>Отзывы</p>
+                                </div>
+                                <div className="button_container">
+                                    <button>Написать отзыв</button>
+                                </div>
+                            </div>
+                            <div className="">
+                                <Comments onClick={(e) => (handleRate(e))} className="" />
+                            </div>
+                            <div className="product_main-item-review">
+                                <Review reviews={catalogList.review} />
+                            </div>
+                        </div>
+
+
+                        <div className="product_main-item-info">
+                            <div className="product_main-item-info-price">
+                                <p className={catalogList.discount === true ? "overline" : ""}>
+                                    Цена: <span>{`${catalogList.price} руб.`}</span>
+                                </p>
+                                <p className={catalogList.discount === true ? "discount" : "hide"}>
+                                    Цена со скидкой: <span>{`${catalogList.discount_price} руб.`}</span>
+                                </p>
+                                <p>
+                                    Цвет: <span>{catalogList.color}</span>
+                                </p>
+                                <div className="button_container button_cart">
+                                    <button>
+                                        Добавить в корзину
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div className="product_main-item-description">
+                                <h3>Описание</h3>
+                                <p>{catalogList.description}</p>
+                            </div>
+
+                            <div className="product_main-item-about">
+                                <Features features={catalogList.features} />
+                            </div>
+
+                            <div className="product_main-item-consist">
+                                <h3>Состав:</h3>
+                                <p>{catalogList.consist}</p>
+                            </div>
+
+                        </div>
+            </div></>
+
+            } 
+
+            <div className={catalogList ? "hide" : "no_data"}>
+                <p>Упс, похоже не запущен JSON-server...</p>
             </div>
 
-
-            <div className="product_main-item">
-
-
-                <div className="product_main-item-pictures">
-                    <ImageBox imageList={catalogList.icons} imageMain={catalogList.image} newProduct={catalogList.new} age={catalogList.features.age} />
-                    <div className="product_main-item-raiting">
-                        <div className="product_main-item-raiting-block">
-                            <Rating name="half-rating" defaultValue={0} precision={0.5} value={Number(averageRating)} readOnly />
-                            <p>Отзывы</p>
-                        </div>
-                        <div className="button_container">
-                            <button>Написать отзыв</button>
-                        </div>
-                    </div>
-                    <div className="">
-                        <Comments onClick={(e) => (handleRate(e))} className=""/>
-                    </div>
-                    <div className="product_main-item-review">
-                        <Review reviews={catalogList.review} />
-                    </div>
-                </div>
-
-
-                <div className="product_main-item-info">
-                    <div className="product_main-item-info-price">
-                        <p className={catalogList.discount === true ? "overline" : ""}>
-                            Цена: <span>{`${catalogList.price} руб.`}</span>
-                        </p>
-                        <p  className={catalogList.discount === true ? "discount" : "hide"}>
-                            Цена со скидкой: <span>{`${catalogList.discount_price} руб.`}</span>
-                        </p>
-                        <p>
-                            Цвет: <span>{catalogList.color}</span>
-                        </p>
-                        <div className="button_container button_cart">
-                            <button >
-                            Добавить в корзину
-                            </button>
-                        </div>
-                    </div>
-
-                    <div className="product_main-item-description">       
-                            <h3>Описание</h3> 
-                            <p>{catalogList.description}</p>             
-                    </div>
-
-                    <div className="product_main-item-about">
-                        <Features features={catalogList.features} />
-                    </div>
-
-                    <div className="product_main-item-consist">
-                            <h3>Состав:</h3>
-                            <p>{catalogList.consist}</p>
-                    </div>
-
-                </div>
-            </div>
-</section>
+        </section>
     )
 }
+
 export default Product

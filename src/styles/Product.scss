@@ -112,6 +112,13 @@ h3 {
     }
 }
 
-
+.no_data {
+    p{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include fontRoboto(500, 30, 30);
+    }
+}
 
 
