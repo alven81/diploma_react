@@ -6,19 +6,15 @@ import Layout from "./pages/Layout";
 import PageNotFound from "./pages/PageNotFound";
 import Product from "./pages/Product";
 import Workshop from "./pages/Workshop";
-import { useDispatch } from "react-redux";
-import { useEffect } from "react";
-import axios from "axios";
-import IElement from "./types/element";
-import { addCatalogData } from "./store/actions/catalogAction";
+import { useDispatch, useSelector } from "react-redux";
+import React, { useEffect } from "react";
+import getCatalogData from "./store/actions/loadCatalogAction";
 
 const App = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        axios.get<IElement[]>('http://localhost:3004/products')
-        .then(res => dispatch(addCatalogData(res.data)))
-
+        dispatch(getCatalogData())
     }, [dispatch])
 
     return (
