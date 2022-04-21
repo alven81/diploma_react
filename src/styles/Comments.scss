@@ -1,0 +1,13 @@
+.comments {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    &-block
+        {
+            &-text {
+                display: flex;
+                width: 95%;
+                height: 100px;
+            }
+        }
+}

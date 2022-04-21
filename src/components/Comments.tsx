@@ -8,8 +8,8 @@ interface CommentsProps {
 
 const Comments: FC<CommentsProps> = ({ onClick, className }) => {
     return (
-        <>
-            <div>
+        <div className="comments">
+            <div className="comments-rating">
                 <Rating 
                     name="half-rating" 
                     defaultValue={0} 
@@ -17,11 +17,15 @@ const Comments: FC<CommentsProps> = ({ onClick, className }) => {
                     onClick={onClick}
                 />
             </div>
-            <div>
-                блок для написания ревью
-                <button>Отправить</button>
+            <div className="comments-block">
+                <textarea className="comments-block-text">
+
+                </textarea>
+                <div className="button_container">
+                    <button className="button">Отправить</button>
+                </div>
             </div>
-        </>
+        </div>
     )
 }
 

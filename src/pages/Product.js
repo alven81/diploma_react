@@ -11,14 +11,14 @@ import { Review } from "../components/Review";
 const Product = () => {
 
     const itemIndex = useParams().id;
-    const catalog = useSelector(state => state.loadCatalog)
+    const catalog = useSelector((state) => state.loadCatalog);
     const catalogList = catalog[itemIndex - 1]
     const [raiting, setRaiting] = useState([]);
     const [averageRating, setAverageRating] = useState();
-  
-console.log(`http://localhost:3004/products/`);
+    const [showComment, setShowComment] = useState(false)
 
- useEffect(() => {
+
+useEffect(() => {
         if (!catalogList) return;
 
         axios.get(`http://localhost:3004/products/${catalogList.id}`)
@@ -35,25 +35,25 @@ const updateRaiting = () => {
     setAverageRating((raiting.reduce((x, y) => x + y, 0))/raiting.length)
 }
 
-console.log(raiting, averageRating)
-
-    const handleRate = (e) => {
-        if (e.target.value) {
-            
-            raiting.push(Number(e.target.value));
-
-            axios.patch(`http://localhost:3004/products/${catalogList.id}`, 
-            {raiting: raiting})
-            .then(updateRaiting(raiting))
-            .then(resp => {console.log(resp.data)})
-            .catch(error => {console.log(error)});
-        }
+const handleRate = (e) => {
+    if (e.target.value) {
+        
+        raiting.push(Number(e.target.value));
+        axios.patch(`http://localhost:3004/products/${catalogList.id}`, 
+        {raiting: raiting})
+        .then(updateRaiting(raiting))
+        .then(resp => {console.log(resp.data)})
+        .catch(error => {console.log(error)});
     }
+}
+
+const handleShowComments = () => {
+    setShowComment(!showComment);
+}
 
     //if (!catalogList) return null;
 
     return (
-
 
         <section className="product_main container">
             
@@ -72,12 +72,14 @@ console.log(raiting, averageRating)
                                     <p>Отзывы</p>
                                 </div>
                                 <div className="button_container">
-                                    <button>Написать отзыв</button>
+                                    <button onClick={(e) => handleShowComments()}>Написать отзыв</button>
                                 </div>
                             </div>
-                            <div className="">
+
+                            <div className={showComment ? "" : "hide"}>
                                 <Comments onClick={(e) => (handleRate(e))} className="" />
                             </div>
+
                             <div className="product_main-item-review">
                                 <Review reviews={catalogList.review} />
                             </div>
