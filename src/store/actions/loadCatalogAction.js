@@ -3,8 +3,11 @@ import axios from "axios";
 function getCatalogData() {
     
     return (dispatch) => {
-        axios.get('http://localhost:3004/products')
-        .then(res => dispatch(setCatalogData(res.data)))
+        axios.get('http://localhost:3004/products').then ((res) => {
+            console.log("does work?");
+            dispatch(setCatalogData(res.data))
+        });
+        
     }
 }
 

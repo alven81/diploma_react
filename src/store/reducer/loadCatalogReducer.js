@@ -2,12 +2,12 @@
  const initialState = { loadCatalog: []}
  
  const loadCatalogReducer = (state = initialState, action) => {
-    console.log(action);
+    console.log("Reducer: ", action);
     switch (action.type) {
         case "SET_CATALOG_DATA":
             return {
                 ...state,
-                loadCatalog: [...action.payload]
+                loadCatalog: [ ...action.payload]
             }
 
         default:

@@ -1,6 +1,6 @@
 import { Rating } from "@mui/material";
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useSelector } from "react-redux"
 import { useParams } from "react-router";
 import Comments from "../components/Comments";
@@ -11,7 +11,7 @@ import { Review } from "../components/Review";
 const Product = () => {
 
     const itemIndex = useParams().id;
-    const catalog = useSelector(state => state.loadData.loadCatalog)
+    const catalog = useSelector(state => state.loadCatalog)
     const catalogList = catalog[itemIndex - 1]
     const [raiting, setRaiting] = useState([]);
     const [averageRating, setAverageRating] = useState();

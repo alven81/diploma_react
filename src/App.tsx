@@ -6,15 +6,16 @@ import Layout from "./pages/Layout";
 import PageNotFound from "./pages/PageNotFound";
 import Product from "./pages/Product";
 import Workshop from "./pages/Workshop";
-import { useDispatch, useSelector } from "react-redux";
-import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { useEffect } from "react";
+import { store } from './store/index'
 import getCatalogData from "./store/actions/loadCatalogAction";
 
 const App = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(getCatalogData())
+        store.dispatch(getCatalogData())
     }, [dispatch])
 
     return (

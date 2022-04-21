@@ -1,12 +1,12 @@
-import { combineReducers, applyMiddleware } from "redux";
+import { combineReducers } from "redux";
 import { catalogReducer } from "./catalogReducer";
 import { catalogProdReducer } from "./catalogProdReducer";
 import { indexReducer } from "./indexReducer";
-import thunk from "redux-thunk";
+//import thunk from "redux-thunk";
 import  loadCatalogReducer  from "./loadCatalogReducer";
-import { compose } from "redux";
+//import { compose } from "redux";
 
-const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+//const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const reducer = combineReducers(
     {
@@ -16,7 +16,7 @@ const reducer = combineReducers(
     loadData: loadCatalogReducer
     
 },
-composeEnhancer(applyMiddleware(thunk))
+//composeEnhancer(applyMiddleware(thunk))
 );
 
 

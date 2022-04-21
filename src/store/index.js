@@ -1,4 +1,11 @@
-import { createStore } from "redux";
-import { reducer } from "./reducer/index"
+import { applyMiddleware, createStore } from "redux";
+import thunk from "redux-thunk";
+import loadCatalogReducer from "./reducer/loadCatalogReducer";
 
-export const store = createStore(reducer)
+const store = createStore(loadCatalogReducer, applyMiddleware(thunk));
+
+store.subscribe(() => {
+    console.log("store data: ", store.getState())
+})
+
+export {store}
