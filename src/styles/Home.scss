@@ -38,6 +38,7 @@
                 background-repeat: no-repeat;
                 background-position: 0 0;
                 span {
+                    @include fontPattaya(400, 36, 50);
                     margin-top: 16px;
                     text-align: center;
                     max-width: 432px;
@@ -56,6 +57,12 @@
                 background-repeat: no-repeat;
                 background-position: 100% 0;
                 height: 155px;
+                span:first-child {
+                    margin-top: 20px;
+                }
+                span:last-child {
+                    margin-top: 25px;
+                }
             }
         }
         &-right {

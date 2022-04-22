@@ -3,7 +3,9 @@ import { Button } from "@mui/material"
 const Home = () => {
     return (
         <div className="home_main container">
+
             <section className="home_main-theme">
+
                 <div className="home_main-theme-left">
                     <div className="home_main-theme-left-first">
                         <span>
@@ -23,10 +25,13 @@ const Home = () => {
                     </div>
                     <img src="./assets/img/oreol.png" alt="" />
                 </div>
+
                 <div className="home_main-theme-right">
                     <img src="./assets/img/slider1.png" alt="" />
                 </div>
+
             </section>
+
             <section className="home_main-head home_container">
                 <div className="home_main-head-name">
                     <span></span>

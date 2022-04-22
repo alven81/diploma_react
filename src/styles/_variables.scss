@@ -2,7 +2,7 @@ $containerBackground: #ffffff;
 $headerDarker: #f2785f;
 $lightFont: #ffffff;
 $lightBackground: #ffffff;
-$mainBlack: #000000;
+$mainBlack: #500000;
 $mainPinc: #f04784;
 $produckBtnBorder: #fc5185;
 $productPrice: #40403f;
@@ -20,4 +20,14 @@ $lineColor: #e3dadb;
 
 .hide {
     display: none;
+}
+
+.fullscreen-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    
+    background-color: rgba($color: #eadddd, $alpha: 0.5);
 }

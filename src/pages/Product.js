@@ -37,7 +37,6 @@ const updateRaiting = () => {
 
 const handleRate = (e) => {
     if (e.target.value) {
-        
         raiting.push(Number(e.target.value));
         axios.patch(`http://localhost:3004/products/${catalogList.id}`, 
         {raiting: raiting})
@@ -58,10 +57,12 @@ const handleShowComments = () => {
         <section className="product_main container">
             
             { catalogList &&
+
             <>
             <div className="product_main-name">
                     <p>{catalogList.title}</p>
-                </div><div className="product_main-item">
+                </div>
+                    <div className="product_main-item">
 
 
                         <div className="product_main-item-pictures">
@@ -77,7 +78,10 @@ const handleShowComments = () => {
                             </div>
 
                             <div className={showComment ? "" : "hide"}>
-                                <Comments onClick={(e) => (handleRate(e))} className="" />
+                                <Comments 
+                                    onClick={(e) => (handleRate(e))} 
+                                    handleShowComments={() => handleShowComments()} 
+                                />
                             </div>
 
                             <div className="product_main-item-review">
@@ -119,7 +123,8 @@ const handleShowComments = () => {
                             </div>
 
                         </div>
-            </div></>
+                </div>
+            </>
 
             } 
 
