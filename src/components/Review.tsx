@@ -6,7 +6,8 @@ interface ReviewProps {
 }
 
 const Review: FC<ReviewProps> = ({ reviews }) => {
-
+    console.log("rev", reviews);
+    
     return (
         <>
             {

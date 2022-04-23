@@ -41,8 +41,8 @@ const handleRate = (e) => {
         axios.patch(`http://localhost:3004/products/${catalogList.id}`, 
         {raiting: raiting})
         .then(updateRaiting(raiting))
-        .then(resp => {console.log(resp.data)})
-        .catch(error => {console.log(error)});
+        // .then(resp => {console.log(resp.data)})
+        // .catch(error => {console.log(error)});
     }
 }
 
@@ -80,7 +80,9 @@ const handleShowComments = () => {
                             <div className={showComment ? "" : "hide"}>
                                 <Comments 
                                     onClick={(e) => (handleRate(e))} 
-                                    handleShowComments={() => handleShowComments()} 
+                                    handleShowComments={() => handleShowComments()}
+                                    itemIndex={itemIndex}
+                                    showComment={showComment}
                                 />
                             </div>
 

@@ -1,35 +1,34 @@
 import { Rating } from "@mui/material"
 import axios from "axios";
-import { FC, useEffect, useRef, useState } from "react"
-
-interface CommentsProps {
-    onClick: React.MouseEventHandler<HTMLButtonElement>;
-    className: string;
-    handleShowComments: React.MouseEventHandler<HTMLButtonElement>
-}
-
-// useEffect(() => {
-//     if (!catalogList) return;
-//     raiting.push(Number(e.target.value));
-//     axios.patch(`http://localhost:3004/products/${catalogList.id}`, 
-//     {raiting: raiting})
-//     .then(updateRaiting(raiting))
-//     .then(resp => {console.log(resp.data)})
-//     .catch(error => {console.log(error)});
-// )
+import { useEffect, useState } from "react"
 
 
-const Comments: FC<CommentsProps> = ({ onClick, handleShowComments }) => {
+const Comments = ({ onClick, handleShowComments, itemIndex, showComment }) => {
     
-    //const [textComment, setTextComment] = useState<string>("")
-    const textComment = useRef<HTMLTextAreaElement>(null);
+    const [text, setText] = useState("");
+    const [id] = useState(itemIndex);
+    const [message, setMessage] = useState();
 
-
-    const sendComment = () => {
-        console.log(textComment.current?.value);
-        
+    const handleText = (e) => {
+        setText(e.target.value);
     }
 
+    const sendComment = (e) => {
+
+        setMessage(
+            [
+                {
+                    "user": "Alexander",
+                    "data": Date(),
+                    "text": text
+                }
+            ]
+        );
+        //console.log(message);
+        axios.patch(`http://localhost:3004/products/${id}`, 
+        {review: message});
+
+    }
 
     return (
         <div className="fullscreen-box">
@@ -38,13 +37,11 @@ const Comments: FC<CommentsProps> = ({ onClick, handleShowComments }) => {
                     <p>
                         Напишите ваш отзыв о товаре:
                     </p>
-                    <button onClick={handleShowComments}>
-                        x
-                    </button>
+                    <button className="cross-button" onClick={handleShowComments} />
                 </div>
                 {/* <form onSubmit={sendComment}> */}
                     <div className="comments-rating">
-                        <textarea ref={textComment} className="comments-block-text" />
+                        <textarea  className="comments-block-text" onChange={(e) => handleText(e)} />
                     </div>
                     <div className="comments-block">
                         <Rating 
@@ -54,7 +51,7 @@ const Comments: FC<CommentsProps> = ({ onClick, handleShowComments }) => {
                             onClick={onClick}
                         />
                         <div className="comments-block-button button_container">
-                            <button className="button" onClick={(e) => sendComment()} > Отправить</button>
+                            <button className="button" onClick={() => sendComment()} > Отправить</button>
                         </div>
                     </div>
                 {/* </form> */}

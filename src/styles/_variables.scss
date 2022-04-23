@@ -31,3 +31,51 @@ $lineColor: #e3dadb;
     
     background-color: rgba($color: #eadddd, $alpha: 0.5);
 }
+
+.cross-button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border: 1px solid $mainBlack;
+    &:hover {
+        &::before {
+            height: 23px;
+            width: 3px;
+            left: 47%;
+            transition: 0.1s ease-out;
+        }
+        &::after {
+            height: 23px;
+            width: 3px;
+            right: 47%;
+            transition: 0.1s ease-out;
+        }
+    }
+    
+    &::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        height: 17px;
+        width: 1px;
+        border-radius: 2px;
+        background-color: $mainBlack;
+        transform: rotate(-45deg);
+
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        right: 50%;
+        height: 17px;
+        width: 1px;
+        border-radius: 2px;
+        background-color: $mainBlack;
+        transform: rotate(45deg);
+
+    }
+}
