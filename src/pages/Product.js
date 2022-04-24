@@ -3,7 +3,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux"
 import { useParams } from "react-router";
-import Comments from "../components/Comments";
+import Comments from "../components/CommentsModal";
 import { Features } from "../components/Features";
 import { ImageBox } from "../components/ImageBox";
 import { Review } from "../components/Review";

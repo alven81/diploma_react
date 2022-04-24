@@ -41,6 +41,7 @@ $lineColor: #e3dadb;
     height: 30px;
     cursor: pointer;
     border: 1px solid $mainBlack;
+    border-radius: 5px;
     &:hover {
         &::before {
             height: 23px;
@@ -50,6 +51,20 @@ $lineColor: #e3dadb;
         }
         &::after {
             height: 23px;
+            width: 3px;
+            right: 47%;
+            transition: 0.1s ease-out;
+        }
+    }
+    &:active {
+        &::before {
+            height: 17px;
+            width: 3px;
+            left: 47%;
+            transition: 0.1s ease-out;
+        }
+        &::after {
+            height: 17px;
             width: 3px;
             right: 47%;
             transition: 0.1s ease-out;
