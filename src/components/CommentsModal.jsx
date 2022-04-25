@@ -1,33 +1,46 @@
 import { Rating } from "@mui/material"
 import axios from "axios";
 import { useEffect, useState } from "react"
+import { useSelector } from "react-redux";
 
 
-const Comments = ({ onClick, handleShowComments, itemIndex, showComment }) => {
+const CommentsModal = ({ onClick, handleShowComments, id, showComment }) => {
     
-    const [text, setText] = useState("");
-    const [id] = useState(itemIndex);
-    const [message, setMessage] = useState();
+    const [text, setText] = useState([]);
+    const itemIndex = id - 1;
+    const [newCatalog, setNewCatalog] = useState();
+    const catalog = useSelector((state) => state.loadCatalog);
+    console.log("id", id, ", ", "itemIndex", itemIndex);
+    
+    useEffect(() => {
+        if (!catalog) return;
+        setNewCatalog(catalog[itemIndex].review);
+        //console.log('newCatalog ', newCatalog)
+    }, [catalog, itemIndex])
+
 
     const handleText = (e) => {
-        setText(e.target.value);
-    }
-
-    const sendComment = (e) => {
-
-        setMessage(
-            [
+       setText(
                 {
                     "user": "Alexander",
                     "data": Date(),
-                    "text": text
+                    "text": e.target.value
                 }
-            ]
         );
-        //console.log(message);
-        axios.patch(`http://localhost:3004/products/${id}`, 
-        {review: message});
+        
+    }
 
+    const sendComment = (e) => {
+        const review = newCatalog;
+         
+        //if (e.target.value) 
+            review.push(text);
+            console.log("review", review);
+            axios.patch(`http://localhost:3004/products/${id}`, 
+            {review: review})
+            .then(setNewCatalog(review))
+            // .then(resp => {console.log(resp.data)})
+            // .catch(error => {console.log(error)});
     }
 
     return (
@@ -60,7 +73,7 @@ const Comments = ({ onClick, handleShowComments, itemIndex, showComment }) => {
     )
 }
 
-export default Comments
+export default CommentsModal
 
 
 

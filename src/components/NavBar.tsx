@@ -18,22 +18,22 @@ const NavBar: FC = () => {
                         </ul>
                     </div>
                     <div className="nav_top-contact">
-                        <img src="./assets/img/phone-call.svg" alt=""/>
+                        <img src="/assets/img/phone-call.svg" alt=""/>
                         <p>8(029)5779286</p>
                     </div>
                 </div>
                 <div className="nav_middle">
                     <div className="nav_middle-logo">
-                        <img src="./assets/img/logo.png" alt="логотип Креатив"/>
+                        <img src="/assets/img/logo.png" alt="логотип Креатив"/>
                     </div>
                     <div>
                         <InputSearch className="nav_middle-input" placeholder="Поиск товара"/><span className="nav_middle-loupe"/>
                     </div>
                     <div className="nav_middle-cart">
-                        <img src="./assets/img/cart_man.svg" alt="Регистрация" />
-                        <img src="./assets/img/cart_heart.svg" alt="Избранное" />
+                        <img src="/assets/img/cart_man.svg" alt="Регистрация" />
+                        <img src="/assets/img/cart_heart.svg" alt="Избранное" />
                         <span className="nav_middle-cart-span-heart">0</span>
-                        <img src="./assets/img/cart.svg" alt="Корзина" />
+                        <img src="/assets/img/cart.svg" alt="Корзина" />
                         <span className="nav_middle-cart-span-cart">0</span>
                     </div>
                 </div>

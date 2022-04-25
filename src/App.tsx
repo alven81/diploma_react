@@ -8,7 +8,7 @@ import Product from "./pages/Product";
 import Workshop from "./pages/Workshop";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
-import { store } from './store/index'
+import { store } from './store/index';
 import getCatalogData from "./store/actions/loadCatalogAction";
 
 const App = () => {

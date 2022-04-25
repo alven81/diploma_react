@@ -3,7 +3,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux"
 import { useParams } from "react-router";
-import Comments from "../components/CommentsModal";
+import CommentsModal from "../components/CommentsModal";
 import { Features } from "../components/Features";
 import { ImageBox } from "../components/ImageBox";
 import { Review } from "../components/Review";
@@ -12,10 +12,10 @@ const Product = () => {
 
     const itemIndex = useParams().id;
     const catalog = useSelector((state) => state.loadCatalog);
-    const catalogList = catalog[itemIndex - 1]
+    const catalogList = catalog[itemIndex - 1];
     const [raiting, setRaiting] = useState([]);
     const [averageRating, setAverageRating] = useState();
-    const [showComment, setShowComment] = useState(false)
+    const [showComment, setShowComment] = useState(false);
 
 
 useEffect(() => {
@@ -78,10 +78,10 @@ const handleShowComments = () => {
                             </div>
 
                             <div className={showComment ? "" : "hide"}>
-                                <Comments 
+                                <CommentsModal 
                                     onClick={(e) => (handleRate(e))} 
                                     handleShowComments={() => handleShowComments()}
-                                    itemIndex={itemIndex}
+                                    id={itemIndex}
                                     showComment={showComment}
                                 />
                             </div>

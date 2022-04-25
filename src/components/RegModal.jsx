@@ -1,7 +1,7 @@
 import { useState } from "react"
-import { doesUserExist } from "../functions/doesUserExist";
-import { getLastUserId } from "../functions/getLastUserId";
-import { setCredentials } from "../functions/setCredentials";
+import { doesUserExist } from "../utils/doesUserExist";
+import { getLastUserId } from "../utils/getLastUserId";
+import { setCredentials } from "../utils/setCredentials";
 
 const RegModal = () => {
     
@@ -9,22 +9,30 @@ const RegModal = () => {
     const [lastName, setLastName] = useState(null);
     const [eMail, setEMail] = useState(null);
     const [passMain, setPassMain] = useState(null);
+    //const [lastUserId, setLastUserId] = useState(null);
+    //const [userExist, setUserExist] = useState(true);
 
-    const handleRegUser = (e) => {
+
+    const handleRegUser = async (e) => {
         e.preventDefault();
-        //if (!doesUserExist(eMail)) console.log(doesUserExist()); //alert("Пользователь с таким адресом загеристрирован!");
-        console.log(doesUserExist(eMail));
+
+        const userId = await getLastUserId();
+        
         if (!firstName || !lastName || !eMail || !passMain) return alert("Необходимо заполнить форму!");
+
+        const userExist = await doesUserExist(eMail);
+
+        if (userExist) return alert("Пользователь с таким адресом загеристрирован!");
         
         const credentials = ({
-            "id": getLastUserId(),
+            "id": userId,
             "firstName": firstName,
             "lastName": lastName,
             "email": eMail,
             "password": passMain
         });
 
-        //setCredentials(credentials);
+        setCredentials(credentials);
     }
 
     return (

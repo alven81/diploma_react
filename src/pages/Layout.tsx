@@ -5,7 +5,7 @@ import RegModal from "../components/RegModal"
 
 const Layout = () => {
 
-const userIsLogin = true;
+const userIsLogin = false;
 
     return (
         <div className="main_container">
