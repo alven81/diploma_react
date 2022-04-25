@@ -5,7 +5,7 @@ import RegModal from "../components/RegModal"
 
 const Layout = () => {
 
-const isOpenRegModal = true;
+const userIsLogin = true;
 
     return (
         <div className="main_container">
@@ -13,7 +13,7 @@ const isOpenRegModal = true;
                 <main>
                     <Outlet />
                     {
-                        isOpenRegModal && < RegModal />
+                        userIsLogin && < RegModal />
                     }
                 </main>
             <Footer />

@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
-import { catalogReducer } from "./catalogReducer";
-import { catalogProdReducer } from "./catalogProdReducer";
+//import { catalogReducer } from "./catalogReducer_";
+//import { catalogProdReducer } from "./catalogProdReducer_";
 import { indexReducer } from "./indexReducer";
 //import thunk from "redux-thunk";
 import  loadCatalogReducer  from "./loadCatalogReducer";
@@ -10,8 +10,8 @@ import  loadCatalogReducer  from "./loadCatalogReducer";
 
 const reducer = combineReducers(
     {
-    catalogData: catalogReducer,
-    catalogProdData: catalogProdReducer,
+    //catalogData: catalogReducer,
+    //catalogProdData: catalogProdReducer,
     itemIndexData: indexReducer,
     loadData: loadCatalogReducer
     

@@ -1,4 +1,7 @@
 import { useState } from "react"
+import { doesUserExist } from "../functions/doesUserExist";
+import { getLastUserId } from "../functions/getLastUserId";
+import { setCredentials } from "../functions/setCredentials";
 
 const RegModal = () => {
     
@@ -7,16 +10,21 @@ const RegModal = () => {
     const [eMail, setEMail] = useState(null);
     const [passMain, setPassMain] = useState(null);
 
-
     const handleRegUser = (e) => {
         e.preventDefault();
+        //if (!doesUserExist(eMail)) console.log(doesUserExist()); //alert("Пользователь с таким адресом загеристрирован!");
+        console.log(doesUserExist(eMail));
         if (!firstName || !lastName || !eMail || !passMain) return alert("Необходимо заполнить форму!");
-        console.log({
-            "fn": firstName,
-            "ln": lastName,
-            "el": eMail,
-            "pw": passMain
+        
+        const credentials = ({
+            "id": getLastUserId(),
+            "firstName": firstName,
+            "lastName": lastName,
+            "email": eMail,
+            "password": passMain
         });
+
+        //setCredentials(credentials);
     }
 
     return (

@@ -44,8 +44,8 @@
       "review": [
         {
           "user": "Alexander",
-          "data": "Sun Apr 24 2022 00:52:54 GMT+0300 (Москва, стандартное время)",
-          "text": "fgdfgdgwetwerwer"
+          "data": "Mon Apr 25 2022 12:26:16 GMT+0300 (Москва, стандартное время)",
+          "text": "sdgsdf"
         }
       ],
       "raiting": [
@@ -64,7 +64,11 @@
         4,
         4,
         3,
-        4
+        4,
+        5,
+        5,
+        5,
+        5
       ]
     },
     {
@@ -605,12 +609,11 @@
   ],
   "users": [
     {
-      "id": 0,
-      "firstName": "some comment",
-      "lastName": 1,
-      "age": 27,
-      "login": "Alven",
-      "password": "12345678"
+      "firstName": "Aliaksandr",
+      "lastName": "Kot",
+      "email": "sdfsdf@dfdf",
+      "password": "werwerwe",
+      "id": 1
     }
   ],
   "profile": {
