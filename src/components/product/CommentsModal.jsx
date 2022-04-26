@@ -10,31 +10,40 @@ const CommentsModal = ({ onClick, handleShowComments, id, showComment }) => {
     const itemIndex = id - 1;
     const [newCatalog, setNewCatalog] = useState();
     const catalog = useSelector((state) => state.loadCatalog);
-    console.log("id", id, ", ", "itemIndex", itemIndex);
+    const [localRate, setLocalRate] = useState(0);
+    const [reviewText, setReviewText] = useState({})
     
     useEffect(() => {
         if (!catalog) return;
         setNewCatalog(catalog[itemIndex].review);
-        //console.log('newCatalog ', newCatalog)
     }, [catalog, itemIndex])
 
 
     const handleText = (e) => {
-       setText(
-                {
-                    "user": "Alexander",
-                    "data": Date(),
-                    "text": e.target.value
-                }
-        );
-        
+       setText(e.target.value)
     }
 
-    const sendComment = (e) => {
+    const handleRate = (e) => {
+        setLocalRate(e.target.value)
+     }
+
+
+     useEffect(() => {
+        setReviewText(
+            {
+                "user": "Alexander",
+                "data": new Date().toLocaleDateString(),
+                "text": text,
+                "rate": localRate,
+            }
+        );
+    }, [localRate, text])
+
+
+    const sendComment = async (e) => {
+
         const review = newCatalog;
-         
-        //if (e.target.value) 
-            review.push(text);
+            review.push(reviewText);
             console.log("review", review);
             axios.patch(`http://localhost:3004/products/${id}`, 
             {review: review})
@@ -62,6 +71,7 @@ const CommentsModal = ({ onClick, handleShowComments, id, showComment }) => {
                             defaultValue={0} 
                             precision={0.5} 
                             onClick={onClick}
+                            onChange={(e) => handleRate(e)}
                         />
                         <div className="comments-block-button button_container">
                             <button className="button" onClick={() => sendComment()} > Отправить</button>

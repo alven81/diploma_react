@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom"
-import Footer from "../components/Footer"
-import NavBar from "../components/NavBar"
-import RegModal from "../components/RegModal"
+import Footer from "../components/layout/Footer"
+import NavBar from "../components/layout/NavBar"
+import RegModal from "../components/modal/reg/Reg"
 
 const Layout = () => {
 

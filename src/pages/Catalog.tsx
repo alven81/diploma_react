@@ -1,6 +1,6 @@
 import { FC } from "react"
 import { useSelector, RootStateOrAny } from "react-redux"
-import CatElement from "../components/CatElement"
+import CatElement from "../components/catalog/CatElement"
 import IElement from "../types/element"
 
 const Catalog: FC = () => {

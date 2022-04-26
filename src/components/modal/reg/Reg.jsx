@@ -1,7 +1,9 @@
-import { useState } from "react"
-import { doesUserExist } from "../utils/doesUserExist";
-import { getLastUserId } from "../utils/getLastUserId";
-import { setCredentials } from "../utils/setCredentials";
+//import { Avatar } from "@mui/material";
+import { useEffect, useState } from "react"
+import { doesUserExist } from "../../../utils/doesUserExist";
+import { getLastUserId } from "../../../utils/getLastUserId";
+import { setCredentials } from "../../../utils/setCredentials";
+import { AvaFoto } from "./AvaFoto";
 
 const RegModal = () => {
     
@@ -9,9 +11,16 @@ const RegModal = () => {
     const [lastName, setLastName] = useState(null);
     const [eMail, setEMail] = useState(null);
     const [passMain, setPassMain] = useState(null);
-    //const [lastUserId, setLastUserId] = useState(null);
-    //const [userExist, setUserExist] = useState(true);
+    const [avaImage, setAvaImage] = useState("")
 
+    useEffect(() => {
+        setAvaImage("/assets/avatars/1.jpg")
+    }, [])
+
+    const handleImage = (handleImage) => {
+        console.log("img", handleImage);
+        setAvaImage(handleImage)
+    }
 
     const handleRegUser = async (e) => {
         e.preventDefault();
@@ -26,6 +35,7 @@ const RegModal = () => {
         
         const credentials = ({
             "id": userId,
+            "avatar": avaImage,
             "firstName": firstName,
             "lastName": lastName,
             "email": eMail,
@@ -34,6 +44,11 @@ const RegModal = () => {
 
         setCredentials(credentials);
     }
+
+
+
+
+
 
     return (
         <>
@@ -46,6 +61,9 @@ const RegModal = () => {
                         Зарегистрируйтесь для входа
                     </div>
                     <form className="regform-form" onSubmit={handleRegUser} >
+                        <div className="regform-ava">
+                            <AvaFoto handleImage={handleImage} image={avaImage.toString() }/>
+                        </div>
                         <label htmlFor="firstName"> Имя
                             <input onChange={(e) => setFirstName(e.target.value)} type="text" name="firstName"/>
                         </label>

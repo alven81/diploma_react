@@ -40,10 +40,10 @@ const Footer = () => {
                         <li>Подарочная карта</li>
                         <li>Поставщикам товаров и услуг </li>
                         <li>
-                            <img src="./assets/img/facebook.svg" alt="Фейсбук" />
-                            <img src="./assets/img/twitter.svg" alt="Твиттер" />
-                            <img src="./assets/img/vk.svg" alt="ВКонтакте" />
-                            <img src="./assets/img/telegram.svg" alt="Телеграмм" />
+                            <img src="/assets/img/facebook.svg" alt="Фейсбук" />
+                            <img src="/assets/img/twitter.svg" alt="Твиттер" />
+                            <img src="/assets/img/vk.svg" alt="ВКонтакте" />
+                            <img src="/assets/img/telegram.svg" alt="Телеграмм" />
                         </li>
                     </ul>
                 </div>

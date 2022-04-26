@@ -1,9 +1,9 @@
 import { FC } from "react"
 import { Link } from "react-router-dom"
 import { useDispatch } from "react-redux"
-import IElement from "../types/element"
-import { addItemIndex } from "../store/actions/indexAction"
-import Product from "../pages/Product"
+import IElement from "../../types/element"
+import { addItemIndex } from "../../store/actions/indexAction"
+import Product from "../../pages/Product"
 
 interface CatElementProps {
     catalog: IElement,

@@ -3,10 +3,10 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux"
 import { useParams } from "react-router";
-import CommentsModal from "../components/CommentsModal";
-import { Features } from "../components/Features";
-import { ImageBox } from "../components/ImageBox";
-import { Review } from "../components/Review";
+import CommentsModal from "../components/product/CommentsModal";
+import { Features } from "../components/product/Features";
+import { ImageBox } from "../components/product/ImageBox";
+import { Review } from "../components/product/Review";
 
 const Product = () => {
 
