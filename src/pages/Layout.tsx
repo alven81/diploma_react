@@ -1,6 +1,8 @@
 import { Outlet } from "react-router-dom"
 import Footer from "../components/layout/Footer"
 import NavBar from "../components/layout/NavBar"
+import LogModal from "../components/modal/log/Log"
+
 import RegModal from "../components/modal/reg/Reg"
 
 const Layout = () => {
@@ -13,8 +15,9 @@ const userIsLogin = true;
                 <main>
                     <Outlet />
                     {
-                        userIsLogin && < RegModal />
+                        userIsLogin && < LogModal />
                     }
+                    
                 </main>
             <Footer />
         </div>

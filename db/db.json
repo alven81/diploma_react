@@ -747,6 +747,14 @@
       "lastName": "Kot",
       "email": "sdfsdf@dfdf.ert",
       "password": "eret"
+    },
+    {
+      "id": 11,
+      "avatar": "/assets/avatars/1.jpg",
+      "firstName": "Александр",
+      "lastName": "Кот",
+      "email": "sdfsdf@dfdf.btt",
+      "password": "we5345"
     }
   ],
   "profile": {

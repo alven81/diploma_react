@@ -1,4 +1,6 @@
-const initialState = {}
+const initialState = {
+
+}
 
  const isUserLogInReducer = (state = initialState, action) => {
     console.log("action", action);

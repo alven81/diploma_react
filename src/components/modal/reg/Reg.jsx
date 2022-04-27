@@ -1,6 +1,5 @@
 //import { Avatar } from "@mui/material";
 import { useEffect, useState } from "react"
-import { useDispatch, useSelector } from "react-redux";
 import { userLogInfo } from "../../../store";
 import { isUserLogIn } from "../../../store/actions/isUserLogInAction";
 import { doesUserExist } from "../../../utils/doesUserExist";
@@ -48,7 +47,7 @@ const RegModal = () => {
         });
 
         setCredentials(credentials);
-        userLogInfo.dispatch(isUserLogIn(credentials));
+        //userLogInfo.dispatch(isUserLogIn(credentials));
     }
 
     return (

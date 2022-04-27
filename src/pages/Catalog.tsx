@@ -7,6 +7,8 @@ const Catalog: FC = () => {
 
     const catalog = useSelector((state: RootStateOrAny) => state.loadCatalog);
     
+
+
     return (
         <div className="catalog_main container">
             { catalog &&
