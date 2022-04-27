@@ -1,5 +1,6 @@
 import { FC } from "react"
 import { NavLink } from "react-router-dom"
+import DropDownMenu from "../DropDownMenu"
 import InputSearch from "../InputSearch"
 
 const NavBar: FC = () => {
@@ -30,7 +31,12 @@ const NavBar: FC = () => {
                         <InputSearch className="nav_middle-input" placeholder="Поиск товара"/><span className="nav_middle-loupe"/>
                     </div>
                     <div className="nav_middle-cart">
-                        <img src="/assets/img/cart_man.svg" alt="Регистрация" />
+                        <div>
+                            {/* <img src="/assets/img/cart_man.svg" alt="Регистрация" /> */}
+                            <DropDownMenu src={`/assets/img/cart_man.svg`} alt={"Регистрация"}/>
+                        </div>
+                        
+
                         <img src="/assets/img/cart_heart.svg" alt="Избранное" />
                         <span className="nav_middle-cart-span-heart">0</span>
                         <img src="/assets/img/cart.svg" alt="Корзина" />
