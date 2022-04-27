@@ -11,5 +11,5 @@ const initialState = { indexList: []}
             return state
     }
 }
-    
+
 export { indexReducer }

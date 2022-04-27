@@ -1,23 +1,16 @@
 import { combineReducers } from "redux";
-//import { catalogReducer } from "./catalogReducer_";
-//import { catalogProdReducer } from "./catalogProdReducer_";
 import { indexReducer } from "./indexReducer";
-//import thunk from "redux-thunk";
+import { isUserLogInReducer } from "./isUserLogInReducer";
 import  loadCatalogReducer  from "./loadCatalogReducer";
-//import { compose } from "redux";
 
 //const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const reducer = combineReducers(
     {
-    //catalogData: catalogReducer,
-    //catalogProdData: catalogProdReducer,
-    itemIndexData: indexReducer,
-    loadData: loadCatalogReducer
-    
-},
-//composeEnhancer(applyMiddleware(thunk))
+        itemIndexData: indexReducer,
+        loadData: loadCatalogReducer,
+        isUserLogIn: isUserLogInReducer
+    },
 );
-
 
 export { reducer } 

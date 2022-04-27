@@ -1,5 +1,8 @@
 //import { Avatar } from "@mui/material";
 import { useEffect, useState } from "react"
+import { useDispatch, useSelector } from "react-redux";
+import { userLogInfo } from "../../../store";
+import { isUserLogIn } from "../../../store/actions/isUserLogInAction";
 import { doesUserExist } from "../../../utils/doesUserExist";
 import { getLastUserId } from "../../../utils/getLastUserId";
 import { setCredentials } from "../../../utils/setCredentials";
@@ -17,6 +20,8 @@ const RegModal = () => {
         setAvaImage("/assets/avatars/1.jpg")
     }, [])
 
+        //const dispatch = useDispatch();
+    
     const handleImage = (handleImage) => {
         console.log("img", handleImage);
         setAvaImage(handleImage)
@@ -43,12 +48,8 @@ const RegModal = () => {
         });
 
         setCredentials(credentials);
+        userLogInfo.dispatch(isUserLogIn(credentials));
     }
-
-
-
-
-
 
     return (
         <>
