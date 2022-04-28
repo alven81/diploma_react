@@ -43,19 +43,19 @@
       ],
       "review": [
         {
-          "user": "Alexander",
+          "userId": "Alexander",
           "data": "26.04.2022",
           "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
           "rate": "3.5"
         },
         {
-          "user": "Alexander",
+          "userId": "Alexander",
           "data": "26.04.2022",
           "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
           "rate": "4.5"
         },
         {
-          "user": "Alexander",
+          "userId": "Alexander",
           "data": "26.04.2022",
           "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
           "rate": "0.5"
@@ -123,13 +123,66 @@
         "Мел для обозначения контуров при раскрое материала",
         "Цветная книжка -инструкция"
       ],
-      "review": [],
+      "review": [
+        {
+          "userId": 2,
+          "data": "28.04.2022",
+          "text": [],
+          "rate": 0
+        },
+        {
+          "userId": 2,
+          "data": "28.04.2022",
+          "text": [],
+          "rate": 0
+        },
+        {
+          "userId": 2,
+          "data": "28.04.2022",
+          "text": "fsdfsdfgsdf",
+          "rate": 0
+        },
+        {
+          "userId": 2,
+          "data": "28.04.2022",
+          "text": "fsdfsdfgsdf",
+          "rate": "4"
+        },
+        {
+          "userId": 2,
+          "data": "28.04.2022",
+          "text": "dfgasdfasdgsdfh",
+          "rate": "4.5"
+        },
+        {
+          "userId": 2,
+          "data": "28.04.2022",
+          "text": "dfgasdfasdgsdfhfhdfgdffg",
+          "rate": "4.5"
+        },
+        {
+          "userId": 2,
+          "data": "28.04.2022",
+          "text": "dfgasdfasdgsdfhfhdfgdffgasfgasd",
+          "rate": "4.5"
+        },
+        {
+          "userId": 2,
+          "data": "28.04.2022",
+          "text": "asgasdasd",
+          "rate": "5"
+        }
+      ],
       "raiting": [
         5,
         5,
         4,
         1,
-        1.5
+        1.5,
+        4,
+        4,
+        4.5,
+        5
       ]
     },
     {
@@ -176,15 +229,23 @@
       ],
       "review": [
         {
-          "user": "Alexander",
+          "userId": "Alexander",
           "data": "26.04.2022",
           "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+        },
+        {
+          "userId": 2,
+          "data": "28.04.2022",
+          "text": "asfassd",
+          "rate": "4.5"
         }
       ],
       "raiting": [
         4,
         3,
         2,
+        4.5,
+        3,
         4.5
       ]
     },
@@ -232,13 +293,13 @@
       ],
       "review": [
         {
-          "user": "Alexander",
+          "userId": "Alexander",
           "data": "26.04.2022",
           "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
           "rate": "3.5"
         },
         {
-          "user": "Alexander",
+          "userId": "Alexander",
           "data": "26.04.2022",
           "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
           "rate": "2"
@@ -388,7 +449,7 @@
       ],
       "review": [
         {
-          "user": "Alexander",
+          "userId": "Alexander",
           "data": "26.04.2022",
           "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
         }
@@ -489,19 +550,19 @@
       ],
       "review": [
         {
-          "user": "Alexander",
+          "userId": "Alexander",
           "data": "26.04.2022",
           "text": "Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. ",
           "rate": "5"
         },
         {
-          "user": "Alexander",
+          "userId": "Alexander",
           "data": "26.04.2022",
           "text": "Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. ",
           "rate": "5"
         },
         {
-          "user": "Alexander",
+          "userId": "Alexander",
           "data": "26.04.2022",
           "text": "Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. ",
           "rate": "2"
@@ -556,7 +617,7 @@
       ],
       "review": [
         {
-          "user": "Alexander",
+          "userId": "Alexander",
           "data": "26.04.2022",
           "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
           "rate": "4"
@@ -656,7 +717,7 @@
       ],
       "review": [
         {
-          "user": "Alexander",
+          "userId": "Alexander",
           "data": "26.04.2022",
           "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
           "rate": "3"
@@ -672,89 +733,17 @@
       "id": 1,
       "avatar": "/assets/avatars/1.jpg",
       "firstName": "Aliaksandr",
-      "lastName": "asd",
-      "email": "sdfsdf@dfdf.ru",
-      "password": "234234"
-    },
-    {
-      "id": 2,
-      "avatar": "/assets/avatars/5.jpg",
-      "firstName": "Джон",
-      "lastName": "Малкович",
-      "email": "D.Malkovich@tam.by",
+      "lastName": "Kot",
+      "email": "tikotik@yandex.ru",
       "password": "123456"
     },
     {
-      "id": 3,
-      "avatar": "/assets/avatars/1.jpg",
+      "id": 2,
+      "avatar": "/assets/avatars/3.jpg",
       "firstName": "Aliaksandr",
       "lastName": "Kot",
-      "email": "sdfsdf@dfdf",
-      "password": "34324"
-    },
-    {
-      "id": 4,
-      "avatar": "/assets/avatars/1.jpg",
-      "firstName": "Aliaksandr",
-      "lastName": "Kot",
-      "email": "sdfsdf@dfdf.bn",
-      "password": "wewe"
-    },
-    {
-      "id": 5,
-      "avatar": "/assets/avatars/1.jpg",
-      "firstName": "Aliaksandr",
-      "lastName": "Kot",
-      "email": "sdfsdf@dfdf.re",
-      "password": "er"
-    },
-    {
-      "id": 6,
-      "avatar": "/assets/avatars/1.jpg",
-      "firstName": "werwer",
-      "lastName": "werw",
-      "email": "sdfsdf@dfdf.bt",
-      "password": "ewqe"
-    },
-    {
-      "id": 7,
-      "avatar": "/assets/avatars/1.jpg",
-      "firstName": "Александр",
-      "lastName": "asd",
-      "email": "sdfsdf@dfdf.hf",
-      "password": "dsf"
-    },
-    {
-      "id": 8,
-      "avatar": "/assets/avatars/1.jpg",
-      "firstName": "Aliaksandr",
-      "lastName": "Kot",
-      "email": "sdfsdf@dfdf.qwe",
-      "password": "qwe"
-    },
-    {
-      "id": 9,
-      "avatar": "/assets/avatars/1.jpg",
-      "firstName": "qwe",
-      "lastName": "wqe",
-      "email": "D.Malkovich@tam.byy",
-      "password": "sdf"
-    },
-    {
-      "id": 10,
-      "avatar": "/assets/avatars/1.jpg",
-      "firstName": "Aliaksandr",
-      "lastName": "Kot",
-      "email": "sdfsdf@dfdf.ert",
-      "password": "eret"
-    },
-    {
-      "id": 11,
-      "avatar": "/assets/avatars/1.jpg",
-      "firstName": "Александр",
-      "lastName": "Кот",
-      "email": "sdfsdf@dfdf.btt",
-      "password": "we5345"
+      "email": "D.Malkovich@tam.by",
+      "password": "123456"
     }
   ],
   "profile": {

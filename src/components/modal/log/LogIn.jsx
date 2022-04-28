@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { useDispatch, useSelector } from "react-redux";
-import { userLogInfo } from "../../../store";
 import { isUserLogIn } from "../../../store/actions/isUserLogInAction";
+import { openLogModal } from "../../../store/actions/LogAction";
 import { doesCredentialsOk } from "../../../utils/doesCredentialsOk";
 import { doesUserExist } from "../../../utils/doesUserExist";
 import { getUserInfoById } from "../../../utils/getUserInfoById";
@@ -16,14 +16,14 @@ const LogModal = () => {
     const [eMail, setEMail] = useState(null);
     const [passMain, setPassMain] = useState(null);
 
-    const handleRegUser = async (e) => {
+    const handleLogUser = async (e) => {
         e.preventDefault();
         const userExist = await doesUserExist(eMail);
         const passCorrect = await doesCredentialsOk(userExist, eMail, passMain);
         if (userExist || passCorrect) {
             if (passCorrect.access) {
                 const userInfo = await getUserInfoById(passCorrect.id)
-                userLogInfo.dispatch(isUserLogIn(userInfo));
+                dispatch(isUserLogIn(userInfo));
                 console.log("Доступ получен - true");
             } else {
                 alert("Неверный пароль");
@@ -37,12 +37,12 @@ const LogModal = () => {
             <section className="fullscreen-box">
                 <div className="regform">
                     <div className="regform-close">
-                        <button className="cross-button" />
+                        <button className="cross-button" onClick={() => dispatch(openLogModal(false))}/>
                     </div>
                     <div className="regform-name">
                         Введите данные для входа
                     </div>
-                    <form className="regform-form" onSubmit={handleRegUser} >
+                    <form className="regform-form" onSubmit={handleLogUser} >
                         <label htmlFor="eMail"> Электроная почта
                             <input onChange={(e) => setEMail(e.target.value)} type="email" name="eMail"/>
                         </label>

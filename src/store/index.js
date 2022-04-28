@@ -1,16 +1,12 @@
 import { applyMiddleware, createStore } from "redux";
 import thunk from "redux-thunk";
-import { reducer } from "./reducer";
-import { isUserLogInReducer } from "./reducer/isUserLogInReducer";
+import { reducer } from "./reducer/index";
 import loadCatalogReducer from "./reducer/loadCatalogReducer";
 
-const store = createStore(loadCatalogReducer, applyMiddleware(thunk));
-//const userLogInfo = createStore(isUserLogInReducer)
+const store = createStore(reducer, applyMiddleware(thunk));
 
-const userLogInfo = createStore(reducer)
-
-userLogInfo.subscribe(() => {
-    console.log("store data: ", userLogInfo.getState())
+store.subscribe(() => {
+    console.log("store data: ", store.getState())
 })
 
-export {store, userLogInfo}
+export {store}

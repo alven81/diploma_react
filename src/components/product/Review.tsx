@@ -4,11 +4,17 @@ import IReview from "../../types/review"
 
 interface ReviewProps {
     reviews: IReview
+    //userId: any,
 }
 
 const Review: FC<ReviewProps> = ({ reviews }) => {
-    //console.log("rev", reviews);
+
+    // function userName(id: number) {
+    //     const userData = getUserInfoById(id);
+    //     return userData;
+    // }
     
+
     return (
         <>
             {
@@ -21,7 +27,7 @@ const Review: FC<ReviewProps> = ({ reviews }) => {
                         <div className="review-info" >
                             <div className="review-info-user">
                                 <p className="review-info-user-name">
-                                    {item.user}
+                                    {item.userId}
                                 </p>
                                 <p className="review-info-user-data">
                                     {item.data}

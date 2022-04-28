@@ -13,6 +13,8 @@
     &-name {
         display: flex;
         justify-content: space-between;
+        color: $mainPinc;
+        @include fontRoboto(500, 16, 16);
         button {
             padding: 0;
             height: 30px;

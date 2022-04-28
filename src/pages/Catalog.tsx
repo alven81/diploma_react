@@ -5,10 +5,8 @@ import IElement from "../types/element"
 
 const Catalog: FC = () => {
 
-    const catalog = useSelector((state: RootStateOrAny) => state.loadCatalog);
+    const catalog = useSelector((state: RootStateOrAny) => state.loadData.loadCatalog);
     
-
-
     return (
         <div className="catalog_main container">
             { catalog &&

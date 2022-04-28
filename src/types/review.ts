@@ -1,6 +1,7 @@
 export default interface IReview {
     [x: string]: any;
-    "user": string,
+    "userId": number,
     "data": string,
-    "text": string
+    "text": string,
+    "rate": number
 }

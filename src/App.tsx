@@ -6,9 +6,9 @@ import Layout from "./pages/Layout";
 import PageNotFound from "./pages/PageNotFound";
 import Product from "./pages/Product";
 import Workshop from "./pages/Workshop";
-import { RootStateOrAny, useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useEffect } from "react";
-import { store, userLogInfo } from './store/index';
+import { store } from './store/index';
 import getCatalogData from "./store/actions/loadCatalogAction";
 import { isUserLogIn } from "./store/actions/isUserLogInAction";
 
@@ -16,18 +16,18 @@ const App = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        store.dispatch(getCatalogData())
+        dispatch(getCatalogData())
     }, [dispatch])
 
 
     useEffect(() => {
-    userLogInfo.dispatch(isUserLogIn({
-        "id": 0,
-        "avatar": "/assets/avatars/1.jpg",
-        "firstName": "Unnamed",
-        "lastName": "Unnamed",
-        "email": "-"
-    }))}, []);
+        dispatch(isUserLogIn({
+            "id": 0,
+            "avatar": "/assets/avatars/1.jpg",
+            "firstName": "Таинственный незнакомец",
+            "lastName": "",
+            "email": "-"
+    }))}, [dispatch]);
 
     
    

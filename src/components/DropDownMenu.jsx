@@ -1,4 +1,8 @@
-import React, { useRef } from "react";
+import { useSelect } from "@mui/base";
+import React, { useEffect, useRef, useState } from "react";
+import { useDispatch } from "react-redux";
+import { openLogModal } from "../store/actions/LogAction";
+import { openRegModal } from "../store/actions/RegAction";
 
 import { useDetectOutsideClick } from "../utils/useDetectOutsideClick";
 /*
@@ -8,8 +12,18 @@ import { useDetectOutsideClick } from "../utils/useDetectOutsideClick";
 export default function DropDownMenu({src, alt}) {
   const dropdownRef = useRef(null);
   const [isActive, setIsActive] = useDetectOutsideClick(dropdownRef, false);
+  //const [openReg, setOpenReg] = useState(Boolean)
   const onClick = () => setIsActive(!isActive);
+  let userIsReg = false;
+  const dispatch = useDispatch();
+  
+// useEffect(() => {
+//   console.log("click");
+//   dispatch(openRegModal(openReg));
+// }, [dispatch, openReg])
 
+
+  
   return (
       <div className="menu-container">
         <button onClick={onClick} className="menu-button">
@@ -32,8 +46,11 @@ export default function DropDownMenu({src, alt}) {
             <li>
               <a href="#">Корзина</a>
             </li>
+            <li className={userIsReg ? "hide" : ""}>
+              <a onClick={() => dispatch(openRegModal(true))} href="#">Зарегистрироваться</a>
+            </li>
             <li>
-              <a href="#">Войти в аккаунт</a>
+              <a onClick={() => dispatch(openLogModal(true))} href="#">Войти в аккаунт</a>
             </li>
             <li>
               <a href="#">Админка</a>

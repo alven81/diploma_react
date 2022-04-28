@@ -11,16 +11,16 @@ import { Review } from "../components/product/Review";
 const Product = () => {
 
     const itemIndex = useParams().id;
-    const catalog = useSelector((state) => state.loadCatalog);
+    const catalog = useSelector((state) => state.loadData.loadCatalog);
     const catalogList = catalog[itemIndex - 1];
     const [raiting, setRaiting] = useState([]);
     const [averageRating, setAverageRating] = useState();
     const [showComment, setShowComment] = useState(false);
 
-
+    const user = useSelector((state) => state.isUserLogIn.isUserLogInInfo)
+    
 useEffect(() => {
         if (!catalogList) return;
-
         axios.get(`http://localhost:3004/products/${catalogList.id}`)
         .then(res => setRaiting(res.data.raiting))
         }, [catalogList]
@@ -47,11 +47,11 @@ const handleRate = (e) => {
 }
 
 const handleShowComments = () => {
+    if (!user.id) return alert("Только зарегистрированные пользователи могут оставлять комментарии!")
     setShowComment(!showComment);
 }
 
     //if (!catalogList) return null;
-
     return (
 
         <section className="product_main container">

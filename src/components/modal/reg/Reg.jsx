@@ -1,7 +1,7 @@
 //import { Avatar } from "@mui/material";
 import { useEffect, useState } from "react"
-import { userLogInfo } from "../../../store";
-import { isUserLogIn } from "../../../store/actions/isUserLogInAction";
+import { useDispatch } from "react-redux";
+import { openRegModal } from "../../../store/actions/RegAction";
 import { doesUserExist } from "../../../utils/doesUserExist";
 import { getLastUserId } from "../../../utils/getLastUserId";
 import { setCredentials } from "../../../utils/setCredentials";
@@ -15,11 +15,11 @@ const RegModal = () => {
     const [passMain, setPassMain] = useState(null);
     const [avaImage, setAvaImage] = useState("")
 
+    const dispatch = useDispatch();
+
     useEffect(() => {
         setAvaImage("/assets/avatars/1.jpg")
     }, [])
-
-        //const dispatch = useDispatch();
     
     const handleImage = (handleImage) => {
         console.log("img", handleImage);
@@ -47,7 +47,6 @@ const RegModal = () => {
         });
 
         setCredentials(credentials);
-        //userLogInfo.dispatch(isUserLogIn(credentials));
     }
 
     return (
@@ -55,7 +54,7 @@ const RegModal = () => {
             <section className="fullscreen-box">
                 <div className="regform">
                     <div className="regform-close">
-                        <button className="cross-button" />
+                        <button className="cross-button" onClick={() => dispatch(openRegModal(false))} />
                     </div>
                     <div className="regform-name">
                         Зарегистрируйтесь для входа

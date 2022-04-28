@@ -1,9 +1,13 @@
 import { FC } from "react"
+import { RootStateOrAny, useSelector } from "react-redux"
 import { NavLink } from "react-router-dom"
 import DropDownMenu from "../DropDownMenu"
 import InputSearch from "../InputSearch"
 
 const NavBar: FC = () => {
+
+    const userName = useSelector((state: RootStateOrAny) => state.isUserLogIn.isUserLogInInfo)
+
     return (
         <>
             <nav className="nav_main container">
@@ -31,16 +35,25 @@ const NavBar: FC = () => {
                         <InputSearch className="nav_middle-input" placeholder="Поиск товара"/><span className="nav_middle-loupe"/>
                     </div>
                     <div className="nav_middle-cart">
-                        <div>
-                            {/* <img src="/assets/img/cart_man.svg" alt="Регистрация" /> */}
-                            <DropDownMenu src={`/assets/img/cart_man.svg`} alt={"Регистрация"}/>
+                        <div className="nav_middle-cart-user">
+                            <p>Добрый день, {userName.firstName}</p>
                         </div>
-                        
-
-                        <img src="/assets/img/cart_heart.svg" alt="Избранное" />
-                        <span className="nav_middle-cart-span-heart">0</span>
-                        <img src="/assets/img/cart.svg" alt="Корзина" />
-                        <span className="nav_middle-cart-span-cart">0</span>
+                        <div className="nav_middle-cart-block">
+                            <div>
+                                <img className="nav_middle-cart-block-img" src={userName.avatar} alt="Регистрация" />
+                            </div>
+                            <div>
+                                <DropDownMenu src={`/assets/img/cart_man.svg`} alt={"Регистрация"}/>
+                            </div >
+                            <div>
+                                <img src="/assets/img/cart_heart.svg" alt="Избранное" />
+                                <span className="nav_middle-cart-block-span-heart">0</span>
+                            </div>
+                            <div>
+                                <img src="/assets/img/cart.svg" alt="Корзина" />
+                                <span className="nav_middle-cart-block-span-cart">0</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div className="nav_bottom">

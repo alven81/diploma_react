@@ -6,13 +6,15 @@ import { useSelector } from "react-redux";
 
 const CommentsModal = ({ onClick, handleShowComments, id, showComment }) => {
     
-    const [text, setText] = useState([]);
+    const [text, setText] = useState("");
     const itemIndex = id - 1;
-    const [newCatalog, setNewCatalog] = useState();
-    const catalog = useSelector((state) => state.loadCatalog);
+    const [newCatalog, setNewCatalog] = useState({});
+    const catalog = useSelector((state) => state.loadData.loadCatalog);
     const [localRate, setLocalRate] = useState(0);
     const [reviewText, setReviewText] = useState({})
     
+    const user = useSelector((state) => state.isUserLogIn.isUserLogInInfo)
+
     useEffect(() => {
         if (!catalog) return;
         setNewCatalog(catalog[itemIndex].review);
@@ -25,31 +27,31 @@ const CommentsModal = ({ onClick, handleShowComments, id, showComment }) => {
 
     const handleRate = (e) => {
         setLocalRate(e.target.value)
-     }
-
+    }
 
      useEffect(() => {
         setReviewText(
             {
-                "user": "Alexander",
+                "userId": user.id,
                 "data": new Date().toLocaleDateString(),
                 "text": text,
                 "rate": localRate,
             }
         );
-    }, [localRate, text])
+    }, [localRate, text, user.id])
 
 
     const sendComment = async (e) => {
-
+        console.log(catalog);
         const review = newCatalog;
-            review.push(reviewText);
-            console.log("review", review);
-            axios.patch(`http://localhost:3004/products/${id}`, 
-            {review: review})
-            .then(setNewCatalog(review))
-            // .then(resp => {console.log(resp.data)})
-            // .catch(error => {console.log(error)});
+        review.push(reviewText);
+        //console.log("review", review);
+        axios.patch(`http://localhost:3004/products/${id}`, 
+        {review: review})
+        .then(setNewCatalog(review))
+        // .then(resp => {console.log(resp.data)})
+        // .catch(error => {console.log(error)});
+        handleShowComments();
     }
 
     return (
@@ -57,7 +59,7 @@ const CommentsModal = ({ onClick, handleShowComments, id, showComment }) => {
             <div className="comments">
                 <div className="comments-name">
                     <p>
-                        Напишите ваш отзыв о товаре:
+                        {user.firstName}, напишите ваш отзыв о товаре:
                     </p>
                     <button className="cross-button" onClick={handleShowComments} />
                 </div>
