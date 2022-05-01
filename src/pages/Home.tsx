@@ -20,7 +20,7 @@ const Home = () => {
                             идей для творчества 
                         </span>
                         <span className="home_main-theme-button">
-                            <Button variant="contained">Вдохновись</Button>
+                            <Button variant="contained" >Вдохновись</Button>
                         </span>
                     </div>
                     <img src="./assets/img/oreol.png" alt="" />

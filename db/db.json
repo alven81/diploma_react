@@ -2,6 +2,7 @@
   "products": [
     {
       "id": 1,
+      "category": "craft",
       "price": 46.18,
       "discount": false,
       "new": true,
@@ -83,6 +84,7 @@
     },
     {
       "id": 2,
+      "category": "craft",
       "price": 77.45,
       "discount": false,
       "new": false,
@@ -187,6 +189,7 @@
     },
     {
       "id": 3,
+      "category": "craft",
       "price": 77.45,
       "discount": true,
       "new": true,
@@ -229,7 +232,7 @@
       ],
       "review": [
         {
-          "userId": "Alexander",
+          "userId": 2,
           "data": "26.04.2022",
           "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
         },
@@ -251,6 +254,7 @@
     },
     {
       "id": 4,
+      "category": "craft",
       "price": 77.45,
       "discount": false,
       "new": false,
@@ -293,13 +297,13 @@
       ],
       "review": [
         {
-          "userId": "Alexander",
+          "userId": 2,
           "data": "26.04.2022",
           "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
           "rate": "3.5"
         },
         {
-          "userId": "Alexander",
+          "userId": 2,
           "data": "26.04.2022",
           "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
           "rate": "2"
@@ -313,6 +317,7 @@
     },
     {
       "id": 5,
+      "category": "craft",
       "price": 77.45,
       "discount": true,
       "new": false,
@@ -360,6 +365,7 @@
     },
     {
       "id": 6,
+      "category": "craft",
       "price": 46.18,
       "discount": false,
       "new": true,
@@ -407,6 +413,7 @@
     },
     {
       "id": 7,
+      "category": "craft",
       "price": 46.18,
       "discount": false,
       "new": false,
@@ -463,9 +470,10 @@
     },
     {
       "id": 8,
+      "category": "craft",
       "price": 77.45,
       "discount": false,
-      "new": false,
+      "new": true,
       "discount_price": 0,
       "title": "Набор для шитья (текстильная кукла) 'Кукла Ассоль'",
       "color": "синий",
@@ -503,11 +511,21 @@
         "Мел для обозначения контуров при раскрое материала",
         "Цветная книжка -инструкция"
       ],
-      "review": [],
-      "raiting": []
+      "review": [
+        {
+          "userId": 3,
+          "data": "01.05.2022",
+          "text": "Тест отзыва!",
+          "rate": "5"
+        }
+      ],
+      "raiting": [
+        5
+      ]
     },
     {
       "id": 9,
+      "category": "craft",
       "price": 77.45,
       "discount": false,
       "new": false,
@@ -550,19 +568,19 @@
       ],
       "review": [
         {
-          "userId": "Alexander",
+          "userId": 2,
           "data": "26.04.2022",
           "text": "Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. ",
           "rate": "5"
         },
         {
-          "userId": "Alexander",
+          "userId": 2,
           "data": "26.04.2022",
           "text": "Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. ",
           "rate": "5"
         },
         {
-          "userId": "Alexander",
+          "userId": 2,
           "data": "26.04.2022",
           "text": "Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. ",
           "rate": "2"
@@ -575,6 +593,7 @@
     },
     {
       "id": 10,
+      "category": "craft",
       "price": 77.45,
       "discount": false,
       "new": true,
@@ -617,7 +636,7 @@
       ],
       "review": [
         {
-          "userId": "Alexander",
+          "userId": 2,
           "data": "26.04.2022",
           "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
           "rate": "4"
@@ -630,6 +649,7 @@
     },
     {
       "id": 11,
+      "category": "craft",
       "price": 77.45,
       "discount": true,
       "new": true,
@@ -675,9 +695,10 @@
     },
     {
       "id": 12,
+      "category": "craft",
       "price": 85.27,
       "discount": true,
-      "new": false,
+      "new": true,
       "discount_price": 50,
       "title": "Набор для шитья (текстильная кукла) 'Кукла Венди'",
       "color": "коричневый",
@@ -717,7 +738,7 @@
       ],
       "review": [
         {
-          "userId": "Alexander",
+          "userId": 2,
           "data": "26.04.2022",
           "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
           "rate": "3"
@@ -744,9 +765,20 @@
       "lastName": "Kot",
       "email": "D.Malkovich@tam.by",
       "password": "123456"
+    },
+    {
+      "id": 3,
+      "avatar": "/assets/avatars/5.jpg",
+      "firstName": "Добрыня",
+      "lastName": "Никитич",
+      "email": "dobra@tut.by",
+      "password": "123456"
     }
   ],
-  "profile": {
-    "name": "typicode"
+  "profiles": {
+    "id": 1,
+    "favourites": [],
+    "cart":[],
+    "reviews": []
   }
 }

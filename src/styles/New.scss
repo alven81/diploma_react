@@ -1,0 +1,92 @@
+.new {
+    &-main {
+        display: flex;
+        overflow: hidden; 
+        position: relative;    
+        &-header {
+            @include fontRoboto(400, 26, 28);
+        }
+        &-block {
+            position: relative;
+            align-items: center;
+            button{
+                position: absolute;
+                height: 48px;
+                width: 48px;
+                background-color: transparent;
+                border-radius: 48px;
+                border: 1px solid $produckBtnBorder;
+                cursor: pointer;
+                
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: 45%;
+                    top: 40%;
+                    height: 17px;
+                    width: 2px;
+                    background-color: $produckBtnBorder;
+                    transform: rotate(-45deg);
+                    transition: all 200ms;
+                }
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 45%;
+                    top: 18%;
+                    height: 17px;
+                    width: 2px;
+                    background-color: $produckBtnBorder;
+                    transform: rotate(45deg);
+                    transition: all 200ms;
+                }
+                &:first-child {
+                    left: -60px;
+                    top: 150px; 
+                    &:hover {
+                        &::before {
+                            left: 40%;
+                        }
+                        &::after {
+                            left: 40%;
+                        }
+                    }
+                    &:active {
+                        &::before {
+                            left: 31%;
+                            width: 4px;
+                        }
+                        &::after {
+                            left: 31%;
+                            width: 4px;
+                        }
+                    }
+                }
+                &:last-child {
+                    right: -60px;
+                    top: 150px; 
+                    transform: rotate(180deg);
+                    &:hover {
+                        &::before {
+                            left: 40%;
+                        }
+                        &::after {
+                            left: 40%;
+                        }
+                    }
+                    &:active {
+                        &::before {
+                            left: 31%;
+                            width: 4px;
+                        }
+                        &::after {
+                            left: 31%;
+                            width: 4px;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}

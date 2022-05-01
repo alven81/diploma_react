@@ -6,17 +6,19 @@ import { addItemIndex } from "../../store/actions/indexAction"
 import Product from "../../pages/Product"
 
 interface CatElementProps {
-    catalog: IElement,
+    catalog: IElement
 } 
 
-const CatElement: FC<CatElementProps> = ({ catalog }) => {
+const CatElement: FC<CatElementProps> = ({ catalog}) => {
 
     const discountPercent = Math.round((catalog.price - catalog.discount_price) / catalog.price*100)
     const dispatch = useDispatch();
     return (
             <div className="catalog_main-element">
                 <div className="catalog_main-element-image">
-                    <img className={catalog.new === true ? "new" : "hide"} src="./assets/img/new.svg" alt=""/>
+                    <div>
+                        <img className={catalog.new === true ? "new" : "hide"} src="/assets/img/new.svg" alt=""/>
+                    </div>
                     <div>
                         <Link key={catalog.id} to={`/product/${catalog.id}`}>
                             <img className="catalog_main-element-image-main" 

@@ -68,7 +68,7 @@ const CommentsModal = ({ onClick, handleShowComments, id, showComment }) => {
                         <textarea  className="comments-block-text" onChange={(e) => handleText(e)} />
                     </div>
                     <div className="comments-block">
-                        <Rating 
+                        <Rating
                             name="half-rating" 
                             defaultValue={0} 
                             precision={0.5} 

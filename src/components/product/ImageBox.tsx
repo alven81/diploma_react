@@ -9,11 +9,15 @@ interface ImageBoxProps {
 
 const ImageBox: FC<ImageBoxProps> = ({imageList, newProduct, imageMain, age}) => {
 
+    useEffect(() => {
+        setImageLink(imageMain)
+    }, [imageMain])
+
     const handlerImage = (item: string) => {
         setImageLink(item);
     }
 
-    const [imageLink, setImageLink] = useState<string>("");
+    const [imageLink, setImageLink] = useState<string>();
 
     useState(() => {
         setImageLink(imageMain)

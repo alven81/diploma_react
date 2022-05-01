@@ -57,6 +57,9 @@
         &-rating {
             display: flex;
             gap: 50px;
+            span {
+                color: $produckBtnBorder;
+            }
             &-votes {
                 display: flex;
                 align-items: baseline;

@@ -68,6 +68,9 @@ h3 {
             margin-right: 27px;
             display: flex;
             justify-content: space-between;
+            span {
+                color: $produckBtnBorder;
+            }
         }
                         
         &-info {

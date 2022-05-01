@@ -5,16 +5,21 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+    
     &-element {
+
         width: 23%;
         box-sizing: border-box;
         margin: 10px;
+        position: relative;
         &-image {
+
             display: flex;
             justify-content: center;
-            position: relative;
-            > div {
+            
+            > div:nth-child(2) {
                 border: 1px solid #fc5185;
+                
             }
             img:first-child {
                 border: none;

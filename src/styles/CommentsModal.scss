@@ -28,6 +28,9 @@
         display: flex;
         justify-content: space-between;
         align-items: baseline;
+        span {
+            color: $produckBtnBorder;
+        }
         &-button {
             margin-right: 40%;
         }

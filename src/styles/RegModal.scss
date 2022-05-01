@@ -9,6 +9,7 @@
     box-sizing: border-box;
     border-radius: 10px;
     border: 1px solid $headerDarker;
+    box-shadow: -2px 2px 8px 13px rgba(34, 60, 80, 0.16);
     &-close {
         display: flex;
         justify-content: right;

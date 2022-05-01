@@ -7,6 +7,8 @@ import CommentsModal from "../components/product/CommentsModal";
 import { Features } from "../components/product/Features";
 import { ImageBox } from "../components/product/ImageBox";
 import { Review } from "../components/product/Review";
+import { Consist } from "../components/product/Consist";
+import { New } from "../components/product/New";
 
 const Product = () => {
 
@@ -16,9 +18,10 @@ const Product = () => {
     const [raiting, setRaiting] = useState([]);
     const [averageRating, setAverageRating] = useState();
     const [showComment, setShowComment] = useState(false);
+    const [review, setReview] = useState(false);
 
     const user = useSelector((state) => state.isUserLogIn.isUserLogInInfo)
-    
+
 useEffect(() => {
         if (!catalogList) return;
         axios.get(`http://localhost:3004/products/${catalogList.id}`)
@@ -51,6 +54,10 @@ const handleShowComments = () => {
     setShowComment(!showComment);
 }
 
+const handleShowReview = () => {
+    setReview(!review)
+}
+
     //if (!catalogList) return null;
     return (
 
@@ -63,14 +70,14 @@ const handleShowComments = () => {
                     <p>{catalogList.title}</p>
                 </div>
                     <div className="product_main-item">
-
-
                         <div className="product_main-item-pictures">
                             <ImageBox imageList={catalogList.icons} imageMain={catalogList.image} newProduct={catalogList.new} age={catalogList.features.age} />
                             <div className="product_main-item-raiting">
                                 <div className="product_main-item-raiting-block">
                                     <Rating name="half-rating" defaultValue={0} precision={0.5} value={Number(averageRating)} readOnly />
-                                    <p>Отзывы</p>
+                                    <div className="button_container">
+                                        <button onClick={(e) => handleShowReview()}>Отзывы</button>
+                                    </div>
                                 </div>
                                 <div className="button_container">
                                     <button onClick={(e) => handleShowComments()}>Написать отзыв</button>
@@ -86,9 +93,9 @@ const handleShowComments = () => {
                                 />
                             </div>
 
-                            <div className="product_main-item-review">
-                                <Review reviews={catalogList.review} />
-                            </div>
+                                <div className={review ? "product_main-item-review" : "hide"}>
+                                    <Review reviews={catalogList.review} />
+                                </div>
                         </div>
 
 
@@ -121,17 +128,21 @@ const handleShowComments = () => {
 
                             <div className="product_main-item-consist">
                                 <h3>Состав:</h3>
-                                <p>{catalogList.consist}</p>
+                                <Consist consist={catalogList.consist}/>
                             </div>
 
                         </div>
+                    </div>
+                <div className="container">
+                    <New />
                 </div>
+            
             </>
 
             } 
 
-            <div className={catalogList ? "hide" : "no_data"}>
-                <p>Упс, похоже не запущен JSON-server...</p>
+                <div className={catalogList ? "hide" : "no_data"}>
+                    <p>Упс, похоже не запущен JSON-server...</p>
             </div>
 
         </section>
