@@ -47,6 +47,8 @@ const RegModal = () => {
         });
 
         setCredentials(credentials);
+        alert("Вы успешно зарегистрировались! Перейдите на форму входа.")
+        dispatch(openRegModal(false));
     }
 
     return (

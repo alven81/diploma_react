@@ -9,7 +9,7 @@ interface CatElementProps {
     catalog: IElement
 } 
 
-const CatElement: FC<CatElementProps> = ({ catalog}) => {
+const CatElement: FC<CatElementProps> = ({ catalog }) => {
 
     const discountPercent = Math.round((catalog.price - catalog.discount_price) / catalog.price*100)
     const dispatch = useDispatch();

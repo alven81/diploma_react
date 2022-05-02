@@ -32,7 +32,7 @@ const NavBar: FC = () => {
                         <img src="/assets/img/logo.png" alt="логотип Креатив"/>
                     </div>
                     <div>
-                        <InputSearch className="nav_middle-input" placeholder="Поиск товара"/><span className="nav_middle-loupe"/>
+                        <InputSearch className="nav_middle-input" placeholder="Поиск товара"/>
                     </div>
                     <div className="nav_middle-cart">
                         <div className="nav_middle-cart-user">

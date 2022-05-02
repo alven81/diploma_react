@@ -24,7 +24,8 @@ const LogModal = () => {
             if (passCorrect.access) {
                 const userInfo = await getUserInfoById(passCorrect.id)
                 dispatch(isUserLogIn(userInfo));
-                console.log("Доступ получен - true");
+                alert("Вы успешно вошли в ресурс!");
+                dispatch(openLogModal(false));
             } else {
                 alert("Неверный пароль");
             }

@@ -44,42 +44,35 @@
       ],
       "review": [
         {
-          "userId": "Alexander",
-          "data": "26.04.2022",
-          "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+          "userId": 1,
+          "data": "02.05.2022",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
           "rate": "3.5"
         },
         {
-          "userId": "Alexander",
-          "data": "26.04.2022",
-          "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-          "rate": "4.5"
+          "userId": 2,
+          "data": "02.05.2022",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "rate": "4"
         },
         {
-          "userId": "Alexander",
-          "data": "26.04.2022",
-          "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-          "rate": "0.5"
+          "userId": 3,
+          "data": "02.05.2022",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "rate": "2"
+        },
+        {
+          "userId": 4,
+          "data": "02.05.2022",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "rate": "5"
         }
       ],
       "raiting": [
-        3,
-        1.5,
-        2.5,
-        2.5,
-        4,
-        4,
-        4,
-        4,
-        3.5,
         3.5,
         4,
-        4,
-        3,
-        4,
-        3.5,
-        4.5,
-        0.5
+        2,
+        5
       ]
     },
     {
@@ -127,63 +120,20 @@
       ],
       "review": [
         {
-          "userId": 2,
-          "data": "28.04.2022",
-          "text": [],
-          "rate": 0
+          "userId": 3,
+          "data": "02.05.2022",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "rate": "2"
         },
         {
-          "userId": 2,
-          "data": "28.04.2022",
-          "text": [],
-          "rate": 0
-        },
-        {
-          "userId": 2,
-          "data": "28.04.2022",
-          "text": "fsdfsdfgsdf",
-          "rate": 0
-        },
-        {
-          "userId": 2,
-          "data": "28.04.2022",
-          "text": "fsdfsdfgsdf",
-          "rate": "4"
-        },
-        {
-          "userId": 2,
-          "data": "28.04.2022",
-          "text": "dfgasdfasdgsdfh",
-          "rate": "4.5"
-        },
-        {
-          "userId": 2,
-          "data": "28.04.2022",
-          "text": "dfgasdfasdgsdfhfhdfgdffg",
-          "rate": "4.5"
-        },
-        {
-          "userId": 2,
-          "data": "28.04.2022",
-          "text": "dfgasdfasdgsdfhfhdfgdffgasfgasd",
-          "rate": "4.5"
-        },
-        {
-          "userId": 2,
-          "data": "28.04.2022",
-          "text": "asgasdasd",
+          "userId": 4,
+          "data": "02.05.2022",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
           "rate": "5"
         }
       ],
       "raiting": [
-        5,
-        5,
-        4,
-        1,
-        1.5,
-        4,
-        4,
-        4.5,
+        2,
         5
       ]
     },
@@ -232,24 +182,21 @@
       ],
       "review": [
         {
-          "userId": 2,
-          "data": "26.04.2022",
-          "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+          "userId": 1,
+          "data": "02.05.2022",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "rate": "3.5"
         },
         {
           "userId": 2,
-          "data": "28.04.2022",
-          "text": "asfassd",
-          "rate": "4.5"
+          "data": "02.05.2022",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "rate": "3.5"
         }
       ],
       "raiting": [
-        4,
-        3,
-        2,
-        4.5,
-        3,
-        4.5
+        3.5,
+        3.5
       ]
     },
     {
@@ -297,22 +244,21 @@
       ],
       "review": [
         {
-          "userId": 2,
-          "data": "26.04.2022",
-          "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-          "rate": "3.5"
+          "userId": 3,
+          "data": "02.05.2022",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "rate": "2"
         },
         {
-          "userId": 2,
-          "data": "26.04.2022",
-          "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-          "rate": "2"
+          "userId": 4,
+          "data": "02.05.2022",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "rate": "5"
         }
       ],
       "raiting": [
-        3,
-        3.5,
-        2
+        2,
+        5
       ]
     },
     {
@@ -358,9 +304,23 @@
         "Мел для обозначения контуров при раскрое материала",
         "Цветная книжка -инструкция"
       ],
-      "review": [],
+      "review": [
+        {
+          "userId": 2,
+          "data": "02.05.2022",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "rate": "3.5"
+        },
+        {
+          "userId": 3,
+          "data": "02.05.2022",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "rate": "5"
+        }
+      ],
       "raiting": [
-        1
+        3.5,
+        5
       ]
     },
     {
@@ -406,9 +366,16 @@
         "Мел для обозначения контуров при раскрое материала",
         "Цветная книжка -инструкция"
       ],
-      "review": [],
+      "review": [
+        {
+          "userId": 3,
+          "data": "02.05.2022",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "rate": "4"
+        }
+      ],
       "raiting": [
-        2
+        4
       ]
     },
     {
@@ -456,16 +423,14 @@
       ],
       "review": [
         {
-          "userId": "Alexander",
-          "data": "26.04.2022",
-          "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+          "userId": 4,
+          "data": "02.05.2022",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "rate": "3"
         }
       ],
       "raiting": [
-        5,
-        3,
-        1,
-        4.5
+        3
       ]
     },
     {
@@ -513,14 +478,21 @@
       ],
       "review": [
         {
-          "userId": 3,
-          "data": "01.05.2022",
-          "text": "Тест отзыва!",
-          "rate": "5"
+          "userId": 2,
+          "data": "02.05.2022",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "rate": "3.5"
+        },
+        {
+          "userId": 4,
+          "data": "02.05.2022",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "rate": "4"
         }
       ],
       "raiting": [
-        5
+        3.5,
+        4
       ]
     },
     {
@@ -568,27 +540,21 @@
       ],
       "review": [
         {
-          "userId": 2,
-          "data": "26.04.2022",
-          "text": "Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. ",
-          "rate": "5"
+          "userId": 1,
+          "data": "02.05.2022",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "rate": "3.5"
         },
         {
-          "userId": 2,
-          "data": "26.04.2022",
-          "text": "Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. ",
-          "rate": "5"
-        },
-        {
-          "userId": 2,
-          "data": "26.04.2022",
-          "text": "Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. Проверка поля отзыва. ",
-          "rate": "2"
+          "userId": 4,
+          "data": "02.05.2022",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "rate": "1"
         }
       ],
       "raiting": [
-        5,
-        2
+        3.5,
+        1
       ]
     },
     {
@@ -636,15 +602,28 @@
       ],
       "review": [
         {
+          "userId": 1,
+          "data": "02.05.2022",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "rate": "3.5"
+        },
+        {
           "userId": 2,
-          "data": "26.04.2022",
-          "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-          "rate": "4"
+          "data": "02.05.2022",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "rate": "3.5"
+        },
+        {
+          "userId": 4,
+          "data": "02.05.2022",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "rate": "2"
         }
       ],
       "raiting": [
-        3,
-        4
+        3.5,
+        3.5,
+        2
       ]
     },
     {
@@ -690,8 +669,24 @@
         "Мел для обозначения контуров при раскрое материала",
         "Цветная книжка -инструкция"
       ],
-      "review": [],
-      "raiting": []
+      "review": [
+        {
+          "userId": 2,
+          "data": "02.05.2022",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "rate": "3.5"
+        },
+        {
+          "userId": 4,
+          "data": "02.05.2022",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "rate": "3"
+        }
+      ],
+      "raiting": [
+        3.5,
+        3
+      ]
     },
     {
       "id": 12,
@@ -738,47 +733,61 @@
       ],
       "review": [
         {
-          "userId": 2,
-          "data": "26.04.2022",
-          "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-          "rate": "3"
+          "userId": 3,
+          "data": "02.05.2022",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "rate": "2"
+        },
+        {
+          "userId": 4,
+          "data": "02.05.2022",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "rate": "5"
         }
       ],
       "raiting": [
-        3
+        2,
+        5
       ]
     }
   ],
   "users": [
     {
       "id": 1,
-      "avatar": "/assets/avatars/1.jpg",
-      "firstName": "Aliaksandr",
-      "lastName": "Kot",
-      "email": "tikotik@yandex.ru",
-      "password": "123456"
+      "avatar": "/assets/avatars/10.jpg",
+      "firstName": "Арнольд",
+      "lastName": "Шварцнегр",
+      "email": "shvarts@das.ge",
+      "password": "123456",
+      "profile":
+        {
+            "favourites": [],
+            "cart": []
+        }
     },
     {
       "id": 2,
-      "avatar": "/assets/avatars/3.jpg",
-      "firstName": "Aliaksandr",
-      "lastName": "Kot",
-      "email": "D.Malkovich@tam.by",
+      "avatar": "/assets/avatars/2.jpg",
+      "firstName": "Памэла",
+      "lastName": "Андэрсон",
+      "email": "pamka@give.us",
       "password": "123456"
     },
     {
       "id": 3,
-      "avatar": "/assets/avatars/5.jpg",
-      "firstName": "Добрыня",
-      "lastName": "Никитич",
-      "email": "dobra@tut.by",
+      "avatar": "/assets/avatars/7.jpg",
+      "firstName": "Дарт",
+      "lastName": "Вейдер",
+      "email": "datr@ver.us",
+      "password": "123456"
+    },
+    {
+      "id": 4,
+      "avatar": "/assets/avatars/4.jpg",
+      "firstName": "Чиппо",
+      "lastName": "Линно",
+      "email": "chip@dog.br",
       "password": "123456"
     }
-  ],
-  "profiles": {
-    "id": 1,
-    "favourites": [],
-    "cart":[],
-    "reviews": []
-  }
+  ]
 }

@@ -10,16 +10,16 @@ const AvaFoto = ({handleImage, image}) => {
                             e.preventDefault();
                             handleImage(e.target.value)}}
                     >
-                        <option defaultValue value="/assets/avatars/1.jpg">Ава 1</option>
-                        <option value="/assets/avatars/2.jpg">Ава 2</option>
-                        <option value="/assets/avatars/3.jpg">Ава 3</option>
-                        <option value="/assets/avatars/4.jpg">Ава 4</option>
-                        <option value="/assets/avatars/5.jpg">Ава 5</option>
-                        <option value="/assets/avatars/6.jpg">Ава 6</option>
-                        <option value="/assets/avatars/7.jpg">Ава 7</option>
-                        <option value="/assets/avatars/7.jpg">Ава 8</option>
-                        <option value="/assets/avatars/9.jpg">Ава 9</option>
-                        <option value="/assets/avatars/10.jpg">Ава 10</option>
+                        <option defaultValue value="/assets/avatars/1.jpg">Черноволосый Ав</option>
+                        <option value="/assets/avatars/2.jpg">Коричневолосая Ава</option>
+                        <option value="/assets/avatars/3.jpg">Серая Ава</option>
+                        <option value="/assets/avatars/4.jpg">Лысый Ав</option>
+                        <option value="/assets/avatars/5.jpg">Светлый Ав</option>
+                        <option value="/assets/avatars/6.jpg">Черная Ава</option>
+                        <option value="/assets/avatars/7.jpg">Коричневый Ав</option>
+                        <option value="/assets/avatars/7.jpg">Темная Ава</option>
+                        <option value="/assets/avatars/9.jpg">Рыжая Ава</option>
+                        <option value="/assets/avatars/10.jpg">Чернобородый Ав</option>
                     </select>
                 </label>
             </div>

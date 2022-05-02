@@ -123,6 +123,7 @@
     }
     &-loupe {
         position: relative;
+        cursor: pointer;
         &::after {
             position: absolute;
             content: url("../img/loupe.svg");

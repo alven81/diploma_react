@@ -23,7 +23,7 @@ const App = () => {
     useEffect(() => {
         dispatch(isUserLogIn({
             "id": 0,
-            "avatar": "/assets/avatars/1.jpg",
+            "avatar": "/assets/avatars/0.jpg",
             "firstName": "Таинственный незнакомец",
             "lastName": "",
             "email": "-"
