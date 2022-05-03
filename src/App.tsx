@@ -11,6 +11,7 @@ import getCatalogData from "./store/actions/loadCatalogAction";
 import { isUserLogIn } from "./store/actions/isUserLogInAction";
 import Catalog from "./pages/catalog/Catalog";
 import Cart from "./pages/cart/Cart";
+import Search from "./pages/search/Search";
 
 const App = () => {
     const dispatch = useDispatch();
@@ -36,6 +37,7 @@ const App = () => {
             <Routes>
                 <Route path='/' element={<Layout />} >
                     <Route index element={<Home />} />
+                    <Route path="search" element={<Search />} />
                     <Route path="catalog" element={<Catalog />} />
                     <Route path="product/:id" element={<Product/>} />
                     <Route path="cart" element={<Cart/>} />

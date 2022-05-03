@@ -1,8 +1,10 @@
 import axios from "axios";
 import { FC, useState } from "react";
+import { useDispatch } from "react-redux";
 import { Link, NavLink } from "react-router-dom";
 import Catalog from "../pages/catalog/Catalog";
 import CatElement from "../pages/catalog/CatElement";
+import searchResult from "../store/actions/searchResultAction";
 
 interface InputSearchProps {
     className: string,
@@ -12,27 +14,15 @@ interface InputSearchProps {
 const InputSearch: FC<InputSearchProps> = ({ className, placeholder }) => {
     
     const [searchText, setSearchText] = useState("");
+    const dispatch = useDispatch();
 
 const handleInputChange = (e: any) => {
     setSearchText(e.target.value);
 }
 
 const handlerSearchItem = () => {
-        axios.get(`http://localhost:3004/products?q=${searchText}`)
-            //.then((res) => console.log(res.data))
-            .then((res) => {
-                console.log(res.data);
-                // {
-                //     <Link to={`/catalog`}> 
-                //     {
-                //     res.data.map((item: any) => <CatElement key={item.id} catalog={item} />)
-                //     }
-                //     </Link>
-                // }
-            })
-            .catch(function (error) {
-                console.log(error);
-        });
+    dispatch(searchResult(searchText))
+        
 
     }
 
@@ -41,12 +31,10 @@ const handlerSearchItem = () => {
             <input
                 className={className} 
                 placeholder={placeholder}
-                // type='text'
-                // name={name}
-                //value={value}
                 onChange={(e) => handleInputChange(e)}
                 />
-            <span className="nav_middle-loupe" onClick={handlerSearchItem}/>
+            <NavLink to='search'><span className="nav_middle-loupe" onClick={handlerSearchItem}/></NavLink>
+
         </>
     )
 }
