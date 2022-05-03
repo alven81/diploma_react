@@ -1,9 +1,8 @@
-import { useState } from "react"
 import { useSelector } from "react-redux"
 import CartElement from "../cart/CartElement"
 
 const Cart = () => {
-    const [price, setPrice] = useState(null);
+    //const [price, setPrice] = useState(null);
     const whatInTheCart = useSelector((state) => state.loadCart.inCart)
     const fullCatalog = useSelector((state) => state.loadData.loadCatalog)
     

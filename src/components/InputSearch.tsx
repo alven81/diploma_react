@@ -1,9 +1,6 @@
-import axios from "axios";
 import { FC, useState } from "react";
 import { useDispatch } from "react-redux";
-import { Link, NavLink } from "react-router-dom";
-import Catalog from "../pages/catalog/Catalog";
-import CatElement from "../pages/catalog/CatElement";
+import { NavLink } from "react-router-dom";
 import searchResult from "../store/actions/searchResultAction";
 
 interface InputSearchProps {

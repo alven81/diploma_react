@@ -50,15 +50,15 @@
         margin: 0;
         li {
             border-bottom: 1px solid $dropMenuBackground;
-            a {
-                text-decoration: none;
-                color: #333333;
-                padding: 15px 20px;
-                display: block;
-                &:hover {
-                    background-color: $dropMenuBackground;
-                }
+            text-decoration: none;
+            color: #333333;
+            padding: 15px 20px;
+            display: block;
+            cursor: pointer;
+            &:hover {
+                background-color: $dropMenuBackground;
             }
+            
         &:last-child {
             border-top: 1px solid $productPrice;
             }

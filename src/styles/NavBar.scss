@@ -53,6 +53,15 @@
                 img {
                     height: 24px;
                     width: 24px;
+                    transition: all 0.3s ease;
+                    &:hover {
+                        transition: all 0.3s ease;
+                        transform: scale(1.2);
+                    }
+                    &:active {
+                        transition: all 0.1s ease;
+                        transform: scale(1.05);
+                    }
                 }
                 span {
                     color: #cdd7de;
@@ -133,4 +142,3 @@
     }
 }
 
-//input[type="search"]::placeholder { color: #ffd595; }
