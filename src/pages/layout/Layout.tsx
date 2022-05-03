@@ -1,9 +1,9 @@
 import { RootStateOrAny, useSelector } from "react-redux";
 import { Outlet } from "react-router-dom";
-import Footer from "../components/layout/Footer";
-import NavBar from "../components/layout/NavBar";
-import LogModal from "../components/modal/log/LogIn";
-import RegModal from "../components/modal/reg/Reg";
+import Footer from "./Footer";
+import NavBar from "./NavBar";
+import LogModal from "../../components/modal/log/LogIn";
+import RegModal from "../../components/modal/reg/Reg";
 
 const Layout = () => {
 

@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { useDispatch, useSelector } from "react-redux";
 import { isUserLogIn } from "../../../store/actions/isUserLogInAction";
+import loadCart from "../../../store/actions/loadCartAction";
 import { openLogModal } from "../../../store/actions/LogAction";
 import { doesCredentialsOk } from "../../../utils/doesCredentialsOk";
 import { doesUserExist } from "../../../utils/doesUserExist";
@@ -26,6 +27,8 @@ const LogModal = () => {
                 dispatch(isUserLogIn(userInfo));
                 alert("Вы успешно вошли в ресурс!");
                 dispatch(openLogModal(false));
+                dispatch(loadCart(userInfo.id))
+                //localStorage.setItem('userId', true)
             } else {
                 alert("Неверный пароль");
             }

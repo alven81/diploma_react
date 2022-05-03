@@ -1,10 +1,20 @@
-import { FC } from "react"
+import { FC, useEffect, useState } from "react"
 import { useSelector, RootStateOrAny } from "react-redux"
-import CatElement from "../components/catalog/CatElement"
-import { New } from "../components/product/New"
-import IElement from "../types/element"
+import CatElement from "./CatElement"
+import { New } from "../product/New"
+import IElement from "../../types/element"
 
 const Catalog: FC = () => {
+
+    // const [userId, setUserId] = useState(false)
+
+    // useEffect(() => {
+    //     const loggedInUser = localStorage.getItem("userId");
+    //     if (loggedInUser) {
+    //       const foundUser = JSON.parse(loggedInUser);
+    //       setUserId(foundUser);
+    //     }
+    //   }, []);
 
     const catalog = useSelector((state: RootStateOrAny) => state.loadData.loadCatalog);
     

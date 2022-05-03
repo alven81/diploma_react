@@ -1,0 +1,51 @@
+.cart {
+    &-name {
+        > p {
+            text-align: center;
+            @include fontRoboto(700, 24, 24)
+        }
+        
+    }
+    &_main {
+        display: flex;
+        gap: 20px;
+        width: 100%;
+        border-bottom: 1px solid $mainBlack;
+        &-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 5px;
+            width: 150px;
+            img{
+                width: 100px;
+                max-height: 200px;
+            }
+        }
+        &-title {
+            display: flex;
+            justify-content: flex-start;
+            flex: 1;
+            margin: 5px;
+        }
+        &-price {
+            margin: 5px;
+        }
+        &-quantity {
+            display: flex;
+            justify-content:flex-start;
+            align-items: center;
+            flex-direction: column;
+            margin: 5px;
+            min-width: 10%;
+            button {
+                cursor: pointer;
+            }
+        }
+        &-cost {
+            margin: 5px;
+        }
+
+    }
+    
+}

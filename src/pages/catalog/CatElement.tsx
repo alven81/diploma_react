@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 import { useDispatch } from "react-redux"
 import IElement from "../../types/element"
 import { addItemIndex } from "../../store/actions/indexAction"
-import Product from "../../pages/Product"
+import Product from "../product/Product"
 
 interface CatElementProps {
     catalog: IElement

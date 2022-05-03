@@ -1,16 +1,16 @@
 import { Route, Routes } from "react-router-dom"
 import './styles/App.scss';
-import Catalog from "./pages/Catalog";
 import Home from "./pages/Home";
-import Layout from "./pages/Layout";
+import Layout from "./pages/layout/Layout";
 import PageNotFound from "./pages/PageNotFound";
-import Product from "./pages/Product";
+import Product from "./pages/product/Product";
 import Workshop from "./pages/Workshop";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
-import { store } from './store/index';
 import getCatalogData from "./store/actions/loadCatalogAction";
 import { isUserLogIn } from "./store/actions/isUserLogInAction";
+import Catalog from "./pages/catalog/Catalog";
+import Cart from "./pages/cart/Cart";
 
 const App = () => {
     const dispatch = useDispatch();
@@ -38,6 +38,7 @@ const App = () => {
                     <Route index element={<Home />} />
                     <Route path="catalog" element={<Catalog />} />
                     <Route path="product/:id" element={<Product/>} />
+                    <Route path="cart" element={<Cart/>} />
                     <Route path="workshop" element={<Workshop />} />
                     <Route path="*" element={<PageNotFound />} />
                 </Route>

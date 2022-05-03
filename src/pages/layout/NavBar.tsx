@@ -1,12 +1,13 @@
 import { FC } from "react"
 import { RootStateOrAny, useSelector } from "react-redux"
 import { NavLink } from "react-router-dom"
-import DropDownMenu from "../DropDownMenu"
-import InputSearch from "../InputSearch"
+import DropDownMenu from "../../components/DropDownMenu"
+import InputSearch from "../../components/InputSearch"
 
 const NavBar: FC = () => {
 
     const userName = useSelector((state: RootStateOrAny) => state.isUserLogIn.isUserLogInInfo)
+    const whatInTheCart = useSelector((state: RootStateOrAny) => state.loadCart.inCart)
 
     return (
         <>
@@ -50,8 +51,8 @@ const NavBar: FC = () => {
                                 <span className="nav_middle-cart-block-span-heart">0</span>
                             </div>
                             <div>
-                                <img src="/assets/img/cart.svg" alt="Корзина" />
-                                <span className="nav_middle-cart-block-span-cart">0</span>
+                            <NavLink to='cart'><img src="/assets/img/cart.svg" alt="Корзина" /></NavLink>
+                                <span className="nav_middle-cart-block-span-cart">{whatInTheCart.length}</span>
                             </div>
                         </div>
                     </div>

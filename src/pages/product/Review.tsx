@@ -1,6 +1,6 @@
 import { FC } from "react"
 import IReview from "../../types/review"
-import { ReviewText } from "../../components/product/ReviewText";
+import { ReviewText } from "./ReviewText";
 
 interface ReviewProps {
     reviews: IReview

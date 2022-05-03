@@ -42,15 +42,14 @@ const CommentsModal = ({ onClick, handleShowComments, id, showComment }) => {
 
 
     const sendComment = async (e) => {
-        console.log(catalog);
+        //console.log(catalog);
         const review = newCatalog;
         review.push(reviewText);
-        //console.log("review", review);
         axios.patch(`http://localhost:3004/products/${id}`, 
         {review: review})
         .then(setNewCatalog(review))
         // .then(resp => {console.log(resp.data)})
-        // .catch(error => {console.log(error)});
+        .catch(error => {console.log(error)});
         handleShowComments();
     }
 

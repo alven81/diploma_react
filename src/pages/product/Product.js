@@ -1,17 +1,19 @@
 import { Rating } from "@mui/material";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useSelector } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 import { useParams } from "react-router";
-import CommentsModal from "../components/product/CommentsModal";
-import { Features } from "../components/product/Features";
-import { ImageBox } from "../components/product/ImageBox";
-import { Review } from "../components/product/Review";
-import { Consist } from "../components/product/Consist";
-import { New } from "../components/product/New";
+import CommentsModal from "./CommentsModal";
+import { Features } from "./Features";
+import { ImageBox } from "./ImageBox";
+import { Review } from "./Review";
+import { Consist } from "./Consist";
+import { New } from "./New";
+import loadCart from "../../store/actions/loadCartAction";
 
 const Product = () => {
 
+    const dispatch = useDispatch();
     const itemIndex = useParams().id;
     const catalog = useSelector((state) => state.loadData.loadCatalog);
     const catalogList = catalog[itemIndex - 1];
@@ -19,15 +21,22 @@ const Product = () => {
     const [averageRating, setAverageRating] = useState();
     const [showComment, setShowComment] = useState(false);
     const [review, setReview] = useState(false);
+    const [cartItem, setCartItem] = useState();
+    //const [cartItems, setCartItems] = useState();
 
     const user = useSelector((state) => state.isUserLogIn.isUserLogInInfo)
-
+    const whatInTheCart = useSelector((state) => state.loadCart.inCart)
+    
 useEffect(() => {
         if (!catalogList) return;
         axios.get(`http://localhost:3004/products/${catalogList.id}`)
         .then(res => setRaiting(res.data.raiting))
         }, [catalogList]
     )
+
+useEffect(() => {
+    setCartItem(itemIndex)
+}, [])
 
 useEffect(() => {
     setAverageRating((raiting.reduce((x, y) => x + y, 0))/raiting.length)
@@ -44,8 +53,8 @@ const handleRate = (e) => {
         axios.patch(`http://localhost:3004/products/${catalogList.id}`, 
         {raiting: raiting})
         .then(updateRaiting(raiting))
-        // .then(resp => {console.log(resp.data)})
-        // .catch(error => {console.log(error)});
+        .then(resp => {console.log(resp.data)})
+        .catch(error => {console.log(error)});
     }
 }
 
@@ -58,7 +67,20 @@ const handleShowReview = () => {
     setReview(!review)
 }
 
-    //if (!catalogList) return null;
+
+const handleAddtoCart = async () => {
+    if (!user.id) return alert("Только зарегистрированные пользователи могут добавлять товары в корзину!")
+    whatInTheCart.push(Number(cartItem));
+    //setCartItems(whatInTheCart);
+    await axios.patch(`http://localhost:3004/users/${user.id}`, {cart: whatInTheCart})
+    .catch(function (error) {
+        if (error.response) {
+          console.log(error.response.status);
+        }
+    });
+    dispatch(loadCart(user.id))
+}
+    
     return (
 
         <section className="product_main container">
@@ -111,7 +133,7 @@ const handleShowReview = () => {
                                     Цвет: <span>{catalogList.color}</span>
                                 </p>
                                 <div className="button_container button_cart">
-                                    <button>
+                                    <button onClick={() => handleAddtoCart()}>
                                         Добавить в корзину
                                     </button>
                                 </div>

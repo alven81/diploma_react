@@ -5,7 +5,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    
+    border-bottom: 1px solid $headerDarker;
+
     &-element {
 
         width: 23%;

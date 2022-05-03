@@ -1,8 +1,8 @@
 import axios from "axios";
 import { FC, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import Catalog from "../pages/Catalog";
-import CatElement from "./catalog/CatElement";
+import Catalog from "../pages/catalog/Catalog";
+import CatElement from "../pages/catalog/CatElement";
 
 interface InputSearchProps {
     className: string,
@@ -36,14 +36,6 @@ const handlerSearchItem = () => {
 
     }
 
-
-// const handleFilter = (e: FormEvent<HTMLFormElement>) => {
-//     e.preventDefault();
-//     setFilterString(input.current.value)
-//     }
-
-
-    
     return (
         <>
             <input
