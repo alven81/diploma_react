@@ -1,9 +1,9 @@
 import { useSelect } from "@mui/base";
 import React, { useEffect, useRef, useState } from "react";
 import { useDispatch } from "react-redux";
+import { NavLink } from "react-router-dom";
 import { openLogModal } from "../store/actions/LogAction";
 import { openRegModal } from "../store/actions/RegAction";
-
 import { useDetectOutsideClick } from "../utils/useDetectOutsideClick";
 /*
  * Read the blog post here:
@@ -27,33 +27,34 @@ export default function DropDownMenu({src, alt}) {
   return (
       <div className="menu-container">
         <button onClick={onClick} className="menu-button">
-          <img src={src} alt={alt} />
+            <img src={src} alt={alt} />
         </button>
         <nav
-          ref={dropdownRef}
-          className={`menu ${isActive ? "active" : "inactive"}`}
+            ref={dropdownRef}
+            className={`menu ${isActive ? "active" : "inactive"}`}
         >
           <ul>
             <li>
-              <a href="#">Избранное</a>
+                Избранное
             </li>
             <li>
-              <a href="#">Мои отзывы</a>
+                <NavLink className="navlink" to='reviews'>Мои отзывы</NavLink>
+                
             </li>
             <li>
-              <a href="#">Управление аккаунтом</a>
+                Управление аккаунтом
             </li>
             <li>
-              <a href="#">Корзина</a>
+                <NavLink  className="navlink" to='cart'>Корзина</NavLink>
             </li>
-            <li className={userIsReg ? "hide" : ""}>
-              <a onClick={() => dispatch(openRegModal(true))} href="#">Зарегистрироваться</a>
+            <li className={userIsReg ? "hide" : ""} onClick={() => dispatch(openRegModal(true))}>
+                Зарегистрироваться
+            </li>
+            <li onClick={() => dispatch(openLogModal(true))}>
+                Войти в аккаунт
             </li>
             <li>
-              <a onClick={() => dispatch(openLogModal(true))} href="#">Войти в аккаунт</a>
-            </li>
-            <li>
-              <a href="#">Админка</a>
+              Админка
             </li>
           </ul>
         </nav>

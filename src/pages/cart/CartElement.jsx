@@ -82,10 +82,12 @@ const CartElement = ({ item }) => {
             </div>
             <div className="cart_main-quantity">
                 <div>
+                    <button onClick={() => handleQuantity(-1)}>-</button>
+                </div>
+                <div>
                     {qty}
                 </div>
                 <div>
-                    <button onClick={() => handleQuantity(-1)}>-</button>
                     <button onClick={() => handleQuantity(1)}>+</button>
                 </div>
             </div>

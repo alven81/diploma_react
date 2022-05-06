@@ -9,7 +9,7 @@
         justify-content: space-between;
         background-color: $headerDarker;
         text-transform: uppercase;
-        color: #fff;
+        color: $lightFont;
         &-list {
             display: flex;
             list-style: none;
@@ -31,7 +31,7 @@
             justify-content: flex-end;
             &-user {
                 color: $mainPinc;
-                @include fontRoboto(500, 16, 16)
+                @include fontRoboto(500, 16, 16);
             }
             &-block {
                 margin-left: auto;
@@ -53,6 +53,15 @@
                 img {
                     height: 24px;
                     width: 24px;
+                    transition: all 0.3s ease;
+                    &:hover {
+                        transition: all 0.3s ease;
+                        transform: scale(1.2);
+                    }
+                    &:active {
+                        transition: all 0.1s ease;
+                        transform: scale(1.05);
+                    }
                 }
                 span {
                     color: #cdd7de;
@@ -62,7 +71,7 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    border: 1px solid #f2785c;
+                    border: 1px solid $headerDarker;
                     height: 24px;
                     width: 24px;
                     border-radius: 24px;
@@ -74,7 +83,7 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    border: 1px solid #f2785c;
+                    border: 1px solid $headerDarker;
                     height: 24px;
                     width: 24px;
                     border-radius: 24px;
@@ -85,8 +94,8 @@
         }
     }
     &_bottom {
-        border-top: 1px solid #F2785C;
-        border-bottom: 1px solid #F2785C;
+        border-top: 1px solid $headerDarker;
+        border-bottom: 1px solid $headerDarker;
 
         &-list {
             display: flex;
@@ -133,4 +142,3 @@
     }
 }
 
-//input[type="search"]::placeholder { color: #ffd595; }

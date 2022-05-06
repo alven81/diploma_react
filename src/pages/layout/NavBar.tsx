@@ -50,8 +50,8 @@ const NavBar: FC = () => {
                                 <img src="/assets/img/cart_heart.svg" alt="Избранное" />
                                 <span className="nav_middle-cart-block-span-heart">0</span>
                             </div>
-                            <div>
-                            <NavLink to='cart'><img src="/assets/img/cart.svg" alt="Корзина" /></NavLink>
+                            <div >
+                            <NavLink className="nav-icons" to='cart'><img  src="/assets/img/cart.svg" alt="Корзина" /></NavLink>
                                 <span className="nav_middle-cart-block-span-cart">{whatInTheCart.length}</span>
                             </div>
                         </div>

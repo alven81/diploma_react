@@ -1,9 +1,8 @@
-import { useState } from "react"
 import { useSelector } from "react-redux"
 import CartElement from "../cart/CartElement"
 
 const Cart = () => {
-    const [price, setPrice] = useState(null);
+
     const whatInTheCart = useSelector((state) => state.loadCart.inCart)
     const fullCatalog = useSelector((state) => state.loadData.loadCatalog)
     
@@ -25,14 +24,6 @@ const Cart = () => {
     }
 
         const cartContent = (calcCart(calcCartContent))
-
-    // function calcCost(calcCartContent) {
-    //         let price = 0;
-    //         for(let key in calcCartContent) {
-    //         price += (fullCatalog[key-1].discount_price || fullCatalog[key-1].price) * calcCartContent[key]
-    //     }
-    //     return price;
-    // }
 
     function calcCost(whatInTheCart) {
         let price = 0;
