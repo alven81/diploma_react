@@ -1,5 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useSelector } from "react-redux"
+import LoadingSpinner from "../../components/LoadingSpinner";
+import { ReviewUsers } from "./ReviewUsers";
 
 const Reviews = () => {
 
@@ -8,27 +10,45 @@ const Reviews = () => {
     const userId = user.id;
     const [array, setArray] = useState([])
 
-    let arr = [];
+    let userReviewList = [];
 
-    const reviewsList = (user) => {
-        catalog.forEach((value, index) => {
-            let prodId = {id: value.id}
-            value.review.forEach((value) => {
-                if (value.userId === user) {
-                    arr[index] = {review: value, id: prodId}
-                    setArray(arr.filter(n => n));
-                };
-            })
-        })
-        console.log(array)     
+    const findReviews  = (user) => {
+        for (let reviewsArray of catalog) { 
+            for  (let message of reviewsArray.review) { 
+                 if (message.userId === user) {
+                    userReviewList.push(
+                        {
+                        "productId": reviewsArray,
+                        "review": message
+                        }
+                    )
+                }
+            }
+        }
+        setArray(userReviewList);
+        console.log(array);
     }
+
+    useEffect(() => {
+        findReviews(userId);
+    }, [catalog]);
 
     return (
         <section className="container">
-            Reviews 
-            <button onClick={() => reviewsList(userId)}>ОТЗЫВЫ</button>
+            <div className="reviews-title">
+                <p>
+                    Ваши отзывы
+                </p>
+            </div>        
+            {  !array.length ? <LoadingSpinner/> :
+                <ol>
+                    {
+                        array.map(array => <ReviewUsers array={array} />)
+                    }
+                </ol> 
+            }    
         </section>
     )
 }
-
 export default Reviews
+//<button onClick={() => findReviews(userId)} disabled={isLoading}>ОТЗЫВЫ</button>

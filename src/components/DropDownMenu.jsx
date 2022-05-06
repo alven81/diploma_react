@@ -38,14 +38,14 @@ export default function DropDownMenu({src, alt}) {
                 Избранное
             </li>
             <li>
-                <NavLink to='reviews'>Мои отзывы</NavLink>
+                <NavLink className="navlink" to='reviews'>Мои отзывы</NavLink>
                 
             </li>
             <li>
                 Управление аккаунтом
             </li>
             <li>
-                <NavLink to='cart'>Корзина</NavLink>
+                <NavLink  className="navlink" to='cart'>Корзина</NavLink>
             </li>
             <li className={userIsReg ? "hide" : ""} onClick={() => dispatch(openRegModal(true))}>
                 Зарегистрироваться
