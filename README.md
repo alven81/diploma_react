@@ -1,3 +1,13 @@
+### Project in progress...
+
+### For testing run:
+
+### `npm install`
+### `npm run json`
+### `npm start`
+
+-----
+
 ## How to:
 
 -----
