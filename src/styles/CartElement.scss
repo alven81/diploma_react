@@ -29,21 +29,37 @@
             margin: 5px;
         }
         &-price {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 8%;
             margin: 5px;
+            @include fontRoboto(500, 20, 20);
         }
         &-quantity {
             display: flex;
-            justify-content:flex-start;
+            gap: 10px;
+            justify-content:center;
             align-items: center;
-            flex-direction: column;
             margin: 5px;
             min-width: 10%;
+            @include fontRoboto(500, 20, 20);
             button {
+                width: 30px;
+                height: 30px;
                 cursor: pointer;
+                border-radius: 30px;
+                border: 1px solid $produckBtnBorder;
+                background-color: transparent;
             }
         }
         &-cost {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 8%;
             margin: 5px;
+            @include fontRoboto(500, 20, 20);
         }
 
     }
