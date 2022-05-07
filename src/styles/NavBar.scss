@@ -9,11 +9,22 @@
         justify-content: space-between;
         background-color: $headerDarker;
         text-transform: uppercase;
-        color: $lightFont;
+        @include fontRoboto(700, 14, 16);
         &-list {
             display: flex;
             list-style: none;
-            gap: 20px;
+            color: $lightFont;
+            gap: 20px; 
+            &-navlink {
+                text-decoration: none;
+                color: $lightFont;
+                &:hover {
+                    color: $productPrice;
+                    text-decoration: none;
+                    color: $productPrice;
+                }
+            }
+            
         }
         &-contact {
             display: flex;
@@ -96,13 +107,18 @@
     &_bottom {
         border-top: 1px solid $headerDarker;
         border-bottom: 1px solid $headerDarker;
-
         &-list {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
             list-style: none;
             text-transform: uppercase;
+            @include fontRoboto(400, 14, 16);
+            text-decoration: none;
+            color: $productPrice;
+            &:hover {
+                font-weight: 700;
+            }
         }
     }
 }

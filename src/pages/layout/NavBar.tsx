@@ -15,7 +15,7 @@ const NavBar: FC = () => {
                 <div className="nav_top">
                     <div>
                         <ul className="nav_top-list">
-                            <li><NavLink to="/">Главная</NavLink></li>
+                            <li><NavLink className="nav_top-list-navlink" to="/">Главная</NavLink></li>
                             <li>О нас</li>
                             <li>Блог</li>
                             <li>Оплата и доставка</li>
@@ -59,15 +59,15 @@ const NavBar: FC = () => {
                 </div>
                 <div className="nav_bottom">
                     <ul className="nav_bottom-list">
-                        <li><NavLink to='catalog'>Каталог</NavLink></li>
-                        <li><NavLink to='craft'>Рукоделие</NavLink></li>
-                        <li><NavLink to='paint'>Рисование</NavLink></li>
-                        <li><NavLink to='model'>Моделирование</NavLink></li>
-                        <li><NavLink to='decor'>Украшение</NavLink></li>
-                        <li><NavLink to='flora'>Флористика</NavLink></li>
-                        <li><NavLink to='workshop'>Мастерская</NavLink></li>
-                        <li><NavLink to='new'>Новинки</NavLink></li>
-                        <li><NavLink to='discount'>Скидки</NavLink></li>
+                        <li><NavLink className="nav_bottom-list" to='catalog'>Каталог</NavLink></li>
+                        <li><NavLink className="nav_bottom-list" to='craft'>Рукоделие</NavLink></li>
+                        <li><NavLink className="nav_bottom-list" to='paint'>Рисование</NavLink></li>
+                        <li><NavLink className="nav_bottom-list" to='model'>Моделирование</NavLink></li>
+                        <li><NavLink className="nav_bottom-list" to='decor'>Украшение</NavLink></li>
+                        <li><NavLink className="nav_bottom-list" to='flora'>Флористика</NavLink></li>
+                        <li><NavLink className="nav_bottom-list" to='workshop'>Мастерская</NavLink></li>
+                        <li><NavLink className="nav_bottom-list" to='new'>Новинки</NavLink></li>
+                        <li><NavLink className="nav_bottom-list" to='discount'>Скидки</NavLink></li>
                     </ul>
                 </div>
             </nav>

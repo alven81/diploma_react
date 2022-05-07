@@ -1,7 +1,8 @@
 .home_container {
     width: 1144px;
-    margin: 0 auto;
+    margin: 0px auto;
     background-color: #fff;
+    padding: 20px;
 }
 
 .home_main {
@@ -198,6 +199,75 @@
             }
         }
        
+    }
+    &-title {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include fontRoboto(700, 24, 28);
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        padding-bottom: 30px;
+        padding-top: 50px;
+        position: relative;
+        span {
+            display: block;
+            height: 2px;
+            width: 180px;
+            background-color: $titleSpan;
+        }
+        p {
+            margin: 0 20px;
+        }
+        &-ball {
+            position: absolute;
+            right: 2px;
+            top: 5px;
+        }
+        &-pencil {
+            position: absolute;
+            left: 0px;
+            top: 5px;
+        }
+    }
+    &-workshop {
+        display: flex;
+        justify-content: space-between;
+        &-element {
+        box-sizing: border-box;
+            &-image {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 20px 0;
+                height: 465px;
+                width: 340px;
+                border: 1px solid $produckBtnBorder;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                border-radius: 20px;
+                box-sizing: border-box;
+                div {
+                    width: 100%;
+                    height: 383px;                
+                    box-sizing: border-box;
+                    background: $produckBtnBorder;
+                    border: 1px solid $produckBtnBorder;
+                    box-shadow: 0px 3.30588px 3.30588px rgba(0, 0, 0, 0.25);
+                    border-radius: 20px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    img {
+                        display: block;
+                        background: $produckBtnBorder;
+                        border: 3px solid $lightFont;
+                        box-shadow: 0px 3.30588px 3.30588px rgba(0, 0, 0, 0.25);
+                        border-radius: 20px;
+                    }
+                }
+            }
+        }
     }
 }
 
