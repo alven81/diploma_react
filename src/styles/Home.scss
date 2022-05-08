@@ -133,10 +133,17 @@
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
+            @media (max-width: 720px){
+                flex-direction: column;
+            }
             span {
                 height: 3px;
                 width: 195px;
                 background-color: #8C7158;
+                transition: all 1s;
+                @media (max-width: 720px){
+                    width: 100px;
+                }
             }
             p {
                 max-width: 275px;
@@ -235,7 +242,7 @@
         padding-bottom: 30px;
         padding-top: 50px;
         position: relative;
-        @media (max-width: 670px){
+        @media (max-width: 820px){
             flex-direction: column;
         }
         span {
@@ -299,6 +306,13 @@
             }
         }
     }
+    &-buttons {
+        @media (max-width: 1110px) {
+            display: flex !important;
+            justify-content: space-between !important;
+            gap: 0 !important;
+        }
+    }
 }
 
 .artefact {
@@ -308,7 +322,7 @@
         width: 19px;
         height: 19px;
         left: 34px;
-        top: 64px;
+        top: 6%;
         background: radial-gradient(50% 50% at 50% 50%, #FC5185 0%, rgba(252, 81, 133, 0.5) 100%);
     }
     &_2 {
@@ -316,8 +330,8 @@
         position: absolute;
         width: 19px;
         height: 19px;
-        left: 533px;
-        top: 60px;
+        left: 46%;
+        top: 13%;
         background: radial-gradient(50% 50% at 50% 50%, #D96907 0%, rgba(217, 105, 7, 0.5) 100%);
         opacity: 0.9;
     }
@@ -326,8 +340,8 @@
         position: absolute;
         width: 19px;
         height: 19px;
-        left: 600px;
-        top: 268px;
+        left: 51%;
+        top: 71%;
         background: radial-gradient(50% 50% at 50% 50%, #364F6B 0%, rgba(54, 79, 107, 0.5) 100%);
     }
     &_4 {
@@ -335,8 +349,8 @@
         position: absolute;
         width: 30px;
         height: 30px;
-        left: 818px;
-        top: 265px;
+        right: 200px;
+        top: 75%;
         background: radial-gradient(50% 50% at 50% 50%, #364F6B 0%, rgba(54, 79, 107, 0.5) 100%);
     }
     &_5 {
@@ -345,7 +359,7 @@
         width: 30px;
         height: 30px;
         right: 0px;
-        top: 64px;
+        top: 30%;
         background: radial-gradient(50% 50% at 50% 50%, #8C7158 0%, rgba(140, 113, 88, 0.5) 100%);
     }
 }
