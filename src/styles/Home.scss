@@ -268,9 +268,9 @@
 
     &-workshop {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         align-items: center;
-        flex-direction: column;
+        flex-wrap: wrap;
         &-element {
             box-sizing: border-box;
             &-image {

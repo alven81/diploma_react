@@ -1,8 +1,10 @@
 const PageNotFound = () => {
     return (
         <>
-            <div className="container">
-                Страница ещё не создана. Посетите разделы "Каталог" или "Мастерская"
+            <div className="pagenotfound container">
+                <p>К сожалению данная страница ещё не создана...</p>
+                <img src="./assets/img/not_found.png" alt="Грустный смайлик" />
+                <p>Но вы можете посетить другие разделы сайта!</p>
             </div>
         </>
     )

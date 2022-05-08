@@ -1,0 +1,12 @@
+.pagenotfound {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    img {
+        max-width: 600px;
+    }
+    p {
+        @include fontRoboto(500, 20, 20)
+    }
+}

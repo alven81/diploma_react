@@ -2,7 +2,7 @@
   "products": [
     {
       "id": 1,
-      "category": "craft",
+      "categoryId": 1,
       "price": 46.18,
       "discount": false,
       "new": true,
@@ -91,7 +91,7 @@
     },
     {
       "id": 2,
-      "category": "craft",
+      "categoryId": 1,
       "price": 77.45,
       "discount": false,
       "new": false,
@@ -153,7 +153,7 @@
     },
     {
       "id": 3,
-      "category": "craft",
+      "categoryId": 1,
       "price": 77.45,
       "discount": true,
       "new": true,
@@ -215,7 +215,7 @@
     },
     {
       "id": 4,
-      "category": "craft",
+      "categoryId": 1,
       "price": 77.45,
       "discount": false,
       "new": false,
@@ -291,7 +291,7 @@
     },
     {
       "id": 5,
-      "category": "craft",
+      "categoryId": 1,
       "price": 77.45,
       "discount": true,
       "new": false,
@@ -353,7 +353,7 @@
     },
     {
       "id": 6,
-      "category": "craft",
+      "categoryId": 1,
       "price": 46.18,
       "discount": false,
       "new": true,
@@ -414,7 +414,7 @@
     },
     {
       "id": 7,
-      "category": "craft",
+      "categoryId": 1,
       "price": 46.18,
       "discount": false,
       "new": false,
@@ -476,7 +476,7 @@
     },
     {
       "id": 8,
-      "category": "craft",
+      "categoryId": 1,
       "price": 77.45,
       "discount": false,
       "new": true,
@@ -538,7 +538,7 @@
     },
     {
       "id": 9,
-      "category": "craft",
+      "categoryId": 1,
       "price": 77.45,
       "discount": false,
       "new": false,
@@ -600,7 +600,7 @@
     },
     {
       "id": 10,
-      "category": "craft",
+      "categoryId": 1,
       "price": 77.45,
       "discount": false,
       "new": true,
@@ -669,7 +669,7 @@
     },
     {
       "id": 11,
-      "category": "craft",
+      "categoryId": 1,
       "price": 77.45,
       "discount": true,
       "new": true,
@@ -738,7 +738,7 @@
     },
     {
       "id": 12,
-      "category": "paint",
+      "categoryId": 2,
       "price": 85.27,
       "discount": true,
       "new": true,
@@ -853,25 +853,44 @@
       "email": "li@chi.na",
       "password": "123456",
       "cart": [
+        10,
+        3,
+        10,
+        3,
+        6,
         11,
         7,
         3,
-        10,
-        3,
-        10,
-        3,
-        6
+        6,
+        7
       ]
     }
   ],
   "categiries": [
     {
       "id": 1,
-      "category": "craft"
+      "categoryLink": "craft",
+      "category": "Рукоделие"
     },
     {
-      "id": 1,
-      "category": "paint"
+      "id": 2,
+      "categoryLink": "paint",
+      "category": "Рисование"
+    },
+    {
+      "id": 3,
+      "categoryLink": "model",
+      "category": "Моделирование"
+    },
+    {
+      "id": 4,
+      "categoryLink": "decor",
+      "category": "Украшение"
+    },
+    {
+      "id": 5,
+      "categoryLink": "flora",
+      "category": "Флористика"
     }
   ]
 }

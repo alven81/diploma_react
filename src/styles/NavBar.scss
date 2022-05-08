@@ -154,7 +154,7 @@
             justify-content: center;
             align-items: center;
             &:hover {
-                border-color: white;
+                border-color: $lightBackground;
             }
 
             span {
@@ -165,7 +165,6 @@
                 width: 20px;
                 border-radius: 2px;
                 transition: all 0.5s;
-
 
                 &:hover {
                     border-color: $titleSpan;
@@ -182,19 +181,18 @@
                         left: 9px;
                         top: -3px;
                     }
-                &:active {
-                    background-color: white;
-                    &::before {
-                        background-color: white;
-                    }
-                    &::after {
-                        background-color: white;
+                    &:active {
+                        background-color: $lightBackground;
+                        &::before {
+                            background-color: $lightBackground;
+                        }
+                        &::after {
+                            background-color: $lightBackground;
+                        }
                     }
                 }
-
-                }
                 &:active {
-                transform: scale(1.08);
+                    transform: scale(1.08);
                 }
             }
             ::before {
@@ -218,6 +216,23 @@
                 background-color: $mainPinc;
                 transition: all 0.5s;
             }
+            &:hover > span {
+                border-color: $mainBlack;
+                transition: all 0.5s;
+                
+                               &::before {
+                                    transform: rotate(-30deg);
+                                    width: 11px;
+                                    left: 9px;
+                                    top: 3px;
+                                }
+                                &::after {
+                                    transform: rotate(30deg);
+                                    width: 11px;
+                                    left: 9px;
+                                    top: -3px;
+                                }
+              }
         }
     }
 }

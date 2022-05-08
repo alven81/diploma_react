@@ -1,13 +1,19 @@
 import { FC } from "react"
-import { RootStateOrAny, useSelector } from "react-redux"
+import { RootStateOrAny, useDispatch, useSelector } from "react-redux"
 import { NavLink } from "react-router-dom"
 import DropDownMenu from "../../components/DropDownMenu"
 import InputSearch from "../../components/InputSearch"
+import { leftSideMenuStatus } from "../../store/actions/leftSideMenuStatusAction"
 
-const NavBar: FC = (burgerPress: any) => {
+const NavBar: FC = () => {
 
     const userName = useSelector((state: RootStateOrAny) => state.isUserLogIn.isUserLogInInfo)
     const whatInTheCart = useSelector((state: RootStateOrAny) => state.loadCart.inCart)
+    const dispatch = useDispatch();
+
+    const burgerPress = () => {
+        dispatch(leftSideMenuStatus(true));
+    }
 
     return (
         <>
