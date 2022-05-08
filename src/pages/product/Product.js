@@ -127,7 +127,7 @@ const handleAddtoCart = async () => {
                                 <p className={catalogList.discount === true ? "discount" : "hide"}>
                                     Цена со скидкой: <span>{`${catalogList.discount_price} руб.`}</span>
                                 </p>
-                                <p>
+                                <p className={(catalogList.color == 0) ? "hide" : ""}>
                                     Цвет: <span>{catalogList.color}</span>
                                 </p>
                                 <div className="button_container button_cart">
@@ -137,7 +137,7 @@ const handleAddtoCart = async () => {
                                 </div>
                             </div>
 
-                            <div className="product_main-item-description">
+                            <div className={(!catalogList.description) ? "hide" : "product_main-item-description"}>
                                 <h3>Описание</h3>
                                 <p>{catalogList.description}</p>
                             </div>

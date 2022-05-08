@@ -5,13 +5,12 @@ import { leftSideMenuStatus } from "../../store/actions/leftSideMenuStatusAction
 import getCategoryList from "../../store/actions/loadCategoryAction";
 import { CategoryList } from "./CategoryList";
 
-
 const LeftSlideMenu = ({isMenuOpen}) => {
 
     const category = useSelector(state => state.loadCategoryList.categoryListIs)
 
     const dispatch = useDispatch();
-
+    
     const handleCloseMenu = () => {
         dispatch(leftSideMenuStatus(false));
     }

@@ -13,7 +13,6 @@ function searchResult(searchText) {
     }
 }
 
-
 function getSearchResult(load) {
 
     return {
@@ -22,4 +21,5 @@ function getSearchResult(load) {
     }
 }
 
-export default searchResult
+export {searchResult};
+

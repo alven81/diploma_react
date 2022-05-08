@@ -8,6 +8,7 @@ import loadCategoryReducer from "./loadCategoryReducer";
 import { LogModalReducer } from "./LogReducer";
 import { RegModalReducer } from "./RegReducer";
 import loadSearchReducer from "./searchResultReducer";
+import loadSearchCategoryReducer from "./searchCategoryResultReducer";
 
 //const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
@@ -22,6 +23,7 @@ const reducer = combineReducers(
         isOpenLog: LogModalReducer,
         whichIsLeftSideMenuStatus: isLeftSideMenuStatusReducer,
         loadCategoryList: loadCategoryReducer,
+        searchCategoryResult: loadSearchCategoryReducer,
     },
 );
 

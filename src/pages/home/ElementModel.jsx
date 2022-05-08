@@ -1,5 +1,5 @@
 const ElementModel = ({bkgClass}) => {
-    console.log(bkgClass);
+
     return (
         <div className={bkgClass} >
             <div >

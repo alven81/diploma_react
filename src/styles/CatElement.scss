@@ -31,6 +31,11 @@
                 box-sizing: border-box;
                 min-height: 328px;
                 min-width: 246px;
+                transition: all 0.5s;
+                z-index: -1;
+                &:hover {
+                    transform: scale(1.08);
+                }
             }
         }
         &-disc_bottom {

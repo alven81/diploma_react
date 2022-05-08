@@ -1,5 +1,5 @@
 const ElementPaint = ({bkgClass}) => {
-    console.log(bkgClass);
+
     return (
         <>
             <div className={bkgClass} >

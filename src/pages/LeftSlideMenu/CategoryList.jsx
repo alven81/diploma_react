@@ -2,9 +2,9 @@ import { useDispatch } from "react-redux";
 import { NavLink } from "react-router-dom";
 import { leftSideMenuStatus } from "../../store/actions/leftSideMenuStatusAction";
 
-const CategoryList = ({catList}) => {
+const CategoryList = ({catList, handleCategorySearch}) => {
 
-    const {id, category, categoryLink} = catList;
+    const {category, categoryLink} = catList;
     const dispatch = useDispatch();
 
     const handleCatalog = () => {

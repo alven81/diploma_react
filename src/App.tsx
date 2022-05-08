@@ -14,6 +14,8 @@ import Cart from "./pages/cart/Cart";
 import Search from "./pages/search/Search";
 import Reviews from "./pages/reviews/Reviews";
 import { Administration } from "./pages/Administration";
+import Craft from "./pages/Craft";
+import Paint from "./pages/Paint";
 
 const App = () => {
     const dispatch = useDispatch();
@@ -43,6 +45,8 @@ const App = () => {
                     <Route path="reviews" element={<Reviews />} />
                     <Route path="administration" element={<Administration />} />
                     <Route path="catalog" element={<Catalog />} />
+                    <Route path="craft" element={<Craft />} />
+                    <Route path="paint" element={<Paint />} />
                     <Route path="product/:id" element={<Product/>} />
                     <Route path="cart" element={<Cart/>} />
                     <Route path="workshop" element={<Workshop />} />

@@ -17,7 +17,7 @@ const CatElement: FC<CatElementProps> = ({ catalog }) => {
             <div className="catalog_main-element">
                 <div className="catalog_main-element-image">
                     <div>
-                        <img className={catalog.new === true ? "new" : "hide"} src="/assets/img/new.svg" alt=""/>
+                        <img className={catalog.new === true ? "new pulse" : "hide"} src="/assets/img/new.svg" alt=""/>
                     </div>
                     <div>
                         <Link key={catalog.id} to={`/product/${catalog.id}`}>
