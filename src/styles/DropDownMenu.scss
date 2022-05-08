@@ -58,14 +58,16 @@
             &:hover {
                 background-color: $dropMenuBackground;
             }
-            .navlink {
-                text-decoration: none;
-                color: inherit;
-            }
             
-        &:last-child {
-            border-top: 1px solid $productPrice;
-            }
+            
+        // &:last-child {
+        //     border-top: 1px solid $productPrice;
+        //     }
         }
     }
 }
+
+.navlink {
+                text-decoration: none;
+                color: inherit;
+            }

@@ -58,9 +58,12 @@ h3 {
         justify-content: space-around;
         padding: 0 20px;
         gap: 20px;
+        @media (max-width: 950px){
+            flex-wrap: wrap;
+        }
         
         &-pictures {
-            min-width: 50%;
+            min-width: 550px;
         }
 
         &-raiting {
@@ -71,10 +74,25 @@ h3 {
             span {
                 color: $produckBtnBorder;
             }
+            &-block {
+                
+                &-button {
+                    cursor: pointer;
+                    background-color: transparent;
+                    border: none;
+                    color: $headerDarker;
+                    text-transform: uppercase;
+                    @include fontRoboto(700, 14, 16);
+                    &:hover {
+                        text-decoration: underline;
+                    } 
+                }
+            }
+            
         }
                         
         &-info {
-            min-width: 40%;
+            //min-width: 40%;
            
             &-price {
                 

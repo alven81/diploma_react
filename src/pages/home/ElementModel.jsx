@@ -1,4 +1,4 @@
-const HomeElementModel = ({bkgClass}) => {
+const ElementModel = ({bkgClass}) => {
     console.log(bkgClass);
     return (
         <div className={bkgClass} >
@@ -9,4 +9,4 @@ const HomeElementModel = ({bkgClass}) => {
 
     )
 }
-export {HomeElementModel}
+export {ElementModel}

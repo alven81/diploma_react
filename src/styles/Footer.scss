@@ -1,6 +1,7 @@
 .footer_main {
     border-top: 3px solid #F2785C;
     display: flex;
+    flex-wrap: wrap;
     &-contacts {
         background-image: url("../img/f_flower.png");
         background-repeat: no-repeat;
@@ -8,6 +9,7 @@
         padding-left: 81px;
         margin-top: 56px;
         width: 250px;
+        min-height: 300px;
         color: #F2785C;
         p {
             width: 160px;
@@ -42,9 +44,9 @@
             ul {
                 list-style: none;
                 color: #fff;
-                width: 15%;
+                width: 200px;
                 li {
-                    margin: 20px 0;
+                    margin: 20px;
                     &:first-child {
                         font-weight: 700;
                         text-transform: uppercase;

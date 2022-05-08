@@ -1,4 +1,4 @@
-const HomeListCraft = () => {
+const ListCraft = () => {
     return (
         <div className="home_list-craft">        
             <p>Шитьё </p>
@@ -13,4 +13,4 @@ const HomeListCraft = () => {
         </div>
     )
 }
-export {HomeListCraft}
+export {ListCraft}

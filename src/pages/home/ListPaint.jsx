@@ -1,4 +1,4 @@
-const HomeListPaint = () => {
+const ListPaint = () => {
     return (
         <div className="home_list-paint">        
             <p>Материалы </p>
@@ -7,4 +7,4 @@ const HomeListPaint = () => {
         </div>
     )
 }
-export {HomeListPaint}
+export {ListPaint}

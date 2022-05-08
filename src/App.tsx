@@ -13,6 +13,7 @@ import Catalog from "./pages/catalog/Catalog";
 import Cart from "./pages/cart/Cart";
 import Search from "./pages/search/Search";
 import Reviews from "./pages/reviews/Reviews";
+import { Administration } from "./pages/Administration";
 
 const App = () => {
     const dispatch = useDispatch();
@@ -40,6 +41,7 @@ const App = () => {
                     <Route index element={<Home />} />
                     <Route path="search" element={<Search />} />
                     <Route path="reviews" element={<Reviews />} />
+                    <Route path="administration" element={<Administration />} />
                     <Route path="catalog" element={<Catalog />} />
                     <Route path="product/:id" element={<Product/>} />
                     <Route path="cart" element={<Cart/>} />

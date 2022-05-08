@@ -97,9 +97,7 @@ const handleAddtoCart = async () => {
                             <div className="product_main-item-raiting">
                                 <div className="product_main-item-raiting-block">
                                     <Rating name="half-rating" defaultValue={0} precision={0.5} value={Number(averageRating)} readOnly />
-                                    <div className="button_container">
-                                        <button onClick={(e) => handleShowReview()}>Отзывы</button>
-                                    </div>
+                                        <button className="product_main-item-raiting-block-button" onClick={(e) => handleShowReview()}>Отзывы</button>
                                 </div>
                                 <div className="button_container">
                                     <button onClick={(e) => handleShowComments()}>Написать отзыв</button>
@@ -155,9 +153,9 @@ const handleAddtoCart = async () => {
 
                         </div>
                     </div>
-                <div className="container">
+                <section className="container">
                     <New />
-                </div>
+                </section>
             
             </>
 

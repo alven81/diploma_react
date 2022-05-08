@@ -1,15 +1,15 @@
 import { Button } from "@mui/material"
 import { NavLink } from "react-router-dom"
-import { HomeElementDecor } from "./HomeElementDecor"
+import { ElementDecor } from "./ElementDecor"
 import { HomeElementContainer } from "./HomeElementContainer"
-import { HomeElementCraft } from "./HomeElementCraft"
-import { HomeElementModel } from "./HomeElementModel"
-import { HomeElementPaint } from "./HomeElementPaint"
+import { ElementCraft } from "./ElementCraft"
+import { ElementModel } from "./ElementModel"
+import { ElementPaint } from "./ElementPaint"
 import { HomeListContainer } from "./HomeListContainer"
-import { HomeListCraft } from "./HomeListCraft"
-import { HomeListModel } from "./HomeListModel"
-import { HomeListPaint } from "./HomeListPaint"
-import { HomeElementFlora } from "./HomeElementFlora"
+import { ListCraft } from "./ListCraft"
+import { ListModel } from "./ListModel"
+import { ListPaint } from "./ListPaint"
+import { ElementFlora } from "./ElementFlora"
 import Workshop  from "./Workshop"
 
 const Home = () => {
@@ -46,7 +46,7 @@ const Home = () => {
             <section className="home_main-head home_container">
                 <div className="home_main-head-name">
                     <span/>
-                        <p>"Креатив<small>ь</small>" <small>это</small></p>
+                    <p>"Креатив<small>ь</small>" <small>это</small></p>
                     <span/>
                 </div>
                 <div className="home_main-head-links">
@@ -92,8 +92,8 @@ const Home = () => {
                         </div>
                     </NavLink>
                     <div className="home_main-blocks">
-                        <HomeElementContainer  inlayElement={<HomeElementCraft bkgClass={"home_element-bkg-craft home_element-middle-centre"}/>}  />
-                        <HomeListContainer bkgClass={"home_list-bkg-craft home_list-block"} inlayList={<HomeListCraft />} />
+                        <HomeElementContainer  inlayElement={<ElementCraft bkgClass={"home_element-bkg-craft home_element-middle-centre"}/>}  />
+                        <HomeListContainer bkgClass={"home_list-bkg-craft home_list-block"} inlayList={<ListCraft />} />
                     </div>
                 </div>
             </section>
@@ -106,8 +106,8 @@ const Home = () => {
                         </div>
                     </NavLink>
                     <div className="home_main-blocks">
-                        <HomeElementContainer inlayElement={<HomeElementPaint bkgClass={"home_element-bkg-paint home_element-middle-centre"}/>}  />
-                        <HomeListContainer bkgClass={"home_list-bkg-paint home_list-block"} inlayList={<HomeListPaint />} />
+                        <HomeElementContainer inlayElement={<ElementPaint bkgClass={"home_element-bkg-paint home_element-middle-centre"}/>}  />
+                        <HomeListContainer bkgClass={"home_list-bkg-paint home_list-block"} inlayList={<ListPaint />} />
                     </div>
                 </div>
             </section>
@@ -120,8 +120,8 @@ const Home = () => {
                         </div>
                     </NavLink>
                     <div className="home_main-blocks">
-                        <HomeElementContainer inlayElement={<HomeElementModel bkgClass={"home_element-bkg-model home_element-middle-centre"}/>}  />
-                        <HomeListContainer bkgClass={"home_list-bkg-model home_list-block"} inlayList={<HomeListModel />} />
+                        <HomeElementContainer inlayElement={<ElementModel bkgClass={"home_element-bkg-model home_element-middle-centre"}/>}  />
+                        <HomeListContainer bkgClass={"home_list-bkg-model home_list-block"} inlayList={<ListModel />} />
                     </div>
                 </div>
             </section>
@@ -142,8 +142,8 @@ const Home = () => {
                     </div>
                     
                     <div className="home_main-blocks">
-                        <HomeElementContainer inlayElement={<HomeElementDecor bkgClass={"home_element-bkg-decor home_element-middle-centre"}/>}  />
-                        <HomeElementContainer inlayElement={<HomeElementFlora bkgClass={"home_element-bkg-flora home_element-middle-centre"}/>}  />
+                        <HomeElementContainer inlayElement={<ElementDecor bkgClass={"home_element-bkg-decor home_element-middle-centre"}/>}  />
+                        <HomeElementContainer inlayElement={<ElementFlora bkgClass={"home_element-bkg-flora home_element-middle-centre"}/>}  />
                     </div>
                 </div>
             </section>

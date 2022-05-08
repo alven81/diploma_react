@@ -1,13 +1,21 @@
 .new {
+    &_block {
+        //display: flex;
+        //justify-content: center;
+        //width: 80%;
+    }
     &-main {
         display: flex;
+        justify-content: center;
         overflow: hidden; 
-        position: relative;    
+        position: relative;
+
         &-header {
             @include fontRoboto(400, 26, 28);
         }
         &-block {
             
+            padding: 0 40px;
             position: relative;
             align-items: center;
             button{
@@ -42,7 +50,7 @@
                     transition: all 200ms;
                 }
                 &:first-child {
-                    left: -60px;
+                    left: -15px;
                     top: 150px; 
                     &:hover {
                         &::before {
@@ -64,7 +72,7 @@
                     }
                 }
                 &:last-child {
-                    right: -60px;
+                    right: -15px;
                     top: 150px; 
                     transform: rotate(180deg);
                     &:hover {

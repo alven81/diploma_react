@@ -1,4 +1,4 @@
-const HomeElementFlora = ({bkgClass}) => {
+const ElementFlora = ({bkgClass}) => {
 
     return (
         <div className={bkgClass} >
@@ -8,4 +8,4 @@ const HomeElementFlora = ({bkgClass}) => {
         </div>
     )
 }
-export {HomeElementFlora}
+export {ElementFlora}

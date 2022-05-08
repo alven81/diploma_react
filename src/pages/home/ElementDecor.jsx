@@ -1,4 +1,4 @@
-const HomeElementDecor = ({bkgClass}) => {
+const ElementDecor = ({bkgClass}) => {
     console.log(bkgClass);
     return (
         <div className={bkgClass} >
@@ -9,4 +9,4 @@ const HomeElementDecor = ({bkgClass}) => {
 
     )
 }
-export {HomeElementDecor}
+export {ElementDecor}

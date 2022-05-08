@@ -37,25 +37,30 @@ export default function DropDownMenu({src, alt}) {
             <li>
                 Избранное
             </li>
-            <li>
-                <NavLink className="navlink" to='reviews'>Мои отзывы</NavLink>
-                
-            </li>
+            <NavLink className="navlink" to='reviews'>
+                <li>
+                    Мои отзывы
+                </li>
+            </NavLink>
             <li>
                 Управление аккаунтом
             </li>
-            <li>
-                <NavLink  className="navlink" to='cart'>Корзина</NavLink>
-            </li>
+            <NavLink  className="navlink" to='cart'>
+                <li>
+                    Корзина
+                </li>
+            </NavLink>
             <li className={userIsReg ? "hide" : ""} onClick={() => dispatch(openRegModal(true))}>
                 Зарегистрироваться
             </li>
             <li onClick={() => dispatch(openLogModal(true))}>
                 Войти в аккаунт
             </li>
-            <li>
-              Админка
-            </li>
+            <NavLink  className="navlink" to='administration'>
+                <li>
+                    Админка
+                </li>
+            </NavLink>
           </ul>
         </nav>
       </div>

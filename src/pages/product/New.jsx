@@ -35,26 +35,27 @@ const New = () => {
     }; 
 
     return (
-        <>
-            <p className="new-main-header">
-                    НОВИНКИ В ЭТОЙ КАТЕГОРИИ
-            </p>
-
-            <div  className="new-main-block">
-                <button onMouseDown={() => handleCarouselLeftDown()} onMouseUp={() => handleCarouselLeftUp()} className="prev" />
+        <div className="new_block">
+            <div>
+                <p className="new-main-header">
+                        НОВИНКИ В ЭТОЙ КАТЕГОРИИ
+                </p>
     
-                <div className="new-main" ref={Carousel}>
-                    { newCatalog &&
-                        newCatalog.map((catalog) => 
-                           <CatElement key={catalog.id} catalog={catalog} />
-                        )
-                    }
+                <div  className="new-main-block">
+                    <button onMouseDown={() => handleCarouselLeftDown()} onMouseUp={() => handleCarouselLeftUp()} className="prev" />
+        
+                    <div className="new-main" ref={Carousel}>
+                        { newCatalog &&
+                            newCatalog.map((catalog) => 
+                               <CatElement key={catalog.id} catalog={catalog} />
+                            )
+                        }
+                    </div>
+        
+                    <button onMouseDown={() => handleCarouselRightDown()} onMouseUp={() => handleCarouselRightUp()} className="next" />
                 </div>
-    
-                <button onMouseDown={() => handleCarouselRightDown()} onMouseUp={() => handleCarouselRightUp()} className="next" />
             </div>
-            
-        </>
+        </div>
     )
 }
 export { New }

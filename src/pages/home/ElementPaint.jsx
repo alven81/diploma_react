@@ -1,4 +1,4 @@
-const HomeElementPaint = ({bkgClass}) => {
+const ElementPaint = ({bkgClass}) => {
     console.log(bkgClass);
     return (
         <>
@@ -9,4 +9,4 @@ const HomeElementPaint = ({bkgClass}) => {
 
     )
 }
-export {HomeElementPaint}
+export {ElementPaint}

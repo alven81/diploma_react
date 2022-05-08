@@ -1,4 +1,4 @@
-const HomeElementCraft = ({bkgClass}) => {
+const ElementCraft = ({bkgClass}) => {
     return (
         <>
             <div className={bkgClass} >
@@ -8,4 +8,4 @@ const HomeElementCraft = ({bkgClass}) => {
 
     )
 }
-export {HomeElementCraft}
+export {ElementCraft}
