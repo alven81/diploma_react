@@ -2,7 +2,7 @@
  const initialState = { inCart: []}
  
  const loadCartReducer = (state = initialState, action) => {
-    console.log("Reducer: ", action);
+
     switch (action.type) {
         case "GET_CART_DATA":
             return {

@@ -12,7 +12,7 @@ function getCategoryList() {
 
 
 function setCategoryData(load) {
-    //console.log("setCategoryData", load);
+
     return {
         type: "SET_CATEGORY_DATA",
         payload: load

@@ -153,9 +153,9 @@ const handleAddtoCart = async () => {
 
                         </div>
                     </div>
-                <section className="container">
-                    <New />
-                </section>
+                    <section className="container">
+                        <New />
+                    </section>
             
             </>
 

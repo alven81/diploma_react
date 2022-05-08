@@ -11,7 +11,7 @@ function loadCart(id) {
 
 
 function getCartData(load) {
-    console.log("load", load);
+
     return {
         type: "GET_CART_DATA",
         payload: load

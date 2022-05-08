@@ -58,6 +58,7 @@ h3 {
         justify-content: space-around;
         padding: 0 20px;
         gap: 20px;
+        border-bottom: 1px solid $produckBtnBorder;
         @media (max-width: 950px){
             flex-wrap: wrap;
         }

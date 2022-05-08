@@ -12,7 +12,7 @@ function getCatalogData() {
 
 
 function setCatalogData(load) {
-//    console.log(load);
+
     return {
         type: "SET_CATALOG_DATA",
         payload: load

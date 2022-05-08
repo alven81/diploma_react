@@ -1,7 +1,7 @@
 const initialState = { isOpenReg: false }
 
  const RegModalReducer = (state = initialState, action) => {
-    //console.log(action);
+
     switch (action.type) {
         case "OPEN_REG_MODAL":
             return {

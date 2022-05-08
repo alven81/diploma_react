@@ -15,7 +15,7 @@ function searchResult(searchText) {
 
 
 function getSearchResult(load) {
-    console.log("search Result", load);
+
     return {
         type: "GET_SEARCH_RESULT",
         payload: load
