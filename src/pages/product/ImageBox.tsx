@@ -32,14 +32,14 @@ const ImageBox: FC<ImageBoxProps> = ({imageList, newProduct, imageMain, age}) =>
                         <div key={Math.random()}>
                             <img className="" 
                             src={`http://localhost:3000${item}`} alt="" 
-                            onClick = {() => handlerImage(item)}/>
+                            onMouseOver= {() => handlerImage(item)}/>
                         </div>
                     )
                 }
             </div>
             <div  className="image_box-mono">                
                 <img key={Math.random()} className="" src={`http://localhost:3000${imageLink}`} alt=""/>
-                <div>
+                <div className={age.length ? "" : "hide"}>
                     <span>{age}</span>
                 </div>
             </div>

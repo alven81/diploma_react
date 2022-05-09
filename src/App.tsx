@@ -16,6 +16,8 @@ import Reviews from "./pages/reviews/Reviews";
 import { Administration } from "./pages/Administration";
 import Craft from "./pages/Craft";
 import Paint from "./pages/Paint";
+import Model from "./pages/Model";
+import Decor from "./pages/Decor";
 
 const App = () => {
     const dispatch = useDispatch();
@@ -47,6 +49,8 @@ const App = () => {
                     <Route path="catalog" element={<Catalog />} />
                     <Route path="craft" element={<Craft />} />
                     <Route path="paint" element={<Paint />} />
+                    <Route path="model" element={<Model />} />
+                    <Route path="decor" element={<Decor />} />
                     <Route path="product/:id" element={<Product/>} />
                     <Route path="cart" element={<Cart/>} />
                     <Route path="workshop" element={<Workshop />} />
