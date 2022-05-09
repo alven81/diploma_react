@@ -26,7 +26,6 @@ const Reviews = () => {
             }
         }
         setArray(userReviewList);
-        console.log(array);
     }
 
     useEffect(() => {
@@ -43,7 +42,7 @@ const Reviews = () => {
             {  !array.length ? <LoadingSpinner/> :
                 <ol>
                     {
-                        array.map(array => <ReviewUsers array={array} />)
+                        array.map(array => <ReviewUsers key={Math.random()} array={array} />)
                     }
                 </ol> 
             }    
@@ -51,4 +50,3 @@ const Reviews = () => {
     )
 }
 export default Reviews
-//<button onClick={() => findReviews(userId)} disabled={isLoading}>ОТЗЫВЫ</button>

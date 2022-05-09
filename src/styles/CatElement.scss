@@ -4,19 +4,27 @@
     padding: 10px;
     display: flex;
     flex-wrap: wrap;
-    justify-content:space-evenly;
+    justify-content:flex-start;
     border-bottom: 1px solid $headerDarker;
+    flex-flow: row wrap;
 
     &-element {
-
-        width: 250px;
+        width: 265px;
         box-sizing: border-box;
         margin: 10px;
         position: relative;
-        &-image {
+        border-radius: 10px;
+        transition: all .5s;
+        &:hover {
+            box-shadow: 2px 6px 40px 4px rgba(34, 60, 80, 0.2);
+        }
 
+        &-image {
             display: flex;
             justify-content: center;
+            &-overflow {
+                overflow: hidden;
+            }
             
             > div:nth-child(2) {
                 //border: 1px solid #fc5185;
@@ -35,7 +43,9 @@
                 transition: all 0.5s;
                 z-index: -1;
                 &:hover {
-                    transform: scale(1.08);
+                    box-sizing: border-box;
+                    transform: scale(1.05);
+                    //padding-top: 10px;
                 }
                 
             }
@@ -65,7 +75,7 @@
         }
         &-title {
             text-align: center;
-            padding: 0 20px;
+            padding: 0 10px;
             @include fontRoboto(400, 14, 16);
         }
 

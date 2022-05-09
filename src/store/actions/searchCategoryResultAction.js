@@ -14,7 +14,7 @@ function searchCategoryResult(searchText) {
 }
 
 function getSearchCategoryResult(load) {
-    console.log("load", load);
+
     return {
         type: "GET_SEARCH_CATEGORY_RESULT",
         payload: load

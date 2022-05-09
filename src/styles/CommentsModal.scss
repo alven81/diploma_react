@@ -8,7 +8,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: $lightBackground;
-    padding: 20px;
+    padding: 15px;
     border-radius: 10px;
     &-name {
         display: flex;
@@ -17,8 +17,8 @@
         @include fontRoboto(500, 16, 16);
         button {
             padding: 0;
-            height: 30px;
-            width: 30px;
+            min-height: 30px;
+            min-width: 30px;
             border-radius: 5px;
             @include fontRoboto(500, 20, 20);
             cursor: pointer;
@@ -26,23 +26,26 @@
     }
     &-block {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
         align-items: baseline;
         span {
             color: $produckBtnBorder;
         }
         &-button {
-            margin-right: 40%;
+            margin-left: auto;
         }
         div {
             text-align: center;
-            margin-top: 20px;
+            margin-top: 10px;
         }
         &-text {
-            padding: 3px;
+            resize: none;
             display: flex;
             width: 99%;
-            height: 100px;
+            height: 120px;
+            border: 1px solid;
+            border-radius: 5px;
             }
         }
 }

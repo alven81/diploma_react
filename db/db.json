@@ -72,12 +72,6 @@
           "data": "03.05.2022",
           "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
           "rate": "4"
-        },
-        {
-          "userId": 5,
-          "data": "06.05.2022",
-          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-          "rate": "4"
         }
       ],
       "raiting": [
@@ -86,7 +80,8 @@
         2,
         5,
         4,
-        4
+        3.5,
+        1.5
       ]
     },
     {
@@ -529,6 +524,12 @@
           "data": "02.05.2022",
           "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
           "rate": "4"
+        },
+        {
+          "userId": 5,
+          "data": "09.05.2022",
+          "text": "",
+          "rate": 0
         }
       ],
       "raiting": [
@@ -946,9 +947,7 @@
         "деревянные палочки"
       ],
       "review": [],
-      "raiting": [
-        
-      ]
+      "raiting": []
     },
     {
       "id": 16,
@@ -962,8 +961,7 @@
       "description": "Набор для создания браслетов - это яркий подарок на Новый год, День рождения или 8 Марта для девочек разных возрастов. Данный набор включает в себя множество бусин разных цветов и форм, что позволяет создавать браслет подходящий под образ хоть каждый день. Нет необходимости покупать основу под каждый новый браслет, благодаря откручивающемуся механизму застежки ребенок может снимать и надевать бусины бесконечное количество раз. Весь игровой набор для создания бижутерии упакован в подарочную коробочку, которая служит для хранения украшений. Детский подарочный набор для создания украшений - это уникальные браслетики, которые способствуют развитию мелкой моторики и фантазии, а так же интересное времяпровождение для девочки. Не знаете что подарить девочке? Набор для творчества станет отличным решением! Как сделать браслет показано у нас на фото, ну а остальное - это ваша фантазия! Идеально для Вас, если Вы ищете: браслет детский пандора, браслет подарок для девочки, украшения для девочек.",
       "features": {
         "weight": "",
-        "creation": [
-        ],
+        "creation": [],
         "age": "",
         "height_gross": 10,
         "deep": 15,
@@ -980,11 +978,17 @@
         "/images/16_5.avif",
         "/images/16_6.avif"
       ],
-      "consist": [
+      "consist": [],
+      "review": [
+        {
+          "userId": 5,
+          "data": "09.05.2022",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "rate": "3.5"
+        }
       ],
-      "review": [],
       "raiting": [
-        
+        3.5
       ]
     },
     {
@@ -1000,11 +1004,11 @@
       "features": {
         "weight": "75",
         "creation": [
-            "букет из мыльных роз",
-            "изготовление украшений для дома",
-            "листья для декора",
-            "поделки",
-            "Флористика, элемент для декора"
+          "букет из мыльных роз",
+          "изготовление украшений для дома",
+          "листья для декора",
+          "поделки",
+          "Флористика, элемент для декора"
         ],
         "age": "",
         "height_gross": 20,
@@ -1027,17 +1031,17 @@
         "Лист декоративный",
         "1 упаковка (25 штук)"
       ],
-      "review": [],
-      "raiting": [
-      ]
+      "review": [
+        {
+          "userId": 5,
+          "data": "09.05.2022",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "rate": 0
+        }
+      ],
+      "raiting": []
     }
   ],
-
-
-
-
-
-  
   "users": [
     {
       "id": 1,

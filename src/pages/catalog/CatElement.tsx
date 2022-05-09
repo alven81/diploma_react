@@ -19,7 +19,7 @@ const CatElement: FC<CatElementProps> = ({ catalog }) => {
                     <div>
                         <img className={catalog.new === true ? "new pulse" : "hide"} src="/assets/img/new.svg" alt=""/>
                     </div>
-                    <div>
+                    <div  className="catalog_main-element-image-overflow">
                         <Link key={catalog.id} to={`/product/${catalog.id}`}>
                             <img className="catalog_main-element-image-main" 
                                 onClick={() => {dispatch(addItemIndex(catalog.id));

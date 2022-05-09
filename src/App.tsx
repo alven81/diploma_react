@@ -22,20 +22,20 @@ import Flora from "./pages/Flora";
 
 const App = () => {
     const dispatch = useDispatch();
+    const defaultUser = {
+        "id": 0,
+        "avatar": "/assets/avatars/0.jpg",
+        "firstName": "Таинственный незнакомец",
+        "lastName": "",
+        "email": ""
+}
 
     useEffect(() => {
         dispatch(getCatalogData())
     }, [dispatch])
 
-
     useEffect(() => {
-        dispatch(isUserLogIn({
-            "id": 0,
-            "avatar": "/assets/avatars/0.jpg",
-            "firstName": "Таинственный незнакомец",
-            "lastName": "",
-            "email": "-"
-    }))}, [dispatch]);
+        dispatch(isUserLogIn(defaultUser))}, [dispatch]);
 
     
    

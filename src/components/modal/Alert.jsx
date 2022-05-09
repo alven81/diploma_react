@@ -13,14 +13,16 @@ const Alert = ({alertMessage}) => {
     }
 
     return (
-        <div className="alert">
-            <div>
-                <p>{alertMessage}</p>
+        <section className="fullscreen-box">
+            <div className="alert">
+                <div>
+                    <p>{alertMessage}</p>
+                </div>
+                <div className="button_container">
+                    <button onClick={handleCloseAlert} >Закрыть</button>
+                </div>
             </div>
-            <div class="button_container">
-                <button onClick={handleCloseAlert} >Закрыть</button>
-            </div>
-        </div>
+        </section>
     )
 }
 export default Alert

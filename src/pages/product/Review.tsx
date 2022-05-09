@@ -13,8 +13,8 @@ const Review: FC<ReviewProps> = ({ reviews }) => {
         <>
             {
                 reviews.map((item: IReview) =>             
-                    <div className="review" >
-                        <ReviewText key={Math.random()} item={item}/>
+                    <div className="review" key={Math.random()}>
+                        <ReviewText item={item}/>
                     </div>
                 )
             }

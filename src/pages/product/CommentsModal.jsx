@@ -1,11 +1,14 @@
 import { Rating } from "@mui/material"
 import axios from "axios";
-import { useEffect, useState } from "react"
-import { useSelector } from "react-redux";
+import { useEffect, useRef, useState } from "react"
+import { useDispatch, useSelector } from "react-redux";
+import { showAlertMessage } from "../../store/actions/AlertAction";
 
 
 const CommentsModal = ({ onClick, handleShowComments, id, showComment }) => {
     
+    const dispatch = useDispatch();
+
     const [text, setText] = useState("");
     const itemIndex = id - 1;
     const [newCatalog, setNewCatalog] = useState({});
@@ -14,6 +17,8 @@ const CommentsModal = ({ onClick, handleShowComments, id, showComment }) => {
     const [reviewText, setReviewText] = useState({})
     
     const user = useSelector((state) => state.isUserLogIn.isUserLogInInfo)
+
+    const textareaText = useRef();
 
     useEffect(() => {
         if (!catalog) return;
@@ -42,15 +47,21 @@ const CommentsModal = ({ onClick, handleShowComments, id, showComment }) => {
 
 
     const sendComment = async (e) => {
-        //console.log(catalog);
+        if (textareaText.current.value == "") return dispatch(showAlertMessage({
+            status: true,
+            message : "Вы не можете сохранить пустой отзыв."
+            }
+         ));
         const review = newCatalog;
         review.push(reviewText);
         axios.patch(`http://localhost:3004/products/${id}`, 
         {review: review})
         .then(setNewCatalog(review))
-        // .then(resp => {console.log(resp.data)})
         .catch(error => {console.log(error)});
         handleShowComments();
+        textareaText.current.value = "";
+        setText("");
+        //setNewCatalog("");
     }
 
     return (
@@ -64,12 +75,12 @@ const CommentsModal = ({ onClick, handleShowComments, id, showComment }) => {
                 </div>
                 {/* <form onSubmit={sendComment}> */}
                     <div className="comments-rating">
-                        <textarea  className="comments-block-text" onChange={(e) => handleText(e)} />
+                        <textarea ref={textareaText} className="comments-block-text" onChange={(e) => handleText(e)} />
                     </div>
                     <div className="comments-block">
                         <Rating
-                            name="half-rating" 
-                            defaultValue={0} 
+                            name="half-" 
+                            defaultValue={null} 
                             precision={0.5} 
                             onClick={onClick}
                             onChange={(e) => handleRate(e)}

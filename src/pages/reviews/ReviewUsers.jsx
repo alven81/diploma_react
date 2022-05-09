@@ -23,7 +23,8 @@ const ReviewUsers = ({array}) => {
                 </p>    
                 <Rating
                     name="half-rating"
-                    defaultValue={review.rate}
+                    defaultValue={null}
+                    value={Number(review.rate)}
                     precision={0.5}
                     readOnly
                 />

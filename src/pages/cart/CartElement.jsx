@@ -30,10 +30,10 @@ const CartElement = ({ item }) => {
     const handleQuantity = async (e) => {
 
         if (!user.id) return dispatch(showAlertMessage({
-                                    status: true,
-                                    message : "Только зарегистрированные пользователи могут добавлять товары в корзину!"
-                                }
-                            ))
+                    status: true,
+                    message : "Только зарегистрированные пользователи могут добавлять товары в корзину!"
+                }
+            ))
         
         if (e > 0) {
             await whatInTheCart.push(Number(id));

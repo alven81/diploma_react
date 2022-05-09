@@ -38,7 +38,8 @@ const ReviewText = ({ item }) => {
                     <div>   
                         <Rating
                             name="half-rating"
-                            defaultValue={rate}
+                            defaultValue={null}
+                            value={Number(rate)}
                             precision={0.5}
                             readOnly
                         />

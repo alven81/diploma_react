@@ -1,6 +1,6 @@
 import { Rating } from "@mui/material";
 import axios from "axios";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux"
 import { useParams } from "react-router";
 import CommentsModal from "./CommentsModal";
@@ -23,11 +23,16 @@ const Product = () => {
     const [showComment, setShowComment] = useState(false);
     const [review, setReview] = useState(false);
     const [cartItem, setCartItem] = useState();
-    //const [cartItems, setCartItems] = useState();
+
+    const descriptionBlock = useRef();
+    const featureBlock = useRef();
+    const consistBlock = useRef();
 
     const user = useSelector((state) => state.isUserLogIn.isUserLogInInfo)
     const whatInTheCart = useSelector((state) => state.loadCart.inCart)
-    
+
+    let keySwitch;
+
 useEffect(() => {
         if (!catalogList) return;
         axios.get(`http://localhost:3004/products/${catalogList.id}`)
@@ -88,6 +93,12 @@ const handleAddtoCart = async () => {
     dispatch(loadCart(user.id))
 }
 
+    const handleOpenDiv = (incomingBlock) => {
+        if (!keySwitch) {incomingBlock.current.style.height = "auto"} else
+        {incomingBlock.current.style.height = "100px"};
+        keySwitch = !keySwitch;
+    }
+
     return (
 
         <section className="product_main container">
@@ -103,7 +114,7 @@ const handleAddtoCart = async () => {
                             <ImageBox imageList={catalogList.icons} imageMain={catalogList.image} newProduct={catalogList.new} age={catalogList.features.age} />
                             <div className="product_main-item-raiting">
                                 <div className="product_main-item-raiting-block">
-                                    <Rating name="half-rating" defaultValue={0} precision={0.5} value={Number(averageRating)} readOnly />
+                                    <Rating name="half-rating" defaultValue={null} precision={0.5} value={Number(averageRating)} readOnly />
                                         <button className="product_main-item-raiting-block-button" onClick={(e) => handleShowReview()}>Отзывы</button>
                                 </div>
                                 <div className="button_container">
@@ -121,7 +132,13 @@ const handleAddtoCart = async () => {
                             </div>
 
                                 <div className={review ? "product_main-item-review" : "hide"}>
-                                    <Review reviews={catalogList.review} />
+                                {
+                                    catalogList.review.length ? 
+                                        <Review reviews={catalogList.review} /> 
+                                        :
+                                        <p>По данному товару еще нет отзывов</p>
+                                }
+                                    
                                 </div>
                         </div>
 
@@ -144,19 +161,21 @@ const handleAddtoCart = async () => {
                                 </div>
                             </div>
 
-                            <div className={(!catalogList.description) ? "hide" : "product_main-item-description"}>
+                            <div ref={descriptionBlock} className={(!catalogList.description) ? "hide" : "product_main-item-description"}>
                                 <h3>Описание</h3>
-                                <p>{catalogList.description}</p>
+                                <p >{catalogList.description}</p>
                             </div>
-
-                            <div className="product_main-item-about">
+                                <button className="product_main-item-rollbtn" onClick={() => handleOpenDiv(descriptionBlock)}>Развернуть описание</button>
+                            <div ref={featureBlock} className="product_main-item-about">
                                 <Features features={catalogList.features} />
                             </div>
+                            <button className="product_main-item-rollbtn" onClick={() => handleOpenDiv(featureBlock)}>Развернуть описание</button>
 
-                            <div className="product_main-item-consist">
+                            <div ref={consistBlock} className="product_main-item-consist">
                                 <h3>Состав:</h3>
                                 <Consist consist={catalogList.consist}/>
                             </div>
+                            <button className="product_main-item-rollbtn" onClick={() => handleOpenDiv(consistBlock)}>Развернуть описание</button>
 
                         </div>
                     </div>

@@ -15,7 +15,7 @@ const Flora = () => {
     
     return (
         <>
-            <div className="catalog_main container">
+            <div className="catalog_main narrow_container">
                 
                 { catalog &&
                     <>

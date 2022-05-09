@@ -131,17 +131,17 @@
             justify-content: space-around;
             list-style: none;
             text-transform: uppercase;
-            @include fontRoboto(400, 14, 16);
+            @include fontRoboto(500, 14, 16);
             text-decoration: none;
             color: $productPrice;
             &:hover {
-                font-weight: 700;
+                color: rgba($color: $productPrice, $alpha: 0.6);
             }
         }
 
         &-burger {
             position: relative;
-            top: 4px;
+            top: 7px;
             left: 7px;
             min-width: 30px;
             height: 30px;
