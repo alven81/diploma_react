@@ -1,6 +1,6 @@
 import { Rating } from "@mui/material";
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useDispatch, useSelector } from "react-redux"
 import { useParams } from "react-router";
 import CommentsModal from "./CommentsModal";
@@ -10,6 +10,7 @@ import { Review } from "./Review";
 import { Consist } from "./Consist";
 import { New } from "./New";
 import loadCart from "../../store/actions/loadCartAction";
+import { showAlertMessage } from "../../store/actions/AlertAction";
 
 const Product = () => {
 
@@ -36,7 +37,7 @@ useEffect(() => {
 
 useEffect(() => {
     setCartItem(itemIndex)
-}, [])
+}, [itemIndex])
 
 useEffect(() => {
     setAverageRating((raiting.reduce((x, y) => x + y, 0))/raiting.length)
@@ -59,7 +60,11 @@ const handleRate = (e) => {
 }
 
 const handleShowComments = () => {
-    if (!user.id) return alert("Только зарегистрированные пользователи могут оставлять комментарии!")
+    if (!user.id) return dispatch(showAlertMessage({
+            status: true,
+            message : "Только зарегистрированные пользователи могут оставлять комментарии!"
+        }
+    ))
     setShowComment(!showComment);
 }
 
@@ -67,11 +72,13 @@ const handleShowReview = () => {
     setReview(!review)
 }
 
-
 const handleAddtoCart = async () => {
-    if (!user.id) return alert("Только зарегистрированные пользователи могут добавлять товары в корзину!")
+    if (!user.id) return dispatch(showAlertMessage({
+                status: true,
+                message : "Пожалуйста зарегистрируйтесь, чтобы добавлять товары в корзину!"
+            }
+        ))
     whatInTheCart.push(Number(cartItem));
-    //setCartItems(whatInTheCart);
     await axios.patch(`http://localhost:3004/users/${user.id}`, {cart: whatInTheCart})
     .catch(function (error) {
         if (error.response) {
@@ -80,7 +87,7 @@ const handleAddtoCart = async () => {
     });
     dispatch(loadCart(user.id))
 }
-    
+
     return (
 
         <section className="product_main container">

@@ -11,7 +11,7 @@ const Catalog: FC = () => {
     return (
         <>
             <div className="catalog_main container">
-                
+            
                 { catalog &&
                     <>
                         {

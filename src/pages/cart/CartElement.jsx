@@ -5,6 +5,7 @@ import { addItemIndex } from "../../store/actions/indexAction"
 import Product from "../product/Product"
 import axios from "axios"
 import loadCart from "../../store/actions/loadCartAction"
+import { showAlertMessage } from "../../store/actions/AlertAction"
 
 const CartElement = ({ item }) => {
     
@@ -28,7 +29,11 @@ const CartElement = ({ item }) => {
 
     const handleQuantity = async (e) => {
 
-        if (!user.id) return alert("Только зарегистрированные пользователи могут добавлять товары в корзину!")
+        if (!user.id) return dispatch(showAlertMessage({
+                                    status: true,
+                                    message : "Только зарегистрированные пользователи могут добавлять товары в корзину!"
+                                }
+                            ))
         
         if (e > 0) {
             await whatInTheCart.push(Number(id));

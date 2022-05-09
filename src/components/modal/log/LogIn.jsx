@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { useDispatch, useSelector } from "react-redux";
+import { showAlertMessage } from "../../../store/actions/AlertAction";
 import { isUserLogIn } from "../../../store/actions/isUserLogInAction";
 import loadCart from "../../../store/actions/loadCartAction";
 import { openLogModal } from "../../../store/actions/LogAction";
@@ -25,15 +26,28 @@ const LogModal = () => {
             if (passCorrect.access) {
                 const userInfo = await getUserInfoById(passCorrect.id)
                 dispatch(isUserLogIn(userInfo));
-                alert("Вы успешно вошли в ресурс!");
+                dispatch(showAlertMessage({
+                        status: true,
+                        message : "Вы успешно вошли в ресурс!"
+                    }
+                ));
                 dispatch(openLogModal(false));
                 dispatch(loadCart(userInfo.id))
                 //localStorage.setItem('userId', true)
             } else {
-                alert("Неверный пароль");
-            }
+                    dispatch(showAlertMessage({
+                                status: true,
+                                message : "Вы указали неверный логин или пароль"
+                            }
+                    ))
+                }
         } else
-            return alert("Пользователь с таким логином не найден!");
+            return dispatch(showAlertMessage({
+                            status: true,
+                            message : "Пользователь с таким логином не найден!"
+                        }
+                    ))
+            
     }
 
     return (

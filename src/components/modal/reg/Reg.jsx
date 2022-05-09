@@ -1,6 +1,7 @@
 //import { Avatar } from "@mui/material";
 import { useEffect, useState } from "react"
 import { useDispatch } from "react-redux";
+import { showAlertMessage } from "../../../store/actions/AlertAction";
 import { openRegModal } from "../../../store/actions/RegAction";
 import { doesUserExist } from "../../../utils/doesUserExist";
 import { getLastUserId } from "../../../utils/getLastUserId";
@@ -31,11 +32,19 @@ const RegModal = () => {
 
         const userId = await getLastUserId();
         
-        if (!firstName || !lastName || !eMail || !passMain) return alert("Необходимо заполнить форму!");
+        if (!firstName || !lastName || !eMail || !passMain) return dispatch(showAlertMessage({
+                status: true,
+                message : "Вы не полностью заполнили форму!"
+            }
+        ))
 
         const userExist = await doesUserExist(eMail);
 
-        if (userExist) return alert("Пользователь с таким адресом загеристрирован!");
+        if (userExist) return dispatch(showAlertMessage({
+                status: true,
+                message : "Пользователь с таким адресом уже зарегистрирован!"
+            }
+        ));
         
         const credentials = ({
             "id": userId,
@@ -47,7 +56,11 @@ const RegModal = () => {
         });
 
         setCredentials(credentials);
-        alert("Вы успешно зарегистрировались! Перейдите на форму входа.")
+        dispatch(showAlertMessage({
+                status: true,
+                message : "Вы успешно зарегистрировались! Перейдите на форму для входа."
+            }
+        ))
         dispatch(openRegModal(false));
     }
 

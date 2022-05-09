@@ -1,0 +1,31 @@
+.alert {
+    position:fixed;
+    top: 50%; right: 50%;
+    transform: translate(50%,-50%);
+    height: 200px;
+    width: 300px;
+    background-color: $lightBackground;
+    border: 1px solid $headerDarker;
+    box-shadow: 0px 4px 4px $headerDarker;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    div:first-child {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 65%;
+    }
+    div:last-child {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    p {
+        padding: 5px 15px;
+        text-align: center;
+        @include fontRoboto(400, 18, 24);
+    }
+}

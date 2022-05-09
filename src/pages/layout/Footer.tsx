@@ -1,4 +1,13 @@
+import { SpeedDial, SpeedDialAction, SpeedDialIcon } from "@mui/material"
+
 const Footer = () => {
+
+    const actions = [{
+                        name: "Telegramm", 
+                        icon: "//localhost:3000/assets/img/telegram.svg"
+                        }
+                    ]
+
     return (
         <>
         <footer className="footer_main container">
@@ -55,12 +64,14 @@ const Footer = () => {
                         Дизайн - Ляшкевич Екатерина
                     </p>
                     <p>
-                        Макет - Кот Александр
+                        Верстка - Кот Александр
                     </p>
+                    
                 </div>
             </div>
         </footer>
         </>
     )
 }
+
 export default Footer

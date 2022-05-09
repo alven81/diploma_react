@@ -1,4 +1,5 @@
 import React, { FC, useEffect, useState } from "react"
+import LoadingSpinner from "../../components/LoadingSpinner"
 
 interface ImageBoxProps {
     imageList: [],
@@ -32,7 +33,7 @@ const ImageBox: FC<ImageBoxProps> = ({imageList, newProduct, imageMain, age}) =>
                         <div key={Math.random()}>
                             <img className="" 
                             src={`http://localhost:3000${item}`} alt="" 
-                            onMouseOver= {() => handlerImage(item)}/>
+                            onMouseOver= {() => handlerImage(item)} />
                         </div>
                     )
                 }

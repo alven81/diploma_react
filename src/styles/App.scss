@@ -22,3 +22,8 @@ body {
     margin: 0 auto;
     background-color: $containerBackground;
   }
+
+  .narrow_container {
+    max-width: 1144px;
+    margin: 0px auto;
+}

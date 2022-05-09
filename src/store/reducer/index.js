@@ -9,6 +9,7 @@ import { LogModalReducer } from "./LogReducer";
 import { RegModalReducer } from "./RegReducer";
 import loadSearchReducer from "./searchResultReducer";
 import loadSearchCategoryReducer from "./searchCategoryResultReducer";
+import { AlertReducer } from "./AlertReducer";
 
 //const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
@@ -24,6 +25,7 @@ const reducer = combineReducers(
         whichIsLeftSideMenuStatus: isLeftSideMenuStatusReducer,
         loadCategoryList: loadCategoryReducer,
         searchCategoryResult: loadSearchCategoryReducer,
+        alertMessage: AlertReducer,
     },
 );
 
