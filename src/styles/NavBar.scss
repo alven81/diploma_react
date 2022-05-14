@@ -31,7 +31,12 @@
             display: flex;
             gap: 10px;
             margin: 0 45px;
-            color: $lightFont;
+            a {
+                color: $lightFont;
+                &:hover {
+                    color: $productPrice;
+                }
+            }
         }
     }
     &_middle {
@@ -63,16 +68,14 @@
             &-block {
                 margin-left: auto;
                 padding: 0;
-                //width: 125px;
                 height: 35px;
                 display: flex;
-                //justify-content: flex-end;
                 align-items: center;
                 margin-right: 50px;
                 gap: 30px;
                 position: relative;
-                //z-index: 0;
                 &-img {
+                    transform: none !important;
                     min-height: 50px;
                     min-width: 50px;
                     border-radius: 50px;
@@ -124,6 +127,10 @@
         border-top: 1px solid $headerDarker;
         border-bottom: 1px solid $headerDarker;
         display: flex;
+        div {
+            flex: 1;
+        }
+        
         &-list {
             display: flex;
             flex-wrap: wrap;
@@ -220,19 +227,19 @@
                 border-color: $mainBlack;
                 transition: all 0.5s;
                 
-                               &::before {
-                                    transform: rotate(-30deg);
-                                    width: 11px;
-                                    left: 9px;
-                                    top: 3px;
-                                }
-                                &::after {
-                                    transform: rotate(30deg);
-                                    width: 11px;
-                                    left: 9px;
-                                    top: -3px;
-                                }
-              }
+                &::before {
+                    transform: rotate(-30deg);
+                    width: 11px;
+                    left: 9px;
+                    top: 3px;
+                }
+                &::after {
+                    transform: rotate(30deg);
+                    width: 11px;
+                    left: 9px;
+                    top: -3px;
+                }
+            }
         }
     }
 }
@@ -260,14 +267,25 @@
             color: #cdd7de; 
         }
     }
+
     &-loupe {
-        position: relative;
-        cursor: pointer;
+        position: absolute;
+        box-sizing: border-box;
+        transition: all 0.3s;
         &::after {
-            position: absolute;
-            content: url("../img/loupe.svg");
-            top: -25px;
-            right: 0;
+        transition: all 0.3s;
+        position: absolute;
+        content: url("../img/loupe.svg");
+        top: -25px;
+        right: 0;
+    }
+        &:hover {
+            border-color: $titleSpan;
+            transition: all 0.3s;
+            transform: scale(1.15);
+        }
+        &:active {
+            transform: scale(1.05);
         }
     }
 }

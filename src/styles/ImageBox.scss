@@ -30,12 +30,25 @@
     }
 
     &-mono {
-    position: relative;
+    //position: relative;
+    transition: all 0.2s;
         img {
             width: 400px;
             height: auto;
-            //border: 1px solid $mainPinc;
             border-radius: 5px;
+            cursor: zoom-in;
+            &:hover {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%); 
+                width: auto;
+                height: 95vh;
+                z-index: 100;
+                border-radius: 10px;
+                cursor:zoom-out;
+                border: 1px solid $headerDarker;
+            }
         }
         div {
             position: absolute;

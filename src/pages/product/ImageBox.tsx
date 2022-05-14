@@ -39,7 +39,7 @@ const ImageBox: FC<ImageBoxProps> = ({imageList, newProduct, imageMain, age}) =>
                 }
             </div>
             <div  className="image_box-mono">                
-                <img key={Math.random()} className="" src={`http://localhost:3000${imageLink}`} alt=""/>
+                <img key={Math.random()} className="image_box-mono-pic" src={`http://localhost:3000${imageLink}`} alt=""/>
                 <div className={age.length ? "" : "hide"}>
                     <span>{age}</span>
                 </div>

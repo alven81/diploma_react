@@ -21,15 +21,17 @@
         background-color: #fff;
 
         &-left {
-            max-width: 640px;
-            min-height: 522px;
+            //max-width: 640px;
+            max-height: 524px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            flex: 1;
             position: relative;
             @media (max-width: 1245px){
                 width: 100%;
                 max-width: 785px;
+                min-height: 490px;
             }
             img {
                 position: absolute;

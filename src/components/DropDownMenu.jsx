@@ -33,35 +33,35 @@ export default function DropDownMenu({src, alt}) {
   
 return (
     <div className="menu-container">
-        <button onClick={onClick} className="menu-button">
+        <button onMouseOver={onClick} className="menu-button">
             <img src={src} alt={alt} />
         </button>
         <nav ref={dropdownRef} className={`menu ${isActive ? "active" : "inactive"}`}>
             <ul>
-                <li className={userIsLogin ? "" : "hide"}>
+                <li onClick={onClick} className={userIsLogin ? "" : "hide"}>
                     Избранное
                 </li>
                 <NavLink className="navlink" to='reviews'>
-                    <li className={userIsLogin ? "" : "hide"}>
+                    <li onClick={onClick} className={userIsLogin ? "" : "hide"}>
                         Мои отзывы
                     </li>
                 </NavLink>
-                <li className={userIsLogin ? "" : "hide"}>
+                <li onClick={onClick} className={userIsLogin ? "" : "hide"}>
                     Управление аккаунтом
                 </li>
                 <NavLink  className="navlink" to='cart'>
-                    <li className={userIsLogin ? "" : "hide"}>
+                    <li onClick={onClick} className={userIsLogin ? "" : "hide"}>
                         Корзина
                     </li>
                 </NavLink>
-                <li className={userIsLogin ? "hide" : ""} onClick={() => dispatch(openRegModal(true))}>
+                <li className={userIsLogin ? "hide" : ""} onClick={() => {dispatch(openRegModal(true)); onClick()}}>
                     Зарегистрироваться
                 </li>
-                <li className={userIsLogin ? "hide" : ""} onClick={() => dispatch(openLogModal(true))}>
+                <li className={userIsLogin ? "hide" : ""} onClick={() => {dispatch(openLogModal(true)); onClick()}}>
                     Войти в аккаунт
                 </li>
                 <NavLink  className="navlink" to='administration'>
-                    <li className={userIsLogin ? "" : "hide"}>
+                    <li onClick={onClick} className={userIsLogin ? "" : "hide"}>
                         Админка
                     </li>
                 </NavLink>

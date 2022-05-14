@@ -1,5 +1,5 @@
 .footer_main {
-    border-top: 3px solid #F2785C;
+    border-top: 3px solid $headerDarker;
     display: flex;
     flex-wrap: wrap;
     &-contacts {
@@ -10,29 +10,47 @@
         margin-top: 56px;
         width: 250px;
         min-height: 300px;
-        color: #F2785C;
+        color: $headerDarker;
         p {
             width: 160px;
             position: relative;
         }
-        &-phone::before {
-            position: absolute;
-            content: url("../img/f_phone.svg");
-            top: 0;
-            left: -40px;
+        &-phone {
+            a {
+                color: $headerDarker;
+                &:hover {
+                    color: $productPrice;
+                }
+            }
+            &::before {
+                position: absolute;
+                content: url("../img/f_phone.svg");
+                top: 0;
+                left: -40px;
+            }
         }
+
         &-time::before {
             position: absolute;
             content: url("../img/f_clock.svg");
             top: 0;
             left: -40px;
         }
-        &-mail::before {
-            position: absolute;
-            content: url("../img/f_mail.svg");
-            top: 0;
-            left: -40px;
+        &-mail {
+            a {
+                color: $headerDarker;
+                &:hover {
+                    color: $productPrice;
+                }
+            }
+            &::before {
+                position: absolute;
+                content: url("../img/f_mail.svg");
+                top: 0;
+                left: -40px;
+            }
         }
+        
     }
     &-block {
         flex: 1;
@@ -40,10 +58,10 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
-            background-color: #F2785C;
+            background-color: $headerDarker;
             ul {
                 list-style: none;
-                color: #fff;
+                color: $lightFont;
                 width: 200px;
                 li {
                     margin: 20px;
@@ -61,6 +79,13 @@
                     }
                 }
             }
+            &-navlink {
+                color: $lightFont;
+                text-decoration: none;
+                &:hover {
+                    color: $productPrice;
+                }
+            }
         }
         &-middle{
             text-transform: uppercase;
@@ -69,8 +94,8 @@
             padding: 0 40px;
             display: flex;
             justify-content:space-between ;
-            background-color: #F2785C;
-            color: #fff;
+            background-color: $headerDarker;
+            color: $lightFont;
         }
         
     }

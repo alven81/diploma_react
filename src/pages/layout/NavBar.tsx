@@ -22,16 +22,16 @@ const NavBar: FC = () => {
                     <div>
                         <ul className="nav_top-list">
                             <li><NavLink className="nav_top-list-navlink" to="/">Главная</NavLink></li>
-                            <li>О нас</li>
-                            <li>Блог</li>
-                            <li>Оплата и доставка</li>
-                            <li>Отзывы</li>
-                            <li>Контакты</li>
+                            <li><NavLink className="nav_top-list-navlink" to="about">О нас</NavLink></li>
+                            <li><NavLink className="nav_top-list-navlink" to="blog">Блог</NavLink></li>
+                            <li><NavLink className="nav_top-list-navlink" to="delivery">Оплата и доставка</NavLink></li>
+                            <li><NavLink className="nav_top-list-navlink" to="review">Отзывы</NavLink></li>
+                            <li><NavLink className="nav_top-list-navlink" to="contacts">Контакты</NavLink></li>
                         </ul>
                     </div>
                     <div className="nav_top-contact">
                         <img src="/assets/img/phone-call.svg" alt=""/>
-                        <p>8(029)5779286</p>
+                        <p><a href="tel:+375295779286" title="Связаться с дизайнером">8(029)5779286</a></p>
                     </div>
                 </div>
                 <div className="nav_middle">
