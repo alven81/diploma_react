@@ -1,5 +1,4 @@
 import React, { FC, useEffect, useState } from "react"
-import LoadingSpinner from "../../components/LoadingSpinner"
 
 interface ImageBoxProps {
     imageList: [],

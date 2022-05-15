@@ -14,14 +14,16 @@
         margin: 10px;
         position: relative;
         border-radius: 10px;
+        box-shadow: 0px 0px 10px 1px rgba(34, 60, 80, 0.14);
         transition: all .2s;
         &:hover {
-            box-shadow: 2px 6px 40px 4px rgba(34, 60, 80, 0.2);
+            box-shadow: 2px 6px 30px 4px rgba(34, 60, 80, 0.2);
         }
 
         &-image {
             display: flex;
             justify-content: center;
+            //position: relative;
             &-overflow {
                 overflow: hidden;
             }
@@ -70,13 +72,23 @@
             display: flex;
             justify-content: space-between;
             padding: 0 20px;
-            @include fontRoboto(700, 18, 21);
+            @include fontRoboto(700, 20, 21);
+            p {
+                margin: 0;
+            }
 
         }
         &-title {
             text-align: center;
             padding: 0 10px;
             @include fontRoboto(400, 14, 16);
+            color: $titleSpan;
+            p {
+                padding: 0 5px 5px 5px;
+                margin-bottom: 5px;
+                max-height: 30px;
+                overflow: hidden;
+            }
         }
 
     }

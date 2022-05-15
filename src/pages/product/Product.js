@@ -23,6 +23,12 @@ const Product = () => {
     const [showComment, setShowComment] = useState(false);
     const [review, setReview] = useState(false);
     const [cartItem, setCartItem] = useState();
+    const [consistBlockText, setConsistBlockText] = useState("Развернуть описание");
+    const [keyConsistSwitch, setKeyConsistSwitch] = useState(false);
+    const [featureBlockText, setFeatureBlockText] = useState("Развернуть описание");
+    const [keyFeatureSwitch, setKeyFeatureSwitch] = useState(false);
+    const [descriptionBlockText, setDescriptionBlockText] = useState("Развернуть описание");
+    const [keyDescriptionSwitch, setKeyDescriptionSwitch] = useState(false);
 
     const descriptionBlock = useRef();
     const featureBlock = useRef();
@@ -30,8 +36,6 @@ const Product = () => {
 
     const user = useSelector((state) => state.isUserLogIn.isUserLogInInfo)
     const whatInTheCart = useSelector((state) => state.loadCart.inCart)
-
-    let keySwitch;
 
 useEffect(() => {
         if (!catalogList) return;
@@ -93,10 +97,40 @@ const handleAddtoCart = async () => {
     dispatch(loadCart(user.id))
 }
 
-    const handleOpenDiv = (incomingBlock) => {
-        if (!keySwitch) {incomingBlock.current.style.height = "auto"} else
-        {incomingBlock.current.style.height = "100px"};
-        keySwitch = !keySwitch;
+    const handleOpenDescription = (incomingBlock) => {
+        if (!keyDescriptionSwitch) {
+            incomingBlock.current.style.height = "auto";
+            setDescriptionBlockText("Свернуть описание");
+        }
+        if (keyDescriptionSwitch) {
+            incomingBlock.current.style.height = "100px";
+            setDescriptionBlockText("Развернуть описание");
+        };
+        setKeyDescriptionSwitch(!keyDescriptionSwitch);
+    }
+
+    const handleOpenFeature = (incomingBlock) => {
+        if (!keyFeatureSwitch) {
+            incomingBlock.current.style.height = "auto";
+            setFeatureBlockText("Свернуть описание");
+        }
+        if (keyFeatureSwitch) {
+            incomingBlock.current.style.height = "100px";
+            setFeatureBlockText("Развернуть описание");
+        };
+        setKeyFeatureSwitch(!keyFeatureSwitch);
+    }
+
+    const handleOpenConsist = (incomingBlock) => {
+        if (!keyConsistSwitch) {
+            incomingBlock.current.style.height = "auto";
+            setConsistBlockText("Свернуть описание");
+        }
+        if (keyConsistSwitch) {
+            incomingBlock.current.style.height = "100px";
+            setConsistBlockText("Развернуть описание");
+        };
+        setKeyConsistSwitch(!keyConsistSwitch);
     }
 
     return (
@@ -141,8 +175,7 @@ const handleAddtoCart = async () => {
                                     
                                 </div>
                         </div>
-
-
+                        
                         <div className="product_main-item-info">
                             <div className="product_main-item-info-price">
                                 <p className={catalogList.discount === true ? "overline" : ""}>
@@ -165,17 +198,17 @@ const handleAddtoCart = async () => {
                                 <h3>Описание</h3>
                                 <p >{catalogList.description}</p>
                             </div>
-                                <button className="product_main-item-rollbtn" onClick={() => handleOpenDiv(descriptionBlock)}>Развернуть описание</button>
+                                <button className="product_main-item-rollbtn" onClick={() => handleOpenDescription(descriptionBlock)}>{descriptionBlockText}</button>
                             <div ref={featureBlock} className="product_main-item-about">
                                 <Features features={catalogList.features} />
                             </div>
-                            <button className="product_main-item-rollbtn" onClick={() => handleOpenDiv(featureBlock)}>Развернуть описание</button>
+                            <button className="product_main-item-rollbtn" onClick={() => handleOpenFeature(featureBlock)}>{featureBlockText}</button>
 
                             <div ref={consistBlock} className="product_main-item-consist">
                                 <h3>Состав:</h3>
                                 <Consist consist={catalogList.consist}/>
                             </div>
-                            <button className="product_main-item-rollbtn" onClick={() => handleOpenDiv(consistBlock)}>Развернуть описание</button>
+                            <button className="product_main-item-rollbtn" onClick={() => handleOpenConsist(consistBlock)}>{consistBlockText}</button>
 
                         </div>
                     </div>
