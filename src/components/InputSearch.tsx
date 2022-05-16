@@ -23,8 +23,6 @@ const handlerSearchItem = () => {
 
 const handlerSearchItemKey = (e: React.KeyboardEvent<HTMLDivElement>): void => {
     if (e.key === 'Enter') {
-        e.preventDefault();
-        e.stopPropagation();
         dispatch(searchResult(searchText));
     }
 } 
@@ -34,8 +32,8 @@ const handlerSearchItemKey = (e: React.KeyboardEvent<HTMLDivElement>): void => {
             <input
                 className={className} 
                 placeholder={placeholder}
-                onKeyDown={(e) => handlerSearchItemKey(e)}
-                onChange={(e) => handleInputChange(e)}
+                onKeyDown={handlerSearchItemKey}
+                onChange={handleInputChange}
                 />
             <NavLink to='search'><span className="nav_middle-loupe" onClick={handlerSearchItem}/></NavLink>
 

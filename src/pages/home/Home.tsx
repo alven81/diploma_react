@@ -156,9 +156,9 @@ const Home = () => {
             </section>
 
             <section className="home_main-workshop home_container">
-                <Workshop buttonTo={"model"} buttonName={"Идеи"} picture={"/assets/img/master_1.png"}/>
-                <Workshop buttonTo={"model"} buttonName={"Мастер-класс"} picture={"/assets/img/master_2.png"}/>
-                <Workshop buttonTo={"model"} buttonName={"Конкурсы"} picture={"/assets/img/master_3.png"}/>
+                <Workshop buttonTo={"ideas"} buttonName={"Идеи"} picture={"/assets/img/master_1.png"}/>
+                <Workshop buttonTo={"masterclass"} buttonName={"Мастер-класс"} picture={"/assets/img/master_2.png"}/>
+                <Workshop buttonTo={"contests"} buttonName={"Конкурсы"} picture={"/assets/img/master_3.png"}/>
             </section>
         </div>
     )

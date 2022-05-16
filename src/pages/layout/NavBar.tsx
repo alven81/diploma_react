@@ -36,7 +36,9 @@ const NavBar: FC = () => {
                 </div>
                 <div className="nav_middle">
                     <div className="nav_middle-logo">
-                        <img src="/assets/img/logo.png" alt="логотип Креатив"/>
+                        <NavLink to='/'>
+                            <img src="/assets/img/logo.png" alt="логотип Креатив"/>
+                        </NavLink>
                     </div>
                     <div  className="nav_middle-right">
                         <div className="nav_middle-right-input">

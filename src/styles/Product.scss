@@ -114,12 +114,12 @@ h3 {
         &-description {
             @include fontRoboto(400, 14, 20);
             overflow: hidden;
-            height: 110px;
+            height: 90px;
         }
 
         &-about {
             overflow: hidden;
-            height: 110px;
+            height: 90px;
             transition: all 1s;
             div {
                 display: flex;
@@ -141,7 +141,7 @@ h3 {
 
         &-consist {
             overflow: hidden;
-            height: 110px;
+            height: 90px;
         }
             
         &-rollbtn {

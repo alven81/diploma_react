@@ -6,7 +6,7 @@
         case "GET_SEARCH_RESULT":
             return {
                 ...state,
-                searchResult: [ ...action.payload]
+                searchResult: [...action.payload]
             }
 
         default:

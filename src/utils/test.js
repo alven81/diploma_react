@@ -88,3 +88,21 @@
 // console.log(calculator.sum(1, 2));
 
 
+new Promise((resolve, reject) => {
+    setTimeout(() => resolve(1), 1000);
+  })
+    .then((result) => { alert(result);
+            return new Promise(
+                (resolve, reject) => 
+                { setTimeout(() => resolve(result * 2), 1000);
+                }); // 1 * 2;
+})
+.then((result) => {
+    alert(result); // 1
+    return result * 2;
+  })
+  .then((result) => 
+    { alert(result); // 1
+    return new Promise((resolve, reject) => { setTimeout(() => resolve(result * 2), 2000) }) ;
+  })
+  .then((result) => {alert(result)})
