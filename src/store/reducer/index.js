@@ -3,6 +3,7 @@ import { indexReducer } from "./indexReducer";
 import { isUserLogInReducer } from "./isUserLogInReducer";
 import { isLeftSideMenuStatusReducer } from "./leftSideMenuStatusReducer";
 import loadCartReducer from "./loadCartReducer";
+import loadLikesReducer from "./loadLikesReducer";
 import  loadCatalogReducer  from "./loadCatalogReducer";
 import loadCategoryReducer from "./loadCategoryReducer";
 import { LogModalReducer } from "./LogReducer";
@@ -19,6 +20,7 @@ const reducer = combineReducers(
         itemIndexData: indexReducer,
         loadData: loadCatalogReducer,
         loadCart: loadCartReducer,
+        loadLikes: loadLikesReducer,
         loadSearch: loadSearchReducer,
         isUserLogIn: isUserLogInReducer,
         isOpenReg: RegModalReducer,

@@ -104,6 +104,26 @@ h3 {
 					}
 				}
 			}
+            &-like {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 84px;
+                cursor: pointer;
+                img {
+					height: 24px;
+					width: 24px;
+					transition: all 0.3s ease; 
+					&:hover {
+						transition: all 0.3s ease;
+						transform: scale(1.2);
+					}
+					&:active {
+						transition: all 0.1s ease;
+						transform: scale(1.05);
+					}
+				}
+            }
 		}
 
 		&-description {

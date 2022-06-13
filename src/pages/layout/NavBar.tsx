@@ -12,6 +12,9 @@ const NavBar: FC = () => {
 	const whatInTheCart = useSelector(
 		(state: RootStateOrAny) => state.loadCart.inCart
 	);
+    const checkExistingLikes = useSelector(
+		(state: RootStateOrAny) => state.loadLikes.inLikes
+	);
 	const dispatch = useDispatch();
 
 	const burgerPress = () => {
@@ -126,7 +129,7 @@ const NavBar: FC = () => {
 										alt="Избранное"
 									/>
 									<span className="nav_middle-cart-block-span-heart">
-										0
+										{checkExistingLikes.length}
 									</span>
 								</div>
 								<div>
