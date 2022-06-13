@@ -1,4 +1,7 @@
 import React, { FC, useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { showZoomImage } from "../../store/actions/zoomAction";
+//import { ZoomImage } from "./ZoomImage";
 
 interface ImageBoxProps {
 	imageList: [];
@@ -13,6 +16,9 @@ const ImageBox: FC<ImageBoxProps> = ({
 	imageMain,
 	age,
 }) => {
+
+    const dispatch = useDispatch();
+
 	useEffect(() => {
 		setImageLink(imageMain);
 	}, [imageMain]);
@@ -20,6 +26,14 @@ const ImageBox: FC<ImageBoxProps> = ({
 	const handlerImage = (item: string) => {
 		setImageLink(item);
 	};
+
+    // const zoomImage = useSelector(
+	// 	(state: RootStateOrAny) => state.imageZoom.showZoomImage
+	// );
+
+    const handlerZoomImage = () => {
+        dispatch(showZoomImage([true, `http://localhost:3000${imageLink}`]));
+    }
 
 	const [imageLink, setImageLink] = useState<string>();
 
@@ -44,10 +58,11 @@ const ImageBox: FC<ImageBoxProps> = ({
 			</div>
 			<div className="image_box-mono">
 				<img
-					key={Math.random()}
+					//key={Math.random()}
 					className="image_box-mono-pic"
 					src={`http://localhost:3000${imageLink}`}
 					alt=""
+                    onClick={() => handlerZoomImage()}
 				/>
 				<div className={age.length ? "" : "hide"}>
 					<span>{age}</span>

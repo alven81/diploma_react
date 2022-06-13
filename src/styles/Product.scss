@@ -1,172 +1,163 @@
-.button_container {            
-    display: flex;
-    justify-content: end;
-    align-items: flex-start;  
-    height:48px;
-    width: 193px;
-    background: rgba(252, 81, 133, 0.1);
-    border-radius: 5px;
-    box-shadow: (0px 2.75px 2.75px rgba(0, 0, 0, 0.25));
-    transition: 0.3s box-shadow;
-    &:active {
-        box-shadow: none;
-    }
-    button {
-        display: block;
-        height:40px;
-        width: 185px;
-        background-color: $lightBackground;
-        @include fontRoboto(400, 14, 16);
-        color: $mainBlack;
-        text-transform: uppercase;
-        border-radius: 10px;
-        border-color: $produckBtnBorder;
-        cursor: pointer;
-        transition: all 0.3s;
-        &:active {
-            background-color:rgb(236, 231, 231);
-        }
-        &:hover {
-            font-weight: 500;
-        }
-        
-    }
+.button_container {
+	display: flex;
+	justify-content: end;
+	align-items: flex-start;
+	height: 48px;
+	width: 193px;
+	background: rgba(252, 81, 133, 0.1);
+	border-radius: 5px;
+	box-shadow: (0px 2.75px 2.75px rgba(0, 0, 0, 0.25));
+	transition: 0.3s box-shadow;
+	&:active {
+		box-shadow: none;
+	}
+	button {
+		display: block;
+		height: 40px;
+		width: 185px;
+		background-color: $lightBackground;
+		@include fontRoboto(400, 14, 16);
+		color: $mainBlack;
+		text-transform: uppercase;
+		border-radius: 10px;
+		border-color: $produckBtnBorder;
+		cursor: pointer;
+		transition: all 0.3s;
+		&:active {
+			background-color: rgb(236, 231, 231);
+		}
+		&:hover {
+			font-weight: 500;
+		}
+	}
 }
 
 .button_cart {
-    button {
-        background-color: $produckBtnBorder;
-        color: $lightFont;
-        text-transform: none;
-    }
+	button {
+		background-color: $produckBtnBorder;
+		color: $lightFont;
+		text-transform: none;
+	}
 }
 
 h3 {
-    color: $produckBtnBorder;
-    @include fontRoboto(700, 14, 16);
-    text-transform: uppercase;
+	color: $produckBtnBorder;
+	@include fontRoboto(700, 14, 16);
+	text-transform: uppercase;
 }
 
 .product_main {
-    padding: 20px;
-    &-name {
-        @include fontRoboto(400, 36, 42);
-    }
+	padding: 20px;
+	&-name {
+		@include fontRoboto(400, 36, 42);
+	}
 
-    &-item {
-        display: flex;
-        justify-content: space-around;
-        padding: 0 20px 20px;
-        gap: 20px;
-        border-bottom: 1px solid $produckBtnBorder;
-        transition: all 1s;
-        @media (max-width: 950px){
-            flex-wrap: wrap;
-        }
-        
-        &-pictures {
-            min-width: 550px;
-        }
+	&-item {
+		display: flex;
+		justify-content: space-around;
+		padding: 0 20px 20px;
+		gap: 20px;
+		border-bottom: 1px solid $produckBtnBorder;
+		transition: all 1s;
+		@media (max-width: 950px) {
+			flex-wrap: wrap;
+		}
 
-        &-raiting {
-            margin-left: 150px;
-            margin-right: 27px;
-            display: flex;
-            justify-content: space-between;
-            span {
-                color: $produckBtnBorder;
-            }
-            &-block {
-                
-                &-button {
-                    cursor: pointer;
-                    background-color: transparent;
-                    border: none;
-                    color: $headerDarker;
-                    text-transform: uppercase;
-                    @include fontRoboto(500, 14, 16);
-                    border-bottom: 1px dashed rgba($color: $headerDarker, $alpha: 0.4);
-                    transition: all 0.3s;
-                    &:hover {
-                        border-bottom: 1px dashed $headerDarker;
-                    } 
-                }
-            }
-            
-        }
-                        
-        &-info {
-           
-            &-price {
-                
-                p {
-                    @include fontRoboto(700, 14, 30);
-                    color: $productPrice;
-                    
-                    span {
-                        @include fontRoboto(400, 14, 30);
-                    }
-                  
-                }
-            }
-        }
+		&-pictures {
+			min-width: 550px;
+		}
 
-        &-description {
-            @include fontRoboto(400, 14, 20);
-            overflow: hidden;
-            height: 90px;
-        }
+		&-raiting {
+			margin-left: 150px;
+			margin-right: 27px;
+			display: flex;
+			justify-content: space-between;
+			span {
+				color: $produckBtnBorder;
+			}
+			&-block {
+				&-button {
+					cursor: pointer;
+					background-color: transparent;
+					border: none;
+					color: $headerDarker;
+					text-transform: uppercase;
+					@include fontRoboto(500, 14, 16);
+					border-bottom: 1px dashed
+						rgba($color: $headerDarker, $alpha: 0.4);
+					transition: all 0.3s;
+					&:hover {
+						border-bottom: 1px dashed $headerDarker;
+					}
+				}
+			}
+		}
 
-        &-about {
-            overflow: hidden;
-            height: 90px;
-            transition: all 1s;
-            div {
-                display: flex;
-                justify-content: space-between;
-                align-items: baseline;
+		&-info {
+			&-price {
+				p {
+					@include fontRoboto(700, 14, 30);
+					color: $productPrice;
 
-                span {
-                    display: inline-block;
-                }
+					span {
+						@include fontRoboto(400, 14, 30);
+					}
+				}
+			}
+		}
 
-                em {
-                    display: flex;
-                    flex: 1;
-                    border-bottom: 1px solid $lineColor;
-                }
+		&-description {
+			@include fontRoboto(400, 14, 20);
+			overflow: hidden;
+			height: 90px;
+		}
 
-                }
-        }
+		&-about {
+			overflow: hidden;
+			height: 90px;
+			transition: all 1s;
+			div {
+				display: flex;
+				justify-content: space-between;
+				align-items: baseline;
 
-        &-consist {
-            overflow: hidden;
-            height: 90px;
-        }
-            
-        &-rollbtn {
-            background-color: transparent;
-            border: none;
-            @include fontRoboto(400, 14, 16);
-            color: $headerDarker;
-            cursor: pointer;
-            border-bottom: 1px dashed rgba($color: $headerDarker, $alpha: 0.4);
-            transition: all 0.3s;
-            &:hover {
-                border-bottom: 1px dashed $headerDarker;
-            } 
-        }
+				span {
+					display: inline-block;
+				}
 
-    }
+				em {
+					display: flex;
+					flex: 1;
+					border-bottom: 1px solid $lineColor;
+				}
+			}
+		}
+
+		&-consist {
+			overflow: hidden;
+			height: 90px;
+		}
+
+		&-rollbtn {
+			background-color: transparent;
+			border: none;
+			@include fontRoboto(400, 14, 16);
+			color: $headerDarker;
+			cursor: pointer;
+			border-bottom: 1px dashed rgba($color: $headerDarker, $alpha: 0.4);
+			transition: all 0.3s;
+			&:hover {
+				border-bottom: 1px dashed $headerDarker;
+			}
+		}
+	}
 }
 
 .no_data {
-    p{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        @include fontRoboto(500, 30, 30);
-    }
+	p {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@include fontRoboto(500, 30, 30);
+	}
 }
-
-

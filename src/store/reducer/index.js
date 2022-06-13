@@ -7,6 +7,7 @@ import  loadCatalogReducer  from "./loadCatalogReducer";
 import loadCategoryReducer from "./loadCategoryReducer";
 import { LogModalReducer } from "./LogReducer";
 import { RegModalReducer } from "./RegReducer";
+import { zoomImageReducer } from "./zoomReducer";
 import loadSearchReducer from "./searchResultReducer";
 import loadSearchCategoryReducer from "./searchCategoryResultReducer";
 import { AlertReducer } from "./AlertReducer";
@@ -26,6 +27,7 @@ const reducer = combineReducers(
         loadCategoryList: loadCategoryReducer,
         searchCategoryResult: loadSearchCategoryReducer,
         alertMessage: AlertReducer,
+        imageZoom: zoomImageReducer
     },
 );
 

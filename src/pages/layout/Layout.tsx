@@ -5,8 +5,9 @@ import NavBar from "./NavBar";
 import LogModal from "../../components/modal/log/LogIn";
 import RegModal from "../../components/modal/reg/Reg";
 import { LeftSlideMenu } from "../LeftSlideMenu/LeftSlideMenu";
-import { showAlertMessage } from "../../store/actions/AlertAction";
+//import { showAlertMessage } from "../../store/actions/AlertAction";
 import Alert from "../../components/modal/Alert";
+import { ZoomImage } from "../product/ZoomImage";
 
 const Layout = () => {
 	const userIsReg = useSelector(
@@ -22,17 +23,20 @@ const Layout = () => {
 	const showAlert = useSelector(
 		(state: RootStateOrAny) => state.alertMessage.alertIs
 	);
+	const zoomImage = useSelector(
+		(state: RootStateOrAny) => state.imageZoom.showZoomImage
+	);
 
 	const dispatch = useDispatch();
 
-	const handleAlert = () => {
-		dispatch(
-			showAlertMessage({
-				status: true,
-				message: "test alert!",
-			})
-		);
-	};
+	// const handleAlert = () => {
+	// 	dispatch(
+	// 		showAlertMessage({
+	// 			status: true,
+	// 			message: "test alert!",
+	// 		})
+	// 	);
+	// };
 
 	return (
 		<div className="main_container">
@@ -43,6 +47,7 @@ const Layout = () => {
 				{userIsLog && <LogModal />}
 				{userIsReg && <RegModal />}
 				{showAlert.status && <Alert alertMessage={showAlert.message} />}
+                {zoomImage[0] && <ZoomImage image={zoomImage[1]}/>}
 			</main>
 			<Footer />
 		</div>

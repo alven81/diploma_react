@@ -1,67 +1,64 @@
 .cart {
-    &-name {
-        > p {
-            text-align: center;
-            @include fontRoboto(700, 24, 24)
-        }
-        
-    }
-    &_main {
-        display: flex;
-        gap: 20px;
-        width: 100%;
-        border-bottom: 1px solid $mainBlack;
-        &-image {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 5px;
-            width: 150px;
-            img{
-                width: 100px;
-                max-height: 200px;
-            }
-        }
-        &-title {
-            display: flex;
-            justify-content: flex-start;
-            flex: 1;
-            margin: 5px;
-        }
-        &-price {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 8%;
-            margin: 5px;
-            @include fontRoboto(500, 20, 20);
-        }
-        &-quantity {
-            display: flex;
-            gap: 10px;
-            justify-content:center;
-            align-items: center;
-            margin: 5px;
-            min-width: 10%;
-            @include fontRoboto(500, 20, 20);
-            button {
-                width: 30px;
-                height: 30px;
-                cursor: pointer;
-                border-radius: 30px;
-                border: 1px solid $produckBtnBorder;
-                background-color: transparent;
-            }
-        }
-        &-cost {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 8%;
-            margin: 5px;
-            @include fontRoboto(500, 20, 20);
-        }
-
-    }
-    
+	&-name {
+		> p {
+			text-align: center;
+			@include fontRoboto(700, 24, 24);
+		}
+	}
+	&_main {
+		display: flex;
+		gap: 20px;
+		width: 100%;
+		border-bottom: 1px solid $mainBlack;
+		&-image {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: 5px;
+			width: 150px;
+			img {
+				width: 100px;
+				max-height: 200px;
+			}
+		}
+		&-title {
+			display: flex;
+			justify-content: flex-start;
+			flex: 1;
+			margin: 5px;
+		}
+		&-price {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 8%;
+			margin: 5px;
+			@include fontRoboto(500, 20, 20);
+		}
+		&-quantity {
+			display: flex;
+			gap: 10px;
+			justify-content: center;
+			align-items: center;
+			margin: 5px;
+			min-width: 10%;
+			@include fontRoboto(500, 20, 20);
+			button {
+				width: 30px;
+				height: 30px;
+				cursor: pointer;
+				border-radius: 30px;
+				border: 1px solid $produckBtnBorder;
+				background-color: transparent;
+			}
+		}
+		&-cost {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 8%;
+			margin: 5px;
+			@include fontRoboto(500, 20, 20);
+		}
+	}
 }
