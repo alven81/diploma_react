@@ -8,44 +8,44 @@ import { LeftSlideMenu } from "../LeftSlideMenu/LeftSlideMenu";
 import { showAlertMessage } from "../../store/actions/AlertAction";
 import Alert from "../../components/modal/Alert";
 
-
 const Layout = () => {
+	const userIsReg = useSelector(
+		(state: RootStateOrAny) => state.isOpenReg.isOpenReg
+	);
+	const userIsLog = useSelector(
+		(state: RootStateOrAny) => state.isOpenLog.isOpenLog
+	);
+	const leftSideMenuStatus = useSelector(
+		(state: RootStateOrAny) =>
+			state.whichIsLeftSideMenuStatus.leftSideMenuStatusIs
+	);
+	const showAlert = useSelector(
+		(state: RootStateOrAny) => state.alertMessage.alertIs
+	);
 
-    const userIsReg = useSelector((state: RootStateOrAny) => state.isOpenReg.isOpenReg);
-    const userIsLog = useSelector((state: RootStateOrAny) => state.isOpenLog.isOpenLog);
-    const leftSideMenuStatus = useSelector((state: RootStateOrAny) => state.whichIsLeftSideMenuStatus.leftSideMenuStatusIs);
-    const showAlert = useSelector((state: RootStateOrAny) => state.alertMessage.alertIs);
+	const dispatch = useDispatch();
 
-    const dispatch = useDispatch();
+	const handleAlert = () => {
+		dispatch(
+			showAlertMessage({
+				status: true,
+				message: "test alert!",
+			})
+		);
+	};
 
-    const handleAlert = () => {
-        dispatch(showAlertMessage({
-                    status: true,
-                    message : "test alert!"
-                }
-        ));
-    }
-
-
-    return (
-        
-        <div className="main_container">
-            <LeftSlideMenu isMenuOpen={leftSideMenuStatus} />
-            <NavBar/>
-                <main>
-                    <Outlet />
-                    {
-                        userIsLog && < LogModal />
-                    }
-                    {
-                        userIsReg && < RegModal />
-                    }
-                    {
-                        showAlert.status && <Alert alertMessage={showAlert.message}/>
-                    }       
-                </main>
-            <Footer />
-        </div>
-    )
-}
-export default Layout
+	return (
+		<div className="main_container">
+			<LeftSlideMenu isMenuOpen={leftSideMenuStatus} />
+			<NavBar />
+			<main>
+				<Outlet />
+				{userIsLog && <LogModal />}
+				{userIsReg && <RegModal />}
+				{showAlert.status && <Alert alertMessage={showAlert.message} />}
+			</main>
+			<Footer />
+		</div>
+	);
+};
+export default Layout;

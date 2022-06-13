@@ -1,5 +1,5 @@
-import { Route, Routes } from "react-router-dom"
-import './styles/App.scss';
+import { Route, Routes } from "react-router-dom";
+import "./styles/App.scss";
 import Home from "./pages/home/Home";
 import Layout from "./pages/layout/Layout";
 import PageNotFound from "./pages/PageNotFound";
@@ -21,46 +21,45 @@ import Decor from "./pages/Decor";
 import Flora from "./pages/Flora";
 
 const App = () => {
-    const dispatch = useDispatch();
-    const defaultUser = {
-        "id": 0,
-        "avatar": "/assets/avatars/0.jpg",
-        "firstName": "Таинственный незнакомец",
-        "lastName": "",
-        "email": ""
-}
+	const dispatch = useDispatch();
+	const defaultUser = {
+		id: 0,
+		avatar: "/assets/avatars/0.jpg",
+		firstName: "Таинственный незнакомец",
+		lastName: "",
+		email: "",
+	};
 
-    useEffect(() => {
-        dispatch(getCatalogData())
-    }, [dispatch])
+	useEffect(() => {
+		dispatch(getCatalogData());
+	}, [dispatch]);
 
-    useEffect(() => {
-        dispatch(isUserLogIn(defaultUser))}, [dispatch]);
+	useEffect(() => {
+		dispatch(isUserLogIn(defaultUser));
+	}, [dispatch]);
 
-    
-   
-    return (
-        <>
-            <Routes>
-                <Route path='/' element={<Layout />} >
-                    <Route index element={<Home />} />
-                    <Route path="search" element={<Search />} />
-                    <Route path="reviews" element={<Reviews />} />
-                    <Route path="administration" element={<Administration />} />
-                    <Route path="catalog" element={<Catalog />} />
-                    <Route path="craft" element={<Craft />} />
-                    <Route path="paint" element={<Paint />} />
-                    <Route path="model" element={<Model />} />
-                    <Route path="decor" element={<Decor />} />
-                    <Route path="flora" element={<Flora />} />
-                    <Route path="product/:id" element={<Product/>} />
-                    <Route path="cart" element={<Cart/>} />
-                    {/* <Route path="workshop" element={<Workshop />} /> */}
-                    <Route path="*" element={<PageNotFound />} />
-                </Route>
-            </Routes>
-        </>
-    );
-}
+	return (
+		<>
+			<Routes>
+				<Route path="/" element={<Layout />}>
+					<Route index element={<Home />} />
+					<Route path="search" element={<Search />} />
+					<Route path="reviews" element={<Reviews />} />
+					<Route path="administration" element={<Administration />} />
+					<Route path="catalog" element={<Catalog />} />
+					<Route path="craft" element={<Craft />} />
+					<Route path="paint" element={<Paint />} />
+					<Route path="model" element={<Model />} />
+					<Route path="decor" element={<Decor />} />
+					<Route path="flora" element={<Flora />} />
+					<Route path="product/:id" element={<Product />} />
+					<Route path="cart" element={<Cart />} />
+					{/* <Route path="workshop" element={<Workshop />} /> */}
+					<Route path="*" element={<PageNotFound />} />
+				</Route>
+			</Routes>
+		</>
+	);
+};
 
 export default App;

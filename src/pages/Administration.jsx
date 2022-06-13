@@ -1,8 +1,4 @@
 const Administration = () => {
-    return (
-        <section className="container">
-            Admin
-        </section>   
-    )
-}
-export { Administration }
+	return <section className="container">Admin</section>;
+};
+export { Administration };

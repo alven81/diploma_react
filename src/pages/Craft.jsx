@@ -5,32 +5,31 @@ import CatElement from "./catalog/CatElement";
 import { New } from "./product/New";
 
 const Craft = () => {
-    const dispatch = useDispatch();
+	const dispatch = useDispatch();
 
-    useEffect (() => {
-        dispatch(searchCategoryResult(1));
-    }, [dispatch])
-    
-    const catalog = useSelector(state => state.searchCategoryResult.searchCategoryResult)
-    
-    return (
-        <>
-            <div className="catalog_main narrow_container">
-                
-                { catalog &&
-                    <>
-                        {
-                            catalog.map((catalog) =><CatElement key={catalog.id} catalog={catalog} />)
-                        }
-                    </>
-                }
-            </div>
-            {/* <div className="container">
+	useEffect(() => {
+		dispatch(searchCategoryResult(1));
+	}, [dispatch]);
+
+	const catalog = useSelector(
+		(state) => state.searchCategoryResult.searchCategoryResult
+	);
+
+	return (
+		<>
+			<div className="catalog_main narrow_container">
+				{catalog && (
+					<>
+						{catalog.map((catalog) => (
+							<CatElement key={catalog.id} catalog={catalog} />
+						))}
+					</>
+				)}
+			</div>
+			{/* <div className="container">
                 <New />
             </div> */}
-        </> 
-    )
-}
+		</>
+	);
+};
 export default Craft;
-
-
