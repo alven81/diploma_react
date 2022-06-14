@@ -19,7 +19,6 @@ const Cart = () => {
 				id: Number(key),
 				quantity: calcCartContent[key],
 			};
-			console.log(cartItemContent[i]);
 			i++;
 		}
 		return cartItemContent;

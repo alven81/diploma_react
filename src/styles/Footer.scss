@@ -1,100 +1,118 @@
 .footer_main {
-	border-top: 3px solid $headerDarker;
-	display: flex;
-	flex-wrap: wrap;
-	&-contacts {
-		background-image: url("../img/f_flower.png");
-		background-repeat: no-repeat;
-		background-position: 0% 100%;
-		padding-left: 81px;
-		margin-top: 56px;
-		width: 250px;
-		min-height: 300px;
-		color: $headerDarker;
-		p {
-			width: 160px;
-			position: relative;
-		}
-		&-phone {
-			a {
-				color: $headerDarker;
-				&:hover {
-					color: $productPrice;
-				}
-			}
-			&::before {
-				position: absolute;
-				content: url("../img/f_phone.svg");
-				top: 0;
-				left: -40px;
-			}
-		}
+    border-top: 3px solid $headerDarker;
+    display: flex;
+    flex-wrap: wrap;
 
-		&-time::before {
-			position: absolute;
-			content: url("../img/f_clock.svg");
-			top: 0;
-			left: -40px;
-		}
-		&-mail {
-			a {
-				color: $headerDarker;
-				&:hover {
-					color: $productPrice;
-				}
-			}
-			&::before {
-				position: absolute;
-				content: url("../img/f_mail.svg");
-				top: 0;
-				left: -40px;
-			}
-		}
-	}
-	&-block {
-		flex: 1;
-		&-top {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: space-around;
-			background-color: $headerDarker;
-			ul {
-				list-style: none;
-				color: $lightFont;
-				width: 200px;
-				li {
-					margin: 20px;
-					&:first-child {
-						font-weight: 700;
-						text-transform: uppercase;
-					}
-				}
-				&:last-child {
-					li:last-child {
-						display: flex;
-						justify-content: space-around;
-						flex-wrap: wrap;
-						gap: 20px;
-					}
-				}
-			}
-			&-navlink {
-				color: $lightFont;
-				text-decoration: none;
-				&:hover {
-					color: $productPrice;
-				}
-			}
-		}
-		&-middle {
-			text-transform: uppercase;
-		}
-		&-bottom {
-			padding: 0 40px;
-			display: flex;
-			justify-content: space-between;
-			background-color: $headerDarker;
-			color: $lightFont;
-		}
-	}
+    &-contacts {
+        background-image: url("../img/f_flower.png");
+        background-repeat: no-repeat;
+        background-position: 0% 100%;
+        padding-left: 81px;
+        margin-top: 56px;
+        width: 250px;
+        min-height: 300px;
+        color: $headerDarker;
+
+        p {
+            width: 160px;
+            position: relative;
+        }
+
+        &-phone {
+            a {
+                color: $headerDarker;
+
+                &:hover {
+                    color: $productPrice;
+                }
+            }
+
+            &::before {
+                position: absolute;
+                content: url("../img/f_phone.svg");
+                top: 0;
+                left: -40px;
+            }
+        }
+
+        &-time::before {
+            position: absolute;
+            content: url("../img/f_clock.svg");
+            top: 0;
+            left: -40px;
+        }
+
+        &-mail {
+            a {
+                color: $headerDarker;
+
+                &:hover {
+                    color: $productPrice;
+                }
+            }
+
+            &::before {
+                position: absolute;
+                content: url("../img/f_mail.svg");
+                top: 0;
+                left: -40px;
+            }
+        }
+    }
+
+    &-block {
+        flex: 1;
+
+        &-top {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            background-color: $headerDarker;
+
+            ul {
+                list-style: none;
+                color: $lightFont;
+                width: 200px;
+
+                li {
+                    margin: 20px;
+
+                    &:first-child {
+                        font-weight: 700;
+                        text-transform: uppercase;
+                    }
+                }
+
+                &:last-child {
+                    li:last-child {
+                        display: flex;
+                        justify-content: space-around;
+                        flex-wrap: wrap;
+                        gap: 20px;
+                    }
+                }
+            }
+
+            &-navlink {
+                color: $lightFont;
+                text-decoration: none;
+
+                &:hover {
+                    color: $productPrice;
+                }
+            }
+        }
+
+        &-middle {
+            text-transform: uppercase;
+        }
+
+        &-bottom {
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            background-color: $headerDarker;
+            color: $lightFont;
+        }
+    }
 }

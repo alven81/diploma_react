@@ -1,18 +1,16 @@
+const initialState = { loadCatalog: [] };
 
- const initialState = { loadCatalog: []}
- 
- const loadCatalogReducer = (state = initialState, action) => {
-
+const loadCatalogReducer = (state = initialState, action) => {
     switch (action.type) {
         case "SET_CATALOG_DATA":
             return {
                 ...state,
-                loadCatalog: [ ...action.payload]
-            }
+                loadCatalog: [...action.payload],
+            };
 
         default:
-            return state
+            return state;
     }
-}
-    
-export default loadCatalogReducer
+};
+
+export default loadCatalogReducer;

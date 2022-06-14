@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { showAlertMessage } from "../../../store/actions/AlertAction";
 import { isUserLogIn } from "../../../store/actions/isUserLogInAction";
 import loadCart from "../../../store/actions/loadCartAction";
@@ -10,8 +10,6 @@ import { doesUserExist } from "../../../utils/doesUserExist";
 import { getUserInfoById } from "../../../utils/getUserInfoById";
 
 const LogModal = () => {
-    const user = useSelector((state) => state.isUserLogInInfo);
-    console.log("at start", user);
     const dispatch = useDispatch();
 
     const [eMail, setEMail] = useState(null);
@@ -34,7 +32,6 @@ const LogModal = () => {
                 dispatch(openLogModal(false));
                 dispatch(loadCart(userInfo.id));
                 dispatch(loadLikes(userInfo.id));
-                //localStorage.setItem('userId', true)
             } else {
                 dispatch(
                     showAlertMessage({

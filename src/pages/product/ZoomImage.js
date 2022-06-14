@@ -1,20 +1,17 @@
 import { useDispatch } from "react-redux";
 import { showZoomImage } from "../../store/actions/zoomAction";
 
-const ZoomImage = ({image}) => {
-
+const ZoomImage = ({ image }) => {
     const dispatch = useDispatch();
 
     const handlerZoomImage = () => {
         dispatch(showZoomImage(false));
-    }
+    };
 
-    console.log("image", {image});
-
-	return (
-		<div className="image_box-zoom" onClick={() => handlerZoomImage()}>
-			<img src={image} alt=""/>
-		</div>
-	);
+    return (
+        <div className="image_box-zoom" onClick={() => handlerZoomImage()}>
+            <img src={image} alt="" />
+        </div>
+    );
 };
 export { ZoomImage };

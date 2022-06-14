@@ -1,15 +1,15 @@
-function openLogModal (key) {
+function openLogModal(key) {
     return {
         type: "OPEN_LOG_MODAL",
-        payload: key
-    }
+        payload: key,
+    };
 }
 
-function closeLogModal (key) {
+function closeLogModal(key) {
     return {
         type: "CLOSE_LOG_MODAL",
-        payload: key
-    }
+        payload: key,
+    };
 }
 
-export { openLogModal, closeLogModal }
+export { openLogModal, closeLogModal };

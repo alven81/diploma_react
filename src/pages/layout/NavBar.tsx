@@ -124,10 +124,12 @@ const NavBar: FC = () => {
 									/>
 								</div>
 								<div>
+                                <NavLink className="nav-icons" to="likes">
 									<img
 										src="/assets/img/cart_heart.svg"
 										alt="Избранное"
 									/>
+                                    </NavLink>
 									<span className="nav_middle-cart-block-span-heart">
 										{checkExistingLikes.length}
 									</span>

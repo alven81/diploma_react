@@ -5,7 +5,7 @@ export default interface IProducts {
     [x: string]: any;
     id: number,
     price: number,
-    discount: boolean, 
+    discount: boolean,
     new: boolean,
     discount_price: number,
     title: string,

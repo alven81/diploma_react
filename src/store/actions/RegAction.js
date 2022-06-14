@@ -1,15 +1,15 @@
-function openRegModal (key) {
+function openRegModal(key) {
     return {
         type: "OPEN_REG_MODAL",
-        payload: key
-    }
+        payload: key,
+    };
 }
 
-function closeRegModal (key) {
+function closeRegModal(key) {
     return {
         type: "CLOSE_REG_MODAL",
-        payload: key
-    }
+        payload: key,
+    };
 }
 
-export { openRegModal, closeRegModal }
+export { openRegModal, closeRegModal };

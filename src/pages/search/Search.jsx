@@ -4,7 +4,7 @@ import { New } from "../product/New";
 
 const Search = () => {
 	const searchCatalog = useSelector((state) => state.loadSearch.searchResult);
-	console.log("searchCatalog", searchCatalog);
+
 	return (
 		<>
 			<div className="catalog_main container">

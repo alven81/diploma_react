@@ -1,0 +1,53 @@
+.likes {
+
+    &_title {
+        text-align: center;
+        @include fontRoboto(700, 24, 24);
+    }
+
+    &_list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+
+        &_element {
+            width: 150px;
+            padding: 5px;
+            box-sizing: border-box;
+            margin: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 1px rgba(34, 60, 80, 0.14);
+            transition: all 0.2s;
+            cursor: pointer;
+
+            &:hover {
+                box-shadow: 2px 6px 30px 4px rgba(34, 60, 80, 0.2);
+            }
+
+            &-image {
+                display: flex;
+                box-sizing: border-box;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    border-radius: 8px;
+                    max-width: 100%;
+                    height: 200px;
+                    object-fit: cover;
+                }
+            }
+
+            &-title {
+                @include fontRoboto(400, 16, 18);
+                justify-content: flex-start;
+
+                p {
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+
+}

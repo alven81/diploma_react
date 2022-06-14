@@ -5,7 +5,7 @@ import { reducer } from "./reducer/index";
 const store = createStore(reducer, applyMiddleware(thunk));
 
 store.subscribe(() => {
-    console.log("store data: ", store.getState())
-})
+    console.log("store data: ", store.getState());
+});
 
-export {store}
+export { store };

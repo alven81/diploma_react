@@ -71,9 +71,6 @@ const Product = () => {
                     raiting: raiting,
                 })
                 .then(updateRaiting(raiting))
-                .then((resp) => {
-                    console.log(resp.data);
-                })
                 .catch((error) => {
                     console.log(error);
                 });
@@ -119,7 +116,6 @@ const Product = () => {
     };
 
     const handleAddLike = async () => {
-        //console.log("checkExistingLikes", checkExistingLikes);
         if (!user.id)
             return dispatch(
                 showAlertMessage({

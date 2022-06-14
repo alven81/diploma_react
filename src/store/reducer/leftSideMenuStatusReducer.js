@@ -1,15 +1,15 @@
-const initialState = { leftSideMenuStatusIs: false}
+const initialState = { leftSideMenuStatusIs: false };
 
- const isLeftSideMenuStatusReducer = (state = initialState, action) => {
+const isLeftSideMenuStatusReducer = (state = initialState, action) => {
     switch (action.type) {
         case "SET_LEFT_SIDE_MENU_STATUS":
             return {
                 ...state,
-                leftSideMenuStatusIs: action.payload
-            }
+                leftSideMenuStatusIs: action.payload,
+            };
         default:
-            return state
+            return state;
     }
-}
+};
 
-export { isLeftSideMenuStatusReducer }
+export { isLeftSideMenuStatusReducer };

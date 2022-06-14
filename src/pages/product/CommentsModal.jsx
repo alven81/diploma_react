@@ -59,7 +59,6 @@ const CommentsModal = ({ onClick, handleShowComments, id, showComment }) => {
 		handleShowComments();
 		textareaText.current.value = "";
 		setText("");
-		//setNewCatalog("");
 	};
 
 	return (
@@ -72,7 +71,6 @@ const CommentsModal = ({ onClick, handleShowComments, id, showComment }) => {
 						onClick={handleShowComments}
 					/>
 				</div>
-				{/* <form onSubmit={sendComment}> */}
 				<div className="comments-rating">
 					<textarea
 						ref={textareaText}
@@ -98,45 +96,9 @@ const CommentsModal = ({ onClick, handleShowComments, id, showComment }) => {
 						</button>
 					</div>
 				</div>
-				{/* </form> */}
 			</div>
 		</div>
 	);
 };
 
 export default CommentsModal;
-
-////////////////////////////
-
-// const Users: FC = () => {
-//     const [userList, setUserList] = useState<IUser[]>([])
-//     const input = useRef<HTMLInputElement>(null);
-
-//     useEffect(() => {
-//         axios.get<IUser[]>("https://jsonplaceholder.typicode.com/users").then(res => {
-//             setUserList(res.data)
-//         })
-//     }, [])
-
-//     const handleFilter = (e: FormEvent<HTMLFormElement>) => {
-//         e.preventDefault();
-//         if (input.current) {
-// //        setFilterString(input.current.value)
-//         }
-//     }
-
-//     return (
-//         <div className="user-page">
-//             <form
-//             onSubmit={handleFilter}>
-//                 <input ref={input} name="value"/>
-//                 <button>Filter</button>
-//             </form>
-//             {
-//                 userList.map(user => <Link key={user.id} to={`/users/${user.id}`}><UserItem user={user} /></Link>)
-//             }
-//         </div>
-//     )
-// }
-
-// export default Users

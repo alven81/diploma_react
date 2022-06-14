@@ -1,17 +1,16 @@
+const initialState = { categoryListIs: [] };
 
- const initialState = { categoryListIs: []}
- 
- const loadCategoryReducer = (state = initialState, action) => {
+const loadCategoryReducer = (state = initialState, action) => {
     switch (action.type) {
         case "SET_CATEGORY_DATA":
             return {
                 ...state,
-                categoryListIs: action.payload
-            }
+                categoryListIs: action.payload,
+            };
 
         default:
-            return state
+            return state;
     }
-}
-    
-export default loadCategoryReducer
+};
+
+export default loadCategoryReducer;

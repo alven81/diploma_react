@@ -1,130 +1,142 @@
 @import "./_variables.scss";
 
 .catalog_main {
-	padding: 10px;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: flex-start;
-	border-bottom: 1px solid $headerDarker;
-	flex-flow: row wrap;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    border-bottom: 1px solid $headerDarker;
+    flex-flow: row wrap;
 
-	opacity: 0;
-	transition: 0.2s;
-	animation: show 0.2s 1;
-	animation-fill-mode: forwards;
-	animation-delay: 0.3s;
+    opacity: 0;
+    transition: 0.2s;
+    animation: show 0.2s 1;
+    animation-fill-mode: forwards;
+    animation-delay: 0.3s;
 
-	&-element {
-		width: 265px;
-		box-sizing: border-box;
-		margin: 10px;
-		position: relative;
-		border-radius: 10px;
-		box-shadow: 0px 0px 10px 1px rgba(34, 60, 80, 0.14);
-		transition: all 0.2s;
-		&:hover {
-			box-shadow: 2px 6px 30px 4px rgba(34, 60, 80, 0.2);
-		}
+    &-element {
+        width: 265px;
+        box-sizing: border-box;
+        margin: 10px;
+        position: relative;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px 1px rgba(34, 60, 80, 0.14);
+        transition: all 0.2s;
 
-		&-image {
-			display: flex;
-			justify-content: center;
-			//position: relative;
-			&-overflow {
-				overflow: hidden;
-			}
-			img:first-child {
-				border: none;
-				width: 60px;
-				height: 60px;
-			}
-			&-main {
-				box-sizing: border-box;
-				border-radius: 12px;
-				min-height: 328px;
-				min-width: 246px;
-				transition: all 0.5s;
-				z-index: -1;
-				&:hover {
-					box-sizing: border-box;
-					transform: scale(1.05);
-					//padding-top: 10px;
-				}
-			}
-			&:hover > .discount_block {
-				transform: scale(1.4) rotate(15deg);
-				font-weight: 700;
-			}
-		}
-		&-disc_top {
-			background-color: #fff;
-			border-top-left-radius: 4px;
-			border-top-right-radius: 4px;
-		}
-		&-disc_bottom {
-			background-color: #fc5185;
-			color: #fff;
-			@include fontRoboto(400, 14, 16);
-			border-bottom-left-radius: 4px;
-			border-bottom-right-radius: 4px;
-		}
-		&-price {
-			display: flex;
-			justify-content: space-between;
-			padding: 0 20px;
-			@include fontRoboto(700, 20, 21);
-			p {
-				margin: 0;
-			}
-		}
-		&-title {
-			text-align: center;
-			padding: 0 10px;
-			@include fontRoboto(400, 14, 16);
-			color: $titleSpan;
-			p {
-				padding: 0 5px 5px 5px;
-				margin-bottom: 5px;
-				max-height: 30px;
-				overflow: hidden;
-			}
-		}
-	}
+        &:hover {
+            box-shadow: 2px 6px 30px 4px rgba(34, 60, 80, 0.2);
+        }
+
+        &-image {
+            display: flex;
+            justify-content: center;
+
+            &-overflow {
+                padding-top: 10px;
+                overflow: hidden;
+            }
+
+            img:first-child {
+                border: none;
+                width: 60px;
+                height: 60px;
+            }
+
+            &-main {
+                box-sizing: border-box;
+                border-radius: 12px;
+                min-height: 328px;
+                min-width: 246px;
+                transition: all 0.5s;
+                z-index: -1;
+
+                &:hover {
+                    box-sizing: border-box;
+                    transform: scale(1.05);
+                }
+            }
+
+            &:hover>.discount_block {
+                transform: scale(1.4) rotate(15deg);
+                font-weight: 700;
+            }
+        }
+
+        &-disc_top {
+            background-color: #fff;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+        }
+
+        &-disc_bottom {
+            background-color: #fc5185;
+            color: #fff;
+            @include fontRoboto(400, 14, 16);
+            border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 4px;
+        }
+
+        &-price {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+            @include fontRoboto(700, 20, 21);
+
+            p {
+                margin: 0;
+            }
+        }
+
+        &-title {
+            text-align: center;
+            padding: 0 10px;
+            @include fontRoboto(400, 14, 16);
+            color: $titleSpan;
+
+            p {
+                padding: 0 5px 5px 5px;
+                margin-bottom: 5px;
+                max-height: 30px;
+                overflow: hidden;
+            }
+        }
+    }
 }
 
 .discount_block {
-	text-align: center;
-	border: 1px solid #fc5185;
-	border-radius: 6px;
-	position: absolute;
-	width: 70px;
-	color: #fc5185;
-	@include fontRoboto(400, 14, 16);
-	right: 43px;
-	top: 0;
-	transition: all 0.2s;
+    text-align: center;
+    border: 1px solid #fc5185;
+    border-radius: 6px;
+    position: absolute;
+    width: 70px;
+    color: #fc5185;
+    @include fontRoboto(400, 14, 16);
+    right: 43px;
+    top: 0;
+    transition: all 0.2s;
 }
 
 .discount {
-	color: #fc5185 !important;
-	font-weight: 500 !important;
+    color: #fc5185 !important;
+    font-weight: 500 !important;
 }
 
 .overline {
-	text-decoration: line-through;
+    text-decoration: line-through;
 }
 
 .new {
-	position: absolute;
-	left: 25px;
-	top: -10px;
+    position: absolute;
+    left: 25px;
+    top: -10px;
 }
 
 @keyframes show {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }

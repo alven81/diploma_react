@@ -1,8 +1,8 @@
-function showZoomImage (key) {
+function showZoomImage(key) {
     return {
         type: "SHOW_ZOOM_IMAGE",
-        payload: key
-    }
+        payload: key,
+    };
 }
 
-export { showZoomImage }
+export { showZoomImage };

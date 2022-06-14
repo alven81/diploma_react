@@ -23,7 +23,6 @@ const RegModal = () => {
     }, [])
     
     const handleImage = (handleImage) => {
-        console.log("img", handleImage);
         setAvaImage(handleImage)
     }
 

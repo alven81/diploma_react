@@ -4,7 +4,6 @@ import { ReviewText } from "./ReviewText";
 
 interface ReviewProps {
 	reviews: IReview;
-	//userId: any,
 }
 
 const Review: FC<ReviewProps> = ({ reviews }) => {

@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { searchCategoryResult } from "../store/actions/searchCategoryResultAction";
 import CatElement from "./catalog/CatElement";
-import { New } from "./product/New";
 
 const Model = () => {
 	const dispatch = useDispatch();
@@ -26,9 +25,6 @@ const Model = () => {
 					</>
 				)}
 			</div>
-			{/* <div className="container">
-                <New />
-            </div> */}
 		</>
 	);
 };

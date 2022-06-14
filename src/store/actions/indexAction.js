@@ -1,8 +1,8 @@
 function addItemIndex(index) {
     return {
         type: "ADD_ITEM_INDEX",
-        payload: index
-    }
+        payload: index,
+    };
 }
 
-export { addItemIndex }
+export { addItemIndex };

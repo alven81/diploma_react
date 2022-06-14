@@ -1,11 +1,10 @@
-import { RootStateOrAny, useDispatch, useSelector } from "react-redux";
+import { RootStateOrAny, useSelector } from "react-redux";
 import { Outlet } from "react-router-dom";
 import Footer from "./Footer";
 import NavBar from "./NavBar";
 import LogModal from "../../components/modal/log/LogIn";
 import RegModal from "../../components/modal/reg/Reg";
 import { LeftSlideMenu } from "../LeftSlideMenu/LeftSlideMenu";
-//import { showAlertMessage } from "../../store/actions/AlertAction";
 import Alert from "../../components/modal/Alert";
 import { ZoomImage } from "../product/ZoomImage";
 
@@ -26,17 +25,6 @@ const Layout = () => {
 	const zoomImage = useSelector(
 		(state: RootStateOrAny) => state.imageZoom.showZoomImage
 	);
-
-	const dispatch = useDispatch();
-
-	// const handleAlert = () => {
-	// 	dispatch(
-	// 		showAlertMessage({
-	// 			status: true,
-	// 			message: "test alert!",
-	// 		})
-	// 	);
-	// };
 
 	return (
 		<div className="main_container">

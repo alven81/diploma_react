@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import LoadingSpinner from "../../components/LoadingSpinner";
 import { ReviewUsers } from "./ReviewUsers";
 
 const Reviews = () => {
@@ -35,7 +34,7 @@ const Reviews = () => {
 				<p>Ваши отзывы</p>
 			</div>
 			{!array.length ? (
-				<LoadingSpinner />
+				<></>
 			) : (
 				<ol>
 					{array.map((array) => (

@@ -1,18 +1,17 @@
 const initialState = {
-    isUserLogInInfo: {}
-}
+    isUserLogInInfo: {},
+};
 
- const isUserLogInReducer = (state = initialState, action) => {
-
+const isUserLogInReducer = (state = initialState, action) => {
     switch (action.type) {
         case "IS_USER_LOG_IN":
             return {
                 ...state,
-                isUserLogInInfo: {...action.payload},
-            }
+                isUserLogInInfo: { ...action.payload },
+            };
         default:
-            return state
+            return state;
     }
-}
+};
 
-export { isUserLogInReducer }
+export { isUserLogInReducer };

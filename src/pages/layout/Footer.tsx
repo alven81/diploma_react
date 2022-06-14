@@ -1,11 +1,6 @@
 import { NavLink } from "react-router-dom";
 
 const Footer = () => {
-	// const actions = [{
-	//                     name: "Telegramm",
-	//                     icon: "//localhost:3000/assets/img/telegram.svg"
-	//                     }
-	//                 ]
 
 	return (
 		<>
