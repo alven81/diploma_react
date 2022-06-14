@@ -57,7 +57,7 @@ const CatElement: FC<CatElementProps> = ({ catalog }) => {
 				</p>
 			</div>
 			<div className="catalog_main-element-title">
-				<p>{catalog.title}</p>
+				<p>{catalog.title.slice(0, 50) + "..."}</p>
 			</div>
 		</div>
 	);

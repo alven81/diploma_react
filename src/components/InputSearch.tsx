@@ -1,6 +1,6 @@
 import { FC, useState } from "react";
 import { useDispatch } from "react-redux";
-import { NavLink } from "react-router-dom";
+import { Navigate, NavLink, useNavigate } from "react-router-dom";
 import { searchResult } from "../store/actions/searchResultAction";
 
 interface InputSearchProps {
@@ -10,20 +10,20 @@ interface InputSearchProps {
 const InputSearch: FC<InputSearchProps> = ({ className, placeholder }) => {
 	const [searchText, setSearchText] = useState("");
 	const dispatch = useDispatch();
+    const navigate = useNavigate();
 
 	const handleInputChange = (e: any) => {
 		setSearchText(e.target.value);
 	};
 
-	const handlerSearchItem = () => {
+	const handleSearchItem = () => {
 		dispatch(searchResult(searchText));
 	};
 
-	const handlerSearchItemKey = (
-		e: React.KeyboardEvent<HTMLDivElement>
-	): void => {
+	const handleSearchItemKey = (e: any) => {
 		if (e.key === "Enter") {
-			dispatch(searchResult(searchText));
+			dispatch(searchResult(e.target.value));
+            navigate("/search");
 		}
 	};
 
@@ -32,13 +32,13 @@ const InputSearch: FC<InputSearchProps> = ({ className, placeholder }) => {
 			<input
 				className={className}
 				placeholder={placeholder}
-				onKeyDown={handlerSearchItemKey}
+				onKeyDown={handleSearchItemKey}
 				onChange={handleInputChange}
 			/>
 			<NavLink to="search">
 				<span
 					className="nav_middle-loupe"
-					onClick={handlerSearchItem}
+					onClick={handleSearchItem}
 				/>
 			</NavLink>
 		</>
