@@ -163,10 +163,12 @@
             @include fontRoboto(500, 14, 16);
             text-decoration: none;
             color: $productPrice;
-
-            &:hover {
-                color: rgba($color: $productPrice, $alpha: 0.6);
+            .active {
+                color: rgba($color: $productPrice, $alpha: 0.5);
             }
+            // &:hover {
+                
+            // }
         }
 
         &-burger {

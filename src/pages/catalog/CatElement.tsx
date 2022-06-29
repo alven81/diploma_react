@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import IElement from "../../types/element";
 import { addItemIndex } from "../../store/actions/indexAction";
@@ -10,6 +10,8 @@ interface CatElementProps {
 }
 
 const CatElement: FC<CatElementProps> = ({ catalog }) => {
+
+    const {theme, id} = useParams();
 	const discountPercent = Math.round(
 		((catalog.price - catalog.discount_price) / catalog.price) * 100
 	);
@@ -25,7 +27,7 @@ const CatElement: FC<CatElementProps> = ({ catalog }) => {
 					/>
 				</div>
 				<div className="catalog_main-element-image-overflow">
-					<Link key={catalog.id} to={`/product/${catalog.id}`}>
+					<Link key={catalog.id} to={`/catalog/${theme ? theme : "id"}/${catalog.id}`}>
 						<img
 							className="catalog_main-element-image-main"
 							onClick={() => {

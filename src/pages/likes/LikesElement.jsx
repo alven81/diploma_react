@@ -13,7 +13,7 @@ const LikesElement = ({ item }) => {
     return (
         <div className="likes_list_element">
             <div className="likes_list_element-image">
-                <Link key={catalog.id} to={`/product/${catalog.id}`}>
+                <Link key={catalog.id} to={`/catalog/id/${catalog.id}`}>
                     <img
                         onClick={() => {
                             dispatch(addItemIndex(catalog.id));

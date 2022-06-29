@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { leftSideMenuStatus } from "../../store/actions/leftSideMenuStatusAction";
 
 const CategoryList = ({ catList, handleCategorySearch }) => {
@@ -12,13 +12,13 @@ const CategoryList = ({ catList, handleCategorySearch }) => {
 
 	return (
 		<li className="category_list-li">
-			<NavLink
+			<Link
 				onClick={handleCatalog}
 				className="category_list"
-				to={categoryLink}
+				to={`/catalog/${categoryLink}`}
 			>
 				<p>{category}</p>
-			</NavLink>
+			</Link>
 		</li>
 	);
 };

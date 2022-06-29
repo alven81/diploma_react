@@ -75,7 +75,7 @@ const CartElement = ({ item }) => {
 	return (
 		<li className="cart_main">
 			<div className="cart_main-image">
-				<Link key={catalog.id} to={`/product/${catalog.id}`}>
+				<Link key={catalog.id} to={`/catalog/id/${catalog.id}`}>
 					<img
 						onClick={() => {
 							dispatch(addItemIndex(catalog.id));

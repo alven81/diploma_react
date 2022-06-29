@@ -1,14 +1,18 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { useNavigate, useParams } from "react-router-dom";
 import { searchCategoryResult } from "../store/actions/searchCategoryResultAction";
 import CatElement from "./catalog/CatElement";
 
-const Flora = () => {
+const Theme = () => {
 	const dispatch = useDispatch();
+    const {theme} = useParams();
+    //const navigate = useNavigate();
 
 	useEffect(() => {
-		dispatch(searchCategoryResult(5));
-	}, [dispatch]);
+        console.log("theme", theme);
+		dispatch(searchCategoryResult(theme));
+	}, [dispatch, theme]);
 
 	const catalog = useSelector(
 		(state) => state.searchCategoryResult.searchCategoryResult
@@ -28,4 +32,4 @@ const Flora = () => {
 		</>
 	);
 };
-export default Flora;
+export default Theme;

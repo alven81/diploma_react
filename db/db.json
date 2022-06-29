@@ -2,7 +2,7 @@
   "products": [
     {
       "id": 1,
-      "categoryId": 1,
+      "categoryId": "craft",
       "price": 46.18,
       "discount": false,
       "new": true,
@@ -93,7 +93,7 @@
     },
     {
       "id": 2,
-      "categoryId": 1,
+      "categoryId": "craft",
       "price": 77.45,
       "discount": false,
       "new": false,
@@ -155,7 +155,7 @@
     },
     {
       "id": 3,
-      "categoryId": 1,
+      "categoryId": "craft",
       "price": 77.45,
       "discount": true,
       "new": true,
@@ -217,7 +217,7 @@
     },
     {
       "id": 4,
-      "categoryId": 1,
+      "categoryId": "craft",
       "price": 77.45,
       "discount": false,
       "new": false,
@@ -293,7 +293,7 @@
     },
     {
       "id": 5,
-      "categoryId": 1,
+      "categoryId": "craft",
       "price": 77.45,
       "discount": true,
       "new": false,
@@ -355,7 +355,7 @@
     },
     {
       "id": 6,
-      "categoryId": 1,
+      "categoryId": "craft",
       "price": 46.18,
       "discount": false,
       "new": true,
@@ -416,7 +416,7 @@
     },
     {
       "id": 7,
-      "categoryId": 1,
+      "categoryId": "craft",
       "price": 46.18,
       "discount": false,
       "new": false,
@@ -478,7 +478,7 @@
     },
     {
       "id": 8,
-      "categoryId": 1,
+      "categoryId": "craft",
       "price": 77.45,
       "discount": false,
       "new": true,
@@ -546,7 +546,7 @@
     },
     {
       "id": 9,
-      "categoryId": 1,
+      "categoryId": "craft",
       "price": 77.45,
       "discount": false,
       "new": false,
@@ -608,7 +608,7 @@
     },
     {
       "id": 10,
-      "categoryId": 1,
+      "categoryId": "craft",
       "price": 77.45,
       "discount": false,
       "new": true,
@@ -677,7 +677,7 @@
     },
     {
       "id": 11,
-      "categoryId": 1,
+      "categoryId": "craft",
       "price": 77.45,
       "discount": true,
       "new": true,
@@ -746,7 +746,7 @@
     },
     {
       "id": 12,
-      "categoryId": 1,
+      "categoryId": "craft",
       "price": 85.27,
       "discount": true,
       "new": true,
@@ -818,7 +818,7 @@
     },
     {
       "id": 13,
-      "categoryId": 2,
+      "categoryId": "paint",
       "price": 46.03,
       "discount": false,
       "new": true,
@@ -862,7 +862,7 @@
     },
     {
       "id": 14,
-      "categoryId": 2,
+      "categoryId": "paint",
       "price": 70,
       "discount": false,
       "new": false,
@@ -915,7 +915,7 @@
     },
     {
       "id": 15,
-      "categoryId": 3,
+      "categoryId": "model",
       "price": 124.03,
       "discount": true,
       "new": true,
@@ -967,7 +967,7 @@
     },
     {
       "id": 16,
-      "categoryId": 4,
+      "categoryId": "decor",
       "price": 52.24,
       "discount": true,
       "new": false,
@@ -1009,7 +1009,7 @@
     },
     {
       "id": 17,
-      "categoryId": 5,
+      "categoryId": "flora",
       "price": 29.86,
       "discount": true,
       "new": false,
@@ -1059,7 +1059,7 @@
     },
     {
       "id": 18,
-      "categoryId": 3,
+      "categoryId": "model",
       "price": 143.13,
       "discount": true,
       "new": false,
@@ -1095,7 +1095,7 @@
     },
     {
       "id": 19,
-      "categoryId": 2,
+      "categoryId": "paint",
       "price": 45.16,
       "discount": true,
       "new": true,
@@ -1140,7 +1140,7 @@
     },
     {
       "id": 20,
-      "categoryId": 4,
+      "categoryId": "decor",
       "price": 17.94,
       "discount": true,
       "new": true,
@@ -1253,12 +1253,11 @@
         1,
         18,
         14,
-        13,
         1,
         18,
         14,
-        13,
-        1
+        1,
+        14
       ],
       "likes": [
         2,
@@ -1293,27 +1292,27 @@
   ],
   "categiries": [
     {
-      "id": 1,
+      "id": "craft",
       "categoryLink": "craft",
       "category": "Рукоделие"
     },
     {
-      "id": 2,
+      "id": "paint",
       "categoryLink": "paint",
       "category": "Рисование"
     },
     {
-      "id": 3,
+      "id": "model",
       "categoryLink": "model",
       "category": "Моделирование"
     },
     {
-      "id": 4,
+      "id": "decor",
       "categoryLink": "decor",
       "category": "Украшение"
     },
     {
-      "id": 5,
+      "id": "flora",
       "categoryLink": "flora",
       "category": "Флористика"
     }

@@ -11,7 +11,7 @@ const ReviewUsers = ({ array }) => {
 	return (
 		<li className="reviews_main">
 			<div className="reviews_main-image">
-				<Link key={productId.id} to={`/product/${productId.id}`}>
+				<Link key={productId.id} to={`/catalog/id/${productId.id}`}>
 					<img
 						onClick={() => {
 							dispatch(addItemIndex(productId.id));

@@ -13,11 +13,7 @@ import Cart from "./pages/cart/Cart";
 import Search from "./pages/search/Search";
 import Reviews from "./pages/reviews/Reviews";
 import { Administration } from "./pages/Administration";
-import Craft from "./pages/Craft";
-import Paint from "./pages/Paint";
-import Model from "./pages/Model";
-import Decor from "./pages/Decor";
-import Flora from "./pages/Flora";
+import Theme from "./pages/Theme";
 import Likes from "./pages/likes/Likes";
 
 const App = () => {
@@ -43,16 +39,12 @@ const App = () => {
             <Routes>
                 <Route path="/" element={<Layout />}>
                     <Route index element={<Home />} />
+                    <Route path="catalog" element={<Catalog />} />
+                    <Route path="catalog/:theme" element={<Theme />} />
+                    <Route path="catalog/:theme/:id" element={<Product />} />
                     <Route path="search" element={<Search />} />
                     <Route path="reviews" element={<Reviews />} />
                     <Route path="administration" element={<Administration />} />
-                    <Route path="catalog" element={<Catalog />} />
-                    <Route path="craft" element={<Craft />} />
-                    <Route path="paint" element={<Paint />} />
-                    <Route path="model" element={<Model />} />
-                    <Route path="decor" element={<Decor />} />
-                    <Route path="flora" element={<Flora />} />
-                    <Route path="product/:id" element={<Product />} />
                     <Route path="cart" element={<Cart />} />
                     <Route path="likes" element={<Likes />} />
                     <Route path="*" element={<PageNotFound />} />
