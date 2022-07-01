@@ -1,0 +1,332 @@
+.nav {
+    &_main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &_top {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        background-color: $headerDarker;
+        text-transform: uppercase;
+        @include fontRoboto(700, 14, 16);
+
+        &-list {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            color: $lightFont;
+            gap: 20px;
+
+            &-navlink {
+                text-decoration: none;
+                color: $lightFont;
+
+                &:hover {
+                    color: $productPrice;
+                    text-decoration: none;
+                    color: $productPrice;
+                }
+            }
+        }
+
+        &-contact {
+            display: flex;
+            gap: 10px;
+            margin: 0 45px;
+
+            a {
+                color: $lightFont;
+
+                &:hover {
+                    color: $productPrice;
+                }
+            }
+        }
+    }
+
+    &_middle {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-left: 50px;
+
+        &-logo {
+            min-width: 215px;
+        }
+
+        &-right {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: flex-end;
+            flex: 1;
+
+            &-input {
+                margin-top: 20px;
+            }
+        }
+
+        &-cart {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+
+            &-user {
+                color: $mainPinc;
+                @include fontRoboto(500, 16, 16);
+            }
+
+            &-block {
+                margin-left: auto;
+                padding: 0;
+                height: 35px;
+                display: flex;
+                align-items: center;
+                margin-right: 50px;
+                gap: 30px;
+                position: relative;
+
+                &-img {
+                    transform: none !important;
+                    min-height: 50px;
+                    min-width: 50px;
+                    border-radius: 50px;
+                }
+
+                img {
+                    height: 24px;
+                    width: 24px;
+                    transition: all 0.3s ease;
+
+                    &:hover {
+                        transition: all 0.3s ease;
+                        transform: scale(1.2);
+                    }
+
+                    &:active {
+                        transition: all 0.1s ease;
+                        transform: scale(1.05);
+                    }
+                }
+
+                span {
+                    color: #cdd7de;
+                }
+
+                &-span-heart {
+                    position: absolute;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: 1px solid $headerDarker;
+                    height: 24px;
+                    width: 24px;
+                    border-radius: 24px;
+                    bottom: 18px;
+                    right: 30px;
+                }
+
+                &-span-cart {
+                    position: absolute;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: 1px solid $headerDarker;
+                    height: 24px;
+                    width: 24px;
+                    border-radius: 24px;
+                    bottom: 18px;
+                    right: -22px;
+                }
+            }
+        }
+    }
+
+    &_bottom {
+        border-top: 1px solid $headerDarker;
+        border-bottom: 1px solid $headerDarker;
+        display: flex;
+
+        div {
+            flex: 1;
+        }
+
+        &-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: space-around;
+            list-style: none;
+            text-transform: uppercase;
+            @include fontRoboto(500, 14, 16);
+            text-decoration: none;
+            color: $productPrice;
+            .active {
+                color: rgba($color: $productPrice, $alpha: 0.5);
+            }
+            // &:hover {
+                
+            // }
+        }
+
+        &-burger {
+            position: relative;
+            top: 7px;
+            left: 7px;
+            min-width: 30px;
+            height: 30px;
+            background-color: $lightBackground;
+            border: 1px solid $mainPinc;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:hover {
+                border-color: $lightBackground;
+            }
+
+            span {
+                position: absolute;
+                box-sizing: border-box;
+                background-color: $mainPinc;
+                height: 3px;
+                width: 20px;
+                border-radius: 2px;
+                transition: all 0.5s;
+
+                &:hover {
+                    border-color: $titleSpan;
+                    transition: all 0.5s;
+
+                    &::before {
+                        transform: rotate(-30deg);
+                        width: 11px;
+                        left: 9px;
+                        top: 3px;
+                    }
+
+                    &::after {
+                        transform: rotate(30deg);
+                        width: 11px;
+                        left: 9px;
+                        top: -3px;
+                    }
+
+                    &:active {
+                        background-color: $lightBackground;
+
+                        &::before {
+                            background-color: $lightBackground;
+                        }
+
+                        &::after {
+                            background-color: $lightBackground;
+                        }
+                    }
+                }
+
+                &:active {
+                    transform: scale(1.08);
+                }
+            }
+
+            ::before {
+                position: absolute;
+                content: "";
+                top: 6px;
+                left: 0px;
+                height: 3px;
+                width: 20px;
+                background-color: $mainPinc;
+                transition: all 0.5s;
+            }
+
+            ::after {
+                position: absolute;
+                content: "";
+                bottom: 6px;
+                left: 0px;
+                height: 3px;
+                width: 20px;
+                background-color: $mainPinc;
+                transition: all 0.5s;
+            }
+
+            &:hover>span {
+                border-color: $mainBlack;
+                transition: all 0.5s;
+
+                &::before {
+                    transform: rotate(-30deg);
+                    width: 11px;
+                    left: 9px;
+                    top: 3px;
+                }
+
+                &::after {
+                    transform: rotate(30deg);
+                    width: 11px;
+                    left: 9px;
+                    top: -3px;
+                }
+            }
+        }
+    }
+}
+
+.nav_middle {
+    display: flex;
+    align-items: flex-end;
+    min-height: 100px;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+
+    &-logo {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    &-input {
+        border: 0;
+        border-bottom: 1px solid rgba(240, 71, 132, 0.5);
+        box-shadow: 0 6px 4px -4px rgba(0, 0, 0, 0.25);
+        outline: none;
+        width: 344px;
+        padding-left: 8px;
+        padding-right: 45px;
+        font-size: 18px;
+
+        &::placeholder {
+            color: #cdd7de;
+        }
+    }
+
+    &-loupe {
+        position: absolute;
+        box-sizing: border-box;
+        transition: all 0.3s;
+
+        &::after {
+            transition: all 0.3s;
+            position: absolute;
+            content: url("../img/loupe.svg");
+            top: -25px;
+            right: 0;
+        }
+
+        &:hover {
+            border-color: $titleSpan;
+            transition: all 0.3s;
+            transform: scale(1.15);
+        }
+
+        &:active {
+            transform: scale(1.05);
+        }
+    }
+}

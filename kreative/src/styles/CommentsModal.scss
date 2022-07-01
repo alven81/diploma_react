@@ -1,0 +1,58 @@
+.comments {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    width: 50vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $lightBackground;
+    padding: 15px;
+    border-radius: 10px;
+
+    &-name {
+        display: flex;
+        justify-content: space-between;
+        color: $mainPinc;
+        @include fontRoboto(500, 16, 16);
+
+        button {
+            padding: 0;
+            min-height: 30px;
+            min-width: 30px;
+            border-radius: 5px;
+            @include fontRoboto(500, 20, 20);
+            cursor: pointer;
+        }
+    }
+
+    &-block {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        align-items: baseline;
+
+        span {
+            color: $produckBtnBorder;
+        }
+
+        &-button {
+            margin-left: auto;
+        }
+
+        div {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        &-text {
+            resize: none;
+            display: flex;
+            width: 99%;
+            height: 120px;
+            border: 1px solid;
+            border-radius: 5px;
+        }
+    }
+}

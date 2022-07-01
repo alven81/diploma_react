@@ -1,0 +1,123 @@
+$containerBackground: #ffffff;
+$headerDarker: #f2785f;
+$lightFont: #ffffff;
+$lightBackground: #ffffff;
+$mainBlack: #500000;
+$mainPinc: #f04784;
+$produckBtnBorder: #fc5185;
+$productPrice: #40403f;
+$lineColor: #e3dadb;
+$dropMenuBackground: #dddddd;
+$titleSpan: #8c7158;
+
+@mixin fontPattaya($weight, $fontSize, $lineHeight) {
+    font: $weight #{$fontSize}px/#{$lineHeight}px "Pattaya",
+    serif;
+}
+
+@mixin fontRoboto($weight, $fontSize, $lineHeight) {
+    font: $weight #{$fontSize}px/#{$lineHeight}px "Roboto",
+    sans-serif;
+}
+
+.hide {
+    display: none !important;
+}
+
+.fullscreen-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 50;
+    background-color: rgba($color: #eadddd, $alpha: 0.5);
+}
+
+// pulse blinker
+
+.pulse {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transform-origin: center;
+    animation: blink 0.7s ease-in infinite alternate;
+    z-index: 1;
+}
+
+@keyframes blink {
+    from {
+        transform: scale(0.9);
+    }
+
+    to {
+        transform: scale(1.1);
+    }
+}
+
+.cross-button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border: 1px solid $mainBlack;
+    border-radius: 5px;
+
+    &:hover {
+        &::before {
+            height: 23px;
+            width: 3px;
+            left: 47%;
+            transition: all 0.1s ease-out;
+        }
+
+        &::after {
+            height: 23px;
+            width: 3px;
+            right: 47%;
+            transition: 0.1s ease-out;
+        }
+    }
+
+    &:active {
+        &::before {
+            height: 17px;
+            width: 3px;
+            left: 47%;
+            transition: 0.1s ease-out;
+        }
+
+        &::after {
+            height: 17px;
+            width: 3px;
+            right: 47%;
+            transition: 0.1s ease-out;
+        }
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        height: 17px;
+        width: 1px;
+        border-radius: 2px;
+        background-color: $mainBlack;
+        transform: rotate(-45deg);
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        right: 50%;
+        height: 17px;
+        width: 1px;
+        border-radius: 2px;
+        background-color: $mainBlack;
+        transform: rotate(45deg);
+    }
+}

@@ -1,0 +1,87 @@
+.button-vote {
+    width: 20px;
+    height: 26px;
+    font-size: 0;
+    line-height: 1;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    background-image: url("../img/like.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center top;
+    cursor: pointer;
+    transition: 0.3s ease;
+    flex-shrink: 0;
+
+    &:hover {
+        filter: brightness(0.5) sepia(1) hue-rotate(-40deg) saturate(5);
+    }
+
+    &:active {
+        filter: brightness(0.8) sepia(1) hue-rotate(-40deg) saturate(5);
+    }
+}
+
+.button-vote-dislike {
+    transform: rotate(180deg);
+}
+
+.review {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    border-bottom: 1px solid $headerDarker;
+    margin-bottom: 10px;
+
+    &-ava {
+        img {
+            height: 60px;
+            width: 60px;
+            border: 1px solid $headerDarker;
+            border-radius: 60px;
+            margin-top: 15px;
+        }
+    }
+
+    &-info {
+        &-user {
+            display: flex;
+            gap: 30px;
+            align-items: baseline;
+
+            &-name {
+                @include fontRoboto(700, 18, 18);
+            }
+
+            &-data {
+                color: $productPrice;
+            }
+        }
+
+        &-rating {
+            display: flex;
+            gap: 50px;
+
+            span {
+                color: $produckBtnBorder;
+            }
+
+            &-votes {
+                display: flex;
+                align-items: baseline;
+                gap: 30px;
+
+                div {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    span {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,1320 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "categoryId": "craft",
+      "price": 46.18,
+      "discount": false,
+      "new": true,
+      "discount_price": 0,
+      "title": "Набор для шитья (текстильная кукла) 'Принцесса Вероника'",
+      "color": "жёлтый",
+      "description": "Набор для шитья куклы от ТМ 'Цветной' создан для того, что бы быть лучшим подарком для творческих людей, а сшитая любимыми мамиными или бабушкиными руками готовая кукла - спутником вашего чада на долгие годы. Совместный пошив куклы привьет вашему ребенку усидчивость и подарит яркие моменты совместного творчества.Набор для шитья текстильной куклы упакован в красочную коробку, которая может стать подарочной для готовой куклы.В наборе для шитья мягкой игрушки есть все необходимое для изготовления куклы: индивидуальная книжка-инструкция для каждой модели, лекала, ткани для пэчворка, волосы, шар для головы, шапочка, наполнитель, нитки, иголки и многое другое, что бы создать свой маленький шедевр смог каждый.У каждого дизайна имеется видео-инструкция. Просто отсканируйте QR-код на коробке и создайте интерьерную куклу своими руками следуя рекомендациям мастера.",
+      "features": {
+        "weight": 500,
+        "creation": [
+          "изготовление аксессуаров для дома",
+          "изготовление кукол и игрушек",
+          "шитье"
+        ],
+        "age": "8+",
+        "height_gross": 35.5,
+        "deep": 10,
+        "width": 15.8,
+        "height": 35,
+        "origin": "Россия"
+      },
+      "image": "/images/1_1.jpg",
+      "icons": [
+        "/images/1_1.jpg",
+        "/images/1_2.jpg",
+        "/images/1_3.jpg",
+        "/images/1_4.jpg"
+      ],
+      "consist": [
+        "Специальные несыпучие ткани для пэчворка",
+        "Холлофайбер - наполнитель для игрушек",
+        "Ленты и аксессуары для игрушек",
+        "Лекало для построения или проверки кривых",
+        "Игла швейная для ручного шитья",
+        "Булавки для закрепления будущих стежков",
+        "Нитки для шитья",
+        "Мел для обозначения контуров при раскрое материала",
+        "Цветная книжка - инструкция"
+      ],
+      "review": [
+        {
+          "userId": 1,
+          "data": "02.05.2022",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "rate": "3.5"
+        },
+        {
+          "userId": 2,
+          "data": "01.05.2022",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "rate": "4"
+        },
+        {
+          "userId": 3,
+          "data": "02.05.2022",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "rate": "2"
+        },
+        {
+          "userId": 4,
+          "data": "02.05.2022",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "rate": "5"
+        },
+        {
+          "userId": 5,
+          "data": "03.05.2022",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "rate": "4"
+        },
+        {
+          "userId": 6,
+          "data": "13.06.2022",
+          "text": "Отзыв Джо!",
+          "rate": "4"
+        }
+      ],
+      "raiting": [
+        3.5,
+        4,
+        2,
+        5,
+        4,
+        3.5,
+        1.5,
+        4
+      ]
+    },
+    {
+      "id": 2,
+      "categoryId": "craft",
+      "price": 77.45,
+      "discount": false,
+      "new": false,
+      "discount_price": 0,
+      "title": "Набор для шитья (текстильная кукла) 'Кукла Адель'",
+      "color": "розовый",
+      "description": "Набор для шитья куклы от ТМ 'Цветной' создан для того, что бы быть лучшим подарком для творческих людей, а сшитая любимыми мамиными или бабушкиными руками готовая кукла - спутником вашего чада на долгие годы. Совместный пошив куклы привьет вашему ребенку усидчивость и подарит яркие моменты совместного творчества.Набор для шитья текстильной куклы упакован в красочную коробку, которая может стать подарочной для готовой куклы.В наборе для шитья мягкой игрушки есть все необходимое для изготовления куклы: индивидуальная книжка-инструкция для каждой модели, лекала, ткани для пэчворка, волосы, шар для головы, шапочка, наполнитель, нитки, иголки и многое другое, что бы создать свой маленький шедевр смог каждый. У каждого дизайна имеется видео-инструкция. Просто отсканируйте QR-код на коробке и создайте интерьерную куклу своими руками следуя рекомендациям мастера.",
+      "features": {
+        "weight": 500,
+        "creation": [
+          "изготовление аксессуаров для дома",
+          "изготовление кукол и игрушек",
+          "шитье"
+        ],
+        "age": "8+",
+        "height_gross": 35.5,
+        "deep": 10,
+        "width": 15.5,
+        "height": 35,
+        "origin": "Россия"
+      },
+      "image": "/images/2_1.jpg",
+      "icons": [
+        "/images/2_1.jpg",
+        "/images/2_2.jpg",
+        "/images/2_3.jpg",
+        "/images/2_4.jpg",
+        "/images/2_5.jpg"
+      ],
+      "consist": [
+        "Специальные несыпучие ткани для пэчворка",
+        "Холлофайбер - наполнитель для игрушек",
+        "Ленты и аксессуары для игрушек",
+        "Лекало для построения или проверки кривых",
+        "Игла швейная для ручного шитья",
+        "Булавки для закрепления будущих стежков",
+        "Нитки для шитья",
+        "Мел для обозначения контуров при раскрое материала",
+        "Цветная книжка -инструкция"
+      ],
+      "review": [
+        {
+          "userId": 3,
+          "data": "02.05.2022",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "rate": "2"
+        },
+        {
+          "userId": 4,
+          "data": "02.05.2022",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "rate": "5"
+        }
+      ],
+      "raiting": [
+        2,
+        5
+      ]
+    },
+    {
+      "id": 3,
+      "categoryId": "craft",
+      "price": 77.45,
+      "discount": true,
+      "new": true,
+      "discount_price": 40,
+      "title": "Набор для шитья (текстильная кукла) 'Кукла Анна'",
+      "color": "розовый",
+      "description": "Набор для шитья куклы от ТМ 'Цветной' создан для того, что бы быть лучшим подарком для творческих людей, а сшитая любимыми мамиными или бабушкиными руками готовая кукла - спутником вашего чада на долгие годы. Совместный пошив куклы привьет вашему ребенку усидчивость и подарит яркие моменты совместного творчества.Набор для шитья текстильной куклы упакован в красочную коробку, которая может стать подарочной для готовой куклы.В наборе для шитья мягкой игрушки есть все необходимое для изготовления куклы: индивидуальная книжка-инструкция для каждой модели, лекала, ткани для пэчворка, волосы, шар для головы, шапочка, наполнитель, нитки, иголки и многое другое, что бы создать свой маленький шедевр смог каждый.У каждого дизайна имеется видео-инструкция. Просто отсканируйте QR-код на коробке и создайте интерьерную куклу своими руками следуя рекомендациям мастера.",
+      "features": {
+        "weight": 500,
+        "creation": [
+          "изготовление аксессуаров для дома",
+          "изготовление кукол и игрушек",
+          "шитье"
+        ],
+        "age": "8+",
+        "height_gross": 35.5,
+        "deep": 10,
+        "width": 15.8,
+        "height": 35,
+        "origin": "Россия"
+      },
+      "image": "/images/3_1.jpg",
+      "icons": [
+        "/images/3_1.jpg",
+        "/images/3_2.jpg",
+        "/images/3_3.jpg",
+        "/images/3_4.jpg",
+        "/images/3_5.jpg"
+      ],
+      "consist": [
+        "Специальные несыпучие ткани для пэчворка",
+        "Холлофайбер - наполнитель для игрушек",
+        "Ленты и аксессуары для игрушек",
+        "Лекало для построения или проверки кривых",
+        "Игла швейная для ручного шитья",
+        "Булавки для закрепления будущих стежков",
+        "Нитки для шитья",
+        "Мел для обозначения контуров при раскрое материала",
+        "Цветная книжка - инструкция"
+      ],
+      "review": [
+        {
+          "userId": 1,
+          "data": "02.05.2022",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "rate": "3.5"
+        },
+        {
+          "userId": 2,
+          "data": "02.05.2022",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "rate": "3.5"
+        }
+      ],
+      "raiting": [
+        3.5,
+        3.5
+      ]
+    },
+    {
+      "id": 4,
+      "categoryId": "craft",
+      "price": 77.45,
+      "discount": false,
+      "new": false,
+      "discount_price": 0,
+      "title": "Набор для шитья (текстильная кукла) 'Кукла Паулина'",
+      "color": "зеленый",
+      "description": "Набор для шитья куклы от ТМ 'Цветной' создан для того, что бы быть лучшим подарком для творческих людей, а сшитая любимыми мамиными или бабушкиными руками готовая кукла - спутником вашего чада на долгие годы. Совместный пошив куклы привьет вашему ребенку усидчивость и подарит яркие моменты совместного творчества.Набор для шитья текстильной куклы упакован в красочную коробку, которая может стать подарочной для готовой куклы.В наборе для шитья мягкой игрушки есть все необходимое для изготовления куклы: индивидуальная книжка-инструкция для каждой модели, лекала, ткани для пэчворка, волосы, шар для головы, шапочка, наполнитель, нитки, иголки и многое другое, что бы создать свой маленький шедевр смог каждый.У каждого дизайна имеется видео-инструкция. Просто отсканируйте QR-код на коробке и создайте интерьерную куклу своими руками следуя рекомендациям мастера.",
+      "features": {
+        "weight": 500,
+        "creation": [
+          "изготовление аксессуаров для дома",
+          "изготовление кукол и игрушек",
+          "шитье"
+        ],
+        "age": "8+",
+        "height_gross": 35.5,
+        "deep": 10,
+        "width": 15.8,
+        "height": 35,
+        "origin": "Россия"
+      },
+      "image": "/images/4_1.jpg",
+      "icons": [
+        "/images/4_1.jpg",
+        "/images/4_2.jpg",
+        "/images/4_3.jpg",
+        "/images/4_4.jpg",
+        "/images/4_5.jpg"
+      ],
+      "consist": [
+        "Специальные несыпучие ткани для пэчворка",
+        "Холлофайбер - наполнитель для игрушек",
+        "Ленты и аксессуары для игрушек",
+        "Лекало для построения или проверки кривых",
+        "Игла швейная для ручного шитья",
+        "Булавки для закрепления будущих стежков",
+        "Нитки для шитья",
+        "Мел для обозначения контуров при раскрое материала",
+        "Цветная книжка - инструкция"
+      ],
+      "review": [
+        {
+          "userId": 3,
+          "data": "02.05.2022",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "rate": "2"
+        },
+        {
+          "userId": 4,
+          "data": "02.05.2022",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "rate": "5"
+        },
+        {
+          "userId": 1,
+          "data": "03.05.2022",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "rate": "2"
+        },
+        {
+          "userId": 5,
+          "data": "03.05.2022",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "rate": "4"
+        }
+      ],
+      "raiting": [
+        2,
+        5,
+        2,
+        4
+      ]
+    },
+    {
+      "id": 5,
+      "categoryId": "craft",
+      "price": 77.45,
+      "discount": true,
+      "new": false,
+      "discount_price": 60,
+      "title": "Набор для шитья (текстильная кукла) 'Кукла Эльза'",
+      "color": "голубой",
+      "description": "Набор для шитья куклы от ТМ 'Цветной' создан для того, что бы быть лучшим подарком для творческих людей, а сшитая любимыми мамиными или бабушкиными руками готовая кукла - спутником вашего чада на долгие годы. Совместный пошив куклы привьет вашему ребенку усидчивость и подарит яркие моменты совместного творчества.Набор для шитья текстильной куклы упакован в красочную коробку, которая может стать подарочной для готовой куклы.В наборе для шитья мягкой игрушки есть все необходимое для изготовления куклы: индивидуальная книжка-инструкция для каждой модели, лекала, ткани для пэчворка, волосы, шар для головы, шапочка, наполнитель, нитки, иголки и многое другое, что бы создать свой маленький шедевр смог каждый.У каждого дизайна имеется видео-инструкция. Просто отсканируйте QR-код на коробке и создайте интерьерную куклу своими руками следуя рекомендациям мастера.",
+      "features": {
+        "weight": 500,
+        "creation": [
+          "изготовление аксессуаров для дома",
+          "изготовление кукол и игрушек",
+          "шитье"
+        ],
+        "age": "8+",
+        "height_gross": 35.5,
+        "deep": 10,
+        "width": 15.8,
+        "height": 35,
+        "origin": "Россия"
+      },
+      "image": "/images/5_1.jpg",
+      "icons": [
+        "/images/5_1.jpg",
+        "/images/5_2.jpg",
+        "/images/5_3.jpg",
+        "/images/5_4.jpg",
+        "/images/5_5.jpg"
+      ],
+      "consist": [
+        "Специальные несыпучие ткани для пэчворка",
+        "Холлофайбер - наполнитель для игрушек",
+        "Ленты и аксессуары для игрушек",
+        "Лекало для построения или проверки кривых",
+        "Игла швейная для ручного шитья",
+        "Булавки для закрепления будущих стежков",
+        "Нитки для шитья",
+        "Мел для обозначения контуров при раскрое материала",
+        "Цветная книжка - инструкция"
+      ],
+      "review": [
+        {
+          "userId": 2,
+          "data": "02.05.2022",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "rate": "3.5"
+        },
+        {
+          "userId": 3,
+          "data": "02.05.2022",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "rate": "5"
+        }
+      ],
+      "raiting": [
+        3.5,
+        5
+      ]
+    },
+    {
+      "id": 6,
+      "categoryId": "craft",
+      "price": 46.18,
+      "discount": false,
+      "new": true,
+      "discount_price": 0,
+      "title": "Набор для шитья (текстильная кукла) 'Принцесса Космея'",
+      "color": "телесный",
+      "description": "Набор для шитья куклы от ТМ 'Цветной' создан для того, что бы быть лучшим подарком для творческих людей, а сшитая любимыми мамиными или бабушкиными руками готовая кукла - спутником вашего чада на долгие годы. Совместный пошив куклы привьет вашему ребенку усидчивость и подарит яркие моменты совместного творчества.Набор для шитья текстильной куклы упакован в красочную коробку, которая может стать подарочной для готовой куклы.В наборе для шитья мягкой игрушки есть все необходимое для изготовления куклы: индивидуальная книжка-инструкция для каждой модели, лекала, ткани для пэчворка, волосы, шар для головы, шапочка, наполнитель, нитки, иголки и многое другое, что бы создать свой маленький шедевр смог каждый.У каждого дизайна имеется видео-инструкция. Просто отсканируйте QR-код на коробке и создайте интерьерную куклу своими руками следуя рекомендациям мастера.",
+      "features": {
+        "weight": 500,
+        "creation": [
+          "изготовление аксессуаров для дома",
+          "изготовление кукол и игрушек",
+          "шитье"
+        ],
+        "age": "8+",
+        "height_gross": 35.5,
+        "deep": 10,
+        "width": 15.8,
+        "height": 35,
+        "origin": "Россия"
+      },
+      "image": "/images/6_1.jpg",
+      "icons": [
+        "/images/6_1.jpg",
+        "/images/6_2.jpg",
+        "/images/6_3.jpg",
+        "/images/6_4.jpg",
+        "/images/6_5.jpg"
+      ],
+      "consist": [
+        "Специальные несыпучие ткани для пэчворка",
+        "Холлофайбер - наполнитель для игрушек",
+        "Ленты и аксессуары для игрушек",
+        "Лекало для построения или проверки кривых",
+        "Игла швейная для ручного шитья",
+        "Булавки для закрепления будущих стежков",
+        "Нитки для шитья",
+        "Мел для обозначения контуров при раскрое материала",
+        "Цветная книжка - инструкция"
+      ],
+      "review": [
+        {
+          "userId": 3,
+          "data": "02.05.2022",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "rate": "4"
+        },
+        {
+          "userId": 5,
+          "data": "03.05.2022",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "rate": "4"
+        }
+      ],
+      "raiting": [
+        4
+      ]
+    },
+    {
+      "id": 7,
+      "categoryId": "craft",
+      "price": 46.18,
+      "discount": false,
+      "new": false,
+      "discount_price": 0,
+      "title": "Набор для шитья (текстильная кукла) 'Кукла Эмма'",
+      "color": "голубой",
+      "description": "Набор для шитья куклы от ТМ 'Цветной' создан для того, что бы быть лучшим подарком для творческих людей, а сшитая любимыми мамиными или бабушкиными руками готовая кукла - спутником вашего чада на долгие годы. Совместный пошив куклы привьет вашему ребенку усидчивость и подарит яркие моменты совместного творчества.Набор для шитья текстильной куклы упакован в красочную коробку, которая может стать подарочной для готовой куклы.В наборе для шитья мягкой игрушки есть все необходимое для изготовления куклы: индивидуальная книжка-инструкция для каждой модели, лекала, ткани для пэчворка, волосы, шар для головы, шапочка, наполнитель, нитки, иголки и многое другое, что бы создать свой маленький шедевр смог каждый.У каждого дизайна имеется видео-инструкция. Просто отсканируйте QR-код на коробке и создайте интерьерную куклу своими руками следуя рекомендациям мастера.",
+      "features": {
+        "weight": 500,
+        "creation": [
+          "изготовление аксессуаров для дома",
+          "изготовление кукол и игрушек",
+          "шитье"
+        ],
+        "age": "8+",
+        "height_gross": 35.5,
+        "deep": 10,
+        "width": 15.5,
+        "height": 35,
+        "origin": "Россия"
+      },
+      "image": "/images/7_1.jpg",
+      "icons": [
+        "/images/7_1.jpg",
+        "/images/7_2.jpg",
+        "/images/7_3.jpg",
+        "/images/7_4.jpg",
+        "/images/7_5.jpg"
+      ],
+      "consist": [
+        "Специальные несыпучие ткани для пэчворка",
+        "Холлофайбер - наполнитель для игрушек",
+        "Ленты и аксессуары для игрушек",
+        "Лекало для построения или проверки кривых",
+        "Игла швейная для ручного шитья",
+        "Булавки для закрепления будущих стежков",
+        "Нитки для шитья",
+        "Мел для обозначения контуров при раскрое материала",
+        "Цветная книжка - инструкция"
+      ],
+      "review": [
+        {
+          "userId": 4,
+          "data": "02.05.2022",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "rate": "3"
+        },
+        {
+          "userId": 5,
+          "data": "03.05.2022",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "rate": "4"
+        }
+      ],
+      "raiting": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": 8,
+      "categoryId": "craft",
+      "price": 77.45,
+      "discount": false,
+      "new": true,
+      "discount_price": 0,
+      "title": "Набор для шитья (текстильная кукла) 'Кукла Ассоль'",
+      "color": "синий",
+      "description": "Набор для шитья куклы от ТМ 'Цветной' создан для того, чтобы быть лучшим подарком для творческих людей. Упакован в красочную коробку, которая может стать подарочной для готовой куклы. Индивидуальная инструкция для каждой модели, лекала, ткани для пэчворка и многое другое, чтобы создать свой маленький шедевр смог каждый.",
+      "features": {
+        "weight": 500,
+        "creation": [
+          "изготовление аксессуаров для дома",
+          "изготовление кукол и игрушек",
+          "шитье"
+        ],
+        "age": "8+",
+        "height_gross": 35.5,
+        "deep": 10,
+        "width": 15.5,
+        "height": 35,
+        "origin": "Россия"
+      },
+      "image": "/images/8_1.jpg",
+      "icons": [
+        "/images/8_1.jpg",
+        "/images/8_2.jpg",
+        "/images/8_3.jpg",
+        "/images/8_4.jpg",
+        "/images/8_5.jpg"
+      ],
+      "consist": [
+        "Специальные несыпучие ткани для пэчворка",
+        "Холлофайбер - наполнитель для игрушек",
+        "Ленты и аксессуары для игрушек",
+        "Лекало для построения или проверки кривых",
+        "Игла швейная для ручного шитья",
+        "Булавки для закрепления будущих стежков",
+        "Нитки для шитья",
+        "Мел для обозначения контуров при раскрое материала",
+        "Цветная книжка - инструкция"
+      ],
+      "review": [
+        {
+          "userId": 2,
+          "data": "02.05.2022",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "rate": "3.5"
+        },
+        {
+          "userId": 4,
+          "data": "02.05.2022",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "rate": "4"
+        },
+        {
+          "userId": 5,
+          "data": "09.05.2022",
+          "text": "",
+          "rate": 0
+        }
+      ],
+      "raiting": [
+        3.5,
+        4
+      ]
+    },
+    {
+      "id": 9,
+      "categoryId": "craft",
+      "price": 77.45,
+      "discount": false,
+      "new": false,
+      "discount_price": 0,
+      "title": "Набор для шитья (текстильная кукла) 'Кукла Джульетта'",
+      "color": "серый",
+      "description": "Набор для шитья куклы от ТМ 'Цветной' создан для того, чтобы быть лучшим подарком для творческих людей. Упакован в красочную коробку, которая может стать подарочной для готовой куклы. Индивидуальная инструкция для каждой модели, лекала, ткани для пэчворка и многое другое, чтобы создать свой маленький шедевр смог каждый.",
+      "features": {
+        "weight": 500,
+        "creation": [
+          "изготовление аксессуаров для дома",
+          "изготовление кукол и игрушек",
+          "шитье"
+        ],
+        "age": "8+",
+        "height_gross": 35.5,
+        "deep": 10,
+        "width": 15.5,
+        "height": 35,
+        "origin": "Россия"
+      },
+      "image": "/images/9_1.jpg",
+      "icons": [
+        "/images/9_1.jpg",
+        "/images/9_2.jpg",
+        "/images/9_3.jpg",
+        "/images/9_4.jpg",
+        "/images/9_5.jpg"
+      ],
+      "consist": [
+        "Специальные несыпучие ткани для пэчворка",
+        "Холлофайбер - наполнитель для игрушек",
+        "Ленты и аксессуары для игрушек",
+        "Лекало для построения или проверки кривых",
+        "Игла швейная для ручного шитья",
+        "Булавки для закрепления будущих стежков",
+        "Нитки для шитья",
+        "Мел для обозначения контуров при раскрое материала",
+        "Цветная книжка - инструкция"
+      ],
+      "review": [
+        {
+          "userId": 1,
+          "data": "02.05.2022",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "rate": "3.5"
+        },
+        {
+          "userId": 4,
+          "data": "02.05.2022",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "rate": "1"
+        }
+      ],
+      "raiting": [
+        3.5,
+        1
+      ]
+    },
+    {
+      "id": 10,
+      "categoryId": "craft",
+      "price": 77.45,
+      "discount": false,
+      "new": true,
+      "discount_price": 0,
+      "title": "Набор для шитья (текстильная кукла) 'Кукла Мэри'",
+      "color": "красный",
+      "description": "Набор для шитья куклы от ТМ 'Цветной' создан для того, чтобы быть лучшим подарком для творческих людей. Упакован в красочную коробку, которая может стать подарочной для готовой куклы. Индивидуальная инструкция для каждой модели, лекала, ткани для пэчворка и многое другое, чтобы создать свой маленький шедевр смог каждый.",
+      "features": {
+        "weight": 500,
+        "creation": [
+          "изготовление аксессуаров для дома",
+          "изготовление кукол и игрушек",
+          "шитье"
+        ],
+        "age": "8+",
+        "height_gross": 35.5,
+        "deep": 10,
+        "width": 15.5,
+        "height": 35,
+        "origin": "Россия"
+      },
+      "image": "/images/10_1.jpg",
+      "icons": [
+        "/images/10_1.jpg",
+        "/images/10_2.jpg",
+        "/images/10_3.jpg",
+        "/images/10_4.jpg",
+        "/images/10_5.jpg"
+      ],
+      "consist": [
+        "Специальные несыпучие ткани для пэчворка",
+        "Холлофайбер - наполнитель для игрушек",
+        "Ленты и аксессуары для игрушек",
+        "Лекало для построения или проверки кривых",
+        "Игла швейная для ручного шитья",
+        "Булавки для закрепления будущих стежков",
+        "Нитки для шитья",
+        "Мел для обозначения контуров при раскрое материала",
+        "Цветная книжка - инструкция"
+      ],
+      "review": [
+        {
+          "userId": 1,
+          "data": "02.05.2022",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "rate": "3.5"
+        },
+        {
+          "userId": 2,
+          "data": "02.05.2022",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "rate": "3.5"
+        },
+        {
+          "userId": 4,
+          "data": "02.05.2022",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "rate": "2"
+        }
+      ],
+      "raiting": [
+        3.5,
+        3.5,
+        2
+      ]
+    },
+    {
+      "id": 11,
+      "categoryId": "craft",
+      "price": 77.45,
+      "discount": true,
+      "new": true,
+      "discount_price": 45,
+      "title": "Набор для шитья (текстильная кукла) 'Кукла Мила'",
+      "color": "фиолетовый",
+      "description": "Набор для шитья куклы от ТМ 'Цветной' создан для того, чтобы быть лучшим подарком для творческих людей. Упакован в красочную коробку, которая может стать подарочной для готовой куклы. Индивидуальная инструкция для каждой модели, лекала, ткани для пэчворка и многое другое, чтобы создать свой маленький шедевр смог каждый.",
+      "features": {
+        "weight": 500,
+        "creation": [
+          "изготовление аксессуаров для дома",
+          "изготовление кукол и игрушек",
+          "шитье"
+        ],
+        "age": "8+",
+        "height_gross": 35.5,
+        "deep": 10,
+        "width": 15.5,
+        "height": 35,
+        "origin": "Россия"
+      },
+      "image": "/images/11_1.jpg",
+      "icons": [
+        "/images/11_1.jpg",
+        "/images/11_2.jpg",
+        "/images/11_3.jpg",
+        "/images/11_4.jpg",
+        "/images/11_5.jpg"
+      ],
+      "consist": [
+        "Специальные несыпучие ткани для пэчворка",
+        "Холлофайбер - наполнитель для игрушек",
+        "Ленты и аксессуары для игрушек",
+        "Лекало для построения или проверки кривых",
+        "Игла швейная для ручного шитья",
+        "Булавки для закрепления будущих стежков",
+        "Нитки для шитья",
+        "Мел для обозначения контуров при раскрое материала",
+        "Цветная книжка - инструкция"
+      ],
+      "review": [
+        {
+          "userId": 2,
+          "data": "02.05.2022",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "rate": "3.5"
+        },
+        {
+          "userId": 4,
+          "data": "02.05.2022",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "rate": "3"
+        },
+        {
+          "userId": 5,
+          "data": "03.05.2022",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "rate": "3.5"
+        }
+      ],
+      "raiting": [
+        3.5,
+        3,
+        3.5
+      ]
+    },
+    {
+      "id": 12,
+      "categoryId": "craft",
+      "price": 85.27,
+      "discount": true,
+      "new": true,
+      "discount_price": 50,
+      "title": "Набор для шитья (текстильная кукла) 'Кукла Венди'",
+      "color": "коричневый",
+      "description": "Набор для шитья куклы от ТМ 'Арт Ткани' создан для того, чтобы быть лучшим подарком для творческих людей. Упакован в красочную коробку, которая может стать подарочной для готовой куклы. Индивидуальная инструкция для каждой модели, лекала, ткани для пэчворка и многое другое, чтобы создать свой маленький шедевр смог каждый.",
+      "features": {
+        "weight": 254,
+        "creation": [
+          "изготовление аксессуаров для дома",
+          "изготовление кукол и игрушек",
+          "шитье"
+        ],
+        "age": "14+",
+        "height_gross": 35.5,
+        "deep": 23,
+        "width": 15,
+        "height": 5,
+        "origin": "Россия"
+      },
+      "image": "/images/12_1.jpg",
+      "icons": [
+        "/images/12_1.jpg",
+        "/images/12_2.jpg",
+        "/images/12_3.jpg",
+        "/images/12_4.jpg",
+        "/images/12_5.jpg",
+        "/images/12_6.jpg",
+        "/images/12_7.jpg",
+        "/images/12_8.jpg"
+      ],
+      "consist": [
+        "Специальные несыпучие ткани для пэчворка",
+        "Холлофайбер - наполнитель для игрушек",
+        "Ленты и аксессуары для игрушек",
+        "Лекало для построения или проверки кривых",
+        "Игла швейная для ручного шитья",
+        "Булавки для закрепления будущих стежков",
+        "Нитки для шитья",
+        "Мел для обозначения контуров при раскрое материала",
+        "Цветная книжка - инструкция"
+      ],
+      "review": [
+        {
+          "userId": 3,
+          "data": "02.05.2022",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "rate": "2"
+        },
+        {
+          "userId": 4,
+          "data": "02.05.2022",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "rate": "5"
+        },
+        {
+          "userId": 5,
+          "data": "03.05.2022",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "rate": "3"
+        }
+      ],
+      "raiting": [
+        2,
+        5,
+        3
+      ]
+    },
+    {
+      "id": 13,
+      "categoryId": "paint",
+      "price": 46.03,
+      "discount": false,
+      "new": true,
+      "discount_price": "",
+      "title": "Набор для творчества в чемодане",
+      "color": "",
+      "description": "Лучший подарок юному художнику- набор для рисования и творчества! В канцелярском наборе 145 предметов: масляная пастель, фломастеры, цветные карандаши, акварель в двух видах, ластик,кисти - все, что может понадобиться для творчества. Подходит для детей от 3 лет. Набор собран в алюминиевый кейс (чемодан) с четырьмя ячейками. Важно! Каждый кчемоданчик проверяется нами вручную на брак и комплектность. Это подтверждается вложенным посланием и наклейкой с контактами. В случае возникновения вопросов или проблем, вы можете обратиться в наш чат поддержки, мы оперативно вам поможем. Обращаем ваше внимание на случаи фиктивных негативных отзывов, не несущих смысловой нагрузки. Они поступают от конкурентов, мы решаем данную проблему. Развивайтесь и творите, вместе с koCH Creative Group!",
+      "features": {
+        "weight": 2100,
+        "creation": [
+          "набор для рисования",
+          "набор для творчества для рисования"
+        ],
+        "age": "3+",
+        "height_gross": 23,
+        "deep": "9",
+        "width": 34,
+        "height": "",
+        "origin": "Китай"
+      },
+      "image": "/images/13_1.avif",
+      "icons": [
+        "/images/13_1.avif",
+        "/images/13_2.avif",
+        "/images/13_3.avif",
+        "/images/13_4.avif",
+        "/images/13_5.avif",
+        "/images/13_6.avif",
+        "/images/13_7.avif"
+      ],
+      "consist": [
+        "Ластик - 2 шт.",
+        "Кисти - 4 шт.",
+        "Карандаши; Чемодан - 1 шт.",
+        "Фломастер - 33 цвета",
+        "Палитра 2шт.",
+        "24 краски"
+      ],
+      "review": [],
+      "raiting": []
+    },
+    {
+      "id": 14,
+      "categoryId": "paint",
+      "price": 70,
+      "discount": false,
+      "new": false,
+      "discount_price": 0,
+      "title": "Доска для рисования",
+      "color": "белый, черный",
+      "description": "Доска-мольберт ПИФАГОР предназначена для помощи в учёбе и развития творческих способностей! Магнитная маркерная белая и меловая чёрная. Тип доски: двусторонняя. Размещение: напольное. Рабочая поверхность: для письма маркерами, для письма мелом. Магнитная поверхность: да. Материал рабочей поверхности: металл. Количество поверхностей для письма мелом: 1 шт. Количество поверхностей для письма маркером: 1 шт. Высота доски: 54 см. Ширина: 46 см. Максимальная ширина доски: 46 см. Высота в сборе: 109 см. Цвет рабочей поверхности: белый, черный. Разметка: нет. Доска-мольберт: да. Комплектация: мел, полка для принадлежностей. Материал рамки: дерево. Вес: 2.5 кг. Артикул производителя: 236164.",
+      "features": {
+        "weight": 2500,
+        "creation": [
+          "для ребенка",
+          "другу",
+          "подруге"
+        ],
+        "age": "3+",
+        "height_gross": 109.5,
+        "deep": 4,
+        "width": 46,
+        "height": 109,
+        "origin": "Россия"
+      },
+      "image": "/images/14_1.jpeg",
+      "icons": [
+        "/images/14_1.jpeg",
+        "/images/14_2.jpeg",
+        "/images/14_3.jpeg",
+        "/images/14_4.jpeg",
+        "/images/14_5.jpeg",
+        "/images/14_6.jpeg",
+        "/images/14_7.jpeg",
+        "/images/14_8.jpeg",
+        "/images/14_9.jpeg",
+        "/images/14_10.jpeg",
+        "/images/14_11.jpeg"
+      ],
+      "consist": [
+        "доска для рисования"
+      ],
+      "review": [
+        {
+          "userId": 5,
+          "data": "09.05.2022",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "rate": "4.5"
+        }
+      ],
+      "raiting": [
+        4.5
+      ]
+    },
+    {
+      "id": 15,
+      "categoryId": "model",
+      "price": 124.03,
+      "discount": true,
+      "new": true,
+      "discount_price": 43.41,
+      "title": "Набор для создания слепков",
+      "color": "белый",
+      "description": "3D-слепок на 1-2 руки - это возможность воссоздать точную модель рук. Уникальный слепок повторяет каждую линию и отпечатки пальцев, создавая идеальный, единственный в своем роде, драгоценный подарок! СОХРАНИТЕ КАЖДУЮ ДЕТАЛЬ! СОХРАННОСТЬ СЛЕПКА 100 ЛЕТ! Перед началом создания слепка ИЗУЧИТЕ ПОДРОБНУЮ ИНСТРУКЦИЮ внутри набора. В нашем наборе БОЛЕЕ ВЫСОКОЕ И ШИРОКОЕ ВЕДРО И БОЛЬШЕ МАТЕРИАЛОВ, чем в наборах других брендов! Слепочный материал в наборе ВЫСОЧАЙШЕГО КАЧЕСТВА ИТАЛЬЯНСКОГО ПРОИЗВОДСТВА. У него больше рабочего времени, он формирует более прочный слепок, обеспечивает максимальную детализацию и обладает индикатором изменения цвета, в отличие от других брендов, что сильно упрощает создание слепка! Проведите отлично время со второй половинкой, повеселитесь с ребенком. Сделайте необычный подарок на День Рождения, День святого Валентина, годовщину или любой другой памятный праздник. Легко творите и создавайте всей семьей, дети будут счастливы поучаствовать в процессе!",
+      "features": {
+        "weight": 2000,
+        "creation": [
+          "3D слепок на 1-2 руки",
+          "Набор для создания 3D слепка рук",
+          "Слепок рук для двоих"
+        ],
+        "age": "",
+        "height_gross": 18,
+        "deep": 19,
+        "width": 19,
+        "height": 0,
+        "origin": "Россия"
+      },
+      "image": "/images/15_1.jpeg",
+      "icons": [
+        "/images/15_1.jpeg",
+        "/images/15_2.jpeg",
+        "/images/15_3.jpeg",
+        "/images/15_4.jpeg",
+        "/images/15_5.jpeg",
+        "/images/15_6.jpeg"
+      ],
+      "consist": [
+        "инструкция по применению",
+        "ведро",
+        "слепочная масса",
+        "скульптурный гипс",
+        "деревянные палочки"
+      ],
+      "review": [
+        {
+          "userId": 7,
+          "data": "14.06.2022",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "rate": "4.5"
+        }
+      ],
+      "raiting": [
+        4.5
+      ]
+    },
+    {
+      "id": 16,
+      "categoryId": "decor",
+      "price": 52.24,
+      "discount": true,
+      "new": false,
+      "discount_price": 33.95,
+      "title": "Набор для создания браслетов",
+      "color": "розовый",
+      "description": "Набор для создания браслетов - это яркий подарок на Новый год, День рождения или 8 Марта для девочек разных возрастов. Данный набор включает в себя множество бусин разных цветов и форм, что позволяет создавать браслет подходящий под образ хоть каждый день. Нет необходимости покупать основу под каждый новый браслет, благодаря откручивающемуся механизму застежки ребенок может снимать и надевать бусины бесконечное количество раз. Весь игровой набор для создания бижутерии упакован в подарочную коробочку, которая служит для хранения украшений. Детский подарочный набор для создания украшений - это уникальные браслетики, которые способствуют развитию мелкой моторики и фантазии, а так же интересное времяпровождение для девочки. Не знаете что подарить девочке? Набор для творчества станет отличным решением! Как сделать браслет показано у нас на фото, ну а остальное - это ваша фантазия! Идеально для Вас, если Вы ищете: браслет детский пандора, браслет подарок для девочки, украшения для девочек.",
+      "features": {
+        "weight": "",
+        "creation": [],
+        "age": "",
+        "height_gross": 10,
+        "deep": 15,
+        "width": 20,
+        "height": 0,
+        "origin": "Китай"
+      },
+      "image": "/images/16_1.avif",
+      "icons": [
+        "/images/16_1.avif",
+        "/images/16_2.avif",
+        "/images/16_3.avif",
+        "/images/16_4.avif",
+        "/images/16_5.avif",
+        "/images/16_6.avif"
+      ],
+      "consist": [],
+      "review": [
+        {
+          "userId": 5,
+          "data": "09.05.2022",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "rate": "3.5"
+        }
+      ],
+      "raiting": [
+        3.5
+      ]
+    },
+    {
+      "id": 17,
+      "categoryId": "flora",
+      "price": 29.86,
+      "discount": true,
+      "new": false,
+      "discount_price": 12.54,
+      "title": "Листья искусственные для букетов цветов поделки флористика вставка флористическая декор набор 25 шт.",
+      "color": "зеленый, зеленка, зеленое стекло, зеленое море, зеленое мох, зеленое лишайник, зеленая груша, зеленая липа",
+      "description": "Искусственные листья и добавки могут использоваться как для декора, так и для составления флористических букетов и создания искусственной зелени, украшения композиций из искусственных цветов и сладких букетов. новогодних композиций, венков. Также можно использовать для декора аквариума. Листья искусственные имитируют листья розы, дифенбахии и других цветов и растений. Диаметретр листьев 6-9см, в упаковке 25 штук, продаются без проволок. Советуем использовать вместе с флористической проволкой арт. 27727050 и бутонами 51716588 , 50827344. ВАЖНО: во время транспортировки возможна деформация! Для предания изначального вида букет искусственный можно расправить над паром либо используя фен. Вы можете увидеть больше товаров из категории цветы декоративные, букеты искусственные, цветы искусственные а так же товары для флористики из которых сможете сделать сами необходимый букет или украсить свой дом нажав на бренд 'HomeFloret' справа внизу от фотографии товара. С Уважением! Команда HomeFloret.",
+      "features": {
+        "weight": "75",
+        "creation": [
+          "букет из мыльных роз",
+          "изготовление украшений для дома",
+          "листья для декора",
+          "поделки",
+          "Флористика, элемент для декора"
+        ],
+        "age": "",
+        "height_gross": 20,
+        "deep": 4,
+        "width": 15,
+        "height": 19,
+        "origin": "Беларусь"
+      },
+      "image": "/images/17_1.avif",
+      "icons": [
+        "/images/17_1.avif",
+        "/images/17_2.avif",
+        "/images/17_3.avif",
+        "/images/17_4.avif",
+        "/images/17_5.jpeg",
+        "/images/17_6.jpeg",
+        "/images/17_7.jpeg"
+      ],
+      "consist": [
+        "Лист декоративный",
+        "1 упаковка (25 штук)"
+      ],
+      "review": [
+        {
+          "userId": 5,
+          "data": "09.05.2022",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "rate": 0
+        }
+      ],
+      "raiting": []
+    },
+    {
+      "id": 18,
+      "categoryId": "model",
+      "price": 143.13,
+      "discount": true,
+      "new": false,
+      "discount_price": 27.19,
+      "title": "Набор инструментов для моделирования, 13 шт, 16 см.",
+      "color": "прозрачный",
+      "description": "Набор инструментов для моделирования представляет собой комплект инструментов, предназначенный для моделирования различных изделий. Небольшие инструменты хорошо ложатся в руку и очень удобны в использовании. Изделия изготовлено из качественных материалов и станет незаменимым помощником для любой рукодельницы. (инструменты для лепки из полимерной глины, инструменты для лепки и моделирования, набор стеков для лепки, инструменты для лепки из пластилина, стеки для пластилина, аксессуары для рукоделия, стеки для глины)",
+      "features": {
+        "weight": "135",
+        "creation": [
+          "моделирование"
+        ],
+        "age": "0+",
+        "height_gross": 2,
+        "deep": 17,
+        "width": 17,
+        "height": 2,
+        "origin": "Китай"
+      },
+      "image": "/images/18_1.jpeg",
+      "icons": [
+        "/images/18_1.jpeg",
+        "/images/18_2.jpeg",
+        "/images/18_3.jpeg",
+        "/images/18_4.jpeg",
+        "/images/18_5.jpeg"
+      ],
+      "consist": [
+        "инструменты"
+      ],
+      "review": [],
+      "raiting": []
+    },
+    {
+      "id": 19,
+      "categoryId": "paint",
+      "price": 45.16,
+      "discount": true,
+      "new": true,
+      "discount_price": 16.71,
+      "title": "Краски акриловые художественные в тубах для рисования, набор из 12 цвета по 12 мл, ART Debut",
+      "color": "зеленый, белый",
+      "description": "Художественные акриловые краски BRAUBERG ART 'DEBUT' предназначены для живописи и декоративных работ. Профессиональная серия.12 ярких и насыщенных цветов: - белила титановые (044); - лимонная желтая (021); - охра желтая (029); - оранжево-желтая (026); - красная темная (001); - травяная зеленая (066); - зеленая 'ФЦ' (072); - церулеум (036); - голубая 'ФЦ' (039); - сиена жженая (082); - умбра жженая (084); - черная (051). Количество цветов в наборе: 12. Серия: Debut. Тип фасовки: туба. Объем: 12 мл. Спецэффект цвета: матовый. Тип краски: акриловые художественные. Упаковка: картонная коробка. Артикул производителя: 191125.",
+      "features": {
+        "weight": "272",
+        "creation": [
+          "школа"
+        ],
+        "age": "",
+        "height_gross": 3.4,
+        "deep": 13.5,
+        "width": 16,
+        "height": 2,
+        "origin": "Китай"
+      },
+      "image": "/images/19_1.jpeg",
+      "icons": [
+        "/images/19_1.jpeg",
+        "/images/19_2.jpeg",
+        "/images/19_3.jpeg",
+        "/images/19_4.jpeg",
+        "/images/19_5.jpeg",
+        "/images/19_6.jpeg",
+        "/images/19_7.jpeg",
+        "/images/19_8.jpeg"
+      ],
+      "consist": [
+        "краски",
+        "краски - 12 шт.",
+        "краски для рисования",
+        "набор для рисования",
+        "набор",
+        "акриловые краски",
+        "краски 24 цвета"
+      ],
+      "review": [],
+      "raiting": []
+    },
+    {
+      "id": 20,
+      "categoryId": "decor",
+      "price": 17.94,
+      "discount": true,
+      "new": true,
+      "discount_price": 10.4,
+      "title": "Набор для украшения слайма Посыпки и шармы для слаймов",
+      "color": "",
+      "description": "Набор посыпок и шармов для украшения ваших слаймиков! Яркие посыпки помогут вам создать уникальный дизайн, а милые шармы станут красивым дополнением! В наборе 3 посыпки и 2 шарма. Все дизайны представлены на фотографиях, желаем вам крутых идей!",
+      "features": {
+        "weight": "",
+        "creation": [],
+        "age": "7+",
+        "height_gross": 15,
+        "deep": "",
+        "width": 15,
+        "height": 15,
+        "origin": "Россия"
+      },
+      "image": "/images/20_1.jpeg",
+      "icons": [
+        "/images/20_1.jpeg",
+        "/images/20_2.jpeg",
+        "/images/20_3.jpeg",
+        "/images/20_4.jpeg",
+        "/images/20_5.jpeg",
+        "/images/20_6.jpeg",
+        "/images/20_7.jpeg"
+      ],
+      "consist": [
+        "подарок на новый год ребенку",
+        "слаймы для девочек мальчиков",
+        "слайм набор добавки",
+        "посыпка для слаймов 3 шт",
+        "крашения шармы для слаймов 2 шт"
+      ],
+      "review": [],
+      "raiting": []
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "avatar": "/assets/avatars/10.jpg",
+      "firstName": "Арнольд",
+      "lastName": "Шварцнегр",
+      "email": "shvarts@das.ge",
+      "password": "123456",
+      "favourites": [],
+      "cart": [
+        1,
+        2,
+        4
+      ],
+      "likes": []
+    },
+    {
+      "id": 2,
+      "avatar": "/assets/avatars/2.jpg",
+      "firstName": "Памэла",
+      "lastName": "Андэрсон",
+      "email": "pamka@give.us",
+      "password": "123456"
+    },
+    {
+      "id": 3,
+      "avatar": "/assets/avatars/7.jpg",
+      "firstName": "Дарт",
+      "lastName": "Вейдер",
+      "email": "datr@ver.us",
+      "password": "123456"
+    },
+    {
+      "id": 4,
+      "avatar": "/assets/avatars/4.jpg",
+      "firstName": "Чиппо",
+      "lastName": "Линно",
+      "email": "chip@dog.br",
+      "password": "123456"
+    },
+    {
+      "id": 5,
+      "avatar": "/assets/avatars/6.jpg",
+      "firstName": "Джеки",
+      "lastName": "Ли",
+      "email": "li@chi.na",
+      "password": "123456",
+      "cart": [
+        3,
+        7,
+        11,
+        14,
+        13,
+        10,
+        20,
+        20,
+        15
+      ]
+    },
+    {
+      "id": 6,
+      "avatar": "/assets/avatars/1.jpg",
+      "firstName": "Джо",
+      "lastName": "Резкий",
+      "email": "rezki@google.com",
+      "password": "123456",
+      "cart": [
+        19,
+        19,
+        14,
+        14,
+        1,
+        18,
+        14,
+        1,
+        18,
+        14,
+        1,
+        14
+      ],
+      "likes": [
+        2,
+        12,
+        1,
+        14,
+        18,
+        4,
+        20,
+        13,
+        10,
+        17,
+        15,
+        19
+      ]
+    },
+    {
+      "id": 7,
+      "avatar": "/assets/avatars/1.jpg",
+      "firstName": "Maniana",
+      "lastName": "Bro",
+      "email": "bro@google.com",
+      "password": "123456",
+      "cart": [
+        3
+      ],
+      "likes": [
+        3,
+        15
+      ]
+    }
+  ],
+  "categiries": [
+    {
+      "id": "craft",
+      "categoryLink": "craft",
+      "category": "Рукоделие"
+    },
+    {
+      "id": "paint",
+      "categoryLink": "paint",
+      "category": "Рисование"
+    },
+    {
+      "id": "model",
+      "categoryLink": "model",
+      "category": "Моделирование"
+    },
+    {
+      "id": "decor",
+      "categoryLink": "decor",
+      "category": "Украшение"
+    },
+    {
+      "id": "flora",
+      "categoryLink": "flora",
+      "category": "Флористика"
+    }
+  ]
+}

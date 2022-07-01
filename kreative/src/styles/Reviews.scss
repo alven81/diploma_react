@@ -1,0 +1,37 @@
+.reviews {
+    &-title {
+        text-align: center;
+        @include fontRoboto(500, 25, 25);
+    }
+
+    &_main {
+        display: flex;
+        border-bottom: 1px solid $mainPinc;
+        gap: 20px;
+
+        &-image {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: auto;
+            padding: 5px;
+
+            span {
+                color: $produckBtnBorder;
+            }
+
+            img {
+                display: block;
+                width: 100px;
+            }
+        }
+
+        &-title {
+            width: 80%;
+        }
+
+        &-price {
+            @include fontRoboto(500, 20, 20);
+        }
+    }
+}

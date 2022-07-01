@@ -1,0 +1,83 @@
+.home {
+    &_list {
+
+        &-block {
+            display: flex;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            width: 528px;
+            box-sizing: border-box;
+            flex: 1;
+            height: 510px;
+            flex-direction: column;
+            align-items: stretch;
+            justify-content: space-around;
+            border: 1px solid $produckBtnBorder;
+            border-radius: 20px;
+        }
+
+        &-craft {
+            @include fontRoboto(400, 18, 20);
+            letter-spacing: 0.2em;
+            color: $mainBlack;
+            padding: 0 40px;
+            box-sizing: border-box;
+            text-transform: uppercase;
+
+            p {
+                margin: 27px 0;
+            }
+        }
+
+        &-paint {
+            @include fontRoboto(400, 18, 20);
+            letter-spacing: 0.2em;
+            color: $mainBlack;
+            padding: 0 40px;
+            box-sizing: border-box;
+            text-transform: uppercase;
+
+            p {
+                margin: 60px 0;
+            }
+        }
+
+        &-model {
+            @include fontRoboto(400, 18, 20);
+            letter-spacing: 0.2em;
+            color: $mainBlack;
+            padding: 0 40px;
+            box-sizing: border-box;
+            text-transform: uppercase;
+
+            p {
+                margin: 60px 0;
+            }
+        }
+
+        &-bkg {
+            &-craft {
+                background: rgba(242, 120, 92, 0.5);
+                background-image: url("../img/c_flowers.png");
+                background-size: 40%;
+                background-repeat: no-repeat;
+                background-position: 95% 100%;
+            }
+
+            &-paint {
+                background: rgba(252, 81, 133, 0.3);
+                background-image: url("../img/bi_flowers.png");
+                background-size: 60%;
+                background-repeat: no-repeat;
+                background-position: 100% 100%;
+            }
+
+            &-model {
+                background: rgba(242, 120, 92, 0.5);
+                background-image: url("../img/kubes.png");
+                background-size: 37%;
+                background-repeat: no-repeat;
+                background-position: 90% 20px;
+            }
+        }
+    }
+}
