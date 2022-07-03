@@ -4,7 +4,7 @@
 /src/utils/test.js
 
 # dependencies
-/node_modules
+/kreative/node_modules
 /native/node_modules
 /.pnp
 .pnp.js

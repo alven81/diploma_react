@@ -2,7 +2,7 @@ import axios from "axios";
 
 function getCategoryList() {
     return (dispatch) => {
-        axios.get("http://localhost:3004/categiries").then((res) => {
+        axios.get("http://localhost:3004/categories").then((res) => {
             dispatch(setCategoryData(res.data));
         });
     };
