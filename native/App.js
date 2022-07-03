@@ -9,13 +9,18 @@ import {
     FlatList,
     ActivityIndicator,
     SafeAreaView,
+    ScrollView,
+    TextInput,
+    TouchableHighlight,
 } from "react-native";
+import { Footer } from "./components/Footer";
 import { Product } from "./components/Product";
 
 export default function App() {
     const [isLoading, setLoading] = useState(true);
     const [data, setData] = useState([]);
     const [product, setProduct] = useState([]);
+    const [searchText, setSearchText] = useState("");
 
     const Separator = () => <View style={styles.separator} />;
 
@@ -44,10 +49,23 @@ export default function App() {
             setLoading(false);
         }
     };
+
     const getAllProducts = async () => {
         try {
+            const response = await fetch(`http://localhost:3004/products`);
+            const json = await response.json();
+            setProduct(json);
+        } catch (error) {
+            console.error(error);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    const getSearchProduct = async (searchText) => {
+        try {
             const response = await fetch(
-                `http://localhost:3004/products`
+                `http://localhost:3004/products?q=${searchText}`
             );
             const json = await response.json();
             setProduct(json);
@@ -84,6 +102,33 @@ export default function App() {
                 />
             </View>
             <Separator />
+            <View style={styles.search}>
+                <TextInput
+                    style={{
+                        borderColor: "#fc5185",
+                        borderWidth: 1,
+                        borderRadius: 5,
+                        paddingHorizontal: 5,
+                        width: "90%",
+                    }}
+                    //defaultValue="Что ищем?"
+                    onChangeText={setSearchText}
+                    value={searchText}
+                />
+                <TouchableHighlight
+                    onPress={() => getSearchProduct(searchText)}
+                >
+                    <Image
+                        source={require("./assets/loupe.svg")}
+                        style={{
+                            height: 30,
+                            width: 30,
+                        }}
+                    />
+                </TouchableHighlight>
+            </View>
+
+            <Separator />
             <View style={styles.fixToText}>
                 {isLoading ? (
                     <ActivityIndicator />
@@ -109,18 +154,29 @@ export default function App() {
                 )}
             </View>
             <Separator />
-            <View style={styles.fixToText}>
-                {isLoading ? (
+            <ScrollView>
+                {!product.length ? (
+                    <Text
+                        style={{
+                            fontWeight: 600,
+                        }}
+                    >
+                        К сожалению ничего не найдено
+                    </Text>
+                ) : isLoading ? (
                     <ActivityIndicator />
                 ) : (
-                    <FlatList
-                        data={product}
-                        keyExtractor={({ id }, index) => id}
-                        renderItem={({ item }) => <Product item={item} />}
-                    />
+                    <>
+                        <Text>Найдено товаров {product.length}:</Text>
+                        <FlatList
+                            data={product}
+                            keyExtractor={({ id }, index) => id}
+                            renderItem={({ item }) => <Product item={item} />}
+                        />
+                    </>
                 )}
-            </View>
-            <Separator />
+            </ScrollView>
+            <Footer />
             <StatusBar style="auto" />
         </SafeAreaView>
     );
@@ -130,6 +186,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         paddingTop: 30,
+        paddingBottom: 10,
         justifyContent: "flex-start",
         marginHorizontal: 16,
     },
@@ -138,13 +195,17 @@ const styles = StyleSheet.create({
         justifyContent: "flex-start",
         alignItems: "center",
     },
-    fixToText: {
-        flexDirection: "row",
-        justifyContent: "space-between",
-    },
     separator: {
         marginVertical: 8,
         borderBottomColor: "#fc5185",
         borderBottomWidth: StyleSheet.hairlineWidth,
+    },
+    search: {
+        flex: 1,
+        flexDirection: "row",
+        justifyContent: "space-between",
+        width: "100%",
+        minHeight: 30,
+        maxHeight: 30,
     },
 });
