@@ -23,7 +23,8 @@ npm start       //start project
 ```js
 cd kreative
 npm install     //install dependencies
-npm run json    //run local json server
+npm run json    //run local json server (for access to http://localhost:3004/)
+npm start       //start project (for access to http://localhost:3000/)
 cd ..
 cd native
 npm install     //install dependencies
