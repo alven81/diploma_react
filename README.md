@@ -32,3 +32,7 @@ npm start       //start project
 w               //project adopted for web preview, so select web
 ```
 - select mobile preview, dimensions for iPhone 12 Pro or analog in your browser.
+
+Utils links:
+
+https://reactnavigation.org/

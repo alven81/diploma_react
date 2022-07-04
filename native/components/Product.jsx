@@ -1,4 +1,6 @@
 import { Text, Image, View, StyleSheet } from "react-native";
+import colors from "../res/colors";
+import fonts from "../res/fonts";
 
 const Product = ({ item }) => {
     return (
@@ -25,6 +27,7 @@ const Product = ({ item }) => {
                     style={{
                         textDecorationLine:
                             item.discount === true ? "line-through" : "",
+                            fontFamily: fonts.main
                     }}
                 >
                     {`${item.price} руб.`}
@@ -32,6 +35,7 @@ const Product = ({ item }) => {
                 <Text
                     style={{
                         color: item.discount === true ? "#fc5185" : "#fff",
+                        fontFamily: fonts.main
                     }}
                 >
                     {`${item.discount_price} руб.`}
@@ -48,12 +52,13 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
         margin: 16,
-        borderColor: "#fc5185",
+        borderColor: colors.mainPinc,
         borderWidth: 1,
         borderRadius: 6,
     },
     title: {
         fontWeight: 700,
+        fontFamily: fonts.main
     },
     image: {
         margin: 10,

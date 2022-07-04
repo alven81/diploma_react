@@ -8,6 +8,8 @@ import {
     TouchableHighlight,
     ImageBackground,
 } from "react-native";
+import colors from "../res/colors";
+import fonts from "../res/fonts";
 
 const Footer = () => {
     return (
@@ -176,10 +178,10 @@ const Footer = () => {
 const styles = StyleSheet.create({
     container: {
         paddingTop: 2,
-        backgroundColor: "#f2785f",
+        backgroundColor: colors.footerBckg,
     },
     contact: {
-        backgroundColor: "#fff",
+        backgroundColor: colors.mainWhite,
         paddingTop: 20,
     },
     contactBlock: {
@@ -204,20 +206,22 @@ const styles = StyleSheet.create({
         padding: 5,
     },
     aboutText: {
-        color: "#fff",
+        color: colors.mainWhite,
         textTransform: "uppercase",
         fontSize: 18,
         fontWeight: 600,
         margin: 3,
         marginTop: 20,
+        fontFamily: fonts.main
     },
     item: {
-        color: "#fff",
+        color: colors.mainWhite,
         padding: 5,
         fontSize: 16,
         textDecorationLine: "underline",
         height: 25,
         marginBottom: 10,
+        fontFamily: fonts.main
     },
     social: {
         flex: 1,
