@@ -45,6 +45,7 @@ const Catalog = () => {
             );
             const json = await response.json();
             setProduct(json);
+            //console.error(product)
         } catch (error) {
             console.error(error);
         } finally {
@@ -85,26 +86,6 @@ const Catalog = () => {
 
     return (
         <SafeAreaView style={styles.container}>
-            <View style={styles.logo}>
-                <Text
-                    style={{
-                        fontWeight: 700,
-                        color: colors.mainPinc,
-                        marginBottom: 10,
-                        fontFamily: fonts.main
-                    }}
-                >
-                    Добрый день, Таинственный незнакомец!
-                </Text>
-                <Image
-                    source={require("../assets/logo.png")}
-                    style={{
-                        height: 70,
-                        width: 210,
-                    }}
-                />
-            </View>
-            <Separator />
             <View style={styles.search}>
                 <TextInput
                     style={{
@@ -130,7 +111,26 @@ const Catalog = () => {
                     />
                 </TouchableHighlight>
             </View>
-
+            <Separator />
+            <View style={styles.logo}>
+                <Text
+                    style={{
+                        fontWeight: 700,
+                        color: colors.mainPinc,
+                        marginBottom: 10,
+                        fontFamily: fonts.main,
+                    }}
+                >
+                    Добрый день, Таинственный незнакомец!
+                </Text>
+                <Image
+                    source={require("../assets/logo.png")}
+                    style={{
+                        height: 70,
+                        width: 210,
+                    }}
+                />
+            </View>
             <Separator />
             <View style={styles.fixToText}>
                 {isLoading ? (
@@ -147,7 +147,7 @@ const Catalog = () => {
                             >
                                 <Button
                                     onPress={() => getProducts(item.id)}
-                                    color= {colors.mainPinc}
+                                    color={colors.mainPinc}
                                     key={item.id}
                                     title={item.category}
                                 />
@@ -157,7 +157,7 @@ const Catalog = () => {
                 )}
             </View>
             <Separator />
-            <ScrollView>
+            <View>
                 {!product.length ? (
                     <Text
                         style={{
@@ -171,6 +171,7 @@ const Catalog = () => {
                 ) : (
                     <>
                         <Text>Найдено товаров {product.length}:</Text>
+
                         <FlatList
                             data={product}
                             keyExtractor={({ id }, index) => id}
@@ -178,19 +179,19 @@ const Catalog = () => {
                         />
                     </>
                 )}
-            </ScrollView>
+            </View>
             <Footer />
             <StatusBar style="auto" />
         </SafeAreaView>
     );
-}
+};
 
-export { Catalog }
+export { Catalog };
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        paddingTop: 30,
+        paddingTop: 5,
         paddingBottom: 10,
         justifyContent: "flex-start",
         marginHorizontal: 16,

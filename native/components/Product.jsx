@@ -1,47 +1,57 @@
 import { Text, Image, View, StyleSheet } from "react-native";
 import colors from "../res/colors";
 import fonts from "../res/fonts";
+import { Link } from "@react-navigation/native";
 
 const Product = ({ item }) => {
     return (
-        <View style={styles.container}>
-            <Text style={styles.title}>{item.title.slice(0, 50) + "..."}</Text>
+        <Link
+            to={{
+                screen: "ProductCard",
+                params: {id: item.id}
+            }}
+        >
+            <View style={styles.container}>
+                <Text style={styles.title}>
+                    {item.title.slice(0, 50) + "..."}
+                </Text>
 
-            <Image
-                source={{
-                    uri: `http://localhost:3000${item.image}`,
-                }}
-                style={styles.image}
-            />
+                <Image
+                    source={{
+                        uri: `http://localhost:3000${item.image}`,
+                    }}
+                    style={styles.image}
+                />
 
-            <Text
-                style={{
-                    fontWeight: 700,
-                }}
-            >
-                Стоимость:
-            </Text>
-
-            <View style={styles.price}>
                 <Text
                     style={{
-                        textDecorationLine:
-                            item.discount === true ? "line-through" : "",
-                            fontFamily: fonts.main
+                        fontWeight: 700,
                     }}
                 >
-                    {`${item.price} руб.`}
+                    Стоимость:
                 </Text>
-                <Text
-                    style={{
-                        color: item.discount === true ? "#fc5185" : "#fff",
-                        fontFamily: fonts.main
-                    }}
-                >
-                    {`${item.discount_price} руб.`}
-                </Text>
+
+                <View style={styles.price}>
+                    <Text
+                        style={{
+                            textDecorationLine:
+                                item.discount === true ? "line-through" : "",
+                            fontFamily: fonts.main,
+                        }}
+                    >
+                        {`${item.price} руб.`}
+                    </Text>
+                    <Text
+                        style={{
+                            color: item.discount === true ? "#fc5185" : "#fff",
+                            fontFamily: fonts.main,
+                        }}
+                    >
+                        {`${item.discount_price} руб.`}
+                    </Text>
+                </View>
             </View>
-        </View>
+        </Link>
     );
 };
 
@@ -58,7 +68,7 @@ const styles = StyleSheet.create({
     },
     title: {
         fontWeight: 700,
-        fontFamily: fonts.main
+        fontFamily: fonts.main,
     },
     image: {
         margin: 10,
