@@ -195,6 +195,7 @@ const styles = StyleSheet.create({
         paddingBottom: 10,
         justifyContent: "flex-start",
         marginHorizontal: 16,
+        backgroundColor: colors.mainWhite,
     },
     logo: {
         padding: 5,

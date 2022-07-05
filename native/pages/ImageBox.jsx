@@ -1,118 +1,129 @@
+import { useState } from "react";
 import {
-    StyleSheet,
-    ActivityIndicator,
-    FlatList,
-    Image,
-    View,
+	StyleSheet,
+	ActivityIndicator,
+	ScrollView,
+	Image,
+	View,
+	Text,
+	Dimensions,
 } from "react-native";
+import colors from "../res/colors";
+import fonts from "../res/fonts";
 
-const ImageBox = ({ images }) => {
-    return !images ? (
-        <ActivityIndicator />
-    ) : (
-        <View style={styles.imageBlock}>
-            <FlatList
-                data={images}
-                keyExtractor={({ id }, index) => id}
-                renderItem={({ item }) => (
-                    <Image
-                    key={item}
-                        source={{
-                            uri: `http://localhost:3000${item}`,
-                        }}
-                        style={styles.image}
-                    />
-                )}
-            />
-        </View>
-    );
+const { width } = Dimensions.get("window");
+const height = width * 1.5;
+
+const ImageBox = ({ images, newProduct, age }) => {
+	const [active, setActive] = useState(0);
+
+	const change = ({ nativeEvent }) => {
+		const slide = Math.ceil(
+			nativeEvent.contentOffset.x / nativeEvent.layoutMeasurement.width
+		);
+		if (slide !== active) {
+			setActive(slide);
+		}
+	};
+
+	return !images ? (
+		<ActivityIndicator />
+	) : (
+		<View style={styles.container}>
+			{!newProduct ? "" : <Text style={styles.new}>New!</Text>}
+            {!age.age ? "" : <Text style={styles.age}>{age.age}</Text>}
+			<ScrollView
+				pagingEnabled
+				horizontal
+				onScroll={change}
+				showsHorizontalScrollIndicator={false}
+				style={styles.scroll}
+			>
+				{images.map((image, index) => (
+					<Image
+						key={index}
+						source={{
+							uri: `http://localhost:3000${image}`,
+						}}
+						style={styles.image}
+					/>
+				))}
+			</ScrollView>
+			<View style={styles.pagination}>
+				{images.map((i, k) => (
+					<Text
+						key={k}
+						style={
+							k === active
+								? styles.pagingActiveText
+								: styles.pagingText
+						}
+					>
+						⬤
+					</Text>
+				))}
+			</View>
+		</View>
+	);
 };
 
 const styles = StyleSheet.create({
-    imageBlock: {
-        flex: 1,
-        flexDirection: "row",
-        //justifyContent: "space-between",
-        width: "100%",
-        minHeight: 200,
-        maxHeight: 200,
-    },
-    image: {
-        borderRadius: 5,
-        height: 80,
-        width: 50,
-        margin: 5,
-    },
+	container: {
+		width,
+		height,
+		zIndex: 0,
+	},
+	new: {
+		position: "absolute",
+		top: 20,
+		left: 20,
+		color: colors.mainPinc,
+		borderWidth: 3,
+		borderColor: colors.mainPinc,
+		borderRadius: 8,
+		padding: 5,
+		fontFamily: fonts.main,
+		fontSize: 30,
+		zIndex: 10,
+	},
+    age: {
+		position: "absolute",
+		top: 20,
+		right: 20,
+		color: colors.mainPinc,
+		borderWidth: 3,
+		borderColor: colors.mainPinc,
+		borderRadius: 30,
+		padding: 5,
+		fontFamily: fonts.main,
+		fontSize: 20,
+		zIndex: 10,
+	},
+	scroll: {
+		width,
+		height,
+	},
+	image: {
+		width,
+		height,
+		resizeMode: "cover",
+	},
+	pagination: {
+		flexDirection: "row",
+		position: "absolute",
+		bottom: 0,
+		alignSelf: "center",
+	},
+	pagingText: {
+		fontSize: width / 30,
+		color: colors.mainPinc,
+		margin: 3,
+	},
+	pagingActiveText: {
+		fontSize: width / 30,
+		color: colors.mainWhite,
+		margin: 3,
+	},
 });
 
 export { ImageBox };
-
-// import React, { FC, useEffect, useState } from "react";
-// import { useDispatch } from "react-redux";
-// import { showZoomImage } from "../../store/actions/zoomAction";
-
-// interface ImageBoxProps {
-// 	imageList: [];
-// 	newProduct: boolean;
-// 	imageMain: string;
-// 	age: string;
-// }
-
-// const ImageBox: FC<ImageBoxProps> = ({
-// 	imageList,
-// 	newProduct,
-// 	imageMain,
-// 	age,
-// }) => {
-
-//     const dispatch = useDispatch();
-
-// 	useEffect(() => {
-// 		setImageLink(imageMain);
-// 	}, [imageMain]);
-
-// 	const handlerImage = (item: string) => {
-// 		setImageLink(item);
-// 	};
-
-//     const handlerZoomImage = () => {
-//         dispatch(showZoomImage([true, `http://localhost:3000${imageLink}`]));
-//     }
-
-// 	const [imageLink, setImageLink] = useState<string>();
-
-// 	useState(() => {
-// 		setImageLink(imageMain);
-// 	});
-
-// 	return (
-// 		<div className="image_box">
-// 			<div className="image_box-combo">
-// 				{newProduct}
-// 				{imageList.map((item) => (
-// 					<div key={Math.random()}>
-// 						<img
-// 							className=""
-// 							src={`http://localhost:3000${item}`}
-// 							alt=""
-// 							onMouseOver={() => handlerImage(item)}
-// 						/>
-// 					</div>
-// 				))}
-// 			</div>
-// 			<div className="image_box-mono">
-// 				<img
-// 					className="image_box-mono-pic"
-// 					src={`http://localhost:3000${imageLink}`}
-// 					alt=""
-//                     onClick={() => handlerZoomImage()}
-// 				/>
-// 				<div className={age.length ? "" : "hide"}>
-// 					<span>{age}</span>
-// 				</div>
-// 			</div>
-// 		</div>
-// 	);
-// };
-
-// export { ImageBox };

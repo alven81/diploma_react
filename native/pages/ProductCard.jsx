@@ -1,62 +1,123 @@
 import { useEffect, useState } from "react";
-import { View, Text, Button } from "react-native";
-import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { View, Text, Button, StyleSheet } from "react-native";
+import fonts from "../res/fonts";
+import { Features } from "./Features";
 import { ImageBox } from "./ImageBox";
 
 const ProductCard = ({ route, navigation }) => {
-    const [product, setProduct] = useState([]);
-    const [isLoading, setLoading] = useState(true);
+	const [product, setProduct] = useState([]);
+	const [isLoading, setLoading] = useState(true);
 
-    const getProduct = async (id) => {
-        try {
-            const response = await fetch(
-                `http://localhost:3004/products/${id}`
-            );
-            const json = await response.json();
-            setProduct(json);
-        } catch (error) {
-            console.error(error);
-        } finally {
-            setLoading(false);
-        }
-    };
+	const getProduct = async (id) => {
+		try {
+			const response = await fetch(
+				`http://localhost:3004/products/${id}`
+			);
+			const json = await response.json();
+			setProduct(json);
+		} catch (error) {
+			console.error(error);
+		} finally {
+			setLoading(false);
+		}
+	};
 
-    useEffect(() => {
-        getProduct(route.params.id);
-    }, [route.params.id]);
+	useEffect(() => {
+		getProduct(route.params.id);
+	}, [route.params.id]);
 
-    return (
-        <View
-            style={{
-                flex: 1,
-                alignItems: "center",
-                justifyContent: "flex-start",
-            }}
-        >
-            <Text>{product.title}</Text>
+	return (
+		<View
+			style={{
+				flex: 1,
+				alignItems: "center",
+				justifyContent: "flex-start",
+			}}
+		>
+			<Text style={styles.title}>{product.title}</Text>
 
-            <ImageBox images={product.icons} />
-        </View>
-    );
+			<ImageBox
+				images={product.icons}
+				newProduct={product.new}
+				age={product.features}
+			/>
+			<Text
+				style={{
+					fontWeight: 700,
+				}}
+			>
+				Стоимость:
+			</Text>
+
+			<View style={styles.price}>
+				<Text
+					style={{
+						textDecorationLine:
+							product.discount === true ? "line-through" : "",
+						fontFamily: fonts.main,
+					}}
+				>
+					{`${product.price} руб.`}
+				</Text>
+				<Text
+					style={{
+						color: product.discount === true ? "#fc5185" : "#fff",
+						fontFamily: fonts.main,
+					}}
+				>
+					{`${product.discount_price} руб.`}
+				</Text>
+			</View>
+
+			<View>
+				<Text style={styles.title}>Описание</Text>
+				<Text style={styles.description}>{product.description}</Text>
+			</View>
+			<View>
+				<Features features={product.features} />
+			</View>
+		</View>
+	);
 };
+
+const styles = StyleSheet.create({
+	container: {
+		backgroundColor: "#fff",
+		alignItems: "center",
+		justifyContent: "center",
+		padding: 50,
+	},
+	title: {
+		padding: 5,
+		fontFamily: fonts.main,
+		fontSize: 18,
+		fontWeight: 700,
+		textAlign: "center",
+	},
+	price: {
+		flex: 1,
+		flexDirection: "row",
+		justifyContent: "space-between",
+		width: "100%",
+		padding: 10,
+	},
+	description: {
+		padding: 10,
+		textAlign: "justify",
+	},
+});
 
 export { ProductCard };
 
 {
-    /* 
+	/* 
 <section className="product_main container">
             {catalogList && (
                 <>
 
                     <div className="product_main-item">
                         <div className="product_main-item-pictures">
-                            <ImageBox
-                                imageList={catalogList.icons}
-                                imageMain={catalogList.image}
-                                newProduct={catalogList.new}
-                                age={catalogList.features.age}
-                            />
+
                             <div className="product_main-item-raiting">
                                 <div className="product_main-item-raiting-block">
                                     <Rating
@@ -107,34 +168,7 @@ export { ProductCard };
                         </div>
 
                         <div className="product_main-item-info">
-                            <div className="product_main-item-info-price">
-                                <p
-                                    className={
-                                        catalogList.discount === true
-                                            ? "overline"
-                                            : ""
-                                    }
-                                >
-                                    Цена:{" "}
-                                    <span>{`${catalogList.price} руб.`}</span>
-                                </p>
-                                <p
-                                    className={
-                                        catalogList.discount === true
-                                            ? "discount"
-                                            : "hide"
-                                    }
-                                >
-                                    Цена со скидкой:{" "}
-                                    <span>{`${catalogList.discount_price} руб.`}</span>
-                                </p>
-                                <p
-                                    className={
-                                        catalogList.color === 0 ? "hide" : ""
-                                    }
-                                >
-                                    Цвет: <span>{catalogList.color}</span>
-                                </p>
+                            
                                 <div className="product_main-item-info-like">
                                     <div className="button_container button_cart">
                                         <button
