@@ -9,7 +9,6 @@ import {
     FlatList,
     ActivityIndicator,
     SafeAreaView,
-    ScrollView,
     TextInput,
     TouchableHighlight,
 } from "react-native";

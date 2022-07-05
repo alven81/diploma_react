@@ -1,7 +1,8 @@
 const colors = {
-    mainPinc: '#fc5185',
+    mainPinc: "#fc5185",
     footerBckg: "#f2785f",
-    mainWhite: "#fff"
-}
+    mainWhite: "#fff",
+    headerBckg: "#f2785f",
+};
 
-export default colors
+export default colors;

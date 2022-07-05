@@ -8,8 +8,8 @@ import {
 	Text,
 	Dimensions,
 } from "react-native";
-import colors from "../res/colors";
-import fonts from "../res/fonts";
+import colors from "../../res/colors";
+import fonts from "../../res/fonts";
 
 const { width } = Dimensions.get("window");
 const height = width * 1.5;

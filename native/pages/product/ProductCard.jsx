@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { View, Text, Button, StyleSheet } from "react-native";
-import fonts from "../res/fonts";
+import { View, Text, StyleSheet } from "react-native";
+import fonts from "../../res/fonts";
 import { Features } from "./Features";
 import { ImageBox } from "./ImageBox";
 
