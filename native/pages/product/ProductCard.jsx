@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, ScrollView } from "react-native";
 import { Separator } from "../../components/Separator";
 import colors from "../../res/colors";
 import fonts from "../../res/fonts";
+import { Consist } from "./Consist";
 import { Features } from "./Features";
 import { ImageBox } from "./ImageBox";
 
@@ -29,7 +30,7 @@ const ProductCard = ({ route, navigation }) => {
 	}, [route.params.id]);
 
 	return (
-		<>
+		<ScrollView nestedScrollEnabled={true}>
 			<ImageBox
 				images={product.icons}
 				newProduct={product.new}
@@ -79,9 +80,14 @@ const ProductCard = ({ route, navigation }) => {
 						chars={styles.chars}
 					/>
 					<Separator />
+					<Consist
+						consist={product.consist}
+						chars={styles.chars}
+					/>
+                    <Separator />
 				</View>
 			</View>
-		</>
+		</ScrollView>
 	);
 };
 

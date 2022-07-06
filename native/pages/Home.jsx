@@ -6,10 +6,10 @@ const Home = ({ navigation }) => {
             style={{ flex: 1, alignItems: "center", justifyContent: "center" }}
         >
             <Text>Home page</Text>
-            <Button
+            {/* <Button
                 title="Go to Catalog"
                 onPress={() => navigation.navigate("Catalog")}
-            />
+            /> */}
         </View>
     );
 };

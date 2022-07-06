@@ -12,7 +12,7 @@ import colors from "../../res/colors";
 import fonts from "../../res/fonts";
 
 const { width } = Dimensions.get("window");
-const height = width * 1.5;
+const height = width * 1.3;
 
 const ImageBox = ({ images, newProduct, age }) => {
 	const [active, setActive] = useState(0);

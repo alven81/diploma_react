@@ -8,12 +8,13 @@ import {
     Image,
     FlatList,
     ActivityIndicator,
-    SafeAreaView,
     TextInput,
     TouchableHighlight,
+    ScrollView
 } from "react-native";
 import { Footer } from "../components/Footer";
 import { Product } from "../components/Product";
+import { Search } from "../components/Search";
 import { Separator } from "../components/Separator";
 import colors from "../res/colors";
 import fonts from "../res/fonts";
@@ -83,8 +84,8 @@ const Catalog = () => {
     }, []);
 
     return (
-        <SafeAreaView style={styles.container}>
-            <View style={styles.search}>
+        <ScrollView style={styles.container} nestedScrollEnabled={true}>
+            {/* <View style={styles.search}>
                 <TextInput
                     style={{
                         borderColor: colors.mainPinc,
@@ -108,7 +109,7 @@ const Catalog = () => {
                         }}
                     />
                 </TouchableHighlight>
-            </View>
+            </View> */}
             <Separator />
             <View style={styles.logo}>
                 <Text
@@ -129,6 +130,11 @@ const Catalog = () => {
                     }}
                 />
             </View>
+            <Separator />
+
+
+                <Search />
+
             <Separator />
             <View style={styles.fixToText}>
                 {isLoading ? (
@@ -180,7 +186,7 @@ const Catalog = () => {
             </View>
             <Footer />
             <StatusBar style="auto" />
-        </SafeAreaView>
+        </ScrollView>
     );
 };
 
@@ -191,13 +197,13 @@ const styles = StyleSheet.create({
         flex: 1,
         paddingTop: 5,
         paddingBottom: 10,
-        justifyContent: "flex-start",
+        //justifyContent: "flex-start",
         marginHorizontal: 16,
         backgroundColor: colors.mainWhite,
     },
     logo: {
         padding: 5,
-        justifyContent: "flex-start",
+        //justifyContent: "flex-start",
         alignItems: "center",
     },
     separator: {
@@ -208,7 +214,7 @@ const styles = StyleSheet.create({
     search: {
         flex: 1,
         flexDirection: "row",
-        justifyContent: "space-between",
+        //justifyContent: "space-between",
         width: "100%",
         minHeight: 30,
         maxHeight: 30,

@@ -6,6 +6,7 @@
 # dependencies
 /kreative/node_modules
 /native/node_modules
+/react-native-examples
 /.pnp
 .pnp.js
 

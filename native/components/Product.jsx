@@ -23,14 +23,6 @@ const Product = ({ item }) => {
                     style={styles.image}
                 />
 
-                <Text
-                    style={{
-                        fontWeight: 700,
-                    }}
-                >
-                    Стоимость:
-                </Text>
-
                 <View style={styles.price}>
                     <Text
                         style={{
