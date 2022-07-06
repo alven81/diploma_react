@@ -14,6 +14,7 @@ import {
 } from "react-native";
 import { Footer } from "../components/Footer";
 import { Product } from "../components/Product";
+import { Separator } from "../components/Separator";
 import colors from "../res/colors";
 import fonts from "../res/fonts";
 
@@ -22,8 +23,6 @@ const Catalog = () => {
     const [data, setData] = useState([]);
     const [product, setProduct] = useState([]);
     const [searchText, setSearchText] = useState("");
-
-    const Separator = () => <View style={styles.separator} />;
 
     const getCategories = async () => {
         try {

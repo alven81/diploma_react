@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { View, Text, StyleSheet } from "react-native";
+import { Separator } from "../../components/Separator";
+import colors from "../../res/colors";
 import fonts from "../../res/fonts";
 import { Features } from "./Features";
 import { ImageBox } from "./ImageBox";
@@ -27,56 +29,59 @@ const ProductCard = ({ route, navigation }) => {
 	}, [route.params.id]);
 
 	return (
-		<View
-			style={{
-				flex: 1,
-				alignItems: "center",
-				justifyContent: "flex-start",
-			}}
-		>
-			<Text style={styles.title}>{product.title}</Text>
-
+		<>
 			<ImageBox
 				images={product.icons}
 				newProduct={product.new}
 				age={product.features}
 			/>
-			<Text
+			<View
 				style={{
-					fontWeight: 700,
+					//flex: 1,
+					alignItems: "center",
+					justifyContent: "flex-start",
 				}}
 			>
-				Стоимость:
-			</Text>
-
-			<View style={styles.price}>
-				<Text
-					style={{
-						textDecorationLine:
-							product.discount === true ? "line-through" : "",
-						fontFamily: fonts.main,
-					}}
-				>
-					{`${product.price} руб.`}
-				</Text>
-				<Text
-					style={{
-						color: product.discount === true ? "#fc5185" : "#fff",
-						fontFamily: fonts.main,
-					}}
-				>
-					{`${product.discount_price} руб.`}
-				</Text>
+				<Text style={styles.title}>{product.title}</Text>
+				<View style={styles.priceContainer}>
+					<Text
+						style={{
+							textDecorationLine:
+								product.discount === true ? "line-through" : "",
+							fontFamily: fonts.main,
+							textAlign: "left",
+						}}
+					>
+						{`${product.price} руб.`}
+					</Text>
+					<Text
+						style={{
+							display: product.discount === true ? "" : "none",
+							color: colors.mainPinc,
+							fontFamily: fonts.main,
+							textAlign: "left",
+							fontSize: 25,
+							fontWeight: 700,
+						}}
+					>
+						{`${product.discount_price} руб.`}
+					</Text>
+					<Separator />
+					<Text>Артикул: {product.art}</Text>
+					<Separator />
+					<Text style={styles.chars}>Описание:</Text>
+					<Text style={styles.description}>
+						{product.description}
+					</Text>
+					<Separator />
+					<Features
+						features={product.features}
+						chars={styles.chars}
+					/>
+					<Separator />
+				</View>
 			</View>
-
-			<View>
-				<Text style={styles.title}>Описание</Text>
-				<Text style={styles.description}>{product.description}</Text>
-			</View>
-			<View>
-				<Features features={product.features} />
-			</View>
-		</View>
+		</>
 	);
 };
 
@@ -90,14 +95,22 @@ const styles = StyleSheet.create({
 	title: {
 		padding: 5,
 		fontFamily: fonts.main,
-		fontSize: 18,
+		fontSize: 16,
 		fontWeight: 700,
 		textAlign: "center",
 	},
-	price: {
+	chars: {
+		padding: 5,
+		fontFamily: fonts.main,
+		textTransform: "uppercase",
+		fontSize: 16,
+		fontWeight: 700,
+		textAlign: "left",
+	},
+	priceContainer: {
 		flex: 1,
-		flexDirection: "row",
-		justifyContent: "space-between",
+		//flexDirection: "row",
+		//justifyContent: "space-between",
 		width: "100%",
 		padding: 10,
 	},

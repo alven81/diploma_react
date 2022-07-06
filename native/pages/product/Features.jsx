@@ -2,7 +2,7 @@ import { useState } from "react";
 import { View, Text, StyleSheet } from "react-native";
 import fonts from "../../res/fonts";
 
-const Features = ({ features }) => {
+const Features = ({ features, chars }) => {
     const [isLoading, setLoading] = useState(true);
 
     return !features ? (
@@ -15,11 +15,11 @@ const Features = ({ features }) => {
         </Text>
     ) : (
         <View
-            style={{ flex: 1, alignItems: "center", justifyContent: "center" }}
+            //style={{ flex: 1, alignItems: "center", justifyContent: "center" }}
         >
-            <Text style={styles.title}>Характеристики</Text>
+            <Text style={chars}>Характеристики:</Text>
             <View style={features.weight ? styles.description : styles.hide}>
-                <Text>Вес товара с упаковкой (г)</Text>
+                <Text>Вес товара с упаковкой (г):</Text>
                 <Text>{features.weight}</Text>
             </View>
             <View
@@ -27,36 +27,35 @@ const Features = ({ features }) => {
                     features.creation.length ? styles.description : styles.hide
                 }
             >
-                <Text>Вид творчества</Text>
+                <Text>Вид творчества:</Text>
                 {features.creation.map((text, index) => (
-                    <Text key={index}>{text};</Text>
+                    <Text key={index}>- {text};</Text>
                 ))}
-                <Text>{features.creation}</Text>
             </View>
             <View style={features.age ? styles.description : styles.hide}>
-                <Text>Возрастные ограничения</Text>
+                <Text>Возрастные ограничения:</Text>
                 <Text>{features.age}</Text>
             </View>
             <View
                 style={features.height_gross ? styles.description : styles.hide}
             >
-                <Text>Высота упаковки (см)</Text>
+                <Text>Высота упаковки (см):</Text>
                 <Text>{features.height_gross}</Text>
             </View>
             <View style={features.deep ? styles.description : styles.hide}>
-					<Text>Глубина упаковки (см)</Text>
+					<Text>Глубина упаковки (см):</Text>
 					<Text>{features.deep}</Text>
 				</View>
 					<View style={features.width ? styles.description : styles.hide}>
-					<Text>Ширина упаковки (см)</Text>
+					<Text>Ширина упаковки (см):</Text>
 					<Text>{features.width}</Text>
 				</View>
 				<View style={features.height ? styles.description : styles.hide}>
-					<Text>Высота изделия (см)</Text>
+					<Text>Высота изделия (см):</Text>
 					<Text>{features.height}</Text>
 				</View>
 				<View style={features.creation.length ? styles.description : styles.hide}>
-					<Text>Страна производства</Text>
+					<Text>Страна производства:</Text>
 					<Text>{features.origin}</Text>
 				</View>
         </View>
@@ -73,13 +72,14 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         padding: 50,
     },
-    title: {
-        padding: 5,
-        fontFamily: fonts.main,
-        fontSize: 18,
-        fontWeight: 700,
-        textAlign: "center",
-    },
+    // title: {
+    //     padding: 5,
+	// 	fontFamily: fonts.main,
+	// 	textTransform: "uppercase",
+	// 	fontSize: 16,
+	// 	fontWeight: 700,
+	// 	textAlign: "left",
+    // },
     price: {
         flex: 1,
         flexDirection: "row",
