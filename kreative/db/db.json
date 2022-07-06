@@ -1201,6 +1201,30 @@
   ],
   "users": [
     {
+      "id": 0,
+      "avatar": "/assets/avatars/10.jpg",
+      "firstName": "firstName",
+      "lastName": "lastName",
+      "email": "email@das.ge",
+      "password": "123456",
+      "favourites": [],
+      "cart": [
+        1,
+        2,
+        4,
+        17,
+        17,
+        17,
+        1,
+        1,
+        1,
+        3,
+        3,
+        3
+      ],
+      "likes": []
+    },
+    {
       "id": 1,
       "avatar": "/assets/avatars/10.jpg",
       "firstName": "Арнольд",

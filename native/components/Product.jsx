@@ -1,14 +1,17 @@
-import { Text, Image, View, StyleSheet } from "react-native";
+import { Text, Image, View, StyleSheet, ActivityIndicator } from "react-native";
 import colors from "../res/colors";
 import fonts from "../res/fonts";
 import { Link } from "@react-navigation/native";
 
 const Product = ({ item }) => {
     return (
+
+        !item ? <ActivityIndicator /> :
+
         <Link
             to={{
                 screen: "ProductCard",
-                params: {id: item.id}
+                params: { id: item.id },
             }}
         >
             <View style={styles.container}>

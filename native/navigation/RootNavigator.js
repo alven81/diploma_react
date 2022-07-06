@@ -7,11 +7,13 @@ import { Catalog } from "../pages/Catalog";
 import { Home } from "../pages/Home";
 import { ProductCard } from "../pages/product/ProductCard";
 import colors from "../res/colors";
+import { Cart } from "../pages/product/cart/Cart";
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 const HomeStack = createNativeStackNavigator();
 const CatalogStack = createNativeStackNavigator();
+const CartStack = createNativeStackNavigator();
 
 function RootNavigator() {
 	return (
@@ -97,6 +99,38 @@ function RootNavigator() {
 								}}
 							/>
 						</CatalogStack.Navigator>
+					)}
+				</Tab.Screen>
+                <Tab.Screen
+					name="Корзина"
+					options={{
+						tabBarIcon: ({ color, size }) => (
+							<MaterialIcons
+								name="shopping"
+								color={color}
+								size={size}
+							/>
+						),
+					}}
+				>
+					{() => (
+						<CartStack.Navigator initialRouteName="Home">
+							<CartStack.Screen
+								name="Cart"
+								component={Cart}
+								options={{
+									title: "Корзина",
+									headerStyle: {
+										backgroundColor: colors.headerBckg,
+									},
+									headerTintColor: colors.mainWhite,
+									headerTitleStyle: {
+										fontWeight: "bold",
+									},
+									//headerShown: false
+								}}
+							/>
+						</CartStack.Navigator>
 					)}
 				</Tab.Screen>
 			</Tab.Navigator>

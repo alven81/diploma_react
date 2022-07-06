@@ -17,19 +17,3 @@ function setSearchProduct(load) {
 
 export { getSearchProduct };
 
-// export const getSearchProduct = async (searchText) => {
-// 	try {
-// 		const response = await fetch(
-// 			`http://localhost:3004/products?q=${searchText}`
-// 		);
-// 		const json = await response.json();
-// 		console.warn("action: ", json);
-// 		if (json) {
-// 			dispatch(setSearchProduct(json));
-// 		} else {
-// 			console.warn("Unable to fetch");
-// 		}
-// 	} catch (error) {
-// 		console.error(error);
-// 	}
-// };

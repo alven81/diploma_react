@@ -10,20 +10,29 @@ import {
     ActivityIndicator,
     TextInput,
     TouchableHighlight,
-    ScrollView
+    ScrollView,
 } from "react-native";
+import { useDispatch, useSelector } from "react-redux";
 import { Footer } from "../components/Footer";
 import { Product } from "../components/Product";
 import { Search } from "../components/Search";
 import { Separator } from "../components/Separator";
 import colors from "../res/colors";
 import fonts from "../res/fonts";
+import loadCart from "../store/actions/loadCartAction";
 
 const Catalog = () => {
     const [isLoading, setLoading] = useState(true);
     const [data, setData] = useState([]);
     const [product, setProduct] = useState([]);
-    const [searchText, setSearchText] = useState("");
+    //const [searchText, setSearchText] = useState("");
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(loadCart(0))
+        //const whatInTheCart = useSelector((state) => state.loadCart.inCart);
+        //console.warn(whatInTheCart)
+    }, [])
 
     const getCategories = async () => {
         try {
@@ -64,52 +73,20 @@ const Catalog = () => {
         }
     };
 
-    const getSearchProduct = async (searchText) => {
-        try {
-            const response = await fetch(
-                `http://localhost:3004/products?q=${searchText}`
-            );
-            const json = await response.json();
-            setProduct(json);
-        } catch (error) {
-            console.error(error);
-        } finally {
-            setLoading(false);
-        }
-    };
+    const search = useSelector((state) => state.searchData.search);
 
     useEffect(() => {
         getCategories();
         getAllProducts();
     }, []);
 
+    useEffect(() => {
+        setProduct(search);
+    }, [search]);
+
     return (
         <ScrollView style={styles.container} nestedScrollEnabled={true}>
-            {/* <View style={styles.search}>
-                <TextInput
-                    style={{
-                        borderColor: colors.mainPinc,
-                        borderWidth: 1,
-                        borderRadius: 5,
-                        paddingHorizontal: 5,
-                        width: "90%",
-                    }}
-                    //defaultValue="Что ищем?"
-                    onChangeText={setSearchText}
-                    value={searchText}
-                />
-                <TouchableHighlight
-                    onPress={() => getSearchProduct(searchText)}
-                >
-                    <Image
-                        source={require("../assets/loupe.svg")}
-                        style={{
-                            height: 30,
-                            width: 30,
-                        }}
-                    />
-                </TouchableHighlight>
-            </View> */}
+            <Search />
             <Separator />
             <View style={styles.logo}>
                 <Text
@@ -130,12 +107,9 @@ const Catalog = () => {
                     }}
                 />
             </View>
-            <Separator />
-
-
-                <Search />
 
             <Separator />
+
             <View style={styles.fixToText}>
                 {isLoading ? (
                     <ActivityIndicator />
@@ -179,7 +153,9 @@ const Catalog = () => {
                         <FlatList
                             data={product}
                             keyExtractor={({ id }, index) => id}
-                            renderItem={({ item }) => <Product item={item} />}
+                            renderItem={({ item }) => (
+                                <Product key={item.id} item={item} />
+                            )}
                         />
                     </>
                 )}
