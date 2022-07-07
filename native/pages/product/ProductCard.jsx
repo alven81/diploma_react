@@ -11,148 +11,146 @@ import axios from "axios";
 import loadCart from "../../store/actions/loadCartAction";
 
 const ProductCard = ({ route, navigation }) => {
-    const [product, setProduct] = useState([]);
-    const [isLoading, setLoading] = useState(true);
-    const dispatch = useDispatch();
-    const whatInTheCart = useSelector((state) => state.loadCart.inCart);
+	const [product, setProduct] = useState([]);
+	const [isLoading, setLoading] = useState(true);
+	const dispatch = useDispatch();
+	const whatInTheCart = useSelector((state) => state.loadCart.inCart);
 
-    const getProduct = async (id) => {
-        try {
-            const response = await fetch(
-                `http://localhost:3004/products/${id}`
-            );
-            const json = await response.json();
-            setProduct(json);
-        } catch (error) {
-            console.error(error);
-        } finally {
-            setLoading(false);
-        }
-    };
+	const getProduct = async (id) => {
+		try {
+			const response = await fetch(
+				`http://localhost:3004/products/${id}`
+			);
+			const json = await response.json();
+			setProduct(json);
+		} catch (error) {
+			console.error(error);
+		} finally {
+			setLoading(false);
+		}
+	};
 
-    const handleAddtoCart = async () => {
+	const handleAddtoCart = async () => {
+		whatInTheCart.push(Number(route.params.id));
+		await axios
+			.patch(`http://localhost:3004/users/0`, {
+				cart: whatInTheCart,
+			})
+			.catch(function (error) {
+				if (error.response) {
+					console.log(error.response.status);
+				}
+			});
+		dispatch(loadCart(0)); //user.id - 0 - default user
+	};
 
-        whatInTheCart.push(Number(route.params.id));
-        await axios
-            .patch(`http://localhost:3004/users/0`, {
-                cart: whatInTheCart,
-            })
-            .catch(function (error) {
-                if (error.response) {
-                    console.log(error.response.status);
-                }
-            });
-        dispatch(loadCart(0)); //user.id - 0 - default user
-    };
+	useEffect(() => {
+		getProduct(route.params.id);
+	}, [route.params.id]);
 
-    useEffect(() => {
-        getProduct(route.params.id);
-    }, [route.params.id]);
-
-    return (
-        <ScrollView nestedScrollEnabled={true}>
-            <ImageBox
-                images={product.icons}
-                newProduct={product.new}
-                age={product.features}
-            />
-            <View
-                style={{
-                    //flex: 1,
-                    alignItems: "center",
-                    justifyContent: "flex-start",
-                }}
-            >
-                <Text style={styles.title}>{product.title}</Text>
-                <View style={styles.priceContainer}>
-                    <Text
-                        style={{
-                            textDecorationLine:
-                                product.discount === true ? "line-through" : "",
-                            fontFamily: fonts.main,
-                            textAlign: "left",
-                        }}
-                    >
-                        {`${product.price} руб.`}
-                    </Text>
-                    <Text
-                        style={{
-                            display: product.discount === true ? "" : "none",
-                            color: colors.mainPinc,
-                            fontFamily: fonts.main,
-                            textAlign: "left",
-                            fontSize: 25,
-                            fontWeight: 700,
-                        }}
-                    >
-                        {`${product.discount_price} руб.`}
-                    </Text>
-                    <Separator />
-                    <Text>Артикул: {product.art}</Text>
-                    <Separator />
-                    <Text style={styles.chars}>Описание:</Text>
-                    <Text style={styles.description}>
-                        {product.description}
-                    </Text>
-                    <Separator />
-                    <Features
-                        features={product.features}
-                        chars={styles.chars}
-                    />
-                    <Separator />
-                    <Consist consist={product.consist} chars={styles.chars} />
-                    <Separator />
-                </View>
-
-                <Button
-                    onPress={() => handleAddtoCart()}
-                    color={colors.mainPinc}
-                    title="В КОРЗИНУ"
-                />
-            </View>
-        </ScrollView>
-    );
+	return (
+		<ScrollView nestedScrollEnabled={true}>
+			<ImageBox
+				images={product.icons}
+				newProduct={product.new}
+				age={product.features}
+			/>
+			<View
+				style={{
+					//flex: 1,
+					alignItems: "center",
+					justifyContent: "flex-start",
+				}}
+			>
+				<Text style={styles.title}>{product.title}</Text>
+				<View style={styles.priceContainer}>
+					<Text
+						style={{
+							textDecorationLine:
+								product.discount === true ? "line-through" : "",
+							fontFamily: fonts.main,
+							textAlign: "left",
+						}}
+					>
+						{`${product.price} руб.`}
+					</Text>
+					<Text
+						style={{
+							display: product.discount === true ? "" : "none",
+							color: colors.mainPinc,
+							fontFamily: fonts.main,
+							textAlign: "left",
+							fontSize: 25,
+							fontWeight: 700,
+						}}
+					>
+						{`${product.discount_price} руб.`}
+					</Text>
+					<Separator />
+					<Text>Артикул: {product.art}</Text>
+					<Separator />
+					<Text style={styles.chars}>Описание:</Text>
+					<Text style={styles.description}>
+						{product.description}
+					</Text>
+					<Separator />
+					<Features
+						features={product.features}
+						chars={styles.chars}
+					/>
+					<Separator />
+					<Consist consist={product.consist} chars={styles.chars} />
+					<Separator />
+				</View>
+			</View>
+			<Button
+				onPress={() => handleAddtoCart()}
+				color={colors.mainPinc}
+				title="В КОРЗИНУ"
+			/>
+		</ScrollView>
+	);
 };
 
 const styles = StyleSheet.create({
-    container: {
-        backgroundColor: "#fff",
-        alignItems: "center",
-        justifyContent: "center",
-        padding: 50,
-    },
-    title: {
-        padding: 5,
-        fontFamily: fonts.main,
-        fontSize: 16,
-        fontWeight: 700,
-        textAlign: "center",
-    },
-    chars: {
-        padding: 5,
-        fontFamily: fonts.main,
-        textTransform: "uppercase",
-        fontSize: 16,
-        fontWeight: 700,
-        textAlign: "left",
-    },
-    priceContainer: {
-        flex: 1,
-        //flexDirection: "row",
-        //justifyContent: "space-between",
-        width: "100%",
-        padding: 10,
-    },
-    description: {
-        padding: 10,
-        textAlign: "justify",
-    },
+	container: {
+		backgroundColor: "#fff",
+		alignItems: "center",
+		justifyContent: "center",
+		padding: 50,
+	},
+	title: {
+		padding: 5,
+		fontFamily: fonts.main,
+		fontSize: 16,
+		fontWeight: 700,
+		textAlign: "center",
+	},
+	chars: {
+		padding: 5,
+		fontFamily: fonts.main,
+		textTransform: "uppercase",
+		fontSize: 16,
+		fontWeight: 700,
+		textAlign: "left",
+	},
+	priceContainer: {
+		flex: 1,
+		//flexDirection: "row",
+		//justifyContent: "space-between",
+		width: "100%",
+		padding: 10,
+	},
+	description: {
+		padding: 10,
+		textAlign: "justify",
+	},
 });
 
 export { ProductCard };
 
 {
-    /* 
+	/* 
 <section className="product_main container">
             {catalogList && (
                 <>

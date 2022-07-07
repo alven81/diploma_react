@@ -3,7 +3,7 @@ const initialState = {
 };
 
 const searchReducer = (state = initialState, action) => {
-	console.warn("reduсer action: ", action);
+	//console.warn("reduсer action: ", action);
 	switch (action.type) {
 		case "GET_SEARCH_RESULT":
 			return {

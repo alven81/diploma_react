@@ -70,9 +70,9 @@ const styles = StyleSheet.create({
 	search: {
 		flex: 1,
 		flexDirection: "row",
-		//justifyContent: "space-between",
 		width: "100%",
 		minHeight: 30,
 		maxHeight: 30,
+        marginVertical: 10,
 	},
 });

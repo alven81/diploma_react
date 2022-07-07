@@ -7,7 +7,7 @@ import { Catalog } from "../pages/Catalog";
 import { Home } from "../pages/Home";
 import { ProductCard } from "../pages/product/ProductCard";
 import colors from "../res/colors";
-import { Cart } from "../pages/product/cart/Cart";
+import { Cart } from "../pages/cart/Cart";
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -16,6 +16,7 @@ const CatalogStack = createNativeStackNavigator();
 const CartStack = createNativeStackNavigator();
 
 function RootNavigator() {
+    
 	return (
 		<NavigationContainer>
 			<Tab.Navigator
@@ -106,7 +107,7 @@ function RootNavigator() {
 					options={{
 						tabBarIcon: ({ color, size }) => (
 							<MaterialIcons
-								name="shopping"
+								name="folder"
 								color={color}
 								size={size}
 							/>
