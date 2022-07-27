@@ -13,7 +13,7 @@ git clone https://github.com/alven81/diploma_react.git
 
 ```js
 cd kreative
-npm install     //install dependencies
+npm install --legacy-peer-deps     //install dependencies
 npm run json    //run local json server
 npm start       //start project
 ```
