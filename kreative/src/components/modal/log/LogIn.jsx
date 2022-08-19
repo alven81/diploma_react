@@ -26,7 +26,7 @@ const LogModal = () => {
                 dispatch(
                     showAlertMessage({
                         status: true,
-                        message: "Вы успешно вошли в ресурс!",
+                        message: "You have successfully logged in!", //Вы успешно вошли в ресурс!
                     })
                 );
                 dispatch(openLogModal(false));
@@ -36,7 +36,7 @@ const LogModal = () => {
                 dispatch(
                     showAlertMessage({
                         status: true,
-                        message: "Вы указали неверный логин или пароль",
+                        message: "You have entered an incorrect username or password", //Вы указали неверный логин или пароль
                     })
                 );
             }
@@ -44,7 +44,7 @@ const LogModal = () => {
             return dispatch(
                 showAlertMessage({
                     status: true,
-                    message: "Пользователь с таким логином не найден!",
+                    message: "User with this login was not found!", //Пользователь с таким логином не найден!
                 })
             );
     };
@@ -59,11 +59,11 @@ const LogModal = () => {
                             onClick={() => dispatch(openLogModal(false))}
                         />
                     </div>
-                    <div className="regform-name">Введите данные для входа</div>
+                     <div className="regform-name">Enter your login details</div> {/* Введите данные для входа */}
                     <form className="regform-form" onSubmit={handleLogUser}>
                         <label htmlFor="eMail">
                             {" "}
-                            Электроная почта
+                            Email    {/* Электроная почта  */}
                             <input
                                 onChange={(e) => setEMail(e.target.value)}
                                 type="email"
@@ -72,7 +72,7 @@ const LogModal = () => {
                         </label>
                         <label htmlFor="passMain">
                             {" "}
-                            Пароль
+                            Password  {/* Пароль  */}
                             <input
                                 onChange={(e) => setPassMain(e.target.value)}
                                 type="password"
@@ -82,7 +82,7 @@ const LogModal = () => {
                         <div className="regform-button button_container">
                             <button className="regform-button" type="submit">
                                 {" "}
-                                Войти{" "}
+                                OK{" "}  {/* Войти  */}
                             </button>
                         </div>
                     </form>

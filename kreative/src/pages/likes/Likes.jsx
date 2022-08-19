@@ -26,7 +26,7 @@ const Likes = () => {
 
     return (
         <div className="likes container">
-            <p className="likes_title">Мои избранные товары</p>
+            <p className="likes_title">My favorites</p>    {/* Мои избранные товары */}
             <div className="likes_list">
                 {likesContent.map((item) => (
                     <LikesElement key={item.id} item={item} />

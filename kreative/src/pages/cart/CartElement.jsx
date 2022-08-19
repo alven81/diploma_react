@@ -32,7 +32,7 @@ const CartElement = ({ item }) => {
 				showAlertMessage({
 					status: true,
 					message:
-						"Только зарегистрированные пользователи могут добавлять товары в корзину!",
+						"Only registered users can add items to cart!", //Только зарегистрированные пользователи могут добавлять товары в корзину
 				})
 			);
 

@@ -45,7 +45,7 @@ const CommentsModal = ({ onClick, handleShowComments, id, showComment }) => {
 			return dispatch(
 				showAlertMessage({
 					status: true,
-					message: "Вы не можете сохранить пустой отзыв.",
+					message: "You cannot save an empty review.",   //Вы не можете сохранить пустой отзыв
 				})
 			);
 		const review = newCatalog;
@@ -65,7 +65,7 @@ const CommentsModal = ({ onClick, handleShowComments, id, showComment }) => {
 		<div className="fullscreen-box">
 			<div className="comments">
 				<div className="comments-name">
-					<p>{user.firstName}, напишите ваш отзыв о товаре:</p>
+					<p>{user.firstName}, write your review about the product:</p>   {/* напишите ваш отзыв о товаре */}
 					<button
 						className="cross-button"
 						onClick={handleShowComments}
@@ -92,7 +92,7 @@ const CommentsModal = ({ onClick, handleShowComments, id, showComment }) => {
 							onClick={() => sendComment()}
 						>
 							{" "}
-							Отправить
+							Send   {/* Отправить */}
 						</button>
 					</div>
 				</div>

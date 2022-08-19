@@ -40,7 +40,7 @@ const Home = ({ navigation }) => {
 						fontFamily: fonts.main,
 					}}
 				>
-					Добрый день, Таинственный незнакомец!
+					Hello, Mysterious Stranger!   {/* Добрый день, Таинственный незнакомец! */}
 				</Text>
 			</View>
 

@@ -1,15 +1,15 @@
 const ListCraft = () => {
 	return (
 		<div className="home_list-craft">
-			<p>Шитьё </p>
-			<p>Вязание</p>
-			<p>Вышивание</p>
-			<p>Валяние</p>
-			<p>Бисероплетение</p>
-			<p>Декупаж</p>
-			<p>Скрапбугинг</p>
-			<p>Батик </p>
-			<p>Пэчворк </p>
+			<p>Sewing </p>           {/* Шитьё */}
+			<p>Knitting</p>          {/* Вязание */}
+			<p>Embroidery</p>        {/* Вышивание */}
+			<p>Wallow</p>          {/* Валяние */}
+			<p>Beading</p>   {/* Бисероплетение */}
+			<p>Decoupage</p>          {/* Декупаж */}
+			<p>Scrapbooking</p>      {/* Скрапбугинг */}
+			<p>Batik </p>           {/* Батик */}
+			<p>Patchwork </p>         {/* Пэчворк */}
 		</div>
 	);
 };

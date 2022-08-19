@@ -24,15 +24,15 @@ const Product = () => {
     const [review, setReview] = useState(false);
     const [cartItem, setCartItem] = useState();
     const [consistBlockText, setConsistBlockText] = useState(
-        "Развернуть описание"
+        "Full description"   //Развернуть описание
     );
     const [keyConsistSwitch, setKeyConsistSwitch] = useState(false);
     const [featureBlockText, setFeatureBlockText] = useState(
-        "Развернуть описание"
+        "Full description"   //Развернуть описание
     );
     const [keyFeatureSwitch, setKeyFeatureSwitch] = useState(false);
     const [descriptionBlockText, setDescriptionBlockText] = useState(
-        "Развернуть описание"
+        "Full description"   //Развернуть описание
     );
     const [keyDescriptionSwitch, setKeyDescriptionSwitch] = useState(false);
 
@@ -83,7 +83,7 @@ const Product = () => {
                 showAlertMessage({
                     status: true,
                     message:
-                        "Только зарегистрированные пользователи могут оставлять комментарии!",
+                        "Only registered users can leave comments!", //Только зарегистрированные пользователи могут оставлять комментарии
                 })
             );
         setShowComment(!showComment);
@@ -99,7 +99,7 @@ const Product = () => {
                 showAlertMessage({
                     status: true,
                     message:
-                        "Пожалуйста зарегистрируйтесь, чтобы добавлять товары в корзину!",
+                        "Please register to add items to your shopping cart!", //Пожалуйста зарегистрируйтесь, чтобы добавлять товары в корзину
                 })
             );
         whatInTheCart.push(Number(cartItem));
@@ -121,7 +121,7 @@ const Product = () => {
                 showAlertMessage({
                     status: true,
                     message:
-                        "Пожалуйста зарегистрируйтесь, чтобы поставить лайк!",
+                        "Please register to like!", //Пожалуйста зарегистрируйтесь, чтобы поставить лайк
                 })
             );
         if (!checkExistingLikes.includes(Number(cartItem))) checkExistingLikes.push(Number(cartItem));
@@ -141,11 +141,11 @@ const Product = () => {
     const handleOpenDescription = (incomingBlock) => {
         if (!keyDescriptionSwitch) {
             incomingBlock.current.style.height = "auto";
-            setDescriptionBlockText("Свернуть описание");
+            setDescriptionBlockText("Collapse Description");   //Свернуть описание
         }
         if (keyDescriptionSwitch) {
             incomingBlock.current.style.height = "90px";
-            setDescriptionBlockText("Развернуть описание");
+            setDescriptionBlockText("Full description"); //Развернуть описание
         }
         setKeyDescriptionSwitch(!keyDescriptionSwitch);
     };
@@ -153,11 +153,11 @@ const Product = () => {
     const handleOpenFeature = (incomingBlock) => {
         if (!keyFeatureSwitch) {
             incomingBlock.current.style.height = "auto";
-            setFeatureBlockText("Свернуть описание");
+            setFeatureBlockText("Collapse Description");   //Свернуть описание
         }
         if (keyFeatureSwitch) {
             incomingBlock.current.style.height = "90px";
-            setFeatureBlockText("Развернуть описание");
+            setFeatureBlockText("Full description"); //Развернуть описание
         }
         setKeyFeatureSwitch(!keyFeatureSwitch);
     };
@@ -165,11 +165,11 @@ const Product = () => {
     const handleOpenConsist = (incomingBlock) => {
         if (!keyConsistSwitch) {
             incomingBlock.current.style.height = "auto";
-            setConsistBlockText("Свернуть описание");
+            setConsistBlockText("Collapse Description");   //Свернуть описание
         }
         if (keyConsistSwitch) {
             incomingBlock.current.style.height = "90px";
-            setConsistBlockText("Развернуть описание");
+            setConsistBlockText("Collapse Description");   //Свернуть описание
         }
         setKeyConsistSwitch(!keyConsistSwitch);
     };
@@ -203,14 +203,14 @@ const Product = () => {
                                         className="product_main-item-raiting-block-button"
                                         onClick={(e) => handleShowReview()}
                                     >
-                                        Отзывы
+                                        Reviews     {/* Отзывы */}
                                     </button>
                                 </div>
                                 <div className="button_container">
                                     <button
                                         onClick={(e) => handleShowComments()}
                                     >
-                                        Написать отзыв
+                                        Write a review  {/* Отзывы */}
                                     </button>
                                 </div>
                             </div>
@@ -234,7 +234,7 @@ const Product = () => {
                                 {catalogList.review.length ? (
                                     <Review reviews={catalogList.review} />
                                 ) : (
-                                    <p>По данному товару еще нет отзывов</p>
+                                    <p>There are no reviews for this product yet.</p>    //По данному товару еще нет отзывов
                                 )}
                             </div>
                         </div>
@@ -248,7 +248,7 @@ const Product = () => {
                                             : ""
                                     }
                                 >
-                                    Цена:{" "}
+                                    Price:{" "}  {/* Цена */}
                                     <span>{`${catalogList.price} руб.`}</span>
                                 </p>
                                 <p
@@ -258,7 +258,7 @@ const Product = () => {
                                             : "hide"
                                     }
                                 >
-                                    Цена со скидкой:{" "}
+                                    Discount price:{" "}   {/* Цена со скидкой */}
                                     <span>{`${catalogList.discount_price} руб.`}</span>
                                 </p>
                                 <p
@@ -266,14 +266,14 @@ const Product = () => {
                                         catalogList.color === 0 ? "hide" : ""
                                     }
                                 >
-                                    Цвет: <span>{catalogList.color}</span>
+                                    Color: <span>{catalogList.color}</span>  {/* Цвет */}
                                 </p>
                                 <div className="product_main-item-info-like">
                                     <div className="button_container button_cart">
                                         <button
                                             onClick={() => handleAddtoCart()}
                                         >
-                                            Добавить в корзину
+                                            Add to Basket  {/* Добавить в корзину */}
                                         </button>
                                     </div>
                                     <img
@@ -292,7 +292,7 @@ const Product = () => {
                                         : "product_main-item-description"
                                 }
                             >
-                                <h3>Описание</h3>
+                                <h3>Description</h3>   {/* Описание */}
                                 <p>{catalogList.description}</p>
                             </div>
                             <button
@@ -320,7 +320,7 @@ const Product = () => {
                                 ref={consistBlock}
                                 className="product_main-item-consist"
                             >
-                                <h3>Состав:</h3>
+                                <h3>Consist:</h3>    {/* Состав */}
                                 <Consist consist={catalogList.consist} />
                             </div>
                             <button
@@ -339,7 +339,7 @@ const Product = () => {
             )}
 
             <div className={catalogList ? "hide" : "no_data"}>
-                <p>Упс, похоже не запущен JSON-server...</p>
+                <p>Oops, looks like JSON-server is not running...</p>    {/* Состав */}
             </div>
         </section>
     );

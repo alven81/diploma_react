@@ -38,15 +38,15 @@ const Cart = () => {
 
 	return (
 		<div className="cart-name container">
-			<p>Корзина заказов</p>
+			 <p>Shopping cart</p>     {/* Корзина заказов */}
 			<ul className="cart">
 				{cartContent.map((item) => (
 					<CartElement key={item.id} item={item} />
 				))}
 			</ul>
 			<p>
-				Всего товаров в корзине: {whatInTheCart.length}, стоимость
-				заказа {calcCost(whatInTheCart).toFixed(2)} рублей.
+                Total items in cart: {whatInTheCart.length}, order   {/* Всего товаров в корзине / стоимость*/}
+				cost {calcCost(whatInTheCart).toFixed(2)} PLN.         {/* рублей */}
 			</p>
 		</div>
 	);

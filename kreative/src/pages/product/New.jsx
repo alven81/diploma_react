@@ -38,7 +38,7 @@ const New = () => {
 	return (
 		<div className="new_block">
 			<div>
-				<p className="new-main-header">НОВИНКИ В ЭТОЙ КАТЕГОРИИ</p>
+				<p className="new-main-header">NEW IN THIS CATEGORY</p> {/* НОВИНКИ В ЭТОЙ КАТЕГОРИИ */}
 
 				<div className="new-main-block">
 					<button

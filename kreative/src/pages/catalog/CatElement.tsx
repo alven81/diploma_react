@@ -44,7 +44,7 @@ const CatElement: FC<CatElementProps> = ({ catalog }) => {
 						catalog.discount === true ? "discount_block" : "hide"
 					}
 				>
-					<div className="catalog_main-element-disc_top">СКИДКА</div>
+					<div className="catalog_main-element-disc_top">DISCOUNT</div>     {/* СКИДКА */}
 					<div className="catalog_main-element-disc_bottom">
 						{discountPercent}%
 					</div>

@@ -21,7 +21,7 @@ const App = () => {
     const defaultUser = {
         id: 0,
         avatar: "/assets/avatars/0.jpg",
-        firstName: "Таинственный незнакомец",
+        firstName: "Mysterious Stranger",   //Таинственный незнакомец
         lastName: "",
         email: "",
     };

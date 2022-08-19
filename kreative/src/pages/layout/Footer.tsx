@@ -8,18 +8,18 @@ const Footer = () => {
 				<div className="footer_main-contacts">
 					<p className="footer_main-contacts-phone">
 						<a
-							href="tel:+375295779286"
-							title="Связаться с дизайнером"
+							href="tel:+48514556773"
+							 title="Contact the designer"  //Связаться с дизайнером
 						>
-							8(029)5779286
+							+48 514 556 773
 						</a>
 					</p>
-					<p>Творческая мастерская-магазин</p>
+					<p>Creative workshop-store</p>       {/* Творческая мастерская-магазин */}
 					<p className="footer_main-contacts-time">10.00-21.00</p>
 					<p className="footer_main-contacts-mail">
 						<a
 							href="mailto:kyasarina@gmail.com"
-							title="Связаться с дизайнером"
+							title="Contact the designer"  //Связаться с дизайнером
 						>
 							kyasarina@gmail.com
 						</a>
@@ -28,13 +28,13 @@ const Footer = () => {
 				<div className="footer_main-block">
 					<div className="footer_main-block-top">
 						<ul>
-							<li>О нас</li>
+							<li>About</li>  {/* О нас */}
 							<li>
 								<NavLink
 									className="footer_main-block-top-navlink"
 									to="history"
 								>
-									История
+									History  {/* История */}
 								</NavLink>
 							</li>
 							<li>
@@ -42,7 +42,7 @@ const Footer = () => {
 									className="footer_main-block-top-navlink"
 									to="contacts"
 								>
-									Контакты
+									Contacts  {/* Контакты */}
 								</NavLink>
 							</li>
 							<li>
@@ -50,7 +50,7 @@ const Footer = () => {
 									className="footer_main-block-top-navlink"
 									to="blog"
 								>
-									Блог
+									Blog  {/* Блог */}
 								</NavLink>
 							</li>
 							<li>
@@ -58,7 +58,7 @@ const Footer = () => {
 									className="footer_main-block-top-navlink"
 									to="brands"
 								>
-									Бренды
+									Brands  {/* Бренды */}
 								</NavLink>
 							</li>
 							<li>
@@ -66,18 +66,18 @@ const Footer = () => {
 									className="footer_main-block-top-navlink"
 									to="vacancies"
 								>
-									Вакансии
+									Career  {/* Вакансии */}
 								</NavLink>
 							</li>
 						</ul>
 						<ul>
-							<li>Помощь</li>
+							<li>Help</li>  {/* Помощь */}
 							<li>
 								<NavLink
 									className="footer_main-block-top-navlink"
 									to="payment"
 								>
-									Оплата
+									Payment  {/* Оплата */}
 								</NavLink>
 							</li>
 							<li>
@@ -85,7 +85,7 @@ const Footer = () => {
 									className="footer_main-block-top-navlink"
 									to="delivery"
 								>
-									Доставка
+									Delivery  {/* Доставка */}
 								</NavLink>
 							</li>
 							<li>
@@ -93,7 +93,7 @@ const Footer = () => {
 									className="footer_main-block-top-navlink"
 									to="return"
 								>
-									Правила возврата
+									Return Policy  {/* Правила возврата */}
 								</NavLink>
 							</li>
 							<li>
@@ -101,7 +101,7 @@ const Footer = () => {
 									className="footer_main-block-top-navlink"
 									to="offerta"
 								>
-									Публична оферт
+									Public offer  {/* Публична оферта */}
 								</NavLink>
 							</li>
 							<li>
@@ -109,18 +109,18 @@ const Footer = () => {
 									className="footer_main-block-top-navlink"
 									to="calculator"
 								>
-									Калькулятор расхода пряжи
+									Yarn calculator  {/* Калькулятор расхода пряжи */}
 								</NavLink>
 							</li>
 						</ul>
 						<ul>
-							<li>Карта постоянного покупателя</li>
+							<li>Loyalty card</li>  {/* Карта постоянного покупателя */}
 							<li>
 								<NavLink
 									className="footer_main-block-top-navlink"
 									to="info"
 								>
-									Информация
+									Information  {/* Информация */}
 								</NavLink>
 							</li>
 							<li>
@@ -128,7 +128,7 @@ const Footer = () => {
 									className="footer_main-block-top-navlink"
 									to="activation"
 								>
-									Активация
+									Activation  {/* Активация */}
 								</NavLink>
 							</li>
 							<li>
@@ -136,7 +136,7 @@ const Footer = () => {
 									className="footer_main-block-top-navlink"
 									to="restore"
 								>
-									Восстановление
+									Recovery  {/* Восстановление */}
 								</NavLink>
 							</li>
 							<li>
@@ -144,18 +144,18 @@ const Footer = () => {
 									className="footer_main-block-top-navlink"
 									to="question"
 								>
-									Вопрос
+									FAQ  {/* Вопрос */}
 								</NavLink>
 							</li>
 						</ul>
 						<ul>
-							<li>Обратная связь</li>
+							<li>Feedback</li>  {/* Обратная связь */}
 							<li>
 								<NavLink
 									className="footer_main-block-top-navlink"
 									to="question"
 								>
-									Задать вопрос
+									Ask a Question  {/* Задать вопрос */}
 								</NavLink>
 							</li>
 							<li>
@@ -163,7 +163,7 @@ const Footer = () => {
 									className="footer_main-block-top-navlink"
 									to="review"
 								>
-									Отзывы
+									Reviews  {/* Отзывы */}
 								</NavLink>
 							</li>
 							<li>
@@ -171,7 +171,7 @@ const Footer = () => {
 									className="footer_main-block-top-navlink"
 									to="card"
 								>
-									Подарочная карта
+									Gift card  {/* Подарочная карта */}
 								</NavLink>
 							</li>
 							<li>
@@ -179,43 +179,43 @@ const Footer = () => {
 									className="footer_main-block-top-navlink"
 									to="suppliers"
 								>
-									Поставщикам товаров и услуг
+									Suppliers of goods and services  {/* Поставщикам товаров и услуг */}
 								</NavLink>
 							</li>
 							<li>
 								<a href="https://www.facebook.com/">
 									<img
 										src="/assets/img/facebook.svg"
-										alt="Фейсбук"
+										alt="Facebook"   //Фейсбук
 									/>
 								</a>
 								<a href="https://twitter.com/">
 									<img
 										src="/assets/img/twitter.svg"
-										alt="Твиттер"
+										alt="Twitter"   //Твиттер
 									/>
 								</a>
 								<a href="https://vk.com/">
 									<img
 										src="/assets/img/vk.svg"
-										alt="ВКонтакте"
+										alt="VK"     //ВКонтакте
 									/>
 								</a>
 								<a href="https://telegram.org/">
 									<img
 										src="/assets/img/telegram.svg"
-										alt="Телеграмм"
+										alt="Telegram"     //Телеграмм
 									/>
 								</a>
 							</li>
 						</ul>
 					</div>
 					<div className="footer_main-block-middle">
-						<p>Идеи, мастерские, конкурсы, новинки, акции!</p>
+						<p>Ideas, workshops, contests, novelties, promotions!</p>  {/* Идеи, мастерские, конкурсы, новинки, акции */}
 					</div>
 					<div className="footer_main-block-bottom">
-						<p>Дизайн - Ляшкевич Екатерина</p>
-						<p>Верстка - Кот Александр</p>
+						<p>UI - Liashkevich Katsiarina</p>
+						<p>Layout - Kot Aliaksandr</p>
 					</div>
 				</div>
 			</footer>

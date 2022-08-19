@@ -15,11 +15,11 @@ const PageNotFound = () => {
 			<div className="c">
 				<div className="_404">404</div>
 				<hr className="hr"></hr>
-				<div className="_1">СТРАНИЦА</div>
-				<div className="_2">В РАЗРАБОТКЕ</div>
+				<div className="_1">PAGE</div>  {/* СТРАНИЦА */}
+				<div className="_2">IN DEVELOPING</div>  {/* В РАЗРАБОТКЕ */}
 				<button className="btn">
 					<NavLink className="btn" to="/">
-						Перейти на главную
+                        Switch to Main page  {/* Перейти на главную */}
 					</NavLink>
 				</button>
 

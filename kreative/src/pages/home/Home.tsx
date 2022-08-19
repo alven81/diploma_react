@@ -18,15 +18,15 @@ const Home = () => {
 			<section className="home_main-theme container">
 				<div className="home_main-theme-left">
 					<div className="home_main-theme-left-first">
-						<span>Творческая мастерская-магазин</span>
+						 <span>Креативь workshop-store</span> {/* Творческая мастерская-магазин */}
 					</div>
 					<div className="home_main-theme-left-second">
 						<span>100+</span>
 					</div>
 					<div className="home_main-theme-left-third">
-						<span>идей для творчества</span>
+						<span>ideas for creativity</span>        {/* Творческая мастерская-магазин */}
 						<span className="home_main-theme-button">
-							<Button variant="contained">Вдохновись</Button>
+							<Button variant="contained">Get Inspired</Button> {/* Творческая мастерская-магазин */}
 						</span>
 					</div>
 					<img src="./assets/img/oreol.png" alt="" />
@@ -41,28 +41,28 @@ const Home = () => {
 				<div className="home_main-head-name">
 					<span />
 					<p>
-						"Креатив<small>ь</small>" <small>это</small>
+						"Креатив<small>ь</small>" <small>is</small>    {/* Креативь / это */}
 					</p>
 					<span />
 				</div>
 				<div className="home_main-head-links">
-					<a href="#">Вдохновение</a>
-					<a href="#">Выбор</a>
-					<a href="#">Участие</a>
-					<a href="#">Подарок</a>
+					<a href="#">Inspiration</a>     {/* Вдохновение */}
+					<a href="#">Choice</a>          {/* Выбор */}
+					<a href="#">Involvement</a>     {/* Участие */}
+					<a href="#">Gift</a>            {/* Подарок */}
 				</div>
 				<div className="home_main-head-buttons">
 					<div className="home_main-head-buttons-idea">
-						<a href="#">вдохновляйся идеей</a>
+						<a href="#">be inspired by the idea </a>  {/* вдохновляйся идеей */}
 					</div>
 					<div className="home_main-head-buttons-set">
-						<a href="#">выбирай творческий набор </a>
+						<a href="#">choose a creative set </a>   {/* выбирай творческий набор */}
 					</div>
 					<div className="home_main-head-buttons-quiz">
-						<a href="#">Участвуй в мастер-классах и конкурсах </a>
+						<a href="#">participate in workshops and competitions </a>  {/* Участвуй в мастер-классах и конкурсах */}
 					</div>
 					<div className="home_main-head-buttons-craft">
-						<a href="#">создавай подарок своими руками </a>
+						<a href="#">create a gift with your own hands </a> {/* создавай подарок своими руками */}
 					</div>
 					<span className="artefact_1"></span>
 					<span className="artefact_2"></span>
@@ -77,7 +77,7 @@ const Home = () => {
 					<img src="./assets/img/ball.png" alt="клубок" />
 				</div>
 				<span />
-				<p>ТВОРЧЕСКИЕ НАБОРЫ</p>
+				<p>CREATIVE SETS</p>    {/* ТВОРЧЕСКИЕ НАБОРЫ */}
 				<span />
 			</section>
 
@@ -85,7 +85,7 @@ const Home = () => {
 				<div>
 					<NavLink to="craft">
 						<div className="button_container">
-							<button> РУКОДЕЛИЕ </button>
+							<button> NEEDLEWORK </button>    {/* РУКОДЕЛИЕ */}
 						</div>
 					</NavLink>
 					<div className="home_main-blocks">
@@ -110,7 +110,7 @@ const Home = () => {
 				<div>
 					<NavLink to="paint">
 						<div className="button_container">
-							<button> РИСОВАНИЕ </button>
+							<button> DRAWING </button>    {/* РИСОВАНИЕ */}
 						</div>
 					</NavLink>
 					<div className="home_main-blocks">
@@ -135,7 +135,7 @@ const Home = () => {
 				<div>
 					<NavLink to="model">
 						<div className="button_container">
-							<button> МОДЕЛИРОВАНИЕ </button>
+							<button> MODELING </button>    {/* МОДЕЛИРОВАНИЕ */}
 						</div>
 					</NavLink>
 					<div className="home_main-blocks">
@@ -161,12 +161,12 @@ const Home = () => {
 					<div className="home_main-buttons">
 						<NavLink to="decor">
 							<div className="button_container">
-								<button> Украшение </button>
+								<button> Decoration </button>    {/* Украшение */}
 							</div>
 						</NavLink>
 						<NavLink to="flora">
 							<div className="button_container">
-								<button> Флористика </button>
+								<button> Floristics </button>   {/* Флористика */}
 							</div>
 						</NavLink>
 					</div>
@@ -199,24 +199,24 @@ const Home = () => {
 					<img src="./assets/img/pencil.png" alt="клубок" />
 				</div>
 				<span />
-				<p>Мастерская</p>
+				<p>Workshop</p>   {/* Мастерская */}
 				<span />
 			</section>
 
 			<section className="home_main-workshop home_container">
 				<Workshop
-					buttonTo={"ideas"}
-					buttonName={"Идеи"}
+					buttonTo={"Ideas"}
+					buttonName={"Ideas"} //Идеи
 					picture={"/assets/img/master_1.png"}
 				/>
 				<Workshop
 					buttonTo={"masterclass"}
-					buttonName={"Мастер-класс"}
+					buttonName={"Master Class"} //Мастер-класс
 					picture={"/assets/img/master_2.png"}
 				/>
 				<Workshop
 					buttonTo={"contests"}
-					buttonName={"Конкурсы"}
+					buttonName={"Contests"} //Конкурсы
 					picture={"/assets/img/master_3.png"}
 				/>
 			</section>

@@ -1,7 +1,7 @@
 const Workshop = () => {
 	return (
 		<>
-			<div className="container">Творческая мастерская магазин</div>
+			<div className="container">Creative workshop-store</div>  {/* Творческая мастерская магазин */}
 		</>
 	);
 };

@@ -20,7 +20,7 @@ const Alert = ({ alertMessage }) => {
 					<p>{alertMessage}</p>
 				</div>
 				<div className="button_container">
-					<button onClick={handleCloseAlert}>Закрыть</button>
+					<button onClick={handleCloseAlert}>Close</button>    {/* Закрыть */}
 				</div>
 			</div>
 		</section>

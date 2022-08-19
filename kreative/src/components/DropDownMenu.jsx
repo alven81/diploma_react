@@ -37,7 +37,7 @@ export default function DropDownMenu({ src, alt }) {
                             onClick={onClick}
                             className={userIsLogin ? "" : "hide"}
                         >
-                            Избранное
+                            Favorites      {/* Избранное */}
                         </li>
                     </NavLink>
                     <NavLink className="navlink" to="reviews">
@@ -45,7 +45,7 @@ export default function DropDownMenu({ src, alt }) {
                             onClick={onClick}
                             className={userIsLogin ? "" : "hide"}
                         >
-                            Мои отзывы
+                            My reviews  {/* Мои отзывы */}
                         </li>
                     </NavLink>
                     <NavLink className="navlink" to="settings">
@@ -53,7 +53,7 @@ export default function DropDownMenu({ src, alt }) {
                             onClick={onClick}
                             className={userIsLogin ? "" : "hide"}
                         >
-                            Управление аккаунтом
+                            Account Settings    {/* Управление аккаунтом */}
                         </li>
                     </NavLink>
                     <NavLink className="navlink" to="cart">
@@ -61,7 +61,7 @@ export default function DropDownMenu({ src, alt }) {
                             onClick={onClick}
                             className={userIsLogin ? "" : "hide"}
                         >
-                            Корзина
+                            Cart {/* Корзина */}
                         </li>
                     </NavLink>
                     <li
@@ -71,7 +71,7 @@ export default function DropDownMenu({ src, alt }) {
                             onClick();
                         }}
                     >
-                        Зарегистрироваться
+                        Register  {/* Зарегистрироваться */}
                     </li>
                     <li
                         className={userIsLogin ? "hide" : ""}
@@ -80,14 +80,14 @@ export default function DropDownMenu({ src, alt }) {
                             onClick();
                         }}
                     >
-                        Войти в аккаунт
+                        Sign in {/* Войти в аккаунт */}
                     </li>
                     <NavLink className="navlink" to="admin">
                         <li
                             onClick={onClick}
                             className={userIsLogin ? "" : "hide"}
                         >
-                            Админка
+                            For Admins {/* Админка */}
                         </li>
                     </NavLink>
                 </ul>

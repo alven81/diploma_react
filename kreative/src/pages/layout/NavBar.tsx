@@ -32,7 +32,7 @@ const NavBar: FC = () => {
                                     className="nav_top-list-navlink"
                                     to="/"
                                 >
-                                    Главная
+                                    Main  {/* Главная */}
                                 </NavLink>
                             </li>
                             <li>
@@ -40,7 +40,7 @@ const NavBar: FC = () => {
                                     className="nav_top-list-navlink"
                                     to="about"
                                 >
-                                    О нас
+                                    About   {/* О нас */}
                                 </NavLink>
                             </li>
                             <li>
@@ -48,7 +48,7 @@ const NavBar: FC = () => {
                                     className="nav_top-list-navlink"
                                     to="blog"
                                 >
-                                    Блог
+                                    Blog    {/* Блог */}
                                 </NavLink>
                             </li>
                             <li>
@@ -56,7 +56,7 @@ const NavBar: FC = () => {
                                     className="nav_top-list-navlink"
                                     to="delivery"
                                 >
-                                    Оплата и доставка
+                                    Payment and delivery   {/* Оплата и доставка */}
                                 </NavLink>
                             </li>
                             <li>
@@ -64,7 +64,7 @@ const NavBar: FC = () => {
                                     className="nav_top-list-navlink"
                                     to="review"
                                 >
-                                    Отзывы
+                                    Reviews  {/* Отзывы */}
                                 </NavLink>
                             </li>
                             <li>
@@ -72,7 +72,7 @@ const NavBar: FC = () => {
                                     className="nav_top-list-navlink"
                                     to="contacts"
                                 >
-                                    Контакты
+                                    Contacts    {/* Контакты */}
                                 </NavLink>
                             </li>
                         </ul>
@@ -81,10 +81,10 @@ const NavBar: FC = () => {
                         <img src="/assets/img/phone-call.svg" alt="" />
                         <p>
                             <a
-                                href="tel:+375295779286"
+                                href="tel:+48514556773"
                                 title="Связаться с дизайнером"
                             >
-                                8(029)5779286
+                                +48 514 556 773
                             </a>
                         </p>
                     </div>
@@ -102,12 +102,12 @@ const NavBar: FC = () => {
                         <div className="nav_middle-right-input">
                             <InputSearch
                                 className="nav_middle-input"
-                                placeholder="Поиск товара"
+                                placeholder="Product search"  //Поиск товара
                             />
                         </div>
                         <div className="nav_middle-cart">
                             <div className="nav_middle-cart-user">
-                                <p>Добрый день, {userName.firstName}</p>
+                                <p>Hello, {userName.firstName}</p>    {/* Добрый день */}
                             </div>
                             <div className="nav_middle-cart-block">
                                 <div>
@@ -120,14 +120,14 @@ const NavBar: FC = () => {
                                 <div>
                                     <DropDownMenu
                                         src={`/assets/img/cart_man.svg`}
-                                        alt={"Регистрация"}
+                                        alt={"Registration"} //Регистрация
                                     />
                                 </div>
                                 <div>
                                     <NavLink className="nav-icons" to="likes">
                                         <img
                                             src="/assets/img/cart_heart.svg"
-                                            alt="Избранное"
+                                            alt="Favorites" //Регистрация
                                         />
                                     </NavLink>
                                     <span className="nav_middle-cart-block-span-heart">
@@ -138,7 +138,7 @@ const NavBar: FC = () => {
                                     <NavLink className="nav-icons" to="cart">
                                         <img
                                             src="/assets/img/cart.svg"
-                                            alt="Корзина"
+                                            alt="Cart"   //Корзина
                                         />
                                     </NavLink>
                                     <span className="nav_middle-cart-block-span-cart">
@@ -160,32 +160,32 @@ const NavBar: FC = () => {
                                     className="nav_bottom-list"
                                     to="catalog"
                                 >
-                                    Каталог
+                                    Catalog {/* Каталог */}
                                 </NavLink>
                             </li>
                             <li>
                                 <NavLink className="nav_bottom-list" to="/catalog/craft">
-                                    Рукоделие
+                                    Needlework   {/* Рукоделие */}
                                 </NavLink>
                             </li>
                             <li>
                                 <NavLink className="nav_bottom-list" to="/catalog/paint">
-                                    Рисование
+                                    Drawing   {/* Рисование */}
                                 </NavLink>
                             </li>
                             <li>
                                 <NavLink className="nav_bottom-list" to="/catalog/model">
-                                    Моделирование
+                                    Modeling   {/* Моделирование */}
                                 </NavLink>
                             </li>
                             <li>
                                 <NavLink className="nav_bottom-list" to="/catalog/decor">
-                                    Украшение
+                                    Decoration   {/* Украшение */}
                                 </NavLink>
                             </li>
                             <li>
                                 <NavLink className="nav_bottom-list" to="/catalog/flora">
-                                    Флористика
+                                    Floristics  {/* Флористика */}
                                 </NavLink>
                             </li>
                             <li>
@@ -193,12 +193,12 @@ const NavBar: FC = () => {
                                     className="nav_bottom-list"
                                     to="workshop"
                                 >
-                                    Мастерская
+                                    Workshop  {/* Мастерская */}
                                 </NavLink>
                             </li>
                             <li>
                                 <NavLink className="nav_bottom-list" to="new">
-                                    Новинки
+                                    New {/* Новинки */}
                                 </NavLink>
                             </li>
                             <li>
@@ -206,7 +206,7 @@ const NavBar: FC = () => {
                                     className="nav_bottom-list"
                                     to="discount"
                                 >
-                                    Скидки
+                                    Discounts  {/* Скидки */}
                                 </NavLink>
                             </li>
                         </ul>
