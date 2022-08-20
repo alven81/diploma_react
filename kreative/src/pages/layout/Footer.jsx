@@ -1,6 +1,17 @@
+import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
+import { contacts_designer_message, creative_workshop_ui, about_ui, history_ui, contacts_ui, blog_ui, brands_ui, career_ui, help_ui,
+    pay_ui, deliver_ui, return_rule_ui, pub_offer_ui, yarn_calc_ui, 
+    //  payment_ui, reviews_ui,   logo_message,
+    //search_message, hello_message, reg_ui, favorites_ui, cart_ui, catalog_ui, needlework_ui, draw_ui, model_ui, decor_ui,
+    //flora_ui, workshop_ui, new_ui, discounts_ui 
+} from "../../lng"
 
 const Footer = () => {
+
+    const setLang = useSelector(
+        (state) => state.loadLanguage.languageIs
+    );
 
 	return (
 		<>
@@ -9,17 +20,17 @@ const Footer = () => {
 					<p className="footer_main-contacts-phone">
 						<a
 							href="tel:+48514556773"
-							 title="Contact the designer"  //Связаться с дизайнером
+							title={contacts_designer_message[setLang]}
 						>
 							+48 514 556 773
 						</a>
 					</p>
-					<p>Creative workshop-store</p>       {/* Творческая мастерская-магазин */}
+					<p>{creative_workshop_ui[setLang]}</p>
 					<p className="footer_main-contacts-time">10.00-21.00</p>
 					<p className="footer_main-contacts-mail">
 						<a
 							href="mailto:kyasarina@gmail.com"
-							title="Contact the designer"  //Связаться с дизайнером
+							title={contacts_designer_message[setLang]}
 						>
 							kyasarina@gmail.com
 						</a>
@@ -28,13 +39,13 @@ const Footer = () => {
 				<div className="footer_main-block">
 					<div className="footer_main-block-top">
 						<ul>
-							<li>About</li>  {/* О нас */}
+							<li>{about_ui[setLang]}</li>
 							<li>
 								<NavLink
 									className="footer_main-block-top-navlink"
 									to="history"
 								>
-									History  {/* История */}
+									{history_ui[setLang]}
 								</NavLink>
 							</li>
 							<li>
@@ -42,7 +53,7 @@ const Footer = () => {
 									className="footer_main-block-top-navlink"
 									to="contacts"
 								>
-									Contacts  {/* Контакты */}
+									{contacts_ui[setLang]}
 								</NavLink>
 							</li>
 							<li>
@@ -50,7 +61,7 @@ const Footer = () => {
 									className="footer_main-block-top-navlink"
 									to="blog"
 								>
-									Blog  {/* Блог */}
+									{blog_ui[setLang]}
 								</NavLink>
 							</li>
 							<li>
@@ -58,7 +69,7 @@ const Footer = () => {
 									className="footer_main-block-top-navlink"
 									to="brands"
 								>
-									Brands  {/* Бренды */}
+									{brands_ui[setLang]}
 								</NavLink>
 							</li>
 							<li>
@@ -66,18 +77,18 @@ const Footer = () => {
 									className="footer_main-block-top-navlink"
 									to="vacancies"
 								>
-									Career  {/* Вакансии */}
+									{career_ui[setLang]}
 								</NavLink>
 							</li>
 						</ul>
 						<ul>
-							<li>Help</li>  {/* Помощь */}
+							<li>{help_ui[setLang]}</li>
 							<li>
 								<NavLink
 									className="footer_main-block-top-navlink"
 									to="payment"
 								>
-									Payment  {/* Оплата */}
+									{pay_ui[setLang]}
 								</NavLink>
 							</li>
 							<li>
@@ -85,7 +96,7 @@ const Footer = () => {
 									className="footer_main-block-top-navlink"
 									to="delivery"
 								>
-									Delivery  {/* Доставка */}
+									{deliver_ui[setLang]}
 								</NavLink>
 							</li>
 							<li>
@@ -93,7 +104,7 @@ const Footer = () => {
 									className="footer_main-block-top-navlink"
 									to="return"
 								>
-									Return Policy  {/* Правила возврата */}
+									{return_rule_ui[setLang]}
 								</NavLink>
 							</li>
 							<li>
@@ -101,7 +112,7 @@ const Footer = () => {
 									className="footer_main-block-top-navlink"
 									to="offerta"
 								>
-									Public offer  {/* Публична оферта */}
+								    {pub_offer_ui[setLang]}
 								</NavLink>
 							</li>
 							<li>
@@ -109,7 +120,7 @@ const Footer = () => {
 									className="footer_main-block-top-navlink"
 									to="calculator"
 								>
-									Yarn calculator  {/* Калькулятор расхода пряжи */}
+									{yarn_calc_ui[setLang]}
 								</NavLink>
 							</li>
 						</ul>

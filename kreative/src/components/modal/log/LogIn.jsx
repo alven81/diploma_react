@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { showAlertMessage } from "../../../store/actions/AlertAction";
 import { isUserLogIn } from "../../../store/actions/isUserLogInAction";
 import loadCart from "../../../store/actions/loadCartAction";
@@ -8,12 +8,22 @@ import { openLogModal } from "../../../store/actions/LogAction";
 import { doesCredentialsOk } from "../../../utils/doesCredentialsOk";
 import { doesUserExist } from "../../../utils/doesUserExist";
 import { getUserInfoById } from "../../../utils/getUserInfoById";
+import {
+    email_ui,
+    login_succesfull_message,
+    login_unsuccesfull_message,
+    login_user_not_found_message,
+    password_ui,
+    enter_ui,
+    enter_user_data_message,
+} from "../../../lng";
 
 const LogModal = () => {
     const dispatch = useDispatch();
 
     const [eMail, setEMail] = useState(null);
     const [passMain, setPassMain] = useState(null);
+    const setLang = useSelector((state) => state.loadLanguage.languageIs);
 
     const handleLogUser = async (e) => {
         e.preventDefault();
@@ -26,7 +36,7 @@ const LogModal = () => {
                 dispatch(
                     showAlertMessage({
                         status: true,
-                        message: "You have successfully logged in!", //Вы успешно вошли в ресурс!
+                        message: login_succesfull_message[setLang], //Вы успешно вошли в ресурс!
                     })
                 );
                 dispatch(openLogModal(false));
@@ -36,7 +46,7 @@ const LogModal = () => {
                 dispatch(
                     showAlertMessage({
                         status: true,
-                        message: "You have entered an incorrect username or password", //Вы указали неверный логин или пароль
+                        message: login_unsuccesfull_message[setLang], //Вы указали неверный логин или пароль
                     })
                 );
             }
@@ -44,7 +54,7 @@ const LogModal = () => {
             return dispatch(
                 showAlertMessage({
                     status: true,
-                    message: "User with this login was not found!", //Пользователь с таким логином не найден!
+                    message: login_user_not_found_message[setLang], //Пользователь с таким логином не найден!
                 })
             );
     };
@@ -59,11 +69,11 @@ const LogModal = () => {
                             onClick={() => dispatch(openLogModal(false))}
                         />
                     </div>
-                     <div className="regform-name">Enter your login details</div> {/* Введите данные для входа */}
+                    <div className="regform-name">{enter_user_data_message[setLang]}</div>{" "}   {/* Введите данные для входа */}
                     <form className="regform-form" onSubmit={handleLogUser}>
                         <label htmlFor="eMail">
                             {" "}
-                            Email    {/* Электроная почта  */}
+                            {email_ui[setLang]} {/* Электроная почта  */}
                             <input
                                 onChange={(e) => setEMail(e.target.value)}
                                 type="email"
@@ -72,7 +82,7 @@ const LogModal = () => {
                         </label>
                         <label htmlFor="passMain">
                             {" "}
-                            Password  {/* Пароль  */}
+                            {password_ui[setLang]} {/* Пароль  */}
                             <input
                                 onChange={(e) => setPassMain(e.target.value)}
                                 type="password"
@@ -82,7 +92,7 @@ const LogModal = () => {
                         <div className="regform-button button_container">
                             <button className="regform-button" type="submit">
                                 {" "}
-                                OK{" "}  {/* Войти  */}
+                                {enter_ui[setLang]} {/* Войти  */}
                             </button>
                         </div>
                     </form>

@@ -31,6 +31,41 @@
             }
         }
 
+        &-lang {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 0 45px;
+            button {
+                border: none;
+                min-height: 30px;
+                min-width: 30px;
+                border-radius: 30px;
+                background-position: center;
+                background-size: cover;
+                
+                cursor: pointer;
+                &:hover {
+                    transform: scale(1.05);
+                }
+                &:active {
+                    transform: scale(0.95);
+                }
+            }
+            &-en {
+                background-image: url(../img/gb.svg);
+                background-repeat: no-repeat;
+            }
+            &-pl {
+                background-image: url(../img/pl.svg);
+                background-repeat: no-repeat;
+            }
+            &-ru {
+                background-image: url(../img/ru.svg);
+                background-repeat: no-repeat;
+            }
+        }
+
         &-contact {
             display: flex;
             gap: 10px;

@@ -12,6 +12,7 @@ import { zoomImageReducer } from "./zoomReducer";
 import loadSearchReducer from "./searchResultReducer";
 import loadSearchCategoryReducer from "./searchCategoryResultReducer";
 import { AlertReducer } from "./AlertReducer";
+import { uiLanguageReducer } from "./uiLanguageReducer";
 
 //const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
@@ -29,6 +30,7 @@ const reducer = combineReducers({
     searchCategoryResult: loadSearchCategoryReducer,
     alertMessage: AlertReducer,
     imageZoom: zoomImageReducer,
+    loadLanguage: uiLanguageReducer,
 });
 
 export { reducer };

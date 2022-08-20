@@ -1,25 +1,35 @@
-import { FC } from "react";
-import { RootStateOrAny, useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import DropDownMenu from "../../components/DropDownMenu";
 import InputSearch from "../../components/InputSearch";
 import { leftSideMenuStatus } from "../../store/actions/leftSideMenuStatusAction";
+import { uiLanguage } from "../../store/actions/uiLanguage";
+import { main_ui, about_ui, blog_ui, payment_ui, reviews_ui, contacts_ui, contacts_designer_message, logo_message,
+    search_message, hello_message, reg_ui, favorites_ui, cart_ui, catalog_ui, needlework_ui, draw_ui, model_ui, decor_ui,
+    flora_ui, workshop_ui, new_ui, discounts_ui } from "../../lng"
 
-const NavBar: FC = () => {
+const NavBar = () => {
     const userName = useSelector(
-        (state: RootStateOrAny) => state.isUserLogIn.isUserLogInInfo
+        (state) => state.isUserLogIn.isUserLogInInfo
     );
     const whatInTheCart = useSelector(
-        (state: RootStateOrAny) => state.loadCart.inCart
+        (state) => state.loadCart.inCart
     );
     const checkExistingLikes = useSelector(
-        (state: RootStateOrAny) => state.loadLikes.inLikes
+        (state) => state.loadLikes.inLikes
+    );
+    const setLang = useSelector(
+        (state) => state.loadLanguage.languageIs
     );
     const dispatch = useDispatch();
 
     const burgerPress = () => {
         dispatch(leftSideMenuStatus(true));
     };
+
+    function setLanguage(lang) {
+        dispatch(uiLanguage(lang));
+    }
 
     return (
         <>
@@ -32,7 +42,7 @@ const NavBar: FC = () => {
                                     className="nav_top-list-navlink"
                                     to="/"
                                 >
-                                    Main  {/* Главная */}
+                                    {main_ui[setLang]}
                                 </NavLink>
                             </li>
                             <li>
@@ -40,7 +50,7 @@ const NavBar: FC = () => {
                                     className="nav_top-list-navlink"
                                     to="about"
                                 >
-                                    About   {/* О нас */}
+                                    {about_ui[setLang]}
                                 </NavLink>
                             </li>
                             <li>
@@ -48,7 +58,7 @@ const NavBar: FC = () => {
                                     className="nav_top-list-navlink"
                                     to="blog"
                                 >
-                                    Blog    {/* Блог */}
+                                    {blog_ui[setLang]}
                                 </NavLink>
                             </li>
                             <li>
@@ -56,7 +66,7 @@ const NavBar: FC = () => {
                                     className="nav_top-list-navlink"
                                     to="delivery"
                                 >
-                                    Payment and delivery   {/* Оплата и доставка */}
+                                    {payment_ui[setLang]}{" "}
                                 </NavLink>
                             </li>
                             <li>
@@ -64,7 +74,7 @@ const NavBar: FC = () => {
                                     className="nav_top-list-navlink"
                                     to="review"
                                 >
-                                    Reviews  {/* Отзывы */}
+                                    {reviews_ui[setLang]}
                                 </NavLink>
                             </li>
                             <li>
@@ -72,17 +82,31 @@ const NavBar: FC = () => {
                                     className="nav_top-list-navlink"
                                     to="contacts"
                                 >
-                                    Contacts    {/* Контакты */}
+                                    {contacts_ui[setLang]}
                                 </NavLink>
                             </li>
                         </ul>
+                    </div>
+                    <div className="nav_top-lang">
+                        <button
+                            onClick={() => setLanguage("eng")}
+                            className="nav_top-lang-en"
+                        ></button>
+                        <button
+                            onClick={() => setLanguage("pol")}
+                            className="nav_top-lang-pl"
+                        ></button>
+                        <button
+                            onClick={() => setLanguage("rus")}
+                            className="nav_top-lang-ru"
+                        ></button>
                     </div>
                     <div className="nav_top-contact">
                         <img src="/assets/img/phone-call.svg" alt="" />
                         <p>
                             <a
                                 href="tel:+48514556773"
-                                title="Связаться с дизайнером"
+                                title={contacts_designer_message[setLang]}
                             >
                                 +48 514 556 773
                             </a>
@@ -94,7 +118,7 @@ const NavBar: FC = () => {
                         <NavLink to="/">
                             <img
                                 src="/assets/img/logo.png"
-                                alt="логотип Креатив"
+                                alt={logo_message[setLang]}
                             />
                         </NavLink>
                     </div>
@@ -102,32 +126,32 @@ const NavBar: FC = () => {
                         <div className="nav_middle-right-input">
                             <InputSearch
                                 className="nav_middle-input"
-                                placeholder="Product search"  //Поиск товара
+                                placeholder={search_message[setLang]}
                             />
                         </div>
                         <div className="nav_middle-cart">
                             <div className="nav_middle-cart-user">
-                                <p>Hello, {userName.firstName}</p>    {/* Добрый день */}
+                                <p>{hello_message[setLang]}, {userName.firstName}</p>{" "}
                             </div>
                             <div className="nav_middle-cart-block">
                                 <div>
                                     <img
                                         className="nav_middle-cart-block-img"
                                         src={userName.avatar}
-                                        alt="Регистрация"
+                                        alt={reg_ui[setLang]}
                                     />
                                 </div>
                                 <div>
                                     <DropDownMenu
                                         src={`/assets/img/cart_man.svg`}
-                                        alt={"Registration"} //Регистрация
+                                        alt={reg_ui[setLang]}
                                     />
                                 </div>
                                 <div>
                                     <NavLink className="nav-icons" to="likes">
                                         <img
                                             src="/assets/img/cart_heart.svg"
-                                            alt="Favorites" //Регистрация
+                                            alt={favorites_ui[setLang]}
                                         />
                                     </NavLink>
                                     <span className="nav_middle-cart-block-span-heart">
@@ -138,7 +162,7 @@ const NavBar: FC = () => {
                                     <NavLink className="nav-icons" to="cart">
                                         <img
                                             src="/assets/img/cart.svg"
-                                            alt="Cart"   //Корзина
+                                            alt={cart_ui[setLang]}
                                         />
                                     </NavLink>
                                     <span className="nav_middle-cart-block-span-cart">
@@ -160,32 +184,47 @@ const NavBar: FC = () => {
                                     className="nav_bottom-list"
                                     to="catalog"
                                 >
-                                    Catalog {/* Каталог */}
+                                    {catalog_ui[setLang]}
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink className="nav_bottom-list" to="/catalog/craft">
-                                    Needlework   {/* Рукоделие */}
+                                <NavLink
+                                    className="nav_bottom-list"
+                                    to="/catalog/craft"
+                                >
+                                    {needlework_ui[setLang]}
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink className="nav_bottom-list" to="/catalog/paint">
-                                    Drawing   {/* Рисование */}
+                                <NavLink
+                                    className="nav_bottom-list"
+                                    to="/catalog/paint"
+                                >
+                                    {draw_ui[setLang]}
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink className="nav_bottom-list" to="/catalog/model">
-                                    Modeling   {/* Моделирование */}
+                                <NavLink
+                                    className="nav_bottom-list"
+                                    to="/catalog/model"
+                                >
+                                    {model_ui[setLang]}
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink className="nav_bottom-list" to="/catalog/decor">
-                                    Decoration   {/* Украшение */}
+                                <NavLink
+                                    className="nav_bottom-list"
+                                    to="/catalog/decor"
+                                >
+                                    {decor_ui[setLang]}
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink className="nav_bottom-list" to="/catalog/flora">
-                                    Floristics  {/* Флористика */}
+                                <NavLink
+                                    className="nav_bottom-list"
+                                    to="/catalog/flora"
+                                >
+                                    {flora_ui[setLang]}
                                 </NavLink>
                             </li>
                             <li>
@@ -193,12 +232,12 @@ const NavBar: FC = () => {
                                     className="nav_bottom-list"
                                     to="workshop"
                                 >
-                                    Workshop  {/* Мастерская */}
+                                    {workshop_ui[setLang]}
                                 </NavLink>
                             </li>
                             <li>
                                 <NavLink className="nav_bottom-list" to="new">
-                                    New {/* Новинки */}
+                                    {new_ui[setLang]}
                                 </NavLink>
                             </li>
                             <li>
@@ -206,7 +245,7 @@ const NavBar: FC = () => {
                                     className="nav_bottom-list"
                                     to="discount"
                                 >
-                                    Discounts  {/* Скидки */}
+                                    {discounts_ui[setLang]}
                                 </NavLink>
                             </li>
                         </ul>

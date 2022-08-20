@@ -15,6 +15,7 @@ import Reviews from "./pages/reviews/Reviews";
 import { Administration } from "./pages/Administration";
 import Theme from "./pages/Theme";
 import Likes from "./pages/likes/Likes";
+import { uiLanguage } from "./store/actions/uiLanguage";
 
 const App = () => {
     const dispatch = useDispatch();
@@ -26,12 +27,15 @@ const App = () => {
         email: "",
     };
 
+    const lang = "eng";
+
     useEffect(() => {
         dispatch(getCatalogData());
     }, [dispatch]);
 
     useEffect(() => {
         dispatch(isUserLogIn(defaultUser));
+        dispatch(uiLanguage(lang));
     }, [dispatch]);
 
     return (
