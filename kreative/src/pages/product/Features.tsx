@@ -17,7 +17,7 @@ const Features: FC<FeaturesProps> = ({ features }) => {
 			<div className={features.creation.length ? "" : "hide"}>
 				<p>Type of creativity</p>   {/* Вид творчества */}
 				<em></em>
-				<span>{features.creation}</span>
+				<span>{features.creation.map(item => item + "; ")}</span>
 			</div>
 			<div className={features.age.length ? "" : "hide"}>
 				<p>Age restrictions</p>   {/* Возрастные ограничения */}
