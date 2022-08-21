@@ -1348,27 +1348,47 @@
     {
       "id": "craft",
       "categoryLink": "craft",
-      "category": "Рукоделие"
+      "category": {
+        "rus": "Рукоделие",
+        "eng": "Needlework",
+        "pol": "Robótki"
+      }
     },
     {
       "id": "paint",
       "categoryLink": "paint",
-      "category": "Рисование"
+      "category": {
+        "rus": "Рисование",
+        "eng": "Drawing",
+        "pol": "Rysunek"
+    }
     },
     {
       "id": "model",
       "categoryLink": "model",
-      "category": "Моделирование"
+      "category": {
+        "rus": "Моделирование",
+        "eng": "Modeling",
+        "pol": "Modelowanie"
+    }
     },
     {
       "id": "decor",
       "categoryLink": "decor",
-      "category": "Украшение"
+      "category": {
+        "rus": "Украшение",
+        "eng": "Decoration",
+        "pol": "Dekoracja"
+    }
     },
     {
       "id": "flora",
       "categoryLink": "flora",
-      "category": "Флористика"
+      "category": {
+        "rus": "Флористика",
+        "eng": "Floristics",
+        "pol": "Florystyka"
+    }
     }
   ]
 }

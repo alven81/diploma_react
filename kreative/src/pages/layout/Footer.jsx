@@ -1,11 +1,8 @@
 import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import { contacts_designer_message, creative_workshop_ui, about_ui, history_ui, contacts_ui, blog_ui, brands_ui, career_ui, help_ui,
-    pay_ui, deliver_ui, return_rule_ui, pub_offer_ui, yarn_calc_ui, 
-    //  payment_ui, reviews_ui,   logo_message,
-    //search_message, hello_message, reg_ui, favorites_ui, cart_ui, catalog_ui, needlework_ui, draw_ui, model_ui, decor_ui,
-    //flora_ui, workshop_ui, new_ui, discounts_ui 
-} from "../../lng"
+    pay_ui, deliver_ui, return_rule_ui, pub_offer_ui, yarn_calc_ui, card_ui, info_ui, activation_ui, recover_ui, faq_ui, feedback_ui, 
+    ask_question_ui, reviews_ui, gift_card_ui, suppliers_ui, infoline_ui } from "../../lng";
 
 const Footer = () => {
 
@@ -125,13 +122,13 @@ const Footer = () => {
 							</li>
 						</ul>
 						<ul>
-							<li>Loyalty card</li>  {/* Карта постоянного покупателя */}
+							<li>{card_ui[setLang]}</li>
 							<li>
 								<NavLink
 									className="footer_main-block-top-navlink"
 									to="info"
 								>
-									Information  {/* Информация */}
+									{info_ui[setLang]}
 								</NavLink>
 							</li>
 							<li>
@@ -139,7 +136,7 @@ const Footer = () => {
 									className="footer_main-block-top-navlink"
 									to="activation"
 								>
-									Activation  {/* Активация */}
+									{activation_ui[setLang]}
 								</NavLink>
 							</li>
 							<li>
@@ -147,7 +144,7 @@ const Footer = () => {
 									className="footer_main-block-top-navlink"
 									to="restore"
 								>
-									Recovery  {/* Восстановление */}
+									{recover_ui[setLang]}
 								</NavLink>
 							</li>
 							<li>
@@ -155,18 +152,18 @@ const Footer = () => {
 									className="footer_main-block-top-navlink"
 									to="question"
 								>
-									FAQ  {/* Вопрос */}
+									{faq_ui[setLang]}
 								</NavLink>
 							</li>
 						</ul>
 						<ul>
-							<li>Feedback</li>  {/* Обратная связь */}
+							<li>{feedback_ui[setLang]}</li>
 							<li>
 								<NavLink
 									className="footer_main-block-top-navlink"
 									to="question"
 								>
-									Ask a Question  {/* Задать вопрос */}
+									{ask_question_ui[setLang]}
 								</NavLink>
 							</li>
 							<li>
@@ -174,7 +171,7 @@ const Footer = () => {
 									className="footer_main-block-top-navlink"
 									to="review"
 								>
-									Reviews  {/* Отзывы */}
+									{reviews_ui[setLang]}
 								</NavLink>
 							</li>
 							<li>
@@ -182,7 +179,7 @@ const Footer = () => {
 									className="footer_main-block-top-navlink"
 									to="card"
 								>
-									Gift card  {/* Подарочная карта */}
+									{gift_card_ui[setLang]}
 								</NavLink>
 							</li>
 							<li>
@@ -190,39 +187,39 @@ const Footer = () => {
 									className="footer_main-block-top-navlink"
 									to="suppliers"
 								>
-									Suppliers of goods and services  {/* Поставщикам товаров и услуг */}
+									{suppliers_ui[setLang]}
 								</NavLink>
 							</li>
 							<li>
 								<a href="https://www.facebook.com/">
 									<img
 										src="/assets/img/facebook.svg"
-										alt="Facebook"   //Фейсбук
+										alt="Facebook"
 									/>
 								</a>
 								<a href="https://twitter.com/">
 									<img
 										src="/assets/img/twitter.svg"
-										alt="Twitter"   //Твиттер
+										alt="Twitter"
 									/>
 								</a>
 								<a href="https://vk.com/">
 									<img
 										src="/assets/img/vk.svg"
-										alt="VK"     //ВКонтакте
+										alt="VK"
 									/>
 								</a>
 								<a href="https://telegram.org/">
 									<img
 										src="/assets/img/telegram.svg"
-										alt="Telegram"     //Телеграмм
+										alt="Telegram"
 									/>
 								</a>
 							</li>
 						</ul>
 					</div>
 					<div className="footer_main-block-middle">
-						<p>Ideas, workshops, contests, novelties, promotions!</p>  {/* Идеи, мастерские, конкурсы, новинки, акции */}
+						<p>{infoline_ui[setLang]}</p>
 					</div>
 					<div className="footer_main-block-bottom">
 						<p>UI - Liashkevich Katsiarina</p>

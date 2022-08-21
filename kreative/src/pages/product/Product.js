@@ -169,7 +169,7 @@ const Product = () => {
         }
         if (keyConsistSwitch) {
             incomingBlock.current.style.height = "90px";
-            setConsistBlockText("Collapse Description");   //Свернуть описание
+            setConsistBlockText("Full description"); //Развернуть описание
         }
         setKeyConsistSwitch(!keyConsistSwitch);
     };

@@ -8,44 +8,44 @@ interface FeaturesProps {
 const Features: FC<FeaturesProps> = ({ features }) => {
 	return (
 		<>
-			<h3>Характеристики</h3>
+			<h3>Characteristics</h3> {/*Характеристики*/}
 			<div className={features.weight ? "" : "hide"}>
-				<p>Вес товара с упаковкой (г)</p>
+				<p>Product weight with packaging (g)</p> {/* Вес товара с упаковкой (г) */}
 				<em></em>
 				<span>{features.weight}</span>
 			</div>
 			<div className={features.creation.length ? "" : "hide"}>
-				<p>Вид творчества</p>
+				<p>Type of creativity</p>   {/* Вид творчества */}
 				<em></em>
 				<span>{features.creation}</span>
 			</div>
 			<div className={features.age.length ? "" : "hide"}>
-				<p>Возрастные ограничения</p>
+				<p>Age restrictions</p>   {/* Возрастные ограничения */}
 				<em></em>
 				<span>{features.age}</span>
 			</div>
 			<div className={features.height_gross ? "" : "hide"}>
-				<p>Высота упаковки (см)</p>
+				<p>Packing height (cm)</p> {/* Высота упаковки (см) */}
 				<em></em>
 				<span>{features.height_gross}</span>
 			</div>
 			<div className={features.deep ? "" : "hide"}>
-				<p>Глубина упаковки (см)</p>
+				<p>Packing depth (cm)</p>    {/* Глубина упаковки (см) */}
 				<em></em>
 				<span>{features.deep}</span>
 			</div>
 			<div className={features.width ? "" : "hide"}>
-				<p>Ширина упаковки (см)</p>
+				<p>Packing width (cm)</p> {/* Ширина упаковки (см) */}
 				<em></em>
 				<span>{features.width}</span>
 			</div>
 			<div className={features.height ? "" : "hide"}>
-				<p>Высота изделия (см)</p>
+				<p>Product height (cm)</p>  {/* Высота изделия (см) */}
 				<em></em>
 				<span>{features.height}</span>
 			</div>
 			<div className={features.creation.length ? "" : "hide"}>
-				<p>Страна производства</p>
+				<p>Country of origin</p>  {/* Страна производства */}
 				<em></em>
 				<span>{features.origin}</span>
 			</div>

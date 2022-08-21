@@ -1,9 +1,10 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { leftSideMenuStatus } from "../../store/actions/leftSideMenuStatusAction";
 
 const CategoryList = ({ catList, handleCategorySearch }) => {
 	const { category, categoryLink } = catList;
+    const setLang = useSelector((state) => state.loadLanguage.languageIs);
 	const dispatch = useDispatch();
 
 	const handleCatalog = () => {
@@ -17,7 +18,7 @@ const CategoryList = ({ catList, handleCategorySearch }) => {
 				className="category_list"
 				to={`/catalog/${categoryLink}`}
 			>
-				<p>{category}</p>
+				<p>{category[setLang]}</p>
 			</Link>
 		</li>
 	);

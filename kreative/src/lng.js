@@ -238,17 +238,91 @@ export const yarn_calc_ui = {
     pol: "Kalkulator przędzy"
 }
 
+export const card_ui = {
+    rus: "Карта постоянного покупателя",
+    eng: "Loyalty card",
+    pol: "Karta stałego Klienta"
+}
+
+export const info_ui = {
+    rus: "Информация",
+    eng: "Information",
+    pol: "Informacja"
+}
+
+export const activation_ui = {
+    rus: "Активация",
+    eng: "Activation",
+    pol: "Aktywacja"
+}
+
+export const recover_ui = {
+    rus: "Восстановление",
+    eng: "Recovery",
+    pol: "Zwrot"
+}
+
+export const faq_ui = {
+    rus: "Вопросы",
+    eng: "FAQ",
+    pol: "Pytania"
+}
+
+export const feedback_ui = {
+    rus: "Обратная связь",
+    eng: "Feedback",
+    pol: "Informacja zwrotna"
+}
+
+export const ask_question_ui = {
+    rus: "Задать вопрос",
+    eng: "Ask a Question",
+    pol: "Zadać pytanie"
+}
+
+export const gift_card_ui = {
+    rus: "Подарочная карта",
+    eng: "Gift card",
+    pol: "Karta podarunkowa"
+}
+
+export const suppliers_ui = {
+    rus: "Поставщикам товаров и услуг",
+    eng: "Suppliers of goods and services",
+    pol: "Dostawcy towarów i usług"
+}
+
+export const infoline_ui = {
+    rus: "Идеи, мастерские, конкурсы, новинки, акции",
+    eng: "Ideas, workshops, contests, novelties, promotions!",
+    pol: "Pomysły, warsztaty, konkursy, nowości, promocje"
+}
+
+//pages/cart/cart
+
+export const shop_cart_ui = {
+    rus: "Корзина заказов",
+    eng: "Shopping cart",
+    pol: "Wózek sklepowy"
+}
+
+export const total_in_cart_ui = {
+    rus: "Всего товаров в корзине",
+    eng: "Total items in cart",
+    pol: "Wszystkie przedmioty w koszyku"
+}
+
+export const order_cost_ui = {
+    rus: "стоимость заказа",
+    eng: "order cost",
+    pol: "koszt zamówienia"
+}
+
+export const rub_cost_ui = {
+    rus: "рублей",
+    eng: "rubles",
+    pol: "ruble"
+}
 
 
-
-//<li>Loyalty card</li>  {/* Карта постоянного покупателя */}
-//Information  {/* Информация */}
-//Activation  {/* Активация */}
-//Recovery  {/* Восстановление */}
-//FAQ  {/* Вопрос */}
-//Ask a Question  {/* Задать вопрос */}
-//Reviews  {/* Отзывы */}
-//Gift card  {/* Подарочная карта */}
-//Suppliers of goods and services  {/* Поставщикам товаров и услуг */}
-//<p>Ideas, workshops, contests, novelties, promotions!</p>  {/* Идеи, мастерские, конкурсы, новинки, акции */}
 

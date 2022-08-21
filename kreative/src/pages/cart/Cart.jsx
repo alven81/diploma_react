@@ -1,10 +1,17 @@
 import { useSelector } from "react-redux";
 import CartElement from "../cart/CartElement";
+import {
+    shop_cart_ui,
+    total_in_cart_ui,
+    order_cost_ui,
+    rub_cost_ui
+} from "../../lng";
 
 const Cart = () => {
 	const whatInTheCart = useSelector((state) => state.loadCart.inCart);
 	const fullCatalog = useSelector((state) => state.loadData.loadCatalog);
-
+    const setLang = useSelector((state) => state.loadLanguage.languageIs);
+    
 	const calcCartContent = whatInTheCart.reduce(
 		(acum, cur) => Object.assign(acum, { [cur]: (acum[cur] | 0) + 1 }),
 		{}
@@ -38,15 +45,17 @@ const Cart = () => {
 
 	return (
 		<div className="cart-name container">
-			 <p>Shopping cart</p>     {/* Корзина заказов */}
+			 <p>{shop_cart_ui[setLang]}</p>
 			<ul className="cart">
 				{cartContent.map((item) => (
 					<CartElement key={item.id} item={item} />
 				))}
 			</ul>
 			<p>
-                Total items in cart: {whatInTheCart.length}, order   {/* Всего товаров в корзине / стоимость*/}
-				cost {calcCost(whatInTheCart).toFixed(2)} PLN.         {/* рублей */}
+                {total_in_cart_ui[setLang]}: {whatInTheCart.length}, 
+                {" "}{order_cost_ui[setLang]}{" "}
+                {calcCost(whatInTheCart).toFixed(2)} 
+                {" "}{rub_cost_ui[setLang]}.
 			</p>
 		</div>
 	);

@@ -4,7 +4,7 @@ import Footer from "./Footer";
 import NavBar from "./NavBar";
 import LogModal from "../../components/modal/log/LogIn";
 import RegModal from "../../components/modal/reg/Reg";
-import { LeftSlideMenu } from "../LeftSlideMenu/LeftSlideMenu";
+import { LeftSlideMenu } from "../leftSlideMenu/LeftSlideMenu";
 import Alert from "../../components/modal/Alert";
 import { ZoomImage } from "../product/ZoomImage";
 

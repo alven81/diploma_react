@@ -4,23 +4,36 @@ import DropDownMenu from "../../components/DropDownMenu";
 import InputSearch from "../../components/InputSearch";
 import { leftSideMenuStatus } from "../../store/actions/leftSideMenuStatusAction";
 import { uiLanguage } from "../../store/actions/uiLanguage";
-import { main_ui, about_ui, blog_ui, payment_ui, reviews_ui, contacts_ui, contacts_designer_message, logo_message,
-    search_message, hello_message, reg_ui, favorites_ui, cart_ui, catalog_ui, needlework_ui, draw_ui, model_ui, decor_ui,
-    flora_ui, workshop_ui, new_ui, discounts_ui } from "../../lng"
+import {
+    main_ui,
+    about_ui,
+    blog_ui,
+    payment_ui,
+    reviews_ui,
+    contacts_ui,
+    contacts_designer_message,
+    logo_message,
+    search_message,
+    hello_message,
+    reg_ui,
+    favorites_ui,
+    cart_ui,
+    catalog_ui,
+    needlework_ui,
+    draw_ui,
+    model_ui,
+    decor_ui,
+    flora_ui,
+    workshop_ui,
+    new_ui,
+    discounts_ui,
+} from "../../lng";
 
 const NavBar = () => {
-    const userName = useSelector(
-        (state) => state.isUserLogIn.isUserLogInInfo
-    );
-    const whatInTheCart = useSelector(
-        (state) => state.loadCart.inCart
-    );
-    const checkExistingLikes = useSelector(
-        (state) => state.loadLikes.inLikes
-    );
-    const setLang = useSelector(
-        (state) => state.loadLanguage.languageIs
-    );
+    const userName = useSelector((state) => state.isUserLogIn.isUserLogInInfo);
+    const whatInTheCart = useSelector((state) => state.loadCart.inCart);
+    const checkExistingLikes = useSelector((state) => state.loadLikes.inLikes);
+    const setLang = useSelector((state) => state.loadLanguage.languageIs);
     const dispatch = useDispatch();
 
     const burgerPress = () => {
@@ -87,21 +100,22 @@ const NavBar = () => {
                             </li>
                         </ul>
                     </div>
-                    <div className="nav_top-lang">
-                        <button
-                            onClick={() => setLanguage("eng")}
-                            className="nav_top-lang-en"
-                        ></button>
-                        <button
-                            onClick={() => setLanguage("pol")}
-                            className="nav_top-lang-pl"
-                        ></button>
-                        <button
-                            onClick={() => setLanguage("rus")}
-                            className="nav_top-lang-ru"
-                        ></button>
-                    </div>
+
                     <div className="nav_top-contact">
+                        <div className="nav_top-lang">
+                            <button
+                                onClick={() => setLanguage("eng")}
+                                className="nav_top-lang-en"
+                            ></button>
+                            <button
+                                onClick={() => setLanguage("pol")}
+                                className="nav_top-lang-pl"
+                            ></button>
+                            <button
+                                onClick={() => setLanguage("rus")}
+                                className="nav_top-lang-ru"
+                            ></button>
+                        </div>
                         <img src="/assets/img/phone-call.svg" alt="" />
                         <p>
                             <a
@@ -131,7 +145,10 @@ const NavBar = () => {
                         </div>
                         <div className="nav_middle-cart">
                             <div className="nav_middle-cart-user">
-                                <p>{hello_message[setLang]}, {userName.firstName}</p>{" "}
+                                <p>
+                                    {hello_message[setLang]},{" "}
+                                    {userName.firstName}
+                                </p>{" "}
                             </div>
                             <div className="nav_middle-cart-block">
                                 <div>
