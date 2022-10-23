@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./TooltipWrapper.scss";
 
 const TooltipWrapper = ({ content, direction, positionX, children }) => {
-    const [active, setActive] = useState(false);
+    const [active, setActive] = useState(true);
     const [tipStyle, setTipStyle] = useState("");
     const [tipXLag, setTipXLag] = useState("");
 

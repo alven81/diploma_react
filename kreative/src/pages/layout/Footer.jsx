@@ -23,8 +23,8 @@ const Footer = () => {
 					<p className="footer_main-contacts-phone">
 						<TooltipWrapper
 							content={contacts_designer_message[setLang]}
-							direction="right"
-							//positionX={30}
+							direction="top"
+							positionX={100}
 						>
 							<a
 								href="tel:+48514556773"
