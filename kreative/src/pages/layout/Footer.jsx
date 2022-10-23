@@ -1,36 +1,52 @@
 import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
-import { contacts_designer_message, creative_workshop_ui, about_ui, history_ui, contacts_ui, blog_ui, brands_ui, career_ui, help_ui,
-    pay_ui, deliver_ui, return_rule_ui, pub_offer_ui, yarn_calc_ui, card_ui, info_ui, activation_ui, recover_ui, faq_ui, feedback_ui, 
-    ask_question_ui, reviews_ui, gift_card_ui, suppliers_ui, infoline_ui } from "../../lng";
+import {
+	contacts_designer_message, creative_workshop_ui, about_ui, history_ui, contacts_ui, blog_ui, brands_ui, career_ui, help_ui,
+	pay_ui, deliver_ui, return_rule_ui, pub_offer_ui, yarn_calc_ui, card_ui, info_ui, activation_ui, recover_ui, faq_ui, feedback_ui,
+	ask_question_ui, reviews_ui, gift_card_ui, suppliers_ui, infoline_ui
+} from "../../lng";
+//import Workshop from "../Workshop";
+import TooltipWrapper from "./TooltipWrapper";
+
 
 const Footer = () => {
 
-    const setLang = useSelector(
-        (state) => state.loadLanguage.languageIs
-    );
+	const setLang = useSelector(
+		(state) => state.loadLanguage.languageIs
+	);
 
 	return (
 		<>
 			<footer className="footer_main container">
 				<div className="footer_main-contacts">
+
 					<p className="footer_main-contacts-phone">
-						<a
-							href="tel:+48514556773"
-							title={contacts_designer_message[setLang]}
+						<TooltipWrapper
+							content={contacts_designer_message[setLang]}
+							direction="right"
+							//positionX={30}
 						>
-							+48 514 556 773
-						</a>
+							<a
+								href="tel:+48514556773"
+								// title={contacts_designer_message[setLang]}
+								style={{ position: "relative" }}
+							>
+								+48 514 556 773
+							</a>
+						</TooltipWrapper>
 					</p>
+
 					<p>{creative_workshop_ui[setLang]}</p>
 					<p className="footer_main-contacts-time">10.00-21.00</p>
 					<p className="footer_main-contacts-mail">
-						<a
-							href="mailto:kyasarina@gmail.com"
-							title={contacts_designer_message[setLang]}
-						>
-							kyasarina@gmail.com
-						</a>
+						<TooltipWrapper content={contacts_designer_message[setLang]} direction="bottom">
+							<a
+								href="mailto:kyasarina@gmail.com"
+							// title={contacts_designer_message[setLang]}
+							>
+								kyasarina@gmail.com
+							</a>
+						</TooltipWrapper>
 					</p>
 				</div>
 				<div className="footer_main-block">
@@ -109,7 +125,7 @@ const Footer = () => {
 									className="footer_main-block-top-navlink"
 									to="offerta"
 								>
-								    {pub_offer_ui[setLang]}
+									{pub_offer_ui[setLang]}
 								</NavLink>
 							</li>
 							<li>

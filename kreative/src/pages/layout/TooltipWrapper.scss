@@ -1,0 +1,241 @@
+/* Custom properties */
+:root {
+    --tooltip-margin-x: 10px;
+    --tooltip-margin-y: 30px;
+    --tooltip-arrow-size: 6px;
+  }
+$tooltip-text-color: #ffffff;
+$tooltip-background-color: #999999;
+
+  /* Wrapping */
+  .Tooltip-Wrapper {
+    display: inline-block;
+    position: relative;
+  }
+  
+  /* Absolute positioning */
+  .Tooltip-Tip {
+    position: absolute;
+    width: "max-content";
+    border-radius: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 6px;
+    color: $tooltip-text-color;
+    background-color: $tooltip-background-color;
+    font-size: 14px;
+    font-family: sans-serif;
+    line-height: 1;
+    z-index: 100;
+    white-space: nowrap;
+  }
+  
+//TRIANGLE
+
+  /* CSS border triangles */
+  .Tooltip-Tip::before {
+    content: " ";
+    left: 50%;
+    border: solid transparent;
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-width: var(--tooltip-arrow-size);
+    margin-left: calc(var(--tooltip-arrow-size) * -1);
+
+  }
+  
+
+//TOP
+
+  /* Absolute positioning */
+  .top {
+    top: calc(var(--tooltip-margin-y) * -1);
+    /*transform: translateX(-0%) translateY(0); */
+  }
+  /* CSS border triangles */
+  .top::before {
+    top: 100%;
+    border-top-color: $tooltip-background-color;
+  }
+
+  .top-0::before {
+    top: 100%;
+    left: 92%;
+    border-top-color: $tooltip-background-color;
+  }
+
+  .top-10::before {
+    top: 100%;
+    left: 90%;
+    border-top-color: $tooltip-background-color;
+  }
+
+  .top-20::before {
+    top: 100%;
+    left: 80%;
+    border-top-color: $tooltip-background-color;
+  }
+
+  .top-30::before {
+    top: 100%;
+    left: 70%;
+    border-top-color: $tooltip-background-color;
+  }
+
+  .top-40::before {
+    top: 100%;
+    left: 60%;
+    border-top-color: $tooltip-background-color;
+  }
+
+  .top-50::before {
+    top: 100%;
+    left: 50%;
+    border-top-color: $tooltip-background-color;
+  }
+
+  .top-60::before {
+    top: 100%;
+    left: 40%;
+    border-top-color: $tooltip-background-color;
+  }
+
+  .top-70::before {
+    top: 100%;
+    left: 30%;
+    border-top-color: $tooltip-background-color;
+  }
+
+  .top-80::before {
+    top: 100%;
+    left: 20%;
+    border-top-color: $tooltip-background-color;
+  }
+
+  .top-90::before {
+    top: 100%;
+    left: 10%;
+    border-top-color: $tooltip-background-color;
+  }
+
+  .top-100::before {
+    top: 100%;
+    left: 8%;
+    border-top-color: $tooltip-background-color;
+  }
+
+
+
+//RIGHT
+
+  /* Absolute positioning */
+.right {
+    left: calc(100% + var(--tooltip-margin-x));
+    top: 50%;
+    transform: translateX(0) translateY(-50%);
+  }
+  /* CSS border triangles */
+.right::before {
+    left: calc(var(--tooltip-arrow-size) * -1);
+    top: 50%;
+    transform: translateX(0) translateY(-50%);
+    border-right-color: $tooltip-background-color;
+  }
+  
+
+  //BOTTOM
+  /* Absolute positioning */
+.bottom {
+    bottom: calc(var(--tooltip-margin-y) * -1);
+  }
+  /* CSS border triangles */
+.bottom::before {
+    bottom: 100%;
+    border-bottom-color: $tooltip-background-color;
+  }
+
+  .bottom-0::before {
+    left: 92%;
+    bottom: 100%;
+    border-bottom-color: $tooltip-background-color;
+  }
+
+  .bottom-10::before {
+    left: 90%;
+    bottom: 100%;
+    border-bottom-color: $tooltip-background-color;
+  }
+
+  .bottom-20::before {
+    left: 80%;
+    bottom: 100%;
+    border-bottom-color: $tooltip-background-color;
+  }
+
+  .bottom-30::before {
+    left: 70%;
+    bottom: 100%;
+    border-bottom-color: $tooltip-background-color;
+  }
+
+  .bottom-40::before {
+    left: 60%;
+    bottom: 100%;
+    border-bottom-color: $tooltip-background-color;
+  }
+
+  .bottom-50::before {
+    left: 50%;
+    bottom: 100%;
+    border-bottom-color: $tooltip-background-color;
+  }
+
+  .bottom-60::before {
+    left: 40%;
+    bottom: 100%;
+    border-bottom-color: $tooltip-background-color;
+  }
+
+  .bottom-70::before {
+    left: 30%;
+    bottom: 100%;
+    border-bottom-color: $tooltip-background-color;
+  }
+
+  .bottom-80::before {
+    left: 20%;
+    bottom: 100%;
+    border-bottom-color: $tooltip-background-color;
+  }
+
+  .bottom-90::before {
+    left: 10%;
+    bottom: 100%;
+    border-bottom-color: $tooltip-background-color;
+  }
+
+  .bottom-100::before {
+    left: 100%;
+    bottom: 100%;
+    border-bottom-color: $tooltip-background-color;
+  }
+
+  //LEFT
+  /* Absolute positioning */
+.left {
+    left: auto;
+    right: calc(100% + var(--tooltip-margin-x));
+    top: 50%;
+    transform: translateX(0) translateY(-50%);
+  }
+  /* CSS border triangles */
+.left::before {
+    left: auto;
+    right: calc(var(--tooltip-arrow-size) * -2);
+    top: 50%;
+    transform: translateX(0) translateY(-50%);
+    border-left-color: $tooltip-background-color;
+  }
+  
