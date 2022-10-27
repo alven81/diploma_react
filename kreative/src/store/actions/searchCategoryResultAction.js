@@ -1,13 +1,10 @@
-import axios from "axios";
+import { getSearchByCategory } from "services/fetch";
 
 function searchCategoryResult(searchText) {
 
     return (dispatch) => {
-        axios
-            .get(`http://localhost:3004/products?categoryId=${searchText}`)
-            .then((res) => {
-                dispatch(getSearchCategoryResult(res.data));
-            })
+        getSearchByCategory(searchText)
+            .then((res) => dispatch(getSearchCategoryResult(res.data)))
             .catch(function (error) {
                 console.log(error);
             });

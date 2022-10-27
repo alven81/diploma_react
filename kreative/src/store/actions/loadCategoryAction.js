@@ -1,14 +1,15 @@
-import axios from "axios";
+import { getCategories } from "services/fetch";
 
 function getCategoryList() {
+
     return (dispatch) => {
-        axios.get("http://localhost:3004/categories").then((res) => {
-            dispatch(setCategoryData(res.data));
-        });
+        getCategories()
+        .then((res) => dispatch(setCategoryData(res.data)))
     };
 }
 
 function setCategoryData(load) {
+
     return {
         type: "SET_CATEGORY_DATA",
         payload: load,

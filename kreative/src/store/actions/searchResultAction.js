@@ -1,10 +1,10 @@
 import axios from "axios";
+import { getSearchByProduct } from "services/fetch";
 
 function searchResult(searchText) {
 
     return (dispatch) => {
-        axios
-            .get(`http://localhost:3004/products?q=${searchText}`)
+        getSearchByProduct(searchText)
             .then((res) => {
                 dispatch(getSearchResult(res.data));
             })

@@ -1,14 +1,15 @@
-import axios from "axios";
+import { getUserInfoById } from "services/fetch";
 
 function loadCart(id) {
+
     return (dispatch) => {
-        axios.get(`http://localhost:3004/users/${id}`).then((res) => {
-            dispatch(getCartData(res.data.cart));
-        });
+        getUserInfoById(id)
+            .then((res) => dispatch(getCartData(res.data.cart)))
     };
 }
 
 function getCartData(load) {
+
     return {
         type: "GET_CART_DATA",
         payload: load,

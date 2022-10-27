@@ -1,14 +1,15 @@
-import axios from "axios";
+import { getCatalog } from "services/fetch";
 
 function getCatalogData() {
+
     return (dispatch) => {
-        axios.get("http://localhost:3004/products").then((res) => {
-            dispatch(setCatalogData(res.data));
-        });
+        getCatalog()
+        .then((res) => dispatch(setCatalogData(res.data)))
     };
 }
 
 function setCatalogData(load) {
+
     return {
         type: "SET_CATALOG_DATA",
         payload: load,
