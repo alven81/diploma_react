@@ -6,7 +6,7 @@ import {
 	ask_question_ui, reviews_ui, gift_card_ui, suppliers_ui, infoline_ui
 } from "../../lng";
 //import Workshop from "../Workshop";
-import TooltipWrapper from "./TooltipWrapper";
+import Tooltip from "./Tooltip";
 
 
 const Footer = () => {
@@ -19,34 +19,34 @@ const Footer = () => {
 		<>
 			<footer className="footer_main container">
 				<div className="footer_main-contacts">
-
 					<p className="footer_main-contacts-phone">
-						<TooltipWrapper
+						<Tooltip
 							content={contacts_designer_message[setLang]}
+							contentPositionX={80}
 							direction="top"
-							positionX={100}
 						>
 							<a
 								href="tel:+48514556773"
-								// title={contacts_designer_message[setLang]}
 								style={{ position: "relative" }}
 							>
 								+48 514 556 773
 							</a>
-						</TooltipWrapper>
+						</Tooltip>
 					</p>
-
 					<p>{creative_workshop_ui[setLang]}</p>
 					<p className="footer_main-contacts-time">10.00-21.00</p>
 					<p className="footer_main-contacts-mail">
-						<TooltipWrapper content={contacts_designer_message[setLang]} direction="bottom">
+						<Tooltip
+							content={contacts_designer_message[setLang]}
+							contentPositionX={80}
+							direction="top"
+						>
 							<a
 								href="mailto:kyasarina@gmail.com"
-							// title={contacts_designer_message[setLang]}
 							>
 								kyasarina@gmail.com
 							</a>
-						</TooltipWrapper>
+						</Tooltip>
 					</p>
 				</div>
 				<div className="footer_main-block">
