@@ -1,8 +1,7 @@
-import axios from "axios";
+import { postUserList } from "services/fetch";
 
 const setCredentials = (credentials) => {
-    axios
-        .post(`http://localhost:3004/users/`, credentials)
+    postUserList(credentials)
         .catch(function (error) {
             if (error.response) {
                 console.log(error.response.status);

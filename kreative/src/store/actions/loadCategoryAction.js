@@ -5,6 +5,9 @@ function getCategoryList() {
     return (dispatch) => {
         getCategories()
         .then((res) => dispatch(setCategoryData(res.data)))
+        .catch(function (error) {
+            console.log(error);
+        });
     };
 }
 

@@ -5,6 +5,9 @@ function loadCart(id) {
     return (dispatch) => {
         getUserInfoById(id)
             .then((res) => dispatch(getCartData(res.data.cart)))
+            .catch(function (error) {
+                console.log(error);
+            });
     };
 }
 

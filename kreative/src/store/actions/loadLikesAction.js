@@ -5,6 +5,9 @@ function loadLikes(id) {
     return (dispatch) => {
         getUserInfoById(id)
             .then((res) => dispatch(getLikesData(res.data.likes)))
+            .catch(function (error) {
+                console.log(error);
+            });
     };
 }
 

@@ -1,8 +1,7 @@
-import axios from "axios";
+import { getUserInfoById } from "services/fetch";
 
-const getUserInfoById = async (id) => {
-    return axios
-        .get(`http://localhost:3004/users/${id}`)
+const requestUserInfoById = async (id) => {
+    return getUserInfoById(id)
         .then(function (res) {
             return {
                 id: res.data.id,
@@ -17,4 +16,4 @@ const getUserInfoById = async (id) => {
         });
 };
 
-export { getUserInfoById };
+export { requestUserInfoById };

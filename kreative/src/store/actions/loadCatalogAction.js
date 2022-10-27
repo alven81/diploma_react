@@ -5,6 +5,9 @@ function getCatalogData() {
     return (dispatch) => {
         getCatalog()
         .then((res) => dispatch(setCatalogData(res.data)))
+        .catch(function (error) {
+            console.log(error);
+        });
     };
 }
 

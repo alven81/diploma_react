@@ -1344,6 +1344,20 @@
         3,
         15
       ]
+    },
+    {
+      "id": 9,
+      "avatar": "/assets/avatars/1.jpg",
+      "firstName": "Test new f",
+      "lastName": "tester",
+      "email": "rezki@google123.com",
+      "password": "123456",
+      "likes": [
+        1
+      ],
+      "cart": [
+        1
+      ]
     }
   ],
   "categories": [

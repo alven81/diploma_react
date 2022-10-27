@@ -1,9 +1,9 @@
-import axios from "axios";
+import { getUserInfoById } from "services/fetch";
 
 const getUserForReviewById = (id) => {
-    axios
-        .get(`http://localhost:3004/users/${id}`)
+    getUserInfoById(id)
         .then(function (res) {
+            
             return {
                 id: res.data.id,
                 avatar: res.data.avatar,

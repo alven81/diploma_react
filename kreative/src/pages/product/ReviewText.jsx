@@ -1,6 +1,6 @@
 import { Rating } from "@mui/material";
-import axios from "axios";
 import { useEffect, useState } from "react";
+import { getUserInfoById } from "services/fetch";
 
 const ReviewText = ({ item }) => {
 	const { userId, rate, text, data } = item;
@@ -9,8 +9,7 @@ const ReviewText = ({ item }) => {
 
 	useEffect(() => {
 		const getUserForReviewById = async (id) => {
-			return await axios
-				.get(`http://localhost:3004/users/${id}`)
+			return getUserInfoById(id)
 				.then((res) => res.data)
 				.catch(function (error) {
 					console.log(error);

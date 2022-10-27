@@ -7,7 +7,7 @@ import loadLikes from "store/actions/loadLikesAction";
 import { openLogModal } from "store/actions/LogAction";
 import { doesCredentialsOk } from "utils/doesCredentialsOk";
 import { doesUserExist } from "utils/doesUserExist";
-import { getUserInfoById } from "utils/getUserInfoById";
+import { requestUserInfoById } from "utils/getUserInfoById";
 import {
     email_ui,
     login_succesfull_message,
@@ -31,7 +31,7 @@ const LogModal = () => {
         const passCorrect = await doesCredentialsOk(userExist, eMail, passMain);
         if (userExist || passCorrect) {
             if (passCorrect.access) {
-                const userInfo = await getUserInfoById(passCorrect.id);
+                const userInfo = await requestUserInfoById(passCorrect.id);
                 dispatch(isUserLogIn(userInfo));
                 dispatch(
                     showAlertMessage({

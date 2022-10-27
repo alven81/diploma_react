@@ -1,13 +1,10 @@
-import axios from "axios";
 import { getSearchByProduct } from "services/fetch";
 
 function searchResult(searchText) {
 
     return (dispatch) => {
         getSearchByProduct(searchText)
-            .then((res) => {
-                dispatch(getSearchResult(res.data));
-            })
+            .then((res) => dispatch(getSearchResult(res.data)))
             .catch(function (error) {
                 console.log(error);
             });

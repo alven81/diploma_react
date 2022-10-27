@@ -1,8 +1,7 @@
-import axios from "axios";
+import { getUserList } from "services/fetch";
 
 const getLastUserId = async () => {
-    return axios
-        .get(`http://localhost:3004/users/`)
+    return getUserList()
         .then((res) => res.data.length + 1)
         .catch(function (error) {
             if (error.response) {

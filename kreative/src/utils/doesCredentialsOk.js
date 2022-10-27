@@ -1,17 +1,19 @@
-import axios from "axios";
+import { getUserEmail } from "services/fetch";
 
 const doesCredentialsOk = async (callback, eMail, passMain) => {
     if (callback) {
-        return axios
-            .get(`http://localhost:3004/users/?email=${eMail}`)
+
+        return getUserEmail(eMail)
             .then(function (res) {
                 if (res.data[0].password === passMain) {
+
                     return {
                         access:
                             res.data[0].password === passMain ? true : false,
                         id: res.data[0].id,
                     };
                 } else {
+
                     return false;
                 }
             })
@@ -19,6 +21,7 @@ const doesCredentialsOk = async (callback, eMail, passMain) => {
                 console.log(error);
             });
     } else {
+
         return false;
     }
 };
