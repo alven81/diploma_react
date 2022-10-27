@@ -1,6 +1,7 @@
 import axios from "axios";
 
 function searchResult(searchText) {
+
     return (dispatch) => {
         axios
             .get(`http://localhost:3004/products?q=${searchText}`)
@@ -14,6 +15,7 @@ function searchResult(searchText) {
 }
 
 function getSearchResult(load) {
+
     return {
         type: "GET_SEARCH_RESULT",
         payload: load,

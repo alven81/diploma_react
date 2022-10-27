@@ -1,6 +1,7 @@
 import axios from "axios";
 
 function searchCategoryResult(searchText) {
+
     return (dispatch) => {
         axios
             .get(`http://localhost:3004/products?categoryId=${searchText}`)
@@ -14,6 +15,7 @@ function searchCategoryResult(searchText) {
 }
 
 function getSearchCategoryResult(load) {
+
     return {
         type: "GET_SEARCH_CATEGORY_RESULT",
         payload: load,

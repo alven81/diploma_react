@@ -2,15 +2,15 @@ import { Button } from "@mui/material";
 import { NavLink } from "react-router-dom";
 import { ElementDecor } from "./ElementDecor";
 import { HomeElementContainer } from "./HomeElementContainer";
-import { ElementCraft } from "./ElementCraft";
-import { ElementModel } from "./ElementModel";
-import { ElementPaint } from "./ElementPaint";
-import { HomeListContainer } from "./HomeListContainer";
-import { ListCraft } from "./ListCraft";
-import { ListModel } from "./ListModel";
-import { ListPaint } from "./ListPaint";
-import { ElementFlora } from "./ElementFlora";
-import Workshop from "./Workshop";
+import { ElementCraft } from "pages/home/ElementCraft";
+import { ElementModel } from "pages/home/ElementModel";
+import { ElementPaint } from "pages/home/ElementPaint";
+import { HomeListContainer } from "pages/home/HomeListContainer";
+import { ListCraft } from "pages/home/ListCraft";
+import { ListModel } from "pages/home/ListModel";
+import { ListPaint } from "pages/home/ListPaint";
+import { ElementFlora } from "pages/home/ElementFlora";
+import Workshop from "pages/home/Workshop";
 
 const Home = () => {
 	return (

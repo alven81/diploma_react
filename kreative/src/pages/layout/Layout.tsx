@@ -1,12 +1,12 @@
 import { RootStateOrAny, useSelector } from "react-redux";
 import { Outlet } from "react-router-dom";
-import Footer from "./Footer";
-import NavBar from "./NavBar";
-import LogModal from "../../components/modal/log/LogIn";
-import RegModal from "../../components/modal/reg/Reg";
-import { LeftSlideMenu } from "../LeftSlideMenu/LeftSlideMenu";
-import Alert from "../../components/modal/Alert";
-import { ZoomImage } from "../product/ZoomImage";
+import Footer from "pages/layout/Footer";
+import NavBar from "pages/layout/NavBar";
+import LogModal from "components/modal/log/LogIn";
+import RegModal from "components/modal/reg/Reg";
+import { LeftSlideMenu } from "pages/LeftSlideMenu/LeftSlideMenu";
+import Alert from "components/modal/Alert";
+import { ZoomImage } from "pages/product/ZoomImage";
 
 const Layout = () => {
 	const userIsReg = useSelector(

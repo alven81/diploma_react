@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate, useParams } from "react-router-dom";
-import { searchCategoryResult } from "../store/actions/searchCategoryResultAction";
-import CatElement from "./catalog/CatElement";
+import { useParams } from "react-router-dom";
+import { searchCategoryResult } from "store/actions/searchCategoryResultAction";
+import CatElement from "pages/catalog/CatElement";
 
 const Theme = () => {
 	const dispatch = useDispatch();

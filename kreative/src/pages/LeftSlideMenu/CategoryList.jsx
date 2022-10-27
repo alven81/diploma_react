@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { leftSideMenuStatus } from "../../store/actions/leftSideMenuStatusAction";
+import { leftSideMenuStatus } from "store/actions/leftSideMenuStatusAction";
 
 const CategoryList = ({ catList, handleCategorySearch }) => {
 	const { category, categoryLink } = catList;

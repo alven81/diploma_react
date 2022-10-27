@@ -2,7 +2,7 @@ import { Rating } from "@mui/material";
 import axios from "axios";
 import { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { showAlertMessage } from "../../store/actions/AlertAction";
+import { showAlertMessage } from "store/actions/AlertAction";
 
 const CommentsModal = ({ onClick, handleShowComments, id, showComment }) => {
 	const dispatch = useDispatch();

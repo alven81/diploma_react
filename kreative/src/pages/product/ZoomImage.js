@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { showZoomImage } from "../../store/actions/zoomAction";
+import { showZoomImage } from "store/actions/zoomAction";
 
 const ZoomImage = ({ image }) => {
     const dispatch = useDispatch();

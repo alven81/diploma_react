@@ -1,7 +1,7 @@
 import { FC, useState } from "react";
 import { useDispatch } from "react-redux";
 import { Navigate, NavLink, useNavigate } from "react-router-dom";
-import { searchResult } from "../store/actions/searchResultAction";
+import { searchResult } from "store/actions/searchResultAction";
 
 interface InputSearchProps {
 	className: string;

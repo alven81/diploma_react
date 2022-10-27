@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import LikesElement from "./LikesElement";
+import LikesElement from "pages/likes/LikesElement";
 
 const Likes = () => {
     const likesList = useSelector((state) => state.loadLikes.inLikes);

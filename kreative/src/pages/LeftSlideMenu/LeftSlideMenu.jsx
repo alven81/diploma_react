@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import LoadingSpinner from "../../components/LoadingSpinner";
-import { leftSideMenuStatus } from "../../store/actions/leftSideMenuStatusAction";
-import getCategoryList from "../../store/actions/loadCategoryAction";
-import { CategoryList } from "./CategoryList";
+import LoadingSpinner from "components/LoadingSpinner";
+import { leftSideMenuStatus } from "store/actions/leftSideMenuStatusAction";
+import getCategoryList from "store/actions/loadCategoryAction";
+import { CategoryList } from "pages/LeftSlideMenu/CategoryList";
 
 const LeftSlideMenu = ({ isMenuOpen }) => {
 	const category = useSelector(

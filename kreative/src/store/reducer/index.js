@@ -1,18 +1,18 @@
 import { combineReducers } from "redux";
-import { indexReducer } from "./indexReducer";
-import { isUserLogInReducer } from "./isUserLogInReducer";
-import { isLeftSideMenuStatusReducer } from "./leftSideMenuStatusReducer";
-import loadCartReducer from "./loadCartReducer";
-import loadLikesReducer from "./loadLikesReducer";
-import loadCatalogReducer from "./loadCatalogReducer";
-import loadCategoryReducer from "./loadCategoryReducer";
-import { LogModalReducer } from "./LogReducer";
-import { RegModalReducer } from "./RegReducer";
-import { zoomImageReducer } from "./zoomReducer";
-import loadSearchReducer from "./searchResultReducer";
-import loadSearchCategoryReducer from "./searchCategoryResultReducer";
-import { AlertReducer } from "./AlertReducer";
-import { uiLanguageReducer } from "./uiLanguageReducer";
+import { indexReducer } from "store/reducer/indexReducer";
+import { isUserLogInReducer } from "store/reducer/isUserLogInReducer";
+import { isLeftSideMenuStatusReducer } from "store/reducer/leftSideMenuStatusReducer";
+import loadCartReducer from "store/reducer/loadCartReducer";
+import loadLikesReducer from "store/reducer/loadLikesReducer";
+import loadCatalogReducer from "store/reducer/loadCatalogReducer";
+import loadCategoryReducer from "store/reducer/loadCategoryReducer";
+import { LogModalReducer } from "store/reducer/LogReducer";
+import { RegModalReducer } from "store/reducer/RegReducer";
+import { zoomImageReducer } from "store/reducer/zoomReducer";
+import loadSearchReducer from "store/reducer/searchResultReducer";
+import loadSearchCategoryReducer from "store/reducer/searchCategoryResultReducer";
+import { AlertReducer } from "store/reducer/AlertReducer";
+import { uiLanguageReducer } from "store/reducer/uiLanguageReducer";
 
 //const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 

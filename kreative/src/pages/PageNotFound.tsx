@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 
 const PageNotFound = () => {
+
 	return (
 		<section className="pnf container">
 			<div>
@@ -28,4 +29,5 @@ const PageNotFound = () => {
 		</section>
 	);
 };
+
 export default PageNotFound;

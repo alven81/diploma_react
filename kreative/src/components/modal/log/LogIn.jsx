@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { showAlertMessage } from "../../../store/actions/AlertAction";
-import { isUserLogIn } from "../../../store/actions/isUserLogInAction";
-import loadCart from "../../../store/actions/loadCartAction";
-import loadLikes from "../../../store/actions/loadLikesAction";
-import { openLogModal } from "../../../store/actions/LogAction";
-import { doesCredentialsOk } from "../../../utils/doesCredentialsOk";
-import { doesUserExist } from "../../../utils/doesUserExist";
-import { getUserInfoById } from "../../../utils/getUserInfoById";
+import { showAlertMessage } from "store/actions/AlertAction";
+import { isUserLogIn } from "store/actions/isUserLogInAction";
+import loadCart from "store/actions/loadCartAction";
+import loadLikes from "store/actions/loadLikesAction";
+import { openLogModal } from "store/actions/LogAction";
+import { doesCredentialsOk } from "utils/doesCredentialsOk";
+import { doesUserExist } from "utils/doesUserExist";
+import { getUserInfoById } from "utils/getUserInfoById";
 import {
     email_ui,
     login_succesfull_message,
@@ -16,7 +16,7 @@ import {
     password_ui,
     enter_ui,
     enter_user_data_message,
-} from "../../../lng";
+} from "lng";
 
 const LogModal = () => {
     const dispatch = useDispatch();

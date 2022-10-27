@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { addItemIndex } from "../../store/actions/indexAction";
-import Product from "../product/Product";
+import { addItemIndex } from "store/actions/indexAction";
+import Product from "pages/product/Product";
 import axios from "axios";
-import loadCart from "../../store/actions/loadCartAction";
-import { showAlertMessage } from "../../store/actions/AlertAction";
+import loadCart from "store/actions/loadCartAction";
+import { showAlertMessage } from "store/actions/AlertAction";
 
 const CartElement = ({ item }) => {
 	const { id, quantity } = item;

@@ -1,21 +1,22 @@
 import { Route, Routes } from "react-router-dom";
-import "./styles/App.scss";
-import Home from "./pages/home/Home";
-import Layout from "./pages/layout/Layout";
-import PageNotFound from "./pages/PageNotFound";
-import Product from "./pages/product/Product";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
-import getCatalogData from "./store/actions/loadCatalogAction";
-import { isUserLogIn } from "./store/actions/isUserLogInAction";
-import Catalog from "./pages/catalog/Catalog";
-import Cart from "./pages/cart/Cart";
-import Search from "./pages/search/Search";
-import Reviews from "./pages/reviews/Reviews";
-import { Administration } from "./pages/Administration";
-import Theme from "./pages/Theme";
-import Likes from "./pages/likes/Likes";
-import { uiLanguage } from "./store/actions/uiLanguage";
+
+import Home from "pages/home/Home";
+import Layout from "pages/layout/Layout";
+import PageNotFound from "pages/PageNotFound";
+import Product from "pages/product/Product";
+import getCatalogData from "store/actions/loadCatalogAction";
+import { isUserLogIn } from "store/actions/isUserLogInAction";
+import Catalog from "pages/catalog/Catalog";
+import Cart from "pages/cart/Cart";
+import Search from "pages/search/Search";
+import Reviews from "pages/reviews/Reviews";
+import { Administration } from "pages/Administration";
+import Theme from "pages/Theme";
+import Likes from "pages/likes/Likes";
+import { uiLanguage } from "store/actions/uiLanguage";
+import "styles/App.scss";
 
 const App = () => {
     const dispatch = useDispatch();

@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
-import { openLogModal } from "../store/actions/LogAction";
-import { openRegModal } from "../store/actions/RegAction";
-import { useDetectOutsideClick } from "../utils/useDetectOutsideClick";
+import { openLogModal } from "store/actions/LogAction";
+import { openRegModal } from "store/actions/RegAction";
+import { useDetectOutsideClick } from "utils/useDetectOutsideClick";
 
 export default function DropDownMenu({ src, alt }) {
     const dispatch = useDispatch();

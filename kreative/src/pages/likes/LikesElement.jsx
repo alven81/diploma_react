@@ -1,8 +1,8 @@
 //import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { addItemIndex } from "../../store/actions/indexAction";
-import Product from "../product/Product";
+import { addItemIndex } from "store/actions/indexAction";
+import Product from "pages/product/Product";
 
 const LikesElement = ({ item }) => {
     const { id } = item;

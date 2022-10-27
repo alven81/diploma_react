@@ -3,15 +3,15 @@ import axios from "axios";
 import { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router";
-import CommentsModal from "./CommentsModal";
-import { Features } from "./Features";
-import { ImageBox } from "./ImageBox";
-import { Review } from "./Review";
-import { Consist } from "./Consist";
-import { New } from "./New";
-import loadCart from "../../store/actions/loadCartAction";
-import { showAlertMessage } from "../../store/actions/AlertAction";
-import loadLikes from "../../store/actions/loadLikesAction";
+import CommentsModal from "pages/product/CommentsModal";
+import { Features } from "pages/product/Features";
+import { ImageBox } from "pages/product/ImageBox";
+import { Review } from "pages/product/Review";
+import { Consist } from "pages/product/Consist";
+import { New } from "pages/product/New";
+import loadCart from "store/actions/loadCartAction";
+import { showAlertMessage } from "store/actions/AlertAction";
+import loadLikes from "store/actions/loadLikesAction";
 
 const Product = () => {
     const dispatch = useDispatch();

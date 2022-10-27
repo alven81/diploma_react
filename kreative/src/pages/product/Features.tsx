@@ -1,5 +1,5 @@
 import { FC } from "react";
-import IFeatures from "../../types/features";
+import IFeatures from "types/features";
 
 interface FeaturesProps {
 	features: IFeatures;

@@ -1,11 +1,11 @@
 import { useSelector } from "react-redux";
-import CartElement from "../cart/CartElement";
+import CartElement from "pages/cart/CartElement";
 import {
     shop_cart_ui,
     total_in_cart_ui,
     order_cost_ui,
     rub_cost_ui
-} from "../../lng";
+} from "lng";
 
 const Cart = () => {
 	const whatInTheCart = useSelector((state) => state.loadCart.inCart);

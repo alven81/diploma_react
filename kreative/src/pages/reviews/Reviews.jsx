@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import { ReviewUsers } from "./ReviewUsers";
+import { ReviewUsers } from "pages/reviews/ReviewUsers";
 
 const Reviews = () => {
 	const catalog = useSelector((state) => state.loadData.loadCatalog);

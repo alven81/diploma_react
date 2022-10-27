@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import CatElement from "../catalog/CatElement";
+import CatElement from "pages/catalog/CatElement";
 
 const New = () => {
     const catalog = useSelector((state) => state.loadData.loadCatalog);

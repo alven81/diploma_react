@@ -4,9 +4,8 @@ import {
 	contacts_designer_message, creative_workshop_ui, about_ui, history_ui, contacts_ui, blog_ui, brands_ui, career_ui, help_ui,
 	pay_ui, deliver_ui, return_rule_ui, pub_offer_ui, yarn_calc_ui, card_ui, info_ui, activation_ui, recover_ui, faq_ui, feedback_ui,
 	ask_question_ui, reviews_ui, gift_card_ui, suppliers_ui, infoline_ui
-} from "../../lng";
-//import Workshop from "../Workshop";
-import Tooltip from "./Tooltip";
+} from "lng";
+import Tooltip from "pages/layout/Tooltip";
 
 
 const Footer = () => {

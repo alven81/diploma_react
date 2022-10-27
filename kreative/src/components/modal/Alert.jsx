@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { showAlertMessage } from "../../store/actions/AlertAction";
+import { showAlertMessage } from "store/actions/AlertAction";
 
 const Alert = ({ alertMessage }) => {
 	const dispatch = useDispatch();

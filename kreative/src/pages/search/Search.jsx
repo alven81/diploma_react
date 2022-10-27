@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
-import CatElement from "../catalog/CatElement";
-import { New } from "../product/New";
+import CatElement from "pages/catalog/CatElement";
+import { New } from "pages/product/New";
 
 const Search = () => {
     const searchCatalog = useSelector((state) => state.loadSearch.searchResult);

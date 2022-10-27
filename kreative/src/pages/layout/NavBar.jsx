@@ -1,9 +1,9 @@
 import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
-import DropDownMenu from "../../components/DropDownMenu";
-import InputSearch from "../../components/InputSearch";
-import { leftSideMenuStatus } from "../../store/actions/leftSideMenuStatusAction";
-import { uiLanguage } from "../../store/actions/uiLanguage";
+import DropDownMenu from "components/DropDownMenu";
+import InputSearch from "components/InputSearch";
+import { leftSideMenuStatus } from "store/actions/leftSideMenuStatusAction";
+import { uiLanguage } from "store/actions/uiLanguage";
 import {
     main_ui,
     about_ui,
@@ -27,7 +27,7 @@ import {
     workshop_ui,
     new_ui,
     discounts_ui,
-} from "../../lng";
+} from "lng";
 
 const NavBar = () => {
     const userName = useSelector((state) => state.isUserLogIn.isUserLogInInfo);

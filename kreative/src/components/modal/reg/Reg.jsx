@@ -1,12 +1,12 @@
 //import { Avatar } from "@mui/material";
 import { useEffect, useState } from "react"
 import { useDispatch } from "react-redux";
-import { showAlertMessage } from "../../../store/actions/AlertAction";
-import { openRegModal } from "../../../store/actions/RegAction";
-import { doesUserExist } from "../../../utils/doesUserExist";
-import { getLastUserId } from "../../../utils/getLastUserId";
-import { setCredentials } from "../../../utils/setCredentials";
-import { AvaFoto } from "./AvaFoto";
+import { showAlertMessage } from "store/actions/AlertAction";
+import { openRegModal } from "store/actions/RegAction";
+import { doesUserExist } from "utils/doesUserExist";
+import { getLastUserId } from "utils/getLastUserId";
+import { setCredentials } from "utils/setCredentials";
+import { AvaFoto } from "components/modal/reg/AvaFoto";
 
 const RegModal = () => {
     
