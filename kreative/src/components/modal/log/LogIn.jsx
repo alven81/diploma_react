@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 import { useDispatch, useSelector } from "react-redux";
 import { showAlertMessage } from "store/actions/AlertAction";
 import { isUserLogIn } from "store/actions/isUserLogInAction";
@@ -51,6 +52,7 @@ const LogModal = () => {
                 );
             }
         } else
+
             return dispatch(
                 showAlertMessage({
                     status: true,

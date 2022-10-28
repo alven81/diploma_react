@@ -1,4 +1,3 @@
-import { FC } from "react";
 import IReview from "types/review";
 import { ReviewText } from "pages/product/ReviewText";
 
@@ -6,7 +5,8 @@ interface ReviewProps {
 	reviews: IReview;
 }
 
-const Review: FC<ReviewProps> = ({ reviews }) => {
+const Review = ({ reviews }: ReviewProps) => {
+
 	return (
 		<>
 			{reviews.map((item: IReview) => (
@@ -17,4 +17,5 @@ const Review: FC<ReviewProps> = ({ reviews }) => {
 		</>
 	);
 };
+
 export { Review };

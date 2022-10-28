@@ -25,10 +25,10 @@ const Footer = () => {
 							direction="top"
 						>
 							<a
-								href="tel:+48514556773"
+								href="tel:+12 345 678 900"
 								style={{ position: "relative" }}
 							>
-								+48 514 556 773
+								+12 345 678 900
 							</a>
 						</Tooltip>
 					</p>

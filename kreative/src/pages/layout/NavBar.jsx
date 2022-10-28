@@ -119,10 +119,10 @@ const NavBar = () => {
                         <img src="/assets/img/phone-call.svg" alt="" />
                         <p>
                             <a
-                                href="tel:+48514556773"
+                                href="tel:+12 345 678 900"
                                 title={contacts_designer_message[setLang]}
                             >
-                                +48 514 556 773
+                                +12 345 678 900
                             </a>
                         </p>
                     </div>

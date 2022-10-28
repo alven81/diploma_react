@@ -1,8 +1,10 @@
 import { getUserInfoById } from "services/fetch";
 
 const requestUserInfoById = async (id) => {
+
     return getUserInfoById(id)
         .then(function (res) {
+
             return {
                 id: res.data.id,
                 avatar: res.data.avatar,

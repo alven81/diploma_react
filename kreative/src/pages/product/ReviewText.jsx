@@ -1,5 +1,6 @@
-import { Rating } from "@mui/material";
 import { useEffect, useState } from "react";
+
+import { Rating } from "@mui/material";
 import { getUserInfoById } from "services/fetch";
 
 const ReviewText = ({ item }) => {
@@ -9,6 +10,7 @@ const ReviewText = ({ item }) => {
 
 	useEffect(() => {
 		const getUserForReviewById = async (id) => {
+
 			return getUserInfoById(id)
 				.then((res) => res.data)
 				.catch(function (error) {
@@ -58,4 +60,5 @@ const ReviewText = ({ item }) => {
 		</>
 	);
 };
+
 export { ReviewText };

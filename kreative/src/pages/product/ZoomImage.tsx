@@ -1,7 +1,12 @@
 import { useDispatch } from "react-redux";
+
 import { showZoomImage } from "store/actions/zoomAction";
 
-const ZoomImage = ({ image }) => {
+interface IZoomImage {
+    image: string;
+}
+
+const ZoomImage = ({ image }: IZoomImage) => {
     const dispatch = useDispatch();
 
     const handlerZoomImage = () => {
@@ -14,4 +19,5 @@ const ZoomImage = ({ image }) => {
         </div>
     );
 };
+
 export { ZoomImage };

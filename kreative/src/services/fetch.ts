@@ -20,6 +20,7 @@ const postData = (url: string, payload?: any) => {
     return axios.post(url, payload)
 }
 
+
 //GET
 export const getCatalog = () => getData(catalogData);
 export const getUserInfoById = (id: number) => getData(userInfoById(id));
