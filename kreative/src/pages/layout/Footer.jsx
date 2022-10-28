@@ -18,35 +18,35 @@ const Footer = () => {
 		<>
 			<footer className="footer_main container">
 				<div className="footer_main-contacts">
-					<p className="footer_main-contacts-phone">
-						<Tooltip
-							content={contacts_designer_message[setLang]}
-							contentPositionX={80}
-							direction="top"
-						>
+					<Tooltip
+						content={contacts_designer_message[setLang]}
+						contentPositionX={80}
+						direction="top"
+					>
+						<p className="footer_main-contacts-phone">
 							<a
 								href="tel:+12 345 678 900"
 								style={{ position: "relative" }}
 							>
 								+12 345 678 900
 							</a>
-						</Tooltip>
-					</p>
+						</p>
+					</Tooltip>
 					<p>{creative_workshop_ui[setLang]}</p>
 					<p className="footer_main-contacts-time">10.00-21.00</p>
-					<p className="footer_main-contacts-mail">
-						<Tooltip
-							content={contacts_designer_message[setLang]}
-							contentPositionX={80}
-							direction="top"
-						>
+					<Tooltip
+						content={contacts_designer_message[setLang]}
+						contentPositionX={80}
+						direction="top"
+					>
+						<p className="footer_main-contacts-mail">
 							<a
 								href="mailto:kyasarina@gmail.com"
 							>
 								kyasarina@gmail.com
 							</a>
-						</Tooltip>
-					</p>
+						</p>
+					</Tooltip>
 				</div>
 				<div className="footer_main-block">
 					<div className="footer_main-block-top">
