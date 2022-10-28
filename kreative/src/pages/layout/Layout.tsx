@@ -1,5 +1,6 @@
 import { RootStateOrAny, useSelector } from "react-redux";
 import { Outlet } from "react-router-dom";
+
 import Footer from "pages/layout/Footer";
 import NavBar from "pages/layout/NavBar";
 import LogModal from "components/modal/log/LogIn";
@@ -41,4 +42,5 @@ const Layout = () => {
 		</div>
 	);
 };
+
 export default Layout;

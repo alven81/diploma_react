@@ -1,4 +1,9 @@
-const ElementPaint = ({ bkgClass }) => {
+interface IElementPaint {
+	bkgClass: string;
+}
+
+const ElementPaint = ({ bkgClass }: IElementPaint) => {
+
 	return (
 		<>
 			<div className={bkgClass}>
@@ -9,4 +14,5 @@ const ElementPaint = ({ bkgClass }) => {
 		</>
 	);
 };
+
 export { ElementPaint };

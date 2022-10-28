@@ -1,6 +1,7 @@
-import { Rating } from "@mui/material";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+
+import { Rating } from "@mui/material";
 import { addItemIndex } from "store/actions/indexAction";
 import Product from "pages/product/Product";
 
@@ -51,4 +52,5 @@ const ReviewUsers = ({ array }) => {
 		</li>
 	);
 };
+
 export { ReviewUsers };

@@ -8,13 +8,12 @@ interface ReviewProps {
 const Review = ({ reviews }: ReviewProps) => {
 
 	return (
-		<>
-			{reviews.map((item: IReview) => (
-				<div className="review" key={Math.random()}>
-					<ReviewText item={item} />
-				</div>
-			))}
-		</>
+		reviews.map((item: IReview) => (
+			<div className="review" key={Math.random()}>
+				<ReviewText item={item} />
+			</div>
+		))
+
 	);
 };
 

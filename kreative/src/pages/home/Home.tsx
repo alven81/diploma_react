@@ -1,5 +1,6 @@
-import { Button } from "@mui/material";
 import { NavLink } from "react-router-dom";
+
+import { Button } from "@mui/material";
 import { ElementDecor } from "./ElementDecor";
 import { HomeElementContainer } from "./HomeElementContainer";
 import { ElementCraft } from "pages/home/ElementCraft";
@@ -13,6 +14,7 @@ import { ElementFlora } from "pages/home/ElementFlora";
 import Workshop from "pages/home/Workshop";
 
 const Home = () => {
+
 	return (
 		<div className="home_main">
 			<section className="home_main-theme container">
@@ -223,4 +225,5 @@ const Home = () => {
 		</div>
 	);
 };
+
 export default Home;

@@ -8,7 +8,7 @@ const Search = () => {
     return (
         <>
             <div className="catalog_main container">
-                {searchCatalog && (
+                {searchCatalog &&
                     <>
                         {searchCatalog.length > 0 ? (
                             searchCatalog.map((catalog) => (
@@ -23,7 +23,7 @@ const Search = () => {
                             </div>
                         )}
                     </>
-                )}
+                }
             </div>
             <div className="container">
                 <New />

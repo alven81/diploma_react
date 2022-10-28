@@ -1,4 +1,5 @@
 const ListCraft = () => {
+
 	return (
 		<div className="home_list-craft">
 			<p>Sewing </p>           {/* Шитьё */}
@@ -13,4 +14,5 @@ const ListCraft = () => {
 		</div>
 	);
 };
+
 export { ListCraft };

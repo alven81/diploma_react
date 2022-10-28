@@ -1,4 +1,9 @@
-const ElementModel = ({ bkgClass }) => {
+interface IElementModel {
+	bkgClass: string;
+}
+
+const ElementModel = ({ bkgClass }: IElementModel) => {
+
 	return (
 		<div className={bkgClass}>
 			<div>
@@ -9,4 +14,5 @@ const ElementModel = ({ bkgClass }) => {
 		</div>
 	);
 };
+
 export { ElementModel };

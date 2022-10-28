@@ -1,8 +1,10 @@
-import { Rating } from "@mui/material";
-import axios from "axios";
 import { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router";
+
+import { Rating } from "@mui/material";
+import axios from "axios";
+
 import CommentsModal from "pages/product/CommentsModal";
 import { Features } from "pages/product/Features";
 import { ImageBox } from "pages/product/ImageBox";
@@ -23,17 +25,11 @@ const Product = () => {
     const [showComment, setShowComment] = useState(false);
     const [review, setReview] = useState(false);
     const [cartItem, setCartItem] = useState();
-    const [consistBlockText, setConsistBlockText] = useState(
-        "Full description"   //Развернуть описание
-    );
+    const [consistBlockText, setConsistBlockText] = useState("Full description");
     const [keyConsistSwitch, setKeyConsistSwitch] = useState(false);
-    const [featureBlockText, setFeatureBlockText] = useState(
-        "Full description"   //Развернуть описание
-    );
+    const [featureBlockText, setFeatureBlockText] = useState("Full description");
     const [keyFeatureSwitch, setKeyFeatureSwitch] = useState(false);
-    const [descriptionBlockText, setDescriptionBlockText] = useState(
-        "Full description"   //Развернуть описание
-    );
+    const [descriptionBlockText, setDescriptionBlockText] = useState("Full description");
     const [keyDescriptionSwitch, setKeyDescriptionSwitch] = useState(false);
 
     const descriptionBlock = useRef();
@@ -147,7 +143,7 @@ const Product = () => {
             incomingBlock.current.style.height = "90px";
             setDescriptionBlockText("Full description"); //Развернуть описание
         }
-        setKeyDescriptionSwitch(!keyDescriptionSwitch);
+        setKeyDescriptionSwitch(prev => !prev);
     };
 
     const handleOpenFeature = (incomingBlock) => {
@@ -159,7 +155,7 @@ const Product = () => {
             incomingBlock.current.style.height = "90px";
             setFeatureBlockText("Full description"); //Развернуть описание
         }
-        setKeyFeatureSwitch(!keyFeatureSwitch);
+        setKeyFeatureSwitch(prev => !prev);
     };
 
     const handleOpenConsist = (incomingBlock) => {
@@ -171,7 +167,7 @@ const Product = () => {
             incomingBlock.current.style.height = "90px";
             setConsistBlockText("Full description"); //Развернуть описание
         }
-        setKeyConsistSwitch(!keyConsistSwitch);
+        setKeyConsistSwitch(prev => !prev);
     };
 
     return (
@@ -218,9 +214,7 @@ const Product = () => {
                             <div className={showComment ? "" : "hide"}>
                                 <CommentsModal
                                     onClick={(e) => handleRate(e)}
-                                    handleShowComments={() =>
-                                        handleShowComments()
-                                    }
+                                    handleShowComments={() => handleShowComments()}
                                     id={itemIndex}
                                     showComment={showComment}
                                 />
@@ -262,9 +256,7 @@ const Product = () => {
                                     <span>{`${catalogList.discount_price} руб.`}</span>
                                 </p>
                                 <p
-                                    className={
-                                        catalogList.color === 0 ? "hide" : ""
-                                    }
+                                    className={catalogList.color === 0 ? "hide" : ""}
                                 >
                                     Color: <span>{catalogList.color}</span>  {/* Цвет */}
                                 </p>
@@ -297,9 +289,7 @@ const Product = () => {
                             </div>
                             <button
                                 className="product_main-item-rollbtn"
-                                onClick={() =>
-                                    handleOpenDescription(descriptionBlock)
-                                }
+                                onClick={() => handleOpenDescription(descriptionBlock)}
                             >
                                 {descriptionBlockText}
                             </button>

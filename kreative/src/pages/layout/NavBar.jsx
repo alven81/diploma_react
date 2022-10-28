@@ -106,15 +106,15 @@ const NavBar = () => {
                             <button
                                 onClick={() => setLanguage("eng")}
                                 className="nav_top-lang-en"
-                            ></button>
+                            />
                             <button
                                 onClick={() => setLanguage("pol")}
                                 className="nav_top-lang-pl"
-                            ></button>
+                            />
                             <button
                                 onClick={() => setLanguage("rus")}
                                 className="nav_top-lang-ru"
-                            ></button>
+                            />
                         </div>
                         <img src="/assets/img/phone-call.svg" alt="" />
                         <p>
@@ -146,9 +146,8 @@ const NavBar = () => {
                         <div className="nav_middle-cart">
                             <div className="nav_middle-cart-user">
                                 <p>
-                                    {hello_message[setLang]},{" "}
-                                    {userName.firstName}
-                                </p>{" "}
+                                    {`${hello_message[setLang]}, ${userName.firstName}`}
+                                </p>
                             </div>
                             <div className="nav_middle-cart-block">
                                 <div>
@@ -159,10 +158,10 @@ const NavBar = () => {
                                     />
                                 </div>
                                 <div>
-                                    <DropDownMenu
+                                    {<DropDownMenu
                                         src={`/assets/img/cart_man.svg`}
                                         alt={reg_ui[setLang]}
-                                    />
+                                    />}
                                 </div>
                                 <div>
                                     <NavLink className="nav-icons" to="likes">

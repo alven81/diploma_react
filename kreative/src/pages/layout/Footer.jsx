@@ -15,7 +15,6 @@ const Footer = () => {
 	);
 
 	return (
-		<>
 			<footer className="footer_main container">
 				<div className="footer_main-contacts">
 					<Tooltip
@@ -242,7 +241,6 @@ const Footer = () => {
 					</div>
 				</div>
 			</footer>
-		</>
 	);
 };
 

@@ -1,4 +1,9 @@
-const ElementFlora = ({ bkgClass }) => {
+interface IElementFlora {
+	bkgClass: string;
+}
+
+const ElementFlora = ({ bkgClass }: IElementFlora) => {
+
 	return (
 		<div className={bkgClass}>
 			<p>
@@ -7,4 +12,5 @@ const ElementFlora = ({ bkgClass }) => {
 		</div>
 	);
 };
+
 export { ElementFlora };

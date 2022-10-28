@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
+
 import CatElement from "pages/catalog/CatElement";
 
 const New = () => {
@@ -86,4 +87,5 @@ const New = () => {
         </div>
     );
 };
+
 export { New };

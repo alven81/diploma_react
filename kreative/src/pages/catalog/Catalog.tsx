@@ -1,5 +1,5 @@
-import { FC } from "react";
 import { useSelector, RootStateOrAny } from "react-redux";
+
 import CatElement from "pages/catalog/CatElement";
 import { New } from "pages/product/New";
 import IElement from "types/element";
@@ -12,13 +12,11 @@ const Catalog = () => {
 	return (
 		<>
 			<div className="catalog_main narrow_container">
-				{catalog && (
-					<>
-						{catalog.map((catalog: IElement) => (
-							<CatElement key={catalog.id} catalog={catalog} />
-						))}
-					</>
-				)}
+				{catalog &&
+					catalog.map((catalog: IElement) => (
+						<CatElement key={catalog.id} catalog={catalog} />
+					))
+				}
 			</div>
 			<div className="container">
 				<New />
@@ -26,4 +24,5 @@ const Catalog = () => {
 		</>
 	);
 };
+
 export default Catalog;

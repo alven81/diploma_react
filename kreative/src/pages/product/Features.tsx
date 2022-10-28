@@ -1,11 +1,11 @@
-import { FC } from "react";
 import IFeatures from "types/features";
 
-interface FeaturesProps {
+interface IFeaturesProps {
 	features: IFeatures;
 }
 
-const Features: FC<FeaturesProps> = ({ features }) => {
+const Features = ({ features }: IFeaturesProps) => {
+
 	return (
 		<>
 			<h3>Characteristics</h3> {/*Характеристики*/}
@@ -52,4 +52,5 @@ const Features: FC<FeaturesProps> = ({ features }) => {
 		</>
 	);
 };
+
 export { Features };

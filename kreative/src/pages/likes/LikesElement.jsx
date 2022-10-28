@@ -1,6 +1,6 @@
-//import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
+
 import { addItemIndex } from "store/actions/indexAction";
 import Product from "pages/product/Product";
 
@@ -23,7 +23,6 @@ const LikesElement = ({ item }) => {
                         alt=""
                     />
                 </Link>
-                
             </div>
             <div className="likes_list_element-title">
                 <p>{catalog.title.slice(0, 15) + "..."}</p>
@@ -31,4 +30,5 @@ const LikesElement = ({ item }) => {
         </div>
     );
 };
+
 export default LikesElement;

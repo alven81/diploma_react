@@ -1,4 +1,5 @@
 const ListPaint = () => {
+
 	return (
 		<div className="home_list-paint">
 			<p>Materials</p>               {/* Материалы */}
@@ -7,4 +8,5 @@ const ListPaint = () => {
 		</div>
 	);
 };
+
 export { ListPaint };

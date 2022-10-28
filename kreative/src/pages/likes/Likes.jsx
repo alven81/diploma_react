@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux";
+
 import LikesElement from "pages/likes/LikesElement";
 
 const Likes = () => {
@@ -19,6 +20,7 @@ const Likes = () => {
             };
             i++;
         }
+
         return likesItemContent;
     }
 
@@ -35,4 +37,5 @@ const Likes = () => {
         </div>
     );
 };
+
 export default Likes;

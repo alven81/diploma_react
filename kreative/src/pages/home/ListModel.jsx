@@ -1,4 +1,5 @@
 const ListModel = () => {
+
 	return (
 		<div className="home_list-model">
 			<p>Modeling </p>           {/* Лепка */}
@@ -7,4 +8,5 @@ const ListModel = () => {
 		</div>
 	);
 };
+
 export { ListModel };

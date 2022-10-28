@@ -1,4 +1,5 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+
 import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import { openLogModal } from "store/actions/LogAction";
@@ -11,16 +12,22 @@ export default function DropDownMenu({ src, alt }) {
     const dropdownRef = useRef(null);
     const [isActive, setIsActive] = useDetectOutsideClick(dropdownRef, false);
 
-    const isUserLogin = useSelector(
-        (state) => state.isUserLogIn.isUserLogInInfo
-    );
+    const isUserLogin = useSelector((state) => state.isUserLogIn.isUserLogInInfo);
+
     const [userIsLogin, setUserIsLogin] = useState(isUserLogin);
 
     useEffect(() => {
         setUserIsLogin(isUserLogin.id);
     }, [isUserLogin.id, isUserLogin]);
 
-    const onClick = () => setIsActive(!isActive);
+    useEffect(() => {
+        console.log(isActive)
+    })
+
+    const onClick = (e) => {
+        e.stopPropagation();
+        setIsActive(prev => !prev)
+    };
 
     return (
         <div className="menu-container">

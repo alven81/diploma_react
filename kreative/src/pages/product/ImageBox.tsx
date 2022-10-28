@@ -1,8 +1,8 @@
-import { FC, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { showZoomImage } from "store/actions/zoomAction";
 
-interface ImageBoxProps {
+interface IImageBoxProps {
 	imageList: [];
 	newProduct: boolean;
 	imageMain: string;
@@ -14,7 +14,7 @@ const ImageBox = ({
 	newProduct,
 	imageMain,
 	age,
-}: ImageBoxProps) => {
+}: IImageBoxProps) => {
 
 	const dispatch = useDispatch();
 

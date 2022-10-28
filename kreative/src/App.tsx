@@ -19,7 +19,9 @@ import { uiLanguage } from "store/actions/uiLanguage";
 import "styles/App.scss";
 
 const App = () => {
+
     const dispatch = useDispatch();
+
     const defaultUser = {
         id: 0,
         avatar: "/assets/avatars/0.jpg",
@@ -40,22 +42,20 @@ const App = () => {
     }, [dispatch]);
 
     return (
-        <>
-            <Routes>
-                <Route path="/" element={<Layout />}>
-                    <Route index element={<Home />} />
-                    <Route path="catalog" element={<Catalog />} />
-                    <Route path="catalog/:theme" element={<Theme />} />
-                    <Route path="catalog/:theme/:id" element={<Product />} />
-                    <Route path="search" element={<Search />} />
-                    <Route path="reviews" element={<Reviews />} />
-                    <Route path="administration" element={<Administration />} />
-                    <Route path="cart" element={<Cart />} />
-                    <Route path="likes" element={<Likes />} />
-                    <Route path="*" element={<PageNotFound />} />
-                </Route>
-            </Routes>
-        </>
+        <Routes>
+            <Route path="/" element={<Layout />}>
+                <Route index element={<Home />} />
+                <Route path="catalog" element={<Catalog />} />
+                <Route path="catalog/:theme" element={<Theme />} />
+                <Route path="catalog/:theme/:id" element={<Product />} />
+                <Route path="search" element={<Search />} />
+                <Route path="reviews" element={<Reviews />} />
+                <Route path="administration" element={<Administration />} />
+                <Route path="cart" element={<Cart />} />
+                <Route path="likes" element={<Likes />} />
+                <Route path="*" element={<PageNotFound />} />
+            </Route>
+        </Routes>
     );
 };
 

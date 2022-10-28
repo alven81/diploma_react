@@ -1,9 +1,9 @@
 const Workshop = () => {
 
 	return (
-		<>
-			<div className="container">Creative workshop-store</div>  {/* Творческая мастерская магазин */}
-		</>
+		<div className="container">
+			Creative workshop-store
+		</div>
 	);
 };
 

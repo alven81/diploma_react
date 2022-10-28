@@ -20,7 +20,7 @@ const PageNotFound = () => {
 				<div className="_2">IN DEVELOPING</div>  {/* В РАЗРАБОТКЕ */}
 				<button className="btn">
 					<NavLink className="btn" to="/">
-                        Switch to Main page  {/* Перейти на главную */}
+						Switch to Main page  {/* Перейти на главную */}
 					</NavLink>
 				</button>
 

@@ -1,21 +1,22 @@
-import { FC } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
+
 import IElement from "types/element";
 import { addItemIndex } from "store/actions/indexAction";
 import Product from "pages/product/Product";
 
-interface CatElementProps {
+interface ICatElementProps {
 	catalog: IElement;
 }
 
-const CatElement: FC<CatElementProps> = ({ catalog }) => {
+const CatElement = ({ catalog }: ICatElementProps) => {
 
     const {theme, id} = useParams();
 	const discountPercent = Math.round(
 		((catalog.price - catalog.discount_price) / catalog.price) * 100
 	);
 	const dispatch = useDispatch();
+
 	return (
 		<div className="catalog_main-element">
 			<div className="catalog_main-element-image">
@@ -64,4 +65,5 @@ const CatElement: FC<CatElementProps> = ({ catalog }) => {
 		</div>
 	);
 };
+
 export default CatElement;
