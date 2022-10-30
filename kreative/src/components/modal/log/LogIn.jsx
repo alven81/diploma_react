@@ -9,15 +9,7 @@ import { openLogModal } from "store/actions/LogAction";
 import { doesCredentialsOk } from "utils/doesCredentialsOk";
 import { doesUserExist } from "utils/doesUserExist";
 import { requestUserInfoById } from "utils/getUserInfoById";
-import {
-    email_ui,
-    login_succesfull_message,
-    login_unsuccesfull_message,
-    login_user_not_found_message,
-    password_ui,
-    enter_ui,
-    enter_user_data_message,
-} from "lng";
+import { logLanguage } from "lng";
 
 const LogModal = () => {
     const dispatch = useDispatch();
@@ -37,7 +29,7 @@ const LogModal = () => {
                 dispatch(
                     showAlertMessage({
                         status: true,
-                        message: login_succesfull_message[setLang], //Вы успешно вошли в ресурс!
+                        message: logLanguage.login_succesfull_message[setLang], //Вы успешно вошли в ресурс!
                     })
                 );
                 dispatch(openLogModal(false));
@@ -47,7 +39,7 @@ const LogModal = () => {
                 dispatch(
                     showAlertMessage({
                         status: true,
-                        message: login_unsuccesfull_message[setLang], //Вы указали неверный логин или пароль
+                        message: logLanguage.login_unsuccesfull_message[setLang], //Вы указали неверный логин или пароль
                     })
                 );
             }
@@ -56,51 +48,49 @@ const LogModal = () => {
             return dispatch(
                 showAlertMessage({
                     status: true,
-                    message: login_user_not_found_message[setLang], //Пользователь с таким логином не найден!
+                    message: logLanguage.login_user_not_found_message[setLang], //Пользователь с таким логином не найден!
                 })
             );
     };
 
     return (
-        <>
-            <section className="fullscreen-box">
-                <div className="regform">
-                    <div className="regform-close">
-                        <button
-                            className="cross-button"
-                            onClick={() => dispatch(openLogModal(false))}
-                        />
-                    </div>
-                    <div className="regform-name">{enter_user_data_message[setLang]}</div>{" "}   {/* Введите данные для входа */}
-                    <form className="regform-form" onSubmit={handleLogUser}>
-                        <label htmlFor="eMail">
-                            {" "}
-                            {email_ui[setLang]} {/* Электроная почта  */}
-                            <input
-                                onChange={(e) => setEMail(e.target.value)}
-                                type="email"
-                                name="eMail"
-                            />
-                        </label>
-                        <label htmlFor="passMain">
-                            {" "}
-                            {password_ui[setLang]} {/* Пароль  */}
-                            <input
-                                onChange={(e) => setPassMain(e.target.value)}
-                                type="password"
-                                name="passMain"
-                            />
-                        </label>
-                        <div className="regform-button button_container">
-                            <button className="regform-button" type="submit">
-                                {" "}
-                                {enter_ui[setLang]} {/* Войти  */}
-                            </button>
-                        </div>
-                    </form>
+        <section className="fullscreen-box">
+            <div className="regform">
+                <div className="regform-close">
+                    <button
+                        className="cross-button"
+                        onClick={() => dispatch(openLogModal(false))}
+                    />
                 </div>
-            </section>
-        </>
+                <div className="regform-name">{logLanguage.enter_user_data_message[setLang]}</div>{" "}   {/* Введите данные для входа */}
+                <form className="regform-form" onSubmit={handleLogUser}>
+                    <label htmlFor="eMail">
+                        {" "}
+                        {logLanguage.email_ui[setLang]} {/* Электроная почта  */}
+                        <input
+                            onChange={(e) => setEMail(e.target.value)}
+                            type="email"
+                            name="eMail"
+                        />
+                    </label>
+                    <label htmlFor="passMain">
+                        {" "}
+                        {logLanguage.password_ui[setLang]} {/* Пароль  */}
+                        <input
+                            onChange={(e) => setPassMain(e.target.value)}
+                            type="password"
+                            name="passMain"
+                        />
+                    </label>
+                    <div className="regform-button button_container">
+                        <button className="regform-button" type="submit">
+                            {" "}
+                            {logLanguage.enter_ui[setLang]} {/* Войти  */}
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
     );
 };
 

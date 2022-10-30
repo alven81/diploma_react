@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
+
 import { addItemIndex } from "store/actions/indexAction";
 import Product from "pages/product/Product";
-import axios from "axios";
 import loadCart from "store/actions/loadCartAction";
 import { showAlertMessage } from "store/actions/AlertAction";
+import { patchUserInfoById, webHost } from "services/fetch";
 
 const CartElement = ({ item }) => {
 	const { id, quantity } = item;
@@ -27,21 +28,18 @@ const CartElement = ({ item }) => {
 	};
 
 	const handleQuantity = async (e) => {
+
 		if (!user.id)
 			return dispatch(
 				showAlertMessage({
 					status: true,
-					message:
-						"Only registered users can add items to cart!", //Только зарегистрированные пользователи могут добавлять товары в корзину
+					message: "Only registered users can add items to cart!",
 				})
 			);
 
 		if (e > 0) {
 			await whatInTheCart.push(Number(id));
-			await axios
-				.patch(`http://localhost:3004/users/${user.id}`, {
-					cart: whatInTheCart,
-				})
+			await patchUserInfoById(user.id, {cart: whatInTheCart})
 				.catch(function (error) {
 					if (error.response) {
 						console.log(error.response.status);
@@ -55,10 +53,7 @@ const CartElement = ({ item }) => {
 			whatInTheCart = whatInTheCart
 				.splice(index + 1)
 				.concat(whatInTheCart.splice(0, index));
-			await axios
-				.patch(`http://localhost:3004/users/${user.id}`, {
-					cart: whatInTheCart,
-				})
+			await patchUserInfoById(user.id, {cart: whatInTheCart})
 				.catch(function (error) {
 					if (error.response) {
 						console.log(error.response.status);
@@ -81,7 +76,7 @@ const CartElement = ({ item }) => {
 							dispatch(addItemIndex(catalog.id));
 							<Product />;
 						}}
-						src={`http://localhost:3000${catalog.image}`}
+						src={`${webHost}${catalog.image}`}
 						alt=""
 					/>
 				</Link>

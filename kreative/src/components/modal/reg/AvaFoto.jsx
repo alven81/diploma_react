@@ -5,7 +5,7 @@ const AvaFoto = ({handleImage, image}) => {
             <div className="regform-ava-set">
                 <label htmlFor="avatar" >
                     Choose your avatar              {/*Выберите себе аватар  */}
-                    <select name="avatar" 
+                    <select name="avatar"
                         onChange={(e) => {
                             e.preventDefault();
                             handleImage(e.target.value)}}
@@ -26,9 +26,8 @@ const AvaFoto = ({handleImage, image}) => {
             <div className="regform-ava-img">
                 <img src={image} alt="Аватар"/>
             </div>
-        
         </>
     )
-}
+};
 
 export { AvaFoto }

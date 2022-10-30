@@ -1,4 +1,5 @@
 import { useDispatch } from "react-redux";
+
 import { showAlertMessage } from "store/actions/AlertAction";
 
 const Alert = ({ alertMessage }) => {
@@ -20,7 +21,11 @@ const Alert = ({ alertMessage }) => {
 					<p>{alertMessage}</p>
 				</div>
 				<div className="button_container">
-					<button onClick={handleCloseAlert}>Close</button>    {/* Закрыть */}
+					<button
+						onClick={handleCloseAlert}
+					>
+						Close
+					</button>
 				</div>
 			</div>
 		</section>

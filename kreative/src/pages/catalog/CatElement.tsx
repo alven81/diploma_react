@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import IElement from "types/element";
 import { addItemIndex } from "store/actions/indexAction";
 import Product from "pages/product/Product";
+import { apiHost } from "services/fetch";
 
 interface ICatElementProps {
 	catalog: IElement;
@@ -35,7 +36,7 @@ const CatElement = ({ catalog }: ICatElementProps) => {
 								dispatch(addItemIndex(catalog.id));
 								<Product />;
 							}}
-							src={`http://localhost:3000${catalog.image}`}
+							src={`${apiHost}${catalog.image}`}
 							alt=""
 						/>
 					</Link>

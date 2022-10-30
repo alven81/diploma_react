@@ -1,17 +1,14 @@
 import { useSelector } from "react-redux";
+
 import CartElement from "pages/cart/CartElement";
-import {
-    shop_cart_ui,
-    total_in_cart_ui,
-    order_cost_ui,
-    rub_cost_ui
-} from "lng";
+
+import { cartLanguage } from "lng";
 
 const Cart = () => {
 	const whatInTheCart = useSelector((state) => state.loadCart.inCart);
 	const fullCatalog = useSelector((state) => state.loadData.loadCatalog);
-    const setLang = useSelector((state) => state.loadLanguage.languageIs);
-    
+	const setLang = useSelector((state) => state.loadLanguage.languageIs);
+
 	const calcCartContent = whatInTheCart.reduce(
 		(acum, cur) => Object.assign(acum, { [cur]: (acum[cur] | 0) + 1 }),
 		{}
@@ -45,19 +42,23 @@ const Cart = () => {
 
 	return (
 		<div className="cart-name container">
-			 <p>{shop_cart_ui[setLang]}</p>
+			<p>{cartLanguage.shop_cart_ui[setLang]}</p>
 			<ul className="cart">
 				{cartContent.map((item) => (
-					<CartElement key={item.id} item={item} />
+					<CartElement
+						key={item.id}
+						item={item}
+					/>
 				))}
 			</ul>
 			<p>
-                {total_in_cart_ui[setLang]}: {whatInTheCart.length}, 
-                {" "}{order_cost_ui[setLang]}{" "}
-                {calcCost(whatInTheCart).toFixed(2)} 
-                {" "}{rub_cost_ui[setLang]}.
+				{cartLanguage.total_in_cart_ui[setLang]}: {whatInTheCart.length},
+				{" "}{cartLanguage.order_cost_ui[setLang]}{" "}
+				{calcCost(whatInTheCart).toFixed(2)}
+				{" "}{cartLanguage.rub_cost_ui[setLang]}.
 			</p>
 		</div>
 	);
 };
+
 export default Cart;

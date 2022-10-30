@@ -1,14 +1,15 @@
 import axios from "axios";
 
-const host = `http://localhost:3004/`;
+export const apiHost = `http://localhost:3004/`;
+export const webHost = `http://localhost:3000/`;
 
-const catalogData = `${host}products`;
-const userInfoById = (id: number) => `${host}users/${id}`;
-const categories = `${host}categories`;
-const searchByCategory = (categoryId: string) => `${host}products?categoryId=${categoryId}`
-const searchProduct = (searchText: string) => `${host}products?q=${searchText}`
-const searchUserEmail = (eMail: string) => `${host}users/?email=${eMail}`
-const usersList = `${host}users/`;
+const catalogData = `${apiHost}products`;
+const userInfoById = (id: number) => `${apiHost}users/${id}`;
+const categories = `${apiHost}categories`;
+const searchByCategory = (categoryId: string) => `${apiHost}products?categoryId=${categoryId}`
+const searchProduct = (searchText: string) => `${apiHost}products?q=${searchText}`
+const searchUserEmail = (eMail: string) => `${apiHost}users/?email=${eMail}`
+const usersList = `${apiHost}users/`;
 
 //GET
 const getData = (url: string, payload?: any) => {
@@ -20,6 +21,10 @@ const postData = (url: string, payload?: any) => {
     return axios.post(url, payload)
 }
 
+//PATCH
+const patchData = (url: string, payload?: any) => {
+    return axios.patch(url, payload)
+}
 
 //GET
 export const getCatalog = () => getData(catalogData);
@@ -32,3 +37,6 @@ export const getUserList = () => getData(usersList);
 
 //POST
 export const postUserList = (credentials: any) => postData(usersList, credentials);
+
+//PATCH
+export const patchUserInfoById = (id: number, payload: any) => patchData(userInfoById(id), payload);

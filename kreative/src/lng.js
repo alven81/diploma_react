@@ -1,45 +1,41 @@
 //components/modal/log
 
-export const login_succesfull_message = {
-    rus: "Вы успешно вошли в ресурс!",
-    eng: "You have successfully logged in!",
-    pol: "pol - You have successfully logged in!"
-}
-
-export const login_unsuccesfull_message = {
-    rus: "Вы указали неверный логин или пароль",
-    eng: "You have entered an incorrect username or password",
-    pol: "pol - You have entered an incorrect username or password"
-}
-
-export const login_user_not_found_message = {
-    rus: "Пользователь с таким логином не найден!",
-    eng: "User with this login was not found!",
-    pol: "pol - User with this login was not found!"
-}
-
-export const email_ui = {
-    rus: "Электронная почта",
-    eng: "Email",
-    pol: "pol - Email"
-}
-
-export const enter_user_data_message = {
-    rus: "Введите данные для входа",
-    eng: "Enter your login details",
-    pol: "pol - Enter your login details"
-}
-
-export const password_ui = {
-    rus: "Пароль",
-    eng: "Password",
-    pol: "pol - Password"
-}
-
-export const enter_ui = {
-    rus: "Войти",
-    eng: "OK",
-    pol: "pol - OK"
+export const logLanguage = {
+    login_succesfull_message: {
+        rus: "Вы успешно вошли в ресурс!",
+        eng: "You have successfully logged in!",
+        pol: "Logowanie zakończone powodzeniem!"
+    },
+    login_unsuccesfull_message: {
+        rus: "Вы указали неверный логин или пароль",
+        eng: "You have entered an incorrect username or password",
+        pol: "Wpisałeś nieprawidłową nazwę użytkownika lub hasło"
+    },
+    login_user_not_found_message: {
+        rus: "Пользователь с таким логином не найден!",
+        eng: "User with this login didn't found!",
+        pol: "Użytkownik z tym loginem nie został znaleziony!"
+    },
+    email_ui: {
+        rus: "Электронная почта",
+        eng: "Email",
+        pol: "Email"
+    },
+    enter_user_data_message: {
+        rus: "Введите данные для входа",
+        eng: "Enter your login details",
+        pol: "Wpisz swoje dane logowania"
+    },
+    password_ui: {
+        rus: "Пароль",
+        eng: "Password",
+        pol: "Hasło"
+    },
+    enter_ui: {
+        rus: "Войти",
+        eng: "OK",
+        pol: "OK"
+    }
 }
 
 //pages/layout/NavBar
@@ -300,29 +296,30 @@ export const infoline_ui = {
 
 //pages/cart/cart
 
-export const shop_cart_ui = {
-    rus: "Корзина заказов",
-    eng: "Shopping cart",
-    pol: "Wózek sklepowy"
+export const cartLanguage = {
+    shop_cart_ui: {
+        rus: "Корзина заказов",
+        eng: "Shopping cart",
+        pol: "Wózek sklepowy"
+    },
+    total_in_cart_ui: {
+        rus: "Всего товаров в корзине",
+        eng: "Total items in cart",
+        pol: "Wszystkie przedmioty w koszyku"
+    },
+    order_cost_ui: {
+        rus: "стоимость заказа",
+        eng: "order cost",
+        pol: "koszt zamówienia"
+    },
+    rub_cost_ui: {
+        rus: "рублей",
+        eng: "rubles",
+        pol: "ruble"
+    }
 }
 
-export const total_in_cart_ui = {
-    rus: "Всего товаров в корзине",
-    eng: "Total items in cart",
-    pol: "Wszystkie przedmioty w koszyku"
-}
 
-export const order_cost_ui = {
-    rus: "стоимость заказа",
-    eng: "order cost",
-    pol: "koszt zamówienia"
-}
-
-export const rub_cost_ui = {
-    rus: "рублей",
-    eng: "rubles",
-    pol: "ruble"
-}
 
 
 

@@ -11,13 +11,17 @@ const Catalog = () => {
 
 	return (
 		<>
-			<div className="catalog_main narrow_container">
-				{catalog &&
-					catalog.map((catalog: IElement) => (
-						<CatElement key={catalog.id} catalog={catalog} />
-					))
-				}
-			</div>
+			{
+				catalog &&
+				<div className="catalog_main narrow_container">
+					{
+						catalog.map((catalog: IElement) => (
+							<CatElement key={catalog.id} catalog={catalog} />
+						))
+					}
+
+				</div>
+			}
 			<div className="container">
 				<New />
 			</div>

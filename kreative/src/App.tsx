@@ -30,15 +30,14 @@ const App = () => {
         email: "",
     };
 
-    const lang = "eng";
-
     useEffect(() => {
         dispatch(getCatalogData());
     }, [dispatch]);
 
     useEffect(() => {
+
         dispatch(isUserLogIn(defaultUser));
-        dispatch(uiLanguage(lang));
+        dispatch(uiLanguage("eng"));
     }, [dispatch]);
 
     return (

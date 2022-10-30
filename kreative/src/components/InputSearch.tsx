@@ -1,24 +1,23 @@
-import { FC, useState } from "react";
+import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { Navigate, NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+
 import { searchResult } from "store/actions/searchResultAction";
 
-interface InputSearchProps {
+interface IInputSearchProps {
 	className: string;
 	placeholder: string;
 }
-const InputSearch: FC<InputSearchProps> = ({ className, placeholder }) => {
-	const [searchText, setSearchText] = useState("");
+
+const InputSearch = ({ className, placeholder }: IInputSearchProps) => {
+	const [searchText, setSearchText] = useState<string>("");
+
 	const dispatch = useDispatch();
     const navigate = useNavigate();
 
-	const handleInputChange = (e: any) => {
-		setSearchText(e.target.value);
-	};
+	const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => setSearchText(e.target.value);
 
-	const handleSearchItem = () => {
-		dispatch(searchResult(searchText));
-	};
+	const handleSearchItem = () => dispatch(searchResult(searchText));
 
 	const handleSearchItemKey = (e: any) => {
 		if (e.key === "Enter") {

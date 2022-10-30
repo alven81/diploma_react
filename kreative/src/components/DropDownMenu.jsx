@@ -20,10 +20,6 @@ export default function DropDownMenu({ src, alt }) {
         setUserIsLogin(isUserLogin.id);
     }, [isUserLogin.id, isUserLogin]);
 
-    useEffect(() => {
-        console.log(isActive)
-    })
-
     const onClick = (e) => {
         e.stopPropagation();
         setIsActive(prev => !prev)

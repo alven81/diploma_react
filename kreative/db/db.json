@@ -1356,7 +1356,20 @@
         1
       ],
       "cart": [
-        1
+        18,
+        1,
+        20
+      ]
+    },
+    {
+      "id": 10,
+      "avatar": "/assets/avatars/1.jpg",
+      "firstName": "Александр",
+      "lastName": "Малкович",
+      "email": "rezki@googlewww.com",
+      "password": "123456",
+      "likes": [
+        19
       ]
     }
   ],
