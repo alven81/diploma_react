@@ -1,10 +1,6 @@
 import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
-import {
-	contacts_designer_message, creative_workshop_ui, about_ui, history_ui, contacts_ui, blog_ui, brands_ui, career_ui, help_ui,
-	pay_ui, deliver_ui, return_rule_ui, pub_offer_ui, yarn_calc_ui, card_ui, info_ui, activation_ui, recover_ui, faq_ui, feedback_ui,
-	ask_question_ui, reviews_ui, gift_card_ui, suppliers_ui, infoline_ui
-} from "lng";
+import { footerLanguage } from "lng";
 import Tooltip from "pages/layout/Tooltip";
 
 
@@ -18,7 +14,7 @@ const Footer = () => {
 			<footer className="footer_main container">
 				<div className="footer_main-contacts">
 					<Tooltip
-						content={contacts_designer_message[setLang]}
+						content={footerLanguage.contacts_designer_message[setLang]}
 						contentPositionX={80}
 						direction="top"
 					>
@@ -31,10 +27,10 @@ const Footer = () => {
 							</a>
 						</p>
 					</Tooltip>
-					<p>{creative_workshop_ui[setLang]}</p>
+					<p>{footerLanguage.creative_workshop_ui[setLang]}</p>
 					<p className="footer_main-contacts-time">10.00-21.00</p>
 					<Tooltip
-						content={contacts_designer_message[setLang]}
+						content={footerLanguage.contacts_designer_message[setLang]}
 						contentPositionX={80}
 						direction="top"
 					>
@@ -50,13 +46,13 @@ const Footer = () => {
 				<div className="footer_main-block">
 					<div className="footer_main-block-top">
 						<ul>
-							<li>{about_ui[setLang]}</li>
+							<li>{footerLanguage.about_ui[setLang]}</li>
 							<li>
 								<NavLink
 									className="footer_main-block-top-navlink"
 									to="history"
 								>
-									{history_ui[setLang]}
+									{footerLanguage.history_ui[setLang]}
 								</NavLink>
 							</li>
 							<li>
@@ -64,7 +60,7 @@ const Footer = () => {
 									className="footer_main-block-top-navlink"
 									to="contacts"
 								>
-									{contacts_ui[setLang]}
+									{footerLanguage.contacts_ui[setLang]}
 								</NavLink>
 							</li>
 							<li>
@@ -72,7 +68,7 @@ const Footer = () => {
 									className="footer_main-block-top-navlink"
 									to="blog"
 								>
-									{blog_ui[setLang]}
+									{footerLanguage.blog_ui[setLang]}
 								</NavLink>
 							</li>
 							<li>
@@ -80,7 +76,7 @@ const Footer = () => {
 									className="footer_main-block-top-navlink"
 									to="brands"
 								>
-									{brands_ui[setLang]}
+									{footerLanguage.brands_ui[setLang]}
 								</NavLink>
 							</li>
 							<li>
@@ -88,18 +84,18 @@ const Footer = () => {
 									className="footer_main-block-top-navlink"
 									to="vacancies"
 								>
-									{career_ui[setLang]}
+									{footerLanguage.career_ui[setLang]}
 								</NavLink>
 							</li>
 						</ul>
 						<ul>
-							<li>{help_ui[setLang]}</li>
+							<li>{footerLanguage.help_ui[setLang]}</li>
 							<li>
 								<NavLink
 									className="footer_main-block-top-navlink"
 									to="payment"
 								>
-									{pay_ui[setLang]}
+									{footerLanguage.pay_ui[setLang]}
 								</NavLink>
 							</li>
 							<li>
@@ -107,7 +103,7 @@ const Footer = () => {
 									className="footer_main-block-top-navlink"
 									to="delivery"
 								>
-									{deliver_ui[setLang]}
+									{footerLanguage.deliver_ui[setLang]}
 								</NavLink>
 							</li>
 							<li>
@@ -115,7 +111,7 @@ const Footer = () => {
 									className="footer_main-block-top-navlink"
 									to="return"
 								>
-									{return_rule_ui[setLang]}
+									{footerLanguage.return_rule_ui[setLang]}
 								</NavLink>
 							</li>
 							<li>
@@ -123,7 +119,7 @@ const Footer = () => {
 									className="footer_main-block-top-navlink"
 									to="offerta"
 								>
-									{pub_offer_ui[setLang]}
+									{footerLanguage.pub_offer_ui[setLang]}
 								</NavLink>
 							</li>
 							<li>
@@ -131,18 +127,18 @@ const Footer = () => {
 									className="footer_main-block-top-navlink"
 									to="calculator"
 								>
-									{yarn_calc_ui[setLang]}
+									{footerLanguage.yarn_calc_ui[setLang]}
 								</NavLink>
 							</li>
 						</ul>
 						<ul>
-							<li>{card_ui[setLang]}</li>
+							<li>{footerLanguage.card_ui[setLang]}</li>
 							<li>
 								<NavLink
 									className="footer_main-block-top-navlink"
 									to="info"
 								>
-									{info_ui[setLang]}
+									{footerLanguage.info_ui[setLang]}
 								</NavLink>
 							</li>
 							<li>
@@ -150,7 +146,7 @@ const Footer = () => {
 									className="footer_main-block-top-navlink"
 									to="activation"
 								>
-									{activation_ui[setLang]}
+									{footerLanguage.activation_ui[setLang]}
 								</NavLink>
 							</li>
 							<li>
@@ -158,7 +154,7 @@ const Footer = () => {
 									className="footer_main-block-top-navlink"
 									to="restore"
 								>
-									{recover_ui[setLang]}
+									{footerLanguage.recover_ui[setLang]}
 								</NavLink>
 							</li>
 							<li>
@@ -166,18 +162,18 @@ const Footer = () => {
 									className="footer_main-block-top-navlink"
 									to="question"
 								>
-									{faq_ui[setLang]}
+									{footerLanguage.faq_ui[setLang]}
 								</NavLink>
 							</li>
 						</ul>
 						<ul>
-							<li>{feedback_ui[setLang]}</li>
+							<li>{footerLanguage.feedback_ui[setLang]}</li>
 							<li>
 								<NavLink
 									className="footer_main-block-top-navlink"
 									to="question"
 								>
-									{ask_question_ui[setLang]}
+									{footerLanguage.ask_question_ui[setLang]}
 								</NavLink>
 							</li>
 							<li>
@@ -185,7 +181,7 @@ const Footer = () => {
 									className="footer_main-block-top-navlink"
 									to="review"
 								>
-									{reviews_ui[setLang]}
+									{footerLanguage.reviews_ui[setLang]}
 								</NavLink>
 							</li>
 							<li>
@@ -193,7 +189,7 @@ const Footer = () => {
 									className="footer_main-block-top-navlink"
 									to="card"
 								>
-									{gift_card_ui[setLang]}
+									{footerLanguage.gift_card_ui[setLang]}
 								</NavLink>
 							</li>
 							<li>
@@ -201,7 +197,7 @@ const Footer = () => {
 									className="footer_main-block-top-navlink"
 									to="suppliers"
 								>
-									{suppliers_ui[setLang]}
+									{footerLanguage.suppliers_ui[setLang]}
 								</NavLink>
 							</li>
 							<li>
@@ -233,7 +229,7 @@ const Footer = () => {
 						</ul>
 					</div>
 					<div className="footer_main-block-middle">
-						<p>{infoline_ui[setLang]}</p>
+						<p>{footerLanguage.infoline_ui[setLang]}</p>
 					</div>
 					<div className="footer_main-block-bottom">
 						<p>UI - Liashkevich Katsiarina</p>

@@ -2,10 +2,10 @@ import { useSelector, RootStateOrAny } from "react-redux";
 
 import CatElement from "pages/catalog/CatElement";
 import { New } from "pages/product/New";
-import IElement from "types/element";
+import IProducts from "types/products";
 
 const Catalog = () => {
-	const catalog = useSelector(
+	const catalog: IProducts[] = useSelector(
 		(state: RootStateOrAny) => state.loadData.loadCatalog
 	);
 
@@ -15,8 +15,8 @@ const Catalog = () => {
 				catalog &&
 				<div className="catalog_main narrow_container">
 					{
-						catalog.map((catalog: IElement) => (
-							<CatElement key={catalog.id} catalog={catalog} />
+						catalog.map((value) => (
+							<CatElement key={value.id} catalog={value} />
 						))
 					}
 

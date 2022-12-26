@@ -174,124 +174,132 @@ export const discounts_ui = {
 
 //pages/layout/footer
 
-export const creative_workshop_ui = {
-    rus: "Творческая мастерская-магазин",
-    eng: "Creative workshop-store",
-    pol: "Kreatywny warsztat-sklep"
-}
-
-export const history_ui = {
-    rus: "История",
-    eng: "History",
-    pol: "Fabuła"
-}
-
-export const brands_ui = {
-    rus: "Бренды",
-    eng: "Brands",
-    pol: "Marki"
-}
-
-export const career_ui = {
-    rus: "Вакансии",
-    eng: "Career",
-    pol: "Oferty pracy"
-}
-
-export const help_ui = {
-    rus: "Помощь",
-    eng: "Help",
-    pol: "Pomoc"
-}
-
-export const pay_ui = {
-    rus: "Оплата",
-    eng: "Payment",
-    pol: "Zapłata"
-}
-
-export const deliver_ui = {
-    rus: "Доставка",
-    eng: "Delivery",
-    pol: "Dostawa"
-}
-
-export const return_rule_ui = {
-    rus: "Правила возврата",
-    eng: "Return Policy",
-    pol: "Polityka zwrotów"
-}
-
-export const pub_offer_ui = {
-    rus: "Публична оферта",
-    eng: "Public offer",
-    pol: "Oferta publiczna"
-}
-
-export const yarn_calc_ui = {
-    rus: "Калькулятор расхода пряжи",
-    eng: "Yarn calculator",
-    pol: "Kalkulator przędzy"
-}
-
-export const card_ui = {
-    rus: "Карта постоянного покупателя",
-    eng: "Loyalty card",
-    pol: "Karta stałego Klienta"
-}
-
-export const info_ui = {
-    rus: "Информация",
-    eng: "Information",
-    pol: "Informacja"
-}
-
-export const activation_ui = {
-    rus: "Активация",
-    eng: "Activation",
-    pol: "Aktywacja"
-}
-
-export const recover_ui = {
-    rus: "Восстановление",
-    eng: "Recovery",
-    pol: "Zwrot"
-}
-
-export const faq_ui = {
-    rus: "Вопросы",
-    eng: "FAQ",
-    pol: "Pytania"
-}
-
-export const feedback_ui = {
-    rus: "Обратная связь",
-    eng: "Feedback",
-    pol: "Informacja zwrotna"
-}
-
-export const ask_question_ui = {
-    rus: "Задать вопрос",
-    eng: "Ask a Question",
-    pol: "Zadać pytanie"
-}
-
-export const gift_card_ui = {
-    rus: "Подарочная карта",
-    eng: "Gift card",
-    pol: "Karta podarunkowa"
-}
-
-export const suppliers_ui = {
-    rus: "Поставщикам товаров и услуг",
-    eng: "Suppliers of goods and services",
-    pol: "Dostawcy towarów i usług"
-}
-
-export const infoline_ui = {
-    rus: "Идеи, мастерские, конкурсы, новинки, акции",
-    eng: "Ideas, workshops, contests, novelties, promotions!",
-    pol: "Pomysły, warsztaty, konkursy, nowości, promocje"
+export const footerLanguage = {
+    reviews_ui: {
+        rus: "Отзывы",
+        eng: "Reviews",
+        pol: "Opinie"
+    },
+    blog_ui: {
+        rus: "Блог",
+        eng: "Blog",
+        pol: "Blog"
+    },
+    contacts_ui: {
+        rus: "Контакты",
+        eng: "Contacts",
+        pol: "Łączność"
+    },
+    about_ui: {
+        rus: "О нас",
+        eng: "About",
+        pol: "O nas"
+    },
+    contacts_designer_message: {
+        rus: "Связаться с дизайнером",
+        eng: "Contact the designer",
+        pol: "Skontaktuj się z projektantem"
+    },
+    creative_workshop_ui: {
+        rus: "Творческая мастерская-магазин",
+        eng: "Creative workshop-store",
+        pol: "Kreatywny warsztat-sklep"
+    },
+    history_ui: {
+        rus: "История",
+        eng: "History",
+        pol: "Fabuła"
+    },
+    brands_ui: {
+        rus: "Бренды",
+        eng: "Brands",
+        pol: "Marki"
+    },
+    career_ui: {
+        rus: "Вакансии",
+        eng: "Career",
+        pol: "Oferty pracy"
+    },
+    help_ui: {
+        rus: "Помощь",
+        eng: "Help",
+        pol: "Pomoc"
+    },
+    pay_ui: {
+        rus: "Оплата",
+        eng: "Payment",
+        pol: "Zapłata"
+    },
+    deliver_ui: {
+        rus: "Доставка",
+        eng: "Delivery",
+        pol: "Dostawa"
+    },
+    return_rule_ui: {
+        rus: "Правила возврата",
+        eng: "Return Policy",
+        pol: "Polityka zwrotów"
+    },
+    pub_offer_ui: {
+        rus: "Публична оферта",
+        eng: "Public offer",
+        pol: "Oferta publiczna"
+    },
+    yarn_calc_ui: {
+        rus: "Калькулятор расхода пряжи",
+        eng: "Yarn calculator",
+        pol: "Kalkulator przędzy"
+    },
+    card_ui: {
+        rus: "Карта постоянного покупателя",
+        eng: "Loyalty card",
+        pol: "Karta stałego Klienta"
+    },
+    info_ui: {
+        rus: "Информация",
+        eng: "Information",
+        pol: "Informacja"
+    },
+    activation_ui: {
+        rus: "Активация",
+        eng: "Activation",
+        pol: "Aktywacja"
+    },
+    recover_ui: {
+        rus: "Восстановление",
+        eng: "Recovery",
+        pol: "Zwrot"
+    },
+    faq_ui: {
+        rus: "Вопросы",
+        eng: "FAQ",
+        pol: "Pytania"
+    },
+    feedback_ui: {
+        rus: "Обратная связь",
+        eng: "Feedback",
+        pol: "Informacja zwrotna"
+    },
+    ask_question_ui: {
+        rus: "Задать вопрос",
+        eng: "Ask a Question",
+        pol: "Zadać pytanie"
+    },
+    gift_card_ui: {
+        rus: "Подарочная карта",
+        eng: "Gift card",
+        pol: "Karta podarunkowa"
+    },
+    suppliers_ui: {
+        rus: "Поставщикам товаров и услуг",
+        eng: "Suppliers of goods and services",
+        pol: "Dostawcy towarów i usług"
+    },
+    infoline_ui: {
+        rus: "Идеи, мастерские, конкурсы, новинки, акции",
+        eng: "Ideas, workshops, contests, novelties, promotions!",
+        pol: "Pomysły, warsztaty, konkursy, nowości, promocje"
+    }
 }
 
 //pages/cart/cart

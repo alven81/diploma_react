@@ -1371,6 +1371,14 @@
       "likes": [
         19
       ]
+    },
+    {
+      "id": 11,
+      "avatar": "/assets/avatars/1.jpg",
+      "firstName": "Aliaksandr",
+      "lastName": "Kotttt",
+      "email": "rezki@googlewww.comm",
+      "password": "123456"
     }
   ],
   "categories": [

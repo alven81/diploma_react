@@ -19,9 +19,10 @@ const InputSearch = ({ className, placeholder }: IInputSearchProps) => {
 
 	const handleSearchItem = () => dispatch(searchResult(searchText));
 
-	const handleSearchItemKey = (e: any) => {
+	const handleSearchItemKey = (e: React.KeyboardEvent<HTMLInputElement>) => {
 		if (e.key === "Enter") {
-			dispatch(searchResult(e.target.value));
+			e.preventDefault();
+			dispatch(searchResult(e.currentTarget.value));
             navigate("/search");
 		}
 	};
@@ -31,7 +32,7 @@ const InputSearch = ({ className, placeholder }: IInputSearchProps) => {
 			<input
 				className={className}
 				placeholder={placeholder}
-				onKeyDown={handleSearchItemKey}
+				onKeyDown={(e) => handleSearchItemKey(e)}
 				onChange={handleInputChange}
 			/>
 			<NavLink to="search">

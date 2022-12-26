@@ -33,33 +33,30 @@ const RegModal = () => {
         if (!firstName || !lastName || !eMail || !passMain) return dispatch(showAlertMessage({
             status: true,
             message: "You didn't complete the form!"    //Вы не полностью заполнили форму!
-        }
-        ))
+        }));
 
         const userExist = await doesUserExist(eMail);
 
         if (userExist) return dispatch(showAlertMessage({
             status: true,
             message: "The user with this address is already registered!"   //Пользователь с таким адресом уже зарегистрирован!
-        }
-        ));
+        }));
 
-        const credentials = ({
+        const credentials = {
             "id": userId,
             "avatar": avaImage,
             "firstName": firstName,
             "lastName": lastName,
             "email": eMail,
             "password": passMain
-        });
+        };
 
         setCredentials(credentials);
 
         dispatch(showAlertMessage({
             status: true,
             message: "You have successfully registered! Go to the login form."    //Вы успешно зарегистрировались! Перейдите на форму для входа.
-        }
-        ))
+        }))
 
         dispatch(openRegModal(false));
     }

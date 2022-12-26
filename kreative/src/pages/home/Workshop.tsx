@@ -1,6 +1,12 @@
 import { NavLink } from "react-router-dom";
 
-const Workshop = ({ buttonTo, buttonName, picture }) => {
+interface IWorkshop {
+	buttonTo: string;
+	buttonName: string;
+	picture: string;
+}
+
+const Workshop = ({ buttonTo, buttonName, picture }: IWorkshop) => {
 
 	return (
 		<div className="home_main-workshop-element">

@@ -5,14 +5,13 @@ import { showAlertMessage } from "store/actions/AlertAction";
 const Alert = ({ alertMessage }) => {
 	const dispatch = useDispatch();
 
-	const handleCloseAlert = () => {
+	const handleCloseAlert = () =>
 		dispatch(
 			showAlertMessage({
 				status: false,
 				message: null,
 			})
 		);
-	};
 
 	return (
 		<section className="fullscreen-box">

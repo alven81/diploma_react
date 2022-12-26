@@ -1,18 +1,18 @@
 import { Link, useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
-import IElement from "types/element";
+import IProducts from "types/products";
 import { addItemIndex } from "store/actions/indexAction";
 import Product from "pages/product/Product";
 import { apiHost } from "services/fetch";
 
 interface ICatElementProps {
-	catalog: IElement;
+	catalog: IProducts;
 }
 
 const CatElement = ({ catalog }: ICatElementProps) => {
 
-    const {theme, id} = useParams();
+    const {theme} = useParams();
 	const discountPercent = Math.round(
 		((catalog.price - catalog.discount_price) / catalog.price) * 100
 	);

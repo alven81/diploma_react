@@ -1,4 +1,4 @@
-const HomeElementContainer = ({ inlayElement }) => {
+const HomeElementContainer = ({ inlayElement }: any) => {
 
 	return (
 		<div className="home">
