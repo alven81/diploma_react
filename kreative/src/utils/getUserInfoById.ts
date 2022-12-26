@@ -1,7 +1,7 @@
 import { getUserInfoById } from "services/fetch";
 import IUser from "types/IUser";
 
-const requestUserInfoById = async (id: number) => {
+const requestUserInfoById = async (id: number): Promise<any> => {
 
     return getUserInfoById(id)
         .then(function (res): IUser {

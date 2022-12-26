@@ -1,6 +1,7 @@
 import { postUserList } from "services/fetch";
+import IUser from "types/IUser";
 
-const setCredentials = (credentials) => {
+const setCredentials = (credentials: IUser) => {
     postUserList(credentials)
         .catch(function (error) {
             if (error.response) {

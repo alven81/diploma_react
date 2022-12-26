@@ -1,6 +1,6 @@
 import { getUserEmail } from "services/fetch";
 
-const doesCredentialsOk = async (callback: string, eMail: string, passMain: string) => {
+const doesCredentialsOk = async (callback: string, eMail: string, passMain: string): Promise<any> => {
     if (callback) {
 
         return getUserEmail(eMail)

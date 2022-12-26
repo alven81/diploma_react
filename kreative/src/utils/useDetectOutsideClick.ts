@@ -5,11 +5,11 @@ import { useState, useEffect } from "react";
  * @param {React.node} el
  * @param {boolean} initialState
  */
-export const useDetectOutsideClick = (el, initialState) => {
+export const useDetectOutsideClick = (el: any, initialState: boolean) => {
     const [isActive, setIsActive] = useState(initialState);
 
     useEffect(() => {
-        const onClick = (e) => {
+        const onClick = (e: any) => {
             // If the active element exists and is clicked outside of
             if (el.current !== null && !el.current.contains(e.target)) {
                 setIsActive(!isActive);
