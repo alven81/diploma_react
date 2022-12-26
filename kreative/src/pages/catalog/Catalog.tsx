@@ -2,7 +2,7 @@ import { useSelector, RootStateOrAny } from "react-redux";
 
 import CatElement from "pages/catalog/CatElement";
 import { New } from "pages/product/New";
-import IProducts from "types/products";
+import IProducts from "types/IProducts";
 
 const Catalog = () => {
 	const catalog: Array<IProducts> = useSelector(

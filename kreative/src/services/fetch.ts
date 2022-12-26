@@ -1,5 +1,5 @@
 import axios from "axios";
-import IUser from "types/user";
+import IUser from "types/IUser";
 
 export const apiHost = `http://localhost:3004/`;
 export const webHost = `http://localhost:3000/`;

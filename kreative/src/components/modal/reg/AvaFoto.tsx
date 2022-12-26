@@ -1,4 +1,11 @@
-const AvaFoto = ({handleImage, image}) => {
+import React from "react";
+
+interface IAvaFoto {
+    handleImage(e: string): void;
+    image: string;
+}
+
+const AvaFoto = ({ handleImage, image }: IAvaFoto) => {
 
     return (
         <>
@@ -6,11 +13,12 @@ const AvaFoto = ({handleImage, image}) => {
                 <label htmlFor="avatar" >
                     Choose your avatar              {/*Выберите себе аватар  */}
                     <select name="avatar"
-                        onChange={(e) => {
+                        onChange={(e: React.ChangeEvent<HTMLSelectElement>) => {
                             e.preventDefault();
-                            handleImage(e.target.value)}}
+                            handleImage(e.target.value);
+                        }}
                     >
-                        <option defaultValue value="/assets/avatars/1.jpg">Black-haired Av</option> {/* Черноволосый Ав */}
+                        <option defaultValue={"/assets/avatars/1.jpg"}>Black-haired Av</option> {/* Черноволосый Ав */}
                         <option value="/assets/avatars/2.jpg">Brown haired Av</option>              {/* Коричневолосая Ава */}
                         <option value="/assets/avatars/3.jpg">Gray Av</option>                      {/* Серая Ава */}
                         <option value="/assets/avatars/4.jpg">Bald Av</option>                      {/* Лысый Ав */}
@@ -24,7 +32,7 @@ const AvaFoto = ({handleImage, image}) => {
                 </label>
             </div>
             <div className="regform-ava-img">
-                <img src={image} alt="Аватар"/>
+                <img src={image} alt="Аватар" />
             </div>
         </>
     )

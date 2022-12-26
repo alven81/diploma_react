@@ -1,4 +1,4 @@
-import IReview from "types/review";
+import IReview from "types/IReview";
 import { ReviewText } from "pages/product/ReviewText";
 
 interface ReviewProps {

@@ -1,7 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
-import IProducts from "types/products";
+import IProducts from "types/IProducts";
 import { addItemIndex } from "store/actions/indexAction";
 import Product from "pages/product/Product";
 import { apiHost } from "services/fetch";

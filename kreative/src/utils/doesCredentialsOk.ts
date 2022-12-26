@@ -1,6 +1,6 @@
 import { getUserEmail } from "services/fetch";
 
-const doesCredentialsOk = async (callback, eMail, passMain) => {
+const doesCredentialsOk = async (callback: string, eMail: string, passMain: string) => {
     if (callback) {
 
         return getUserEmail(eMail)
@@ -8,8 +8,7 @@ const doesCredentialsOk = async (callback, eMail, passMain) => {
                 if (res.data[0].password === passMain) {
 
                     return {
-                        access:
-                            res.data[0].password === passMain ? true : false,
+                        access: res.data[0].password === passMain ? true : false,
                         id: res.data[0].id,
                     };
                 } else {

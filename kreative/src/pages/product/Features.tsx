@@ -1,4 +1,4 @@
-import IFeatures from "types/features";
+import IFeatures from "types/IFeatures";
 
 interface IFeaturesProps {
 	features: IFeatures;

@@ -1,5 +1,5 @@
-import IFeatures from "./features";
-import IReview from "./review";
+import IFeatures from "./IFeatures";
+import IReview from "./IReview";
 
 export default interface IProducts {
     art: string;

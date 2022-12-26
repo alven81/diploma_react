@@ -21,11 +21,11 @@ interface IPassCorrect {
 const LogModal = () => {
     const dispatch = useDispatch();
 
-    const [eMail, setEMail] = useState<string | null>(null);
-    const [passMain, setPassMain] = useState<string | null>(null);
+    const [eMail, setEMail] = useState<string>("");
+    const [passMain, setPassMain] = useState<string>("");
     const setLang: string = useSelector((state: ICategoryLanguage) => state.loadLanguage.languageIs);
 
-    const handleLogUser = async (e: any) => {
+    const handleLogUser = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         const userExist: string = await doesUserExist(eMail);
         const passCorrect: IPassCorrect | any = await doesCredentialsOk(userExist, eMail, passMain);
