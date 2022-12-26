@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 
 import Footer from "pages/layout/Footer";
 import NavBar from "pages/layout/NavBar";
-import LogModal from "components/modal/log/LogIn";
+import LogModal from "components/modal/log/LogModal";
 import RegModal from "components/modal/reg/Reg";
 import { LeftSlideMenu } from "pages/LeftSlideMenu/LeftSlideMenu";
 import Alert from "components/modal/Alert";
@@ -43,7 +43,7 @@ const Layout = () => {
 				{userIsLog && <LogModal />}
 				{userIsReg && <RegModal />}
 				{showAlert.status && <Alert alertMessage={showAlert.message} />}
-                {zoomImage.isVisible && <ZoomImage imageLink={zoomImage.imageLink}/>}
+				{zoomImage.isVisible && <ZoomImage imageLink={zoomImage.imageLink} />}
 			</main>
 			<Footer />
 		</div>

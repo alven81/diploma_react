@@ -10,26 +10,33 @@ import { doesCredentialsOk } from "utils/doesCredentialsOk";
 import { doesUserExist } from "utils/doesUserExist";
 import { requestUserInfoById } from "utils/getUserInfoById";
 import { logLanguage } from "lng";
+import ICategoryLanguage from "types/ICategoryLanguage";
+import createLink from "utils/createLink";
+
+interface IPassCorrect {
+    access: boolean;
+    id: number;
+}
 
 const LogModal = () => {
     const dispatch = useDispatch();
 
-    const [eMail, setEMail] = useState(null);
-    const [passMain, setPassMain] = useState(null);
-    const setLang = useSelector((state) => state.loadLanguage.languageIs);
+    const [eMail, setEMail] = useState<string | null>(null);
+    const [passMain, setPassMain] = useState<string | null>(null);
+    const setLang: string = useSelector((state: ICategoryLanguage) => state.loadLanguage.languageIs);
 
-    const handleLogUser = async (e) => {
+    const handleLogUser = async (e: any) => {
         e.preventDefault();
-        const userExist = await doesUserExist(eMail);
-        const passCorrect = await doesCredentialsOk(userExist, eMail, passMain);
+        const userExist: string = await doesUserExist(eMail);
+        const passCorrect: IPassCorrect | any = await doesCredentialsOk(userExist, eMail, passMain);
         if (userExist || passCorrect) {
             if (passCorrect.access) {
-                const userInfo = await requestUserInfoById(passCorrect.id);
+                const userInfo: any = await requestUserInfoById(passCorrect.id);
                 dispatch(isUserLogIn(userInfo));
                 dispatch(
                     showAlertMessage({
                         status: true,
-                        message: logLanguage.login_succesfull_message[setLang], //Вы успешно вошли в ресурс!
+                        message: createLink(logLanguage.login_succesfull_message, setLang), //Вы успешно вошли в ресурс!
                     })
                 );
                 dispatch(openLogModal(false));
@@ -39,7 +46,7 @@ const LogModal = () => {
                 dispatch(
                     showAlertMessage({
                         status: true,
-                        message: logLanguage.login_unsuccesfull_message[setLang], //Вы указали неверный логин или пароль
+                        message: createLink(logLanguage.login_unsuccesfull_message, setLang), //Вы указали неверный логин или пароль
                     })
                 );
             }
@@ -48,7 +55,7 @@ const LogModal = () => {
             return dispatch(
                 showAlertMessage({
                     status: true,
-                    message: logLanguage.login_user_not_found_message[setLang], //Пользователь с таким логином не найден!
+                    message: createLink(logLanguage.login_user_not_found_message, setLang), //Пользователь с таким логином не найден!
                 })
             );
     };
@@ -62,11 +69,11 @@ const LogModal = () => {
                         onClick={() => dispatch(openLogModal(false))}
                     />
                 </div>
-                <div className="regform-name">{logLanguage.enter_user_data_message[setLang]}</div>{" "}   {/* Введите данные для входа */}
+                <div className="regform-name">{createLink(logLanguage.enter_user_data_message, setLang)}</div>{" "}   {/* Введите данные для входа */}
                 <form className="regform-form" onSubmit={handleLogUser}>
                     <label htmlFor="eMail">
                         {" "}
-                        {logLanguage.email_ui[setLang]} {/* Электроная почта  */}
+                        {createLink(logLanguage.email_ui, setLang)} {/* Электроная почта  */}
                         <input
                             onChange={(e) => setEMail(e.target.value)}
                             type="email"
@@ -75,7 +82,7 @@ const LogModal = () => {
                     </label>
                     <label htmlFor="passMain">
                         {" "}
-                        {logLanguage.password_ui[setLang]} {/* Пароль  */}
+                        {createLink(logLanguage.password_ui, setLang)} {/* Пароль  */}
                         <input
                             onChange={(e) => setPassMain(e.target.value)}
                             type="password"
@@ -85,7 +92,7 @@ const LogModal = () => {
                     <div className="regform-button button_container">
                         <button className="regform-button" type="submit">
                             {" "}
-                            {logLanguage.enter_ui[setLang]} {/* Войти  */}
+                            {createLink(logLanguage.enter_ui, setLang)} {/* Войти  */}
                         </button>
                     </div>
                 </form>

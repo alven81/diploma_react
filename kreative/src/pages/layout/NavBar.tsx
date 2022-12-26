@@ -33,6 +33,7 @@ import IIsUserLogin from "types/IIsUserLogin";
 import IInCart from "types/inCart";
 import IInLikes from "types/IInLikes";
 import ICategoryLanguage from "types/ICategoryLanguage";
+import createLink from "utils/createLink";
 
 const NavBar = () => {
     const userName: IIsUserLogin = useSelector((state: IIsUserLogin) => state.isUserLogIn.isUserLogInInfo);
@@ -47,10 +48,6 @@ const NavBar = () => {
 
     function setLanguage(lang: string) {
         dispatch(uiLanguage(lang));
-    }
-
-    function createLink(link: ICategoryLanguage, setLang: string): string {
-        return link[setLang]
     }
 
     return (
