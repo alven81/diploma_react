@@ -27,7 +27,7 @@ const ImageBox = ({
 	};
 
 	const handlerZoomImage = () => {
-		dispatch(showZoomImage([true, `http://localhost:3000${imageLink}`]));
+		dispatch(showZoomImage({isVisible: true, imageLink: `http://localhost:3000${imageLink}`}));
 	}
 
 	const [imageLink, setImageLink] = useState<string>();

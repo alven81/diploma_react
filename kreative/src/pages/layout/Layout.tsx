@@ -8,22 +8,29 @@ import RegModal from "components/modal/reg/Reg";
 import { LeftSlideMenu } from "pages/LeftSlideMenu/LeftSlideMenu";
 import Alert from "components/modal/Alert";
 import { ZoomImage } from "pages/product/ZoomImage";
+import IZoomImage from "types/IZoomImage";
+import IShowAlert from "types/IShowAlert";
 
 const Layout = () => {
-	const userIsReg = useSelector(
+
+	const userIsReg: boolean = useSelector(
 		(state: RootStateOrAny) => state.isOpenReg.isOpenReg
 	);
-	const userIsLog = useSelector(
+
+	const userIsLog: boolean = useSelector(
 		(state: RootStateOrAny) => state.isOpenLog.isOpenLog
 	);
-	const leftSideMenuStatus = useSelector(
+
+	const leftSideMenuStatus: boolean = useSelector(
 		(state: RootStateOrAny) =>
 			state.whichIsLeftSideMenuStatus.leftSideMenuStatusIs
 	);
-	const showAlert = useSelector(
+
+	const showAlert: IShowAlert = useSelector(
 		(state: RootStateOrAny) => state.alertMessage.alertIs
 	);
-	const zoomImage = useSelector(
+
+	const zoomImage: IZoomImage = useSelector(
 		(state: RootStateOrAny) => state.imageZoom.showZoomImage
 	);
 
@@ -36,7 +43,7 @@ const Layout = () => {
 				{userIsLog && <LogModal />}
 				{userIsReg && <RegModal />}
 				{showAlert.status && <Alert alertMessage={showAlert.message} />}
-                {zoomImage[0] && <ZoomImage image={zoomImage[1]}/>}
+                {zoomImage.isVisible && <ZoomImage imageLink={zoomImage.imageLink}/>}
 			</main>
 			<Footer />
 		</div>

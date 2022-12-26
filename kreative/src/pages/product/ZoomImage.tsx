@@ -2,11 +2,11 @@ import { useDispatch } from "react-redux";
 
 import { showZoomImage } from "store/actions/zoomAction";
 
-interface IZoomImage {
-    image: string;
+type ZoomImage = {
+    imageLink: string;
 }
 
-const ZoomImage = ({ image }: IZoomImage) => {
+const ZoomImage = ({ imageLink }: ZoomImage) => {
     const dispatch = useDispatch();
 
     const handlerZoomImage = () => {
@@ -15,7 +15,7 @@ const ZoomImage = ({ image }: IZoomImage) => {
 
     return (
         <div className="image_box-zoom" onClick={() => handlerZoomImage()}>
-            <img src={image} alt="" />
+            <img src={imageLink} alt="" />
         </div>
     );
 };

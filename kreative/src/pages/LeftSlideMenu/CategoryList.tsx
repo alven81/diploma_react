@@ -1,10 +1,20 @@
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { leftSideMenuStatus } from "store/actions/leftSideMenuStatusAction";
+import ICategoryLanguage from "types/ICategoryLanguage";
 
-const CategoryList = ({ catList, handleCategorySearch }) => {
-	const { category, categoryLink } = catList;
-    const setLang = useSelector((state) => state.loadLanguage.languageIs);
+interface ICategory {
+	category: ICategoryLanguage;
+	categoryLink: string;
+}
+
+interface ICatList {
+	catList: ICategory
+}
+
+const CategoryList = ({ catList }: ICatList) => {
+
+	const setLang: string = useSelector((state: ICategoryLanguage) => state.loadLanguage.languageIs);
 	const dispatch = useDispatch();
 
 	const handleCatalog = () => {
@@ -16,11 +26,12 @@ const CategoryList = ({ catList, handleCategorySearch }) => {
 			<Link
 				onClick={handleCatalog}
 				className="category_list"
-				to={`/catalog/${categoryLink}`}
+				to={`/catalog/${catList.categoryLink}`}
 			>
-				<p>{category[setLang]}</p>
+				<p>{catList.category[setLang]}</p>
 			</Link>
 		</li>
 	);
 };
+
 export { CategoryList };

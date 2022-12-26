@@ -2,7 +2,11 @@ import { useDispatch } from "react-redux";
 
 import { showAlertMessage } from "store/actions/AlertAction";
 
-const Alert = ({ alertMessage }) => {
+type AlertMessage = {
+	alertMessage: string
+}
+
+const Alert = ({ alertMessage }: AlertMessage) => {
 	const dispatch = useDispatch();
 
 	const handleCloseAlert = () =>

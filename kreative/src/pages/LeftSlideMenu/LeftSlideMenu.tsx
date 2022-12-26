@@ -4,10 +4,27 @@ import LoadingSpinner from "components/LoadingSpinner";
 import { leftSideMenuStatus } from "store/actions/leftSideMenuStatusAction";
 import getCategoryList from "store/actions/loadCategoryAction";
 import { CategoryList } from "pages/LeftSlideMenu/CategoryList";
+import ICategoryLanguage from "types/ICategoryLanguage";
 
-const LeftSlideMenu = ({ isMenuOpen }) => {
-	const category = useSelector(
-		(state) => state.loadCategoryList.categoryListIs
+interface ILeftSlideMenu {
+	isMenuOpen: boolean;
+}
+
+interface ICategoryList {
+	category: ICategoryLanguage;
+	categoryLink: string;
+	id: string;
+}
+
+interface ICategoryListIs {
+	[x: string]: any;
+	categoryListIs: Array<ICategoryList>;
+}
+
+const LeftSlideMenu = ({ isMenuOpen }: ILeftSlideMenu) => {
+
+	const category: ICategoryListIs = useSelector(
+		(state: ICategoryListIs) => state.loadCategoryList.categoryListIs
 	);
 
 	const dispatch = useDispatch();
@@ -31,19 +48,21 @@ const LeftSlideMenu = ({ isMenuOpen }) => {
 					<button
 						className="navbar-button cross-button"
 						onClick={handleCloseMenu}
-					></button>
-					{!category.length ? (
-						<LoadingSpinner />
-					) : (
-						<ul>
-							{category.map((item) => (
-								<CategoryList key={item.id} catList={item} />
-							))}
-						</ul>
-					)}
+					/>
+					{
+						!category.length ?
+							<LoadingSpinner />
+							:
+							<ul>
+								{category.map((item: ICategoryList) => (
+									<CategoryList key={item.id} catList={item} />
+								))}
+							</ul>
+					}
 				</div>
 			</div>
 		</>
 	);
 };
+
 export { LeftSlideMenu };

@@ -5,7 +5,7 @@ import { New } from "pages/product/New";
 import IProducts from "types/products";
 
 const Catalog = () => {
-	const catalog: IProducts[] = useSelector(
+	const catalog: Array<IProducts> = useSelector(
 		(state: RootStateOrAny) => state.loadData.loadCatalog
 	);
 
@@ -15,11 +15,10 @@ const Catalog = () => {
 				catalog &&
 				<div className="catalog_main narrow_container">
 					{
-						catalog.map((value) => (
+						catalog.map((value: IProducts) => (
 							<CatElement key={value.id} catalog={value} />
 						))
 					}
-
 				</div>
 			}
 			<div className="container">
